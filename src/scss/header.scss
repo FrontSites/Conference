@@ -6,8 +6,6 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   width: 100%;
-
-  
   background: #fff;
 
   .container {
@@ -151,6 +149,7 @@
         }
       }
       @media (width <= 68.75em) {
+        background: #fff;
         display: flex;
         justify-content: space-between;
         .btn_nav {
