@@ -31,8 +31,17 @@
           background: transparent;
           column-gap: 0.3125rem;
           li {
-            &.current-item {
-              
+            a {
+              padding: 0.3125rem;
+              border-radius: 0.3125rem;
+              transition: 0.3s ease;
+            }
+           
+            &.current-lang {
+             a {
+              background:#FF29AE;
+              color: #fff;
+             }
             }
 
           }
