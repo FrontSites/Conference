@@ -138,7 +138,10 @@
             &:hover {
               .circle-button__wrap {
                 .circle-button {
-                  bac
+                  background: #222649;
+                  svg {
+                    transform: translate(0.625rem);
+                  }
                 }
             }
           }
