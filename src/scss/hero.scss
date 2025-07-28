@@ -234,7 +234,7 @@
       @include vw(column-gap, 172, 30, 172);
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
       .hero-item__text {
         margin-top: 0.9375rem;
 
