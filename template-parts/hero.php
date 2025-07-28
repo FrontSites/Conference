@@ -1,6 +1,6 @@
  <section class="hero">
    <div class="container">
-   
+
    </div>
 
  </section>
