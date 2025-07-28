@@ -22,15 +22,6 @@ body {
     color: #fff;
     height: 100%;
 
-    // Исправление для админбара WordPress
-    &.admin-bar {
-        overflow-x: visible;
-        
-        .page__wrapper {
-            overflow: visible;
-        }
-    }
-
     &.hidden {
         overflow: hidden;
     }
