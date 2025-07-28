@@ -62,6 +62,7 @@
       }
 
       .header-wrapper {
+        margin-left: 1.625rem;
         ul {
           column-gap: 1.875rem;
           display: flex;
@@ -81,6 +82,7 @@
         }
       }
       .logo {
+        justify-self: center;
         flex: none;
       }
       .header-buttons { 
