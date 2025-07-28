@@ -254,6 +254,12 @@
             margin-bottom: 2.875rem;
             ul {
               height: 100%;
+              li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+              }
             }
           }
         }
