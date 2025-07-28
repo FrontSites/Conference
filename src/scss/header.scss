@@ -13,6 +13,7 @@
         display: none;
       }
       .languages-menu {
+        max-width: 9.375rem;
         padding: 0.9375rem 1.25rem;
         width: 100%;
         background: #F7F7F7;
@@ -30,10 +31,7 @@
           background: transparent;
           column-gap: 0.3125rem;
           li {
-            &:first-child {
-              padding-right: 0.75rem;
-              border-right: 1px solid #222649;
-            }
+          
             a {
               padding: 5px 0.5rem;
               border-radius: 0.3125rem;
