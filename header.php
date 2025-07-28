@@ -46,7 +46,17 @@
             ?>
           </div>
           <div class="header-wrapper">
+            <div class="languages-menu">
 
+              <?php wp_nav_menu([
+                'theme_location' => 'languages-menu',
+
+                'container'       => false,
+                'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'menu_class'     => 'language-menu', // navbar-2nd_level
+              ]);
+              ?>
+            </div>
             <?php wp_nav_menu([
               'theme_location' => 'header-menu',
 
