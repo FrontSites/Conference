@@ -26,6 +26,11 @@
          </div>
        </div>
      </div>
+     <div class="hero-bottom">
+
+       <?php the_field("hero-bottom-text"); ?>
+
+     </div>
    </div>
 
  </section>
