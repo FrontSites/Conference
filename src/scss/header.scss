@@ -84,10 +84,9 @@
                 content: "";
                 position: absolute;
                 @include vw(bottom, 34, 20, 34);
-                left: -200%;
-                width: 100%;
+                left: 0;
+                width: 0;
                 height: 2px;
-                transform-origin: left;
                 background: #222649;
                 transition: 0.3s ease;
               }
@@ -95,8 +94,7 @@
                 &:hover {
                   &::after { 
                     width: 100%;
-                    left: 200%;
-                    transform-origin: right;
+                    left: 0;
                   }
                 }
               }
