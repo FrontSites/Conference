@@ -8,13 +8,12 @@
     .header-block {
       display: grid;
       align-items: center;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 0.1fr 1fr 1fr 11fr;
       .btn_nav {
         display: none;
       }
       .languages-menu {
         border-radius: 0.625rem;
-        max-width: 6.875rem;
         padding: 0.9375rem 1.25rem;
         width: 100%;
         background: #F7F7F7;
@@ -28,6 +27,7 @@
         ul {
           display: flex;
           align-items: center;
+          justify-content: center;
           padding: 0rem;
           background: transparent;
           column-gap: 0.3125rem;
