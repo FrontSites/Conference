@@ -64,7 +64,16 @@
         }
 
         &.right {
+          position: relative;
           flex: 1 1 50%;
+          .hero-image {
+            
+          }
+          .hero-location {
+            display: flex;
+            align-items: center;
+            
+          }
         }
       }
 
