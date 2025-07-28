@@ -48,6 +48,8 @@
                 content: "";
                 position: absolute;
                 transform: rotate(-6.175deg);
+                top: 20px;
+                left: 0.9375rem;
                 @include vw(width, 555,277,555);
                 @include vw(height, 137,80,137);
                 background: #EAD800;
@@ -135,6 +137,9 @@
               svg {
                 transition: transform, all 0.3s ease;
               }
+            }
+            @media (width <= 62em) {
+              
             }
           }
           @media (hover:hover) {
