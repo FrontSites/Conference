@@ -33,7 +33,7 @@ function my_theme_enqueue_assets()
     // === jQuery ===
     error_log('Loading jQuery...');
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', false);
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
     error_log('jQuery enqueued');
     
@@ -71,7 +71,7 @@ function my_theme_enqueue_assets()
     $js_url = get_template_directory_uri() . $js_main;
     error_log('JS URL: ' . $js_url);
     
-    wp_enqueue_script('main-min', $js_url, ['jquery'], filemtime($js_path), false);
+    wp_enqueue_script('main-min', $js_url, ['jquery'], filemtime($js_path), true);
     error_log('JS script enqueued');
 
     // Library
