@@ -320,15 +320,16 @@
           display: none;
         }
         .hero-list { 
+          width: 100%;
           margin-top: 0rem;
           align-items: center;
           p {
             text-align: center;
-            ul {
-              flex-direction: column;
-              align-items: center;
-              row-gap: 0.625rem;
-            }
+          }
+          ul {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 0.625rem;
           }
         }
       }
