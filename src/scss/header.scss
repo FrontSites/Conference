@@ -68,10 +68,12 @@
 
       .header-wrapper {
         .language-menu { 
-          display: none
+          display: none;
         }
         .main-button {
-          
+          &._border {
+            display: none;
+          }
         }
         @include vw(margin-left, 26,15,26);
         ul {
@@ -122,6 +124,21 @@
         align-items: stretch;
         justify-self: flex-end;
         @include vw(column-gap, 45,20,45);
+        
+        .main-button {
+          &._border {
+            display: flex;
+            
+            svg {
+              display: block !important;
+              width: 22px !important;
+              height: 22px !important;
+              flex-shrink: 0 !important;
+              visibility: visible !important;
+              opacity: 1 !important;
+            }
+          }
+        }
       }
       @media (width <= 72.5em) {
         grid-template-columns: 0.1fr 0.4fr 0.3fr 0.7fr;
