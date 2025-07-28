@@ -1,0 +1,116 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+* {
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    font-weight: 400;
+    color: #000;
+    height: 100%;
+
+    &.hidden {
+        overflow: hidden;
+    }
+
+    input[type=submit] {
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+            opacity: 1;
+        }
+    }
+
+
+    .page__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        min-height: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0;
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    h1 {
+        @include vw(font-size, 128, 64, 128);
+        font-weight: 400;
+    }
+
+    h2 {
+        @include vw(font-size, 64, 48, 64);
+        font-weight: 400;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    h4 {}
+
+    h5 {}
+
+    button {
+        outline: none;
+        border: none;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    main {
+        flex: 1 1 auto;
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+        transition: all 0.3s ease;
+
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            outline: none;
+        }
+    }
+
+    img {
+        outline: none;
+        display: block;
+        max-inline-size: 100%;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}

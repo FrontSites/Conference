@@ -1,0 +1,63 @@
+@use "sass:math";
+
+$base-width: 1440px;
+
+@mixin vw(
+  $property,
+  $value,
+  $min-value: null,
+  $max-value: null,
+  $min-screen: null,
+  $max-screen: null
+) {
+  $numeric-base: math.div($base-width, 1px);
+
+  // Рассчитываем значение в vw
+  $vw-value: math.div(abs($value), $numeric-base) * 100;
+
+  // Формируем строку для ограничения значения свойства
+  $value-expression: calc(#{$vw-value}vw);
+
+  // Если значение отрицательное, добавляем знак минус
+  @if $value < 0 {
+    $value-expression: calc(-#{$vw-value}vw);
+  }
+
+  // Добавляем min/max ограничения
+  @if $min-value != null or $max-value != null {
+    $min-value-clamp: if($min-value != null, #{$min-value}px, null);
+    $max-value-clamp: if($max-value != null, #{$max-value}px, null);
+
+    @if $min-value != null and $max-value != null {
+      $value-expression: clamp(#{$min-value-clamp}, #{$value-expression}, #{$max-value-clamp});
+    } @else if $min-value != null {
+      $value-expression: max(#{$min-value-clamp}, #{$value-expression});
+    } @else if $max-value != null {
+      $value-expression: min(#{$value-expression}, #{$max-value-clamp});
+    }
+  }
+
+  // Если заданы ограничения по ширине экрана
+  @if $min-screen != null or $max-screen != null {
+    $min-screen-px: if($min-screen != null, $min-screen * 1px, null);
+    $max-screen-px: if($max-screen != null, $max-screen * 1px, null);
+
+    #{$property}: #{$value}px;
+
+    @if $min-screen != null and $max-screen != null {
+      @media (min-width: #{$min-screen-px}) and (max-width: #{$max-screen-px}) {
+        #{$property}: #{$value-expression};
+      }
+    } @else if $min-screen != null {
+      @media (min-width: #{$min-screen-px}) {
+        #{$property}: #{$value-expression};
+      }
+    } @else if $max-screen != null {
+      @media (max-width: #{$max-screen-px}) {
+        #{$property}: #{$value-expression};
+      }
+    }
+  } @else {
+    #{$property}: #{$value-expression};
+  }
+}

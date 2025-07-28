@@ -1,0 +1,144 @@
+{
+  "project": {
+    "name": "WordPress Theme Development System",
+    "version": "2.0.0",
+    "description": "Advanced hybrid Vite + Gulp system with monitoring, backups, and notifications"
+  },
+  "development": {
+    "vite": {
+      "port": 5173,
+      "host": true,
+      "open": false
+    },
+    "browserSync": {
+      "port": 3001,
+      "uiPort": 3002,
+      "ghostMode": true,
+      "tunnel": false
+    },
+    "gulp": {
+      "watchDelay": 100,
+      "autoprefixer": ["last 2 versions"],
+      "imageQuality": 90
+    }
+  },
+  "monitoring": {
+    "performance": {
+      "enabled": true,
+      "thresholds": {
+        "scss": 1000,
+        "js": 2000,
+        "images": 5000,
+        "memory": 104857600
+      }
+    },
+    "notifications": {
+      "enabled": true,
+      "sound": true,
+      "toast": true,
+      "console": true
+    }
+  },
+  "backup": {
+    "enabled": true,
+    "maxBackups": 10,
+    "autoInterval": 1800000,
+    "criticalFiles": [
+      "gulpfile.mjs",
+      "vite.config.js", 
+      "package.json",
+      "src/scss/main.scss",
+      "src/scss/variables.scss",
+      "src/scss/mixins.scss",
+      "src/js/main.js",
+      "front-page.php",
+      "functions.php",
+      "style.css"
+    ]
+  },
+  "layout": {
+    "autoImport": true,
+    "responsive": true,
+    "presets": {
+      "cardGrid": {
+        "columns": "repeat(auto-fit, minmax(300px, 1fr))",
+        "gap": "2rem"
+      },
+      "heroSection": {
+        "direction": "column",
+        "justify": "center",
+        "align": "center"
+      },
+      "navigation": {
+        "justify": "space-between",
+        "align": "center"
+      }
+    }
+  },
+  "optimization": {
+    "scss": {
+      "outputStyle": "compressed",
+      "sourceMap": true
+    },
+    "js": {
+      "mangle": true,
+      "compress": true,
+      "sourceMap": true
+    },
+    "images": {
+      "webpQuality": 90,
+      "deleteOriginals": true,
+      "formats": ["webp", "jpg", "png"]
+    }
+  },
+  "paths": {
+    "src": {
+      "scss": "src/scss",
+      "js": "src/js"
+    },
+    "dist": {
+      "css": "assets/css",
+      "js": "assets/js",
+      "images": "assets/images"
+    },
+    "php": {
+      "templates": "template-parts",
+      "main": "front-page.php"
+    },
+    "docs": "docs",
+    "scripts": "scripts",
+    "backups": "backups"
+  },
+  "commands": {
+    "development": [
+      "npm run dev",
+      "npm run vite-only",
+      "npm run dev-fast",
+      "npm run dev-full"
+    ],
+    "building": [
+      "npm run build",
+      "npm run zip"
+    ],
+    "monitoring": [
+      "npm run performance",
+      "npm run health",
+      "npm run check"
+    ],
+    "utilities": [
+      "npm run clean",
+      "npm run backup",
+      "npm run layout-presets"
+    ]
+  },
+  "features": {
+    "hotReload": true,
+    "autoBackup": true,
+    "performanceMonitoring": true,
+    "notifications": true,
+    "layoutGenerator": true,
+    "imageOptimization": true,
+    "phpAutomation": true,
+    "mobileSync": true
+  }
+} 
