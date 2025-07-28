@@ -127,6 +127,8 @@
         }
       }
       @media (width <= 68.75em) {
+        display: flex;
+        justify-content: space-between;
         .btn_nav {
           cursor: pointer;
           display: flex;
