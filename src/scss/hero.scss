@@ -182,6 +182,12 @@
 @media (width <= 43.75em) {
   flex-direction: column;
   align-items: center;
+  row-gap: 2.75rem;
+  &.right {
+    max-width: 25rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
     }
   }
