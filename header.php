@@ -66,7 +66,7 @@
             ]);
             ?>
 
-
+            <?php get_template_part('template-parts/buttons/sponsor-button'); ?>
           </div>
           <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="logo"></a>
           <div class="header-buttons">
