@@ -4,7 +4,10 @@
 .header {
   background: #fff;
   .container {
-    
+    .header-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
