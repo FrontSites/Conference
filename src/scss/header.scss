@@ -6,6 +6,7 @@
 
   .container {
     .header-block {
+      column-gap: 0.9375rem;
       display: grid;
       align-items: center;
       grid-template-columns: 0.1fr 0.65fr 0.3fr 0.7fr;
@@ -62,7 +63,7 @@
       }
 
       .header-wrapper {
-        margin-left: 1.625rem;
+        @include vw(margin-left, 26,15,26);
         ul {
           @include vw(column-gap,30,15,30 );
           display: flex;
