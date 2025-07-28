@@ -253,12 +253,16 @@
             margin: 0 auto;
             margin-bottom: 2.875rem;
             ul {
+              column-gap: 1.25rem;
               height: 100%;
               li {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100%;
+                a {
+                  height: 100%;
+                }
               }
             }
           }
