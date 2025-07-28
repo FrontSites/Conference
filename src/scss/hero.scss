@@ -17,7 +17,7 @@
       display: flex;
       justify-content: flex-end;
 
-      .hero-items {
+      .hero-item {
         &.left {
           h1 {
             strong {
@@ -37,7 +37,7 @@
                 height: 8.5625rem;
                 border-radius: 0.3125rem;
                 background: #F7E405;
-                z-index: 0;
+                z-index: -1;
               }
             }
           }
