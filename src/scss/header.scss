@@ -87,6 +87,8 @@
                 width: 0%;
                 height: 2px;
                 transform-origin: left;
+                transform: scaleX(0);
+            }
                 background: #222649;
                 transition: 0.3s ease;
               }
