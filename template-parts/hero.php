@@ -3,6 +3,7 @@
      <div class="hero-items">
        <div class="hero-item left">
          <?php the_field("hero-title"); ?>
+
        </div>
        <a href="/#rent" class="hero-item right">
          <div class="hero-image">
@@ -28,8 +29,12 @@
        </a>
      </div>
      <div class="hero-bottom">
-       <?php the_field("hero-bottom-text"); ?>
-       <?php the_field("hero-list"); ?>
+       <div class="hero-item__text">
+         <?php the_field("hero-bottom-text"); ?>
+       </div>
+       <div class="hero-list">
+         <?php the_field("hero-list"); ?>
+       </div>
 
      </div>
    </div>
