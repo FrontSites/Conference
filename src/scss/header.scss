@@ -155,7 +155,11 @@
           order: 4;
         }
         .header-wrapper {
+          display: none;
           order: 3;
+        }
+        .header-buttons {
+          order: 2;
         }
       }
     }
