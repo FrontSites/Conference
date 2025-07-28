@@ -224,6 +224,7 @@
             align-items: center;
             flex-direction: column;
             .hero-item__text {
+              margin-top: 3.1875rem;
               display: flex;
               align-self: flex-start;
               font-size: 1.125rem;
@@ -237,7 +238,7 @@
                 display: flex;
                 font-size: 1.125rem;
                 align-items: center;
-                column-gap: 0.9375rem;
+                column-gap: 0.1875rem;
                 img {
                   width: 1.3125rem;
                   height: 2.3125rem;
