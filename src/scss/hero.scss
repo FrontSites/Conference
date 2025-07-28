@@ -112,6 +112,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0.625rem;
+            border-radius: 50%;
+            background: #fff;
+            .cirlce-button { 
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              height: 100%;
+            }
           }
         }
       }
