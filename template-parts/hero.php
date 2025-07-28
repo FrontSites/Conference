@@ -6,6 +6,12 @@
            <?php the_field("hero-title"); ?>
          </div>
        </div>
+       <div class="hero-item.right">
+         <div class="hero-image">
+           <?php the_field("hero-image"); ?>
+         </div>
+         .button
+       </div>
      </div>
    </div>
 
