@@ -21,7 +21,8 @@
  */
 function my_theme_enqueue_assets()
 {
-    if (is_admin() || in_array($GLOBALS['pagenow'], ['wp-login.php'])) {
+    // Блокируем загрузку только на админских страницах
+    if (is_admin()) {
         return;
     }
 
