@@ -5,6 +5,9 @@
   background: #fff;
   .container {
     .header-block {
+      .btn_nav {
+        display: none;
+      }
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
