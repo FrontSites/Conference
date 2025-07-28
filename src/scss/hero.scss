@@ -259,16 +259,14 @@
           display: flex;
           align-items: center;
           column-gap: 0.9375rem;
+          column-gap: 1.875rem;
 
           li {
             list-style: disc;
-            padding: 7px 20px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 5px;
+            padding: 0.4375rem 1.25rem;
+            border-radius: 0.3125rem;
             background: rgba(245, 245, 245, 0.50);
-            backdrop-filter: blur(25px);
+            backdrop-filter: blur(1.5625rem);
 
             &::marker {
               color: #FF29AE;
