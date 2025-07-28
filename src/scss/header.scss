@@ -97,6 +97,12 @@
                     left: 0;
                   }
                 }
+                &:not(:hover) {
+                  &::after { 
+                    width: 0;
+                    left: 100%;
+                  }
+                }
               }
             }
           }
