@@ -37,7 +37,7 @@
             ]);
             ?>
           </div>
-          <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="logo"></a>
+
           <div class="header-wrapper">
 
             <?php wp_nav_menu([
