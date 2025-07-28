@@ -42,7 +42,14 @@ function my_theme_enqueue_assets()
 
     // === Scripts ===
     $js_main = '/assets/js/main.min.js';
-    wp_enqueue_script('main-min', get_template_directory_uri() . $js_main, ['jquery'], filemtime(get_template_directory() . $js_main), true);
+    $js_path = get_template_directory() . $js_main;
+    
+    // Проверяем существование файла
+    if (!file_exists($js_path)) {
+        error_log('JS file not found: ' . $js_path);
+    }
+    
+    wp_enqueue_script('main-min', get_template_directory_uri() . $js_main, ['jquery'], filemtime($js_path), true);
 
     // Library
     wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/library/swiper/swiper-bundle.min.js', ['jquery'], null, true);
