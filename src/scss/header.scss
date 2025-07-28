@@ -16,6 +16,8 @@
       }
 
       .languages-menu {
+        display: flex;
+        align-items: center;
         border-radius: 0.3125rem;
         padding: 0.9375rem 0.625rem;
         background: #F7F7F7;
