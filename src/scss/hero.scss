@@ -198,6 +198,9 @@
             width: 100%;
             margin: 0 auto;
             flex: auto;
+            .hero-item__text { 
+              display: none;
+            }
 
             .hero-image {
               img {
@@ -217,6 +220,9 @@
           }
 
           &.left {
+            .hero-item__text {
+              display: flex;
+            }
             h1 {
               strong {
                 transform: rotate(-3.821deg) translateY(-0.4375rem);
