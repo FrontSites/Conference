@@ -87,15 +87,15 @@
                 left: 0;
                 width: 100%;
                 height: 2px;
-                transform-origin: left;
+                transform-origin: right;
                 transform: scaleX(0);
                 background: #222649;
-                transition: 0.3s ease;
+                transition: transform .3s ease-in-out;
               }
               @media (hover:hover) {
                 &:hover {
                   &::after { 
-                    transform-origin: right;
+                    transform-origin: left;
                   transform: scaleX(1);
                   }
                 }
