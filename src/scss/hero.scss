@@ -252,7 +252,7 @@
         row-gap: 1.875rem;
 
         p {
-          @include vw(column-gap, 24, 15, 24);
+          @include vw(font-size, 24, 15, 24);
           text-transform: uppercase;
         }
 
