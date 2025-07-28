@@ -47,11 +47,10 @@
                 content: "";
                 position: absolute;
                 top: 0;
-                left: -1.25rem;
+                right: -3.125rem;
                 width: 35.4375rem;
-                height: 12.5rem;
+                height: 200px;
                 background:url(../../assets/images/back-full.webp) no-repeat center/100%;
-                filter: blur(3.125rem);
                 z-index: -2;
               }
             }
