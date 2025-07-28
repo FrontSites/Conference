@@ -3,8 +3,16 @@
 
 .hero {
   background: #fff;
-  color: 2
+  color:#222649;
+  
   .container {
+    .hero-items {
+      display: flex;
+      
+      .hero-item.left {
+        flex: 1 1 50%;
+      }
+    }
   }
 }
 
