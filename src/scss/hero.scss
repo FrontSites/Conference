@@ -32,9 +32,9 @@
               &:before {
                 content: "";
                 position: absolute;
-                top: -0.9375rem;
+              
                 padding: 0.4375rem 0.9375rem;
-                left: -0.625rem;
+               
                 max-width: 524px;
                 width: 100%;
                 @include vw(width,524,277,524 );
@@ -48,8 +48,6 @@
                 content: "";
                 position: absolute;
                 transform: rotate(-6.175deg);
-                top: 20px;
-                left: 0.9375rem;
                 @include vw(width, 555,277,555);
                 @include vw(height, 137,80,137);
                 background: #EAD800;
