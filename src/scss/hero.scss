@@ -2,6 +2,10 @@
 @use "./mixins" as *;
 
 .hero {
+  @include vw(padding-left, 150,);
+  @include vw(padding-right, );
+  @include vw(padding-top, );
+  @include vw(padding-bottom, );
   background: #fff;
   color:#222649;
   
