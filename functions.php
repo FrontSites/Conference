@@ -256,13 +256,11 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 // add_action( 'init', 'create_postType' );
 
 register_nav_menus([
-    'header-menu' => (' (header-menu)'),
+    'main-menu' => (' (main-menu)'),
 ]);
 
 
-register_nav_menus([
-    'footer-site-menu' => (' (footer-site-menu)'),
-]);
+
 
 
 
