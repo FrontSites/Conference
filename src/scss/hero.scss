@@ -32,15 +32,15 @@
               &:before {
                 content: "";
                 position: absolute;
-              
+
                 padding: 0.4375rem 0.9375rem;
-               
+
                 max-width: 524px;
                 width: 100%;
-                @include vw(width,524,277,524 );
-                @include vw(height, 137,80,137);
+                @include vw(width, 524, 277, 524);
+                @include vw(height, 137, 80, 137);
                 border-radius: 0.3125rem;
-                background:  #F7E405 ;
+                background: #F7E405;
                 z-index: -1;
               }
 
@@ -50,8 +50,8 @@
                 transform: rotate(-6.175deg);
                 top: 20px;
                 left: 0.9375rem;
-                @include vw(width, 555,277,555);
-                @include vw(height, 137,80,137);
+                @include vw(width, 555, 277, 555);
+                @include vw(height, 137, 80, 137);
                 background: #EAD800;
                 filter: blur(1.875rem);
                 z-index: -2;
@@ -134,19 +134,26 @@
               background: #FF29AE;
               height: 100%;
               transition: all 0.3s ease;
+
               svg {
                 transition: transform, all 0.3s ease;
               }
             }
-            @media (width <= 62em) {
-              
+
+            @media (width <=62em) {
+              .circle-button__wrap {
+                bottom: 1.875rem;
+                right: 1.875rem;
+              }
             }
           }
+
           @media (hover:hover) {
             &:hover {
               .circle-button__wrap {
                 .circle-button {
                   background: #222649;
+
                   svg {
                     transform: translate(-0.75rem, -0.75rem);
                   }
