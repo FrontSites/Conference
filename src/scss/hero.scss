@@ -200,6 +200,13 @@
         right: 3.2rem;
       }
     }
+    &.left {
+      h1 {
+        strong {
+          transform: rotate(-3.821deg) translateY(-0.4375rem);
+        }
+      }
+    }
   }
   
 }
