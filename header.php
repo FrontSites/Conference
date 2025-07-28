@@ -27,6 +27,16 @@
     <header class="header">
       <div class="container">
         <div class="header-block">
+          <div class="languages-menu">
+            <?php wp_nav_menu([
+              'theme_location' => 'header-menu',
+
+              'container'       => false,
+              'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              'menu_class'     => 'header-menu', // navbar-2nd_level
+            ]);
+            ?>
+          </div>
           <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="logo"></a>
           <div class="header-wrapper">
 
@@ -53,5 +63,3 @@
       </div>
 
     </header>
-
-    
