@@ -46,11 +46,8 @@
               &:after {
                 content: "";
                 position: absolute;
-                transform: rotate(-6.175deg);
-                top: 5px;
-                padding: 0.4375rem 0.9375rem;
-                left: 0.9375rem;
-                
+                top: 0;
+                left: 0;
                 width: 37.5rem;
                 height: 244px;
                 background: url(../../assets/images/back-2.webp)  no-repeat left top/100%;
