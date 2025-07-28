@@ -44,6 +44,21 @@
 
     background: #ff29a3;
     color: #fff;
+    @media (hover:hover) {
+      &:hover {
+        background: #790547;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
+
+    @media (hover:active) {
+      &:active {
+        background: #790547;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
   }
 
 }
