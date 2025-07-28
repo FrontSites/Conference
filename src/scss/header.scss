@@ -118,6 +118,8 @@
       }
       .logo {
         flex: none;
+        
+
       }
       .header-buttons { 
         display: flex;
@@ -191,11 +193,6 @@
       @media (width <= 37.5em) {
         .languages-menu { 
           display: none;
-        }
-        .logo {
-          max-width: 8rem;
-          width: 100%;
-          transform: translateY(0.125rem);
         }
       }
     }
