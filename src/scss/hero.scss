@@ -70,9 +70,15 @@
             
           }
           .hero-location {
+            position: absolute;
+            top: 1.4375rem;
+            right: 1.25rem;
             display: flex;
             align-items: center;
-            
+            @include vw(font-size, 20,15,20);
+            column-gap: 0.625rem;
+            z-index: 1;
+
           }
         }
       }
