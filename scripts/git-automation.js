@@ -245,9 +245,34 @@ backups/
         return;
       }
 
-      console.log(`🔄 Автокоммит v${this.version}...`);
+      console.log(`🔄 Подготовка к автокоммиту v${this.version}...`);
       
-      // Добавляем все изменения
+      // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
+      console.log('⚙️ Компиляция файлов...');
+      try {
+        await execAsync('npm run build');
+        console.log('✅ Компиляция завершена');
+      } catch (buildError) {
+        console.error('❌ Ошибка компиляции:', buildError.message);
+        console.log('⚠️ Коммит отменён из-за ошибки компиляции');
+        return;
+      }
+      
+      // 2. Проверяем что компиляция прошла успешно
+      try {
+        await fs.access('assets/css/main.min.css');
+        await fs.access('assets/js/main.min.js');
+        console.log('✅ Скомпилированные файлы найдены');
+      } catch (fileError) {
+        console.error('❌ Скомпилированные файлы не найдены');
+        console.log('⚠️ Коммит отменён');
+        return;
+      }
+      
+      // 3. ТЕПЕРЬ ДЕЛАЕМ КОММИТ
+      console.log(`📝 Создание коммита v${this.version}...`);
+      
+      // Добавляем все изменения (включая скомпилированные файлы)
       await execAsync('git add .');
       
       // Создаём коммит с версией
@@ -277,7 +302,7 @@ backups/
   generateCommitMessage(changedFiles) {
     const fileTypes = this.analyzeChangedFiles(changedFiles);
     
-    let message = `🔄 Auto-commit v${this.version}`;
+    let message = `🚀 Build & Commit v${this.version}`;
     
     if (fileTypes.length > 0) {
       message += ` - ${fileTypes.join(', ')}`;
@@ -369,8 +394,34 @@ backups/
     }
 
     try {
+      console.log('🔄 Подготовка к ручному коммиту...');
+      
+      // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
+      console.log('⚙️ Компиляция файлов...');
+      try {
+        await execAsync('npm run build');
+        console.log('✅ Компиляция завершена');
+      } catch (buildError) {
+        console.error('❌ Ошибка компиляции:', buildError.message);
+        console.log('⚠️ Коммит отменён из-за ошибки компиляции');
+        return;
+      }
+      
+      // 2. Проверяем что компиляция прошла успешно
+      try {
+        await fs.access('assets/css/main.min.css');
+        await fs.access('assets/js/main.min.js');
+        console.log('✅ Скомпилированные файлы найдены');
+      } catch (fileError) {
+        console.error('❌ Скомпилированные файлы не найдены');
+        console.log('⚠️ Коммит отменён');
+        return;
+      }
+      
+      // 3. ТЕПЕРЬ ДЕЛАЕМ КОММИТ
       const commitMessage = message || `🔄 Manual commit v${this.version}`;
       
+      console.log('📝 Создание коммита...');
       await execAsync('git add .');
       await execAsync(`git commit -m "${commitMessage}"`);
       

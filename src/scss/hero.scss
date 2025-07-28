@@ -248,10 +248,13 @@
       }
 
       .hero-list {
+        @include vw(margin-top, 60,44,60);
         flex-direction: column;
         row-gap: 1.875rem;
+        
 
         p {
+          margin-bottom: 1.875rem;
           @include vw(font-size, 24, 15, 24);
           text-transform: uppercase;
         }
