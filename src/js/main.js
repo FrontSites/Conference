@@ -47,4 +47,7 @@ function initMenu() {
       setupMobileMenuHandlers();
     });
   }
+  
+  // Вызываем функцию инициализации мобильного меню
+  initMobileMenu();
 } 
