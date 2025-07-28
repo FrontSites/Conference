@@ -83,8 +83,9 @@
       }
       .header-buttons { 
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-self: flex-end;
+        @include vw(column-gap, 45,20,45);
       }
     }
   }
