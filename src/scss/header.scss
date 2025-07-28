@@ -78,7 +78,14 @@
           }
         }
       }
-
+      .logo {
+        flex: none;
+      }
+      .header-buttons { 
+        display: flex;
+        align-items: center;
+        justify-self: flex-end;
+      }
     }
   }
 }
