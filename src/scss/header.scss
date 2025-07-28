@@ -3,7 +3,8 @@
 
 .header {
   position: fixed;
-  top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   width: 100%;
 
   
@@ -216,8 +217,10 @@
             }
           }
           .main-button {
+           
             &._border {
               display: flex;
+              margin-top: 2.375rem;
             }
           }
         
