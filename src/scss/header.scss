@@ -89,6 +89,14 @@
                 background: #222649;
                 transition: 0.3s ease;
               }
+              @media (hover:hover) {
+                &:hover {
+                  &::after { 
+                    width: 100%;
+                    transform-origin: right;
+                  }
+                }
+              }
             }
           }
         }
