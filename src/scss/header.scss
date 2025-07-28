@@ -6,12 +6,17 @@
 
   .container {
     .header-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       .btn_nav {
         display: none;
       }
+      .languages-menu {
+        display: flex;
+        column-gap: 0.625rem;
+      }
 
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+     
     }
   }
 }
