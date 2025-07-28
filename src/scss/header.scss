@@ -70,34 +70,36 @@
 
           li {
             a {
-              position: relative;
+              overflow: hidden;
+              @include vw(padding-top, 38, 20, 38);
+              @include vw(padding-bottom, 38, 20, 38);
               color: #222649;
               font-size: 0.9375rem;
               font-weight: 400;
               line-height: 120%;
               letter-spacing: 0.0469rem;
-              overflow: hidden;
-              @include vw(padding-top, 38, 20, 38);
-              @include vw(padding-bottom, 38, 20, 38);
-            
+              position: relative;
               &::after {
+                display: block;
                 content: "";
                 position: absolute;
-                @include vw(padding-bottom, 34, 20, 34); // или @include vw(bottom, 34, 20, 34); если нужен адаптив
-                left: -100%;
+                @include vw(bottom, 34, 20, 34);
+                left: 0;
                 width: 100%;
                 height: 2px;
                 background: #222649;
-                transition: left 0.3s ease;
+                transition: 0.3s ease;
               }
-            
-              @media (hover: hover) {
-                &:hover::after {
-                  left: 0;
+              @media (hover:hover) {
+                &:hover {
+                  &::after { 
+                    left: 0;
+                  }
                 }
-            
-                &:not(:hover)::after {
-                  left: 100%;
+                &:not(:hover) {
+                  &::after { 
+                    left: 100%;
+                  }
                 }
               }
             }
