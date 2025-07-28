@@ -12,6 +12,11 @@
   font-size: 0.9375rem;
   line-height: 120%;
   text-align: center;
+ 
+  &._border {
+    background: transparent;
+    border: 1px solid #222649;
+  }
   &.bg-pink {
     svg {
       display: none;
@@ -19,10 +24,5 @@
     background: #ff29a3;
     color: #fff;
   }
-  &._border {
-    background: transparent;
-    border: 1px solid #222649;
-  }
-  
 
 }
