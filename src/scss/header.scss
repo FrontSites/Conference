@@ -120,12 +120,18 @@
       .logo {
         flex: none;
       }
-      .header-buttons { 
-        display: flex;
-        align-items: stretch;
-        justify-self: flex-end;
-        @include vw(column-gap, 45,20,45);
-      }
+              .header-buttons { 
+          display: flex;
+          align-items: stretch;
+          justify-self: flex-end;
+          @include vw(column-gap, 45,20,45);
+          
+          .main-button {
+            &._border { 
+              display: flex;
+            }
+          }
+        }
       @media (width <= 72.5em) {
         grid-template-columns: 0.1fr 0.4fr 0.3fr 0.7fr;
         .header-wrapper {
