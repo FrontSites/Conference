@@ -259,6 +259,10 @@ register_nav_menus([
     'main-menu' => (' (main-menu)'),
 ]);
 
+register_nav_menus([
+    'languages-menu' => (' (languages-menu)'),
+]);
+
 
 
 
