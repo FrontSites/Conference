@@ -99,7 +99,7 @@
                 }
                 &:not(:hover) {
                   &::after { 
-                    width: 0;
+                    width: 100%;
                     left: 100%;
                   }
                 }
