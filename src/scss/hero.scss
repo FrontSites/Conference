@@ -220,9 +220,10 @@
           }
 
           &.left {
+            align-items: center;
+            flex-direction: column;
             .hero-item__text {
-        
-
+              display: flex;
               font-size: 1.125rem;
               font-style: normal;
               font-weight: 400;
