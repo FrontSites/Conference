@@ -42,7 +42,7 @@
 
               'container'       => false,
               'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'menu_class'     => 'languages-menu', // navbar-2nd_level
+              'menu_class'     => 'language-menu', // navbar-2nd_level
             ]);
             ?>
           </div>

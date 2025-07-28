@@ -14,7 +14,7 @@
       }
       .languages-menu {
         padding: 0.9375rem 1.25rem;
-        max-width: 5.75rem;
+        max-width: 7.5rem;
         width: 100%;
         background: #F7F7F7;
         img {
@@ -25,6 +25,10 @@
         align-items: center;
         column-gap: 0.625rem;
         ul {
+          display: flex;
+          align-items: center;
+          padding: 0rem;
+          background: transparent;
           column-gap: 0.3125rem;
           li {
 
