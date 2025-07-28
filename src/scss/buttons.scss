@@ -16,6 +16,21 @@
   &._border {
     background: transparent;
     border: 1px solid #222649;
+    @media (hover:hover) {
+     &:hover {
+      background: #222649;
+      color: #fff;
+      border-color: transparent;
+     }
+    } 
+
+    @media (hover:active) {
+      &:active {
+       background: #222649;
+       color: #fff;
+       border-color: transparent;
+      }
+     } 
   }
   &.ticket {
     svg {
