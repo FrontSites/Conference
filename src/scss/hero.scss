@@ -102,10 +102,13 @@
               letter-spacing: 0.075rem;
 
               strong {
-                transform: translateY(0.625rem);
+                transform: translateY(-10px);
                 font-size: 3rem;
                 font-style: normal;
                 font-weight: 700;
+                @media (width <= 62em) {
+                  transform: translateY(0.625rem);
+                }
               }
             }
 
