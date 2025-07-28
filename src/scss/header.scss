@@ -86,7 +86,7 @@
                 left: 0;
                 width: 0%;
                 height: 2px;
-                transform-origin: left;
+                transform-origin: right;
                 transform: scaleX(0);
             }
                 background: #222649;
@@ -95,8 +95,8 @@
               @media (hover:hover) {
                 &:hover {
                   &::after { 
-                    width: 100%;
-                    transform-origin: right;
+                    transform-origin: left;
+                    transform: scaleX(1);
                   }
                 }
               }
