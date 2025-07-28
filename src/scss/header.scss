@@ -119,6 +119,9 @@
       }
       @media (width <= 72.5em) {
         grid-template-columns: 0.1fr 0.4fr 0.3fr 0.7fr;
+        .header-wrapper {
+          margin-left: 0rem;
+        }
       }
     }
   }
