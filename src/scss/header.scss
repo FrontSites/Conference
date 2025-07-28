@@ -67,6 +67,15 @@
       }
 
       .header-wrapper {
+        .language-menu { 
+          display: none
+        }
+        .main-button {
+          &._border { 
+            display: none;
+          }
+        }
+        
         @include vw(margin-left, 26,15,26);
         ul {
           @include vw(column-gap,30,15,30 );
