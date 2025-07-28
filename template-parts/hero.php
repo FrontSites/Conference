@@ -4,7 +4,7 @@
        <div class="hero-item left">
          <?php the_field("hero-title"); ?>
        </div>
-       <div class="hero-item right">
+       <a href="/#rent" class="hero-item right">
          <div class="hero-image">
            <img src="<?php the_field("hero-image"); ?>" alt="">
          </div>
@@ -25,7 +25,7 @@
          <div class="hero-time">
            <?php the_field("hero-time"); ?>
          </div>
-       </div>
+       </a>
      </div>
      <div class="hero-bottom">
        <?php the_field("hero-bottom-text"); ?>
