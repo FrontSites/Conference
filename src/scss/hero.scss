@@ -20,6 +20,7 @@
       .hero-item {
         &.left {
           h1 {
+            position: relative;
             strong {
               display: flex;
               justify-content: center;
@@ -27,7 +28,7 @@
               text-align: center;
               transform: rotate(-3.821deg) translateY(-1.5rem);
               font-weight: 400;
-              position: relative;
+              
 
               &:before {
                 content: "";
