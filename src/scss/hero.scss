@@ -133,7 +133,7 @@
               height: 100%;
               transition: all 0.3s ease;
               svg {
-                transition: all 0.3s ease;
+                transition: transform, all 0.3s ease;
               }
             }
           }
@@ -143,7 +143,7 @@
                 .circle-button {
                   background: #222649;
                   svg {
-                    transform: translate(0.75rem, -0.75rem);
+                    transform: translate(-0.75rem, -0.75rem);
                   }
                 }
               }
