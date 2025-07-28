@@ -27,6 +27,13 @@
     <header class="header">
       <div class="container">
         <div class="header-block">
+          <div class="btn_nav">
+            <div class="burger">
+              <div class="line top"></div>
+              <div class="line middle"></div>
+              <div class="line bottom"></div>
+            </div>
+          </div>
           <div class="languages-menu">
             <?php wp_nav_menu([
               'theme_location' => 'languages-menu',
@@ -37,7 +44,6 @@
             ]);
             ?>
           </div>
-
           <div class="header-wrapper">
 
             <?php wp_nav_menu([
@@ -49,14 +55,13 @@
             ]);
             ?>
           </div>
-
-          <div class="btn_nav">
-            <div class="burger">
-              <div class="line top"></div>
-              <div class="line middle"></div>
-              <div class="line bottom"></div>
-            </div>
+          <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.svg" alt="logo"></a>
+          <div class="header-buttons">
+            <?php get_template_part('template-parts/buttons/ticket-button'); ?>
+            <?php get_template_part('template-parts/buttons/sponsor-button'); ?>
           </div>
+
+
         </div>
 
 
