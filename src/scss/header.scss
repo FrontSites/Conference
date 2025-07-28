@@ -158,6 +158,8 @@
         display: flex;
         justify-content: space-between;
         .btn_nav {
+          position: relative;
+          z-index: 3;
           cursor: pointer;
           display: flex;
           justify-content: center;
@@ -179,9 +181,13 @@
           }
         }
         .logo {
+          position: relative;
+          z-index: 3;
           order: 1;
         }
         .languages-menu {  
+          position: relative;
+          z-index: 3;
           order: 4;
         }
         .header-wrapper {
@@ -199,6 +205,8 @@
         
         }
         .header-buttons {
+          position: relative;
+          z-index: 3;
           flex: 1 1 100%;
           justify-content: flex-end;
           order: 2;
