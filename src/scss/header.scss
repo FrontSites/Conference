@@ -7,11 +7,13 @@
   .container {
     .header-block {
       display: grid;
+      align-items: center;
       grid-template-columns: repeat(4, 1fr);
       .btn_nav {
         display: none;
       }
       .languages-menu {
+        padding: 0.9375rem 1.25rem;
         max-width: 5.75rem;
         width: 100%;
         background: #F7F7F7;
