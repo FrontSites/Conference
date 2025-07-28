@@ -10,6 +10,8 @@
   .container {
     margin-left: auto;
     .hero-items {
+      max-width: 68.375rem;
+      margin-left: auto;
       @include vw(column-gap, 172,30,172);
       display: flex;
       justify-content: flex-end;
