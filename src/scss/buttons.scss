@@ -20,6 +20,13 @@
     border: 1px solid #222649;
     color: #222649;
 
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
     @media (hover:hover) {
       &:hover {
         background: #222649;
