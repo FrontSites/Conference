@@ -212,49 +212,6 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 }
 
 
-
-
-// Custom post type function
-// function create_postType() {
-// 	register_post_type(
-// 		'services',
-// 		// CPT Options
-// 		array(
-// 			'labels'          => array(
-// 				'name'          => __( 'Services' ),
-// 				'singular_name' => __( 'Services' ),
-// 			),
-// 			'public'          => true,
-// 			'has_archive'     => false,
-// 			'rewrite' => ['slug' => 'services', 'with_front' => false], // ❗️важно: with_front = false
-// 			'capability_type' => 'post',
-// 			'show_in_rest'    => true,
-// 			'supports'        => array( 'editor', 'title', 'excerpt', 'thumbnail' ),
-// 			'taxonomies'      => array( 'category' )
-// 		)
-// 	);
-
-// 	register_post_type(
-// 		'Industries',
-// 		// CPT Options
-// 		array(
-// 			'labels'          => array(
-// 				'name'          => __( 'Industries' ),
-// 				'singular_name' => __( 'Industries' ),
-// 			),
-// 			'public'          => true,
-// 			'has_archive'     => false,
-// 			'rewrite'         => array( 'slug' => 'Industries' ),
-// 			'capability_type' => 'post',
-// 			'show_in_rest'    => true,
-// 			'supports'        => array( 'editor', 'title', 'excerpt', 'thumbnail' ),
-//       'taxonomies'      => array( 'category' )
-// 		)
-// 	);
-// }
-// // Hooking up CPT function to theme setup
-// add_action( 'init', 'create_postType' );
-
 register_nav_menus([
     'main-menu' => (' (main-menu)'),
 ]);
@@ -271,15 +228,7 @@ register_nav_menus([
 
 
 
-// Enqueue your script properly in your theme's functions.php file or a custom plugin.
 
-
-
-
-
-// Добавляем функцию для обработки AJAX-запроса
-
-// Добавление раздела "Контакты" в раздел "Настройки" (Customizer)
 function custom_customize_register($wp_customize)
 {
     // Создаем раздел "Контакты"
