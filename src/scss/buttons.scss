@@ -12,30 +12,36 @@
   font-size: 0.9375rem;
   line-height: 120%;
   text-align: center;
- 
+  letter-spacing: 0.0469rem;
+  text-transform: uppercase;
+
   &._border {
     background: transparent;
     border: 1px solid #222649;
+    color: #222649;
+
     @media (hover:hover) {
-     &:hover {
-      background: #222649;
-      color: #fff;
-      border-color: transparent;
-     }
-    } 
+      &:hover {
+        background: #222649;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
 
     @media (hover:active) {
       &:active {
-       background: #222649;
-       color: #fff;
-       border-color: transparent;
+        background: #222649;
+        color: #fff;
+        border-color: transparent;
       }
-     } 
+    }
   }
+
   &.ticket {
     svg {
       display: none;
     }
+
     background: #ff29a3;
     color: #fff;
   }
