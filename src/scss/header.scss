@@ -8,7 +8,7 @@
     .header-block {
       display: grid;
       align-items: center;
-      grid-template-columns: 0.1fr 0.9fr 1fr 1fr;
+      grid-template-columns: 0.1fr 0.9fr 0.3fr 1fr;
 
       .btn_nav {
         display: none;
@@ -82,8 +82,8 @@
         }
       }
       .logo {
-        justify-self: center;
         flex: none;
+        transform: translateX(-1.875rem);
       }
       .header-buttons { 
         display: flex;
