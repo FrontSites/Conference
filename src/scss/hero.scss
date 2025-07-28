@@ -179,7 +179,10 @@
           }
         }
       }
-
+@media (width <= 43.75em) {
+  flex-direction: column;
+  align-items: center;
+}
     }
   }
 }
