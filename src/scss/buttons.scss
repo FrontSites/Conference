@@ -9,7 +9,10 @@
   padding: 0.9375rem 1.25rem;
   border-radius: 0.625rem;
   &.bg-pink {
-
+    background: #ff29a3;
+  }
+  &._border {
+    background: transparent;
   }
   
 
