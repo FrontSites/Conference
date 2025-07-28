@@ -14,7 +14,6 @@
       }
       .languages-menu {
         padding: 0.9375rem 1.25rem;
-        max-width: 7.5rem;
         width: 100%;
         background: #F7F7F7;
         img {
@@ -31,8 +30,12 @@
           background: transparent;
           column-gap: 0.3125rem;
           li {
+            &:first-child {
+              padding-right: 0.75rem;
+              border-right: 1px solid #222649;
+            }
             a {
-              padding: 0.3125rem;
+              padding: 5px 0.5rem;
               border-radius: 0.3125rem;
               transition: 0.3s ease;
             }
