@@ -35,7 +35,6 @@
             </div>
           </div>
           <div class="languages-menu">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/planet.svg" alt="description">
 
             <?php wp_nav_menu([
               'theme_location' => 'languages-menu',
