@@ -15,9 +15,16 @@
       @include vw(column-gap, 172,30,172);
       display: flex;
       justify-content: flex-end;
-      .hero-item.left {
-        flex: 1 1 50%;
+      .hero-items {
+        &.left {
+          flex: 1 1 50%;
+
+        }
+        &.right {
+          flex: 1 1 50%;
+        }
       }
+      
     }
   }
 }
