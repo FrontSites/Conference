@@ -248,8 +248,20 @@
       .hero-list {
         flex-direction: column;
         row-gap: 1.875rem;
+        
         p {
-          
+          @include vw(column-gap, 24,15,24);
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          column-gap: 0.9375rem;
+          li {
+            list-style: disc;
+           ::marker {
+            color: #FF29AE;
+           }
+          }
         }
       }
     }
