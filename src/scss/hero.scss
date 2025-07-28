@@ -10,6 +10,7 @@
   .container {
     margin-left: auto;
     .hero-items {
+      @include vw(column-gap, 172,30,172);
       display: flex;
       justify-content: flex-end;
       .hero-item.left {
