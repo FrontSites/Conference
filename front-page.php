@@ -10,17 +10,4 @@ Template Name: Home
 <?php get_template_part('template-parts/buttons/sponsor-button'); ?>
 <?php get_template_part('template-parts/buttons/speaker-button'); ?>
 <?php get_template_part('template-parts/buttons/button-mediapartner'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <?php get_footer(); ?>
+<?php get_template_part('template-par
