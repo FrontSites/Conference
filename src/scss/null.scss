@@ -4,7 +4,11 @@
 * {
     outline: none !important;
     box-sizing: content-box;
+    @media (width <= 80em) {
+        box-sizing: border-box;
+    }
 }
+
 
 html {
     height: 100%;
