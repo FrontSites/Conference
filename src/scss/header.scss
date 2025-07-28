@@ -204,7 +204,14 @@
             align-items: center;
             li {
               a {
+                display: block;
+                padding-top: 0.625rem;
+                padding-bottom: 0.625rem;
+                
                 text-align: center;
+                &:after {
+                  bottom: 0rem;
+                }
               }
             }
           }
