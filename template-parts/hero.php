@@ -6,7 +6,7 @@
            <?php the_field("hero-title"); ?>
          </div>
        </div>
-       <div class="hero-item.right">
+       <div class="hero-item right">
          <div class="hero-image">
            <img src="<?php the_field("hero-image"); ?>" alt="">
          </div>
