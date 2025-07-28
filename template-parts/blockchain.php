@@ -1,6 +1,6 @@
 <section class="blockchain">
   <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
-  <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain-mobile.svg" alt="">
+  <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-circle.webp" alt="">
   <div class="container">
     <div class="block-chain-block">
       <?php the_field("blockchain-title"); ?>
