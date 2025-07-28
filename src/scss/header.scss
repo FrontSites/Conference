@@ -149,10 +149,13 @@
           }
         }
         .logo {
-          order: 2;
+          order: 1;
         }
         .languages-menu {  
-          order: 1;
+          order: 4;
+        }
+        .header-wrapper {
+          order: 3;
         }
       }
     }
