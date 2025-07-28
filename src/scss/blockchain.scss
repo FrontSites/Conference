@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 .blockchain { 
+  padding-bottom: 150%;
   position: relative;
   .blockchain-bg { 
     position: absolute;
@@ -11,6 +12,7 @@
     height: 100%;
     object-fit: cover;
     max-width: none;
+    z-index: 1;
   }
   .blockchain-circle {
 }
