@@ -30,10 +30,20 @@ function my_theme_enqueue_assets()
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
+    
+    // Добавляем проверку jQuery
+    wp_add_inline_script('jquery', 'console.log("jQuery loaded:", typeof jQuery);');
 
     // === Styles ===
     $css_main = '/assets/css/main.min.css';
-    wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], filemtime(get_template_directory() . $css_main));
+    $css_path = get_template_directory() . $css_main;
+    
+    // Проверяем существование файла
+    if (!file_exists($css_path)) {
+        error_log('CSS file not found: ' . $css_path);
+    }
+    
+    wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], filemtime($css_path));
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
@@ -64,6 +74,9 @@ function my_theme_enqueue_assets()
     wp_localize_script('main-min', 'ajax_object', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
+    
+    // Добавляем тестовый скрипт для проверки
+    wp_add_inline_script('main-min', 'console.log("JS loaded successfully!");');
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_assets');
 
