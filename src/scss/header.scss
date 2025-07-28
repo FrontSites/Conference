@@ -242,14 +242,13 @@
       @media (width <= 37.5em) {
         > .languages-menu { 
           display: none;
-
-          .header-wrapper {
-            .languages-menu {
-              display: flex;
-              max-width: 6.25rem;
-              margin: 0 auto;
-              margin-bottom: 2.875rem;
-            }
+        }
+        .header-wrapper {
+          .languages-menu {
+            display: flex;
+            max-width: 6.25rem;
+            margin: 0 auto;
+            margin-bottom: 2.875rem;
           }
         }
       }
