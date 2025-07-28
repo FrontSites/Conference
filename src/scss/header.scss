@@ -12,8 +12,18 @@
         display: none;
       }
       .languages-menu {
+        img {
+          width: 1.375rem;
+          height: 1.375rem;
+        }
         display: flex;
         column-gap: 0.625rem;
+        ul {
+          column-gap: 0.3125rem;
+          li {
+
+          }
+        }
       }
 
      
