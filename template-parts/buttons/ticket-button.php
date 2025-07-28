@@ -1,4 +1,4 @@
-<a href="#" class="main-button _border bg-pink">
+<a href="#" class="main-button ticket">
   <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect x="0.5" width="22" height="22" fill="url(#pattern0_293_1823)" />
     <defs>
