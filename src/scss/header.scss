@@ -81,7 +81,7 @@
               &::after {
                 content: "";
                 position: absolute;
-                bottom: 0;
+                @include vw(bottom, 34, 20, 34);
                 left: 0;
                 width: 0%;
                 height: 2px;
