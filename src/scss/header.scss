@@ -159,6 +159,9 @@
         .header-wrapper {
           display: none;
           order: 3;
+          &._border {
+            display: none;
+          }
         }
         .header-buttons {
           order: 2;
