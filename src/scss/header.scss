@@ -253,14 +253,19 @@
             margin: 0 auto;
             margin-bottom: 2.875rem;
             ul {
-              column-gap: 1.25rem;
+              justify-content: center;
+              column-gap: 0rem;
               height: 100%;
               li {
+                width: 2.5rem;
+                height: 2.5rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100%;
                 a {
+                  width: 100%;
+                  padding: 0rem;
                   height: 100%;
                 }
               }
