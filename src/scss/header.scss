@@ -49,7 +49,11 @@
           }
         }
       }
-
+      .header-wrapper { 
+        ul {
+          display: flex;
+        }
+      }
      
     }
   }
