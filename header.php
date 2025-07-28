@@ -19,6 +19,14 @@
   echo '<title>' . esc_html($yoast_title) . '</title>';
   ?>
   <?php wp_head(); ?>
+  
+  <!-- Принудительная загрузка скриптов -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.min.js"></script>
+  <script>
+    console.log('Scripts loaded manually');
+    console.log('jQuery version:', typeof jQuery !== 'undefined' ? jQuery.fn.jquery : 'not loaded');
+  </script>
 </head>
 
 <body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" <?php body_class(); ?>>
