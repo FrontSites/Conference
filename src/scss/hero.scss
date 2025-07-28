@@ -21,7 +21,10 @@
         &.left {
           h1 {
             strong {
-              display: block;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
               transform: rotate(-6.175deg);
               font-weight: 400;
               position: relative;
