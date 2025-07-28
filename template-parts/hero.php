@@ -3,7 +3,9 @@
      <div class="hero-items">
        <div class="hero-item left">
          <?php the_field("hero-title"); ?>
-
+         <div class="hero-item__text">
+           <?php the_field("hero-bottom-text"); ?>
+         </div>
        </div>
        <a href="/#rent" class="hero-item right">
          <div class="hero-image">

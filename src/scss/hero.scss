@@ -20,6 +20,9 @@
       .hero-item {
         &.left {
           flex: 0 1 50%;
+          .hero-bottom__text {
+            display: none;
+          }
 
           h1 {
             strong {
