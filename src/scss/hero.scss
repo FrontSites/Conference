@@ -198,9 +198,7 @@
             width: 100%;
             margin: 0 auto;
             flex: auto;
-            .hero-item__text { 
-              display: none;
-            }
+            
 
             .hero-image {
               img {
@@ -315,6 +313,14 @@
 
             }
           }
+        }
+      }
+      @media (width <= 43.75em) {
+        .hero-item__text { 
+          display: none;
+        }
+        .hero-list { 
+          
         }
       }
     }
