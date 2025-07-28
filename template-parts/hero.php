@@ -27,8 +27,8 @@
        </div>
      </div>
      <div class="hero-bottom">
-
        <?php the_field("hero-bottom-text"); ?>
+       <?php the_field("hero-list"); ?>
 
      </div>
    </div>
