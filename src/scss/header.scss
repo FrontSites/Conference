@@ -34,7 +34,7 @@
         column-gap: 0.625rem;
 
         ul {
-         
+
           display: flex;
           align-items: center;
           justify-content: center;
@@ -67,13 +67,14 @@
       }
 
       .header-wrapper {
-        .language-menu { 
+        .language-menu {
           display: none;
         }
+
         .main-button {
-          &._border { 
+          &._border {
             display: none;
-            
+
             svg {
               display: block;
               width: 22px;
@@ -82,10 +83,11 @@
             }
           }
         }
-        
-        @include vw(margin-left, 26,15,26);
+
+        @include vw(margin-left, 26, 15, 26);
+
         ul {
-          @include vw(column-gap,30,15,30 );
+          @include vw(column-gap, 30, 15, 30);
           display: flex;
           align-items: center;
 
@@ -100,6 +102,7 @@
               line-height: 120%;
               letter-spacing: 0.0469rem;
               position: relative;
+
               &::after {
                 content: "";
                 position: absolute;
@@ -112,11 +115,12 @@
                 background: #222649;
                 transition: transform .3s ease-in-out;
               }
+
               @media (hover:hover) {
                 &:hover {
-                  &::after { 
+                  &::after {
                     transform-origin: left;
-                  transform: scaleX(1);
+                    transform: scaleX(1);
                   }
                 }
               }
@@ -124,42 +128,49 @@
           }
         }
       }
+
       .logo {
         flex: none;
       }
-              .header-buttons { 
-          display: flex;
-          align-items: stretch;
-          justify-self: flex-end;
-          @include vw(column-gap, 45,20,45);
-          
-          .main-button {
-            &._border { 
-              display: flex;
-              
-              svg {
-                display: block !important;
-                width: 22px !important;
-                height: 22px !important;
-                flex-shrink: 0 !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-              }
+
+      .header-buttons {
+        display: flex;
+        align-items: stretch;
+        justify-self: flex-end;
+        @include vw(column-gap, 45, 20, 45);
+
+        .main-button {
+          &._border {
+            display: flex;
+
+            svg {
+              display: block !important;
+              width: 22px !important;
+              height: 22px !important;
+              flex-shrink: 0 !important;
+              visibility: visible !important;
+              opacity: 1 !important;
             }
           }
         }
-      @media (width <= 72.5em) {
+      }
+
+      @media (width <=72.5em) {
         grid-template-columns: 0.1fr 0.4fr 0.3fr 0.7fr;
+
         .header-wrapper {
           margin-left: 0rem;
         }
+
         .header-buttons {
           column-gap: 0.9375rem;
         }
       }
-      @media (width <= 68.75em) {
+
+      @media (width <=68.75em) {
         display: flex;
         justify-content: space-between;
+
         .btn_nav {
           cursor: pointer;
           display: flex;
@@ -167,6 +178,7 @@
           align-items: center;
           max-width: 1.875rem;
           width: 100%;
+
           .burger {
             width: 100%;
             display: flex;
@@ -174,6 +186,7 @@
             row-gap: 0.1875rem;
             align-items: center;
             justify-content: center;
+
             .line {
               height: 0.1875rem;
               background: #000;
@@ -181,21 +194,26 @@
             }
           }
         }
+
         .logo {
           order: 1;
         }
-        .languages-menu {  
+
+        .languages-menu {
           order: 4;
         }
+
         .header-wrapper {
           display: none;
           order: 3;
-        
+
         }
+
         .header-buttons {
           flex: 1 1 100%;
           justify-content: flex-end;
           order: 2;
+
           .main-button {
             &._border {
               display: none;
