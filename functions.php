@@ -21,12 +21,17 @@
  */
 function my_theme_enqueue_assets()
 {
+    // Добавляем отладочную информацию
+    error_log('my_theme_enqueue_assets called');
+    
     // Блокируем загрузку только на админских страницах
     if (is_admin()) {
+        error_log('Admin page detected, skipping asset loading');
         return;
     }
 
     // === jQuery ===
+    error_log('Loading jQuery...');
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
@@ -51,12 +56,15 @@ function my_theme_enqueue_assets()
     wp_enqueue_style('intel-tel-css', get_template_directory_uri() . '/assets/library/intel-input/intlTelInput.min.css');
 
     // === Scripts ===
+    error_log('Loading main JS...');
     $js_main = '/assets/js/main.min.js';
     $js_path = get_template_directory() . $js_main;
     
     // Проверяем существование файла
     if (!file_exists($js_path)) {
         error_log('JS file not found: ' . $js_path);
+    } else {
+        error_log('JS file found: ' . $js_path);
     }
     
     wp_enqueue_script('main-min', get_template_directory_uri() . $js_main, ['jquery'], filemtime($js_path), true);
