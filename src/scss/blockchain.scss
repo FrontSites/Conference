@@ -11,6 +11,13 @@
    
   }
   .blockchain-circle {
-    
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 100%;
+    object-fit: cover;
+    max-width: none;
+    height: 44.0625rem;
+    z-index: 1;
 }
 }
