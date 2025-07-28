@@ -64,7 +64,7 @@
       .header-wrapper {
         margin-left: 1.625rem;
         ul {
-          column-gap: 1.875rem;
+          @include vw(column-gap,30,15,30 );
           display: flex;
           align-items: center;
 
