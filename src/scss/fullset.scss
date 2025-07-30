@@ -227,7 +227,7 @@
 }
 @media (width <= 37.5em) {
   .fullset-circle {
-    
+    position: static;
     transform: none;
     top: 20%;
     
@@ -240,7 +240,7 @@
     }
   }
   .fullset-item { 
-    flex: 1 1 45%;
+    flex: 1 1 100%;
     position: relative;
     z-index: 2;
     p {
