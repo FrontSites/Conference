@@ -42,6 +42,7 @@
       h2 {
         font-family: "Bebas Neue Cyrillic", sans-serif;
         margin-bottom: 1.25rem;
+        letter-spacing: 0.2rem;
       }
 
       .block-chain-block__list {
@@ -60,6 +61,7 @@
             align-items: center;
             column-gap: 0.625rem;
             position: relative;
+            letter-spacing: 0.0625rem;
             padding: 0.4375rem 1.25rem;
             @include vw(font-size, 20, 15, 20);
             border-radius: 0.3125rem;
