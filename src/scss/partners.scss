@@ -1,0 +1,21 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.partners {
+  .container {
+    h2 {
+      flex-shrink: 0;
+      color: #FFF;
+      text-align: center;
+      font-family: 'Manrope';
+      @include vw(font-size, 48, 30, 48);
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.15rem;
+      text-transform: uppercase;
+    }
+    p {
+      
+    }
+  }
+}
