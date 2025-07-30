@@ -286,6 +286,7 @@
     transform: none;
     &:before {
       display: none;
+      align-items: center;
     }
 }
 &:nth-last-of-type(1) {
@@ -293,6 +294,7 @@
   transform: none;
   &:before {
     display: none;
+    align-items: center;
   }
 }
 }
