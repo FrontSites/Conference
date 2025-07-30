@@ -20,7 +20,6 @@ html {
 body {
     font-family: "Manrope", sans-serif;
     overflow-x: hidden;
-    background: #222649;
     margin: 0;
     font-weight: 400;
     color: #fff;
@@ -122,5 +121,11 @@ body {
     p {
         padding: 0;
         margin: 0;
+    }
+    .main-content { 
+        background: #222649;
+        border-top-right-radius: 1.5625rem;
+        border-top-left-radius: 1.5625rem;
+
     }
 }
