@@ -229,7 +229,7 @@
   .fullset-circle {
     
     transform: none;
-    top: 4.6875rem;
+    top: 75px;
     left: auto;
     img {
       max-width: none;
@@ -259,6 +259,7 @@
       &:before {
         display: none;
       }
+      align-items: center;
       h3 {
         text-align: center;
       }
@@ -271,6 +272,7 @@
       &:before {
         display: none;
       }
+      align-items: center;
       h3 {
         text-align: center;
       }
