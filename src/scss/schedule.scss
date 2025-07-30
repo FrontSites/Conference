@@ -42,6 +42,7 @@
       }
 
       h2 {
+        font-weight: 700;
         @include vw(font-size, 48, 35, 48);
         position: relative;
         z-index: 2;
@@ -51,6 +52,7 @@
           border-radius: 0.3125rem;
           background: #F7E405;
           color: #222649;
+          transform: rotate(-3.821deg);
         }
 
         color: #fff;
