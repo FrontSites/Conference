@@ -6,7 +6,7 @@
     position: relative;
 
     .schedule-items {
-      @include vw(padding-left,85,25,85 );
+      @include vw(padding-left, 85, 25, 85);
       padding-top: 3.75rem;
       position: relative;
       overflow: hidden;
@@ -21,8 +21,9 @@
 
       .zip {
         position: absolute;
+
         &.zip-top {
-          
+
           top: -0.625rem;
           left: -0.625rem;
           z-index: 1;
@@ -35,8 +36,9 @@
           z-index: 1;
         }
       }
+
       h2 {
-        @include vw(font-size,48,35,48 );
+        @include vw(font-size, 48, 35, 48);
         position: relative;
         z-index: 2;
         text-align: center;
@@ -45,9 +47,27 @@
         color: #fff;
         margin-bottom: 1.25rem;
       }
-      .schedule-item { 
+
+      .schedule-item {
         position: relative;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+
+        .schedule-item-time {
+          display: flex;
+          align-items: center;
+          column-gap: 0.625rem;
+          color: #FFF;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: 0.05rem;
+
+        }
       }
     }
   }
