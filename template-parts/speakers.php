@@ -21,5 +21,11 @@
         </div>
       <?php } ?>
     </div>
-  </div>
+    <div class="load-more">
+      <div class="main-button">
+        <span>Завантажити ще</span>
+
+        </d>
+      </div>
+    </div>
 </section>
