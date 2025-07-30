@@ -6,8 +6,10 @@
     position: relative;
 
     .schedule-items {
+      
       @include vw(padding-left, 85, 25, 85);
       padding-top: 3.75rem;
+      padding-bottom: 2.5rem;
       position: relative;
       overflow: hidden;
       max-width: 53.125rem;
@@ -31,7 +33,7 @@
 
         &.zip-bottom {
           position: absolute;
-          bottom: 0;
+          bottom: -0.625rem;
           right: 0;
           z-index: 1;
         }
