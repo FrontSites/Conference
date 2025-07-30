@@ -15,6 +15,7 @@
           <div class="price-item">
             <h3><?php echo $price['title']; ?></h3>
             <p><?php echo $price['description']; ?></p>
+            <?php get_template_part('template-parts/buttons/ticket-button'); ?>
           </div>
         </div>
 
