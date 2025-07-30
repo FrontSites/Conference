@@ -9,6 +9,7 @@ Template Name: Home
   <?php get_template_part('template-parts/hero'); ?>
   <div class="main-content">
     <?php get_template_part('template-parts/blockchain'); ?>
+    <?php get_template_part('template-parts/speakers'); ?>
 
 
     <?php get_footer() ?>
