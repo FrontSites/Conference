@@ -31,6 +31,8 @@
       padding-bottom: 2rem;
 
       .speakers-item__image {
+        padding: 0.875rem 0.4375rem;
+        padding-bottom: 0rem;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -42,6 +44,13 @@
           height: 100%;
           max-width: none;
           object-fit: cover;
+        }
+      }
+      .speakers-item__name {
+        h3 {
+          font-family: "Manrope";
+          font-weight: 700;
+          font-size: 1.25rem;
         }
       }
     }
