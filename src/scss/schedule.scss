@@ -49,7 +49,7 @@
       }
 
       .schedule-item {
-        padding-left: ;
+        @include vw(padding-left, 65,1,65);
         position: relative;
         z-index: 2;
         display: flex;
