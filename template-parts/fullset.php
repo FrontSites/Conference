@@ -9,12 +9,16 @@
       <?php $group = get_field("fullset-items");
       if ($group) {
         foreach ($group as $item) {
-          $image = $item["fullest-item-title"];
-          $title = $item["fullset-item-text"];
-          $description = $item["description"];
+          $title = $item["fullest-item-title"];
+          $text = $item["fullset-item-text"];
       ?>
           <div class="fullset-item">
-
+            <div class="fullset-item-title">
+              <?php echo $title; ?>
+            </div>
+            <div class="fullset-item-text">
+              <?php echo $text; ?>
+            </div>
           </div>
       <?php
         }
