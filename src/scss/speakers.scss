@@ -117,5 +117,8 @@
     @media (width <= 37.5em) {
       grid-template-columns: repeat(1, 1fr);
     }
+    .speaker-button { 
+      border: 1px solid #fff;
+    }
   }
 }

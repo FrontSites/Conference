@@ -41,6 +41,6 @@
 
       <span><?php echo $load_more_text; ?></span>
     </div>
-
+    <?php get_template_part("template-parts/buttons/speaker-button"); ?>
   </div>
 </section>
