@@ -2,7 +2,6 @@
 @use "./mixins" as *;
 
 .fullset {
-  margin-bottom: 18.75rem;
   @include vw(padding-top, 100, 50, 100);
 
   .container {
@@ -32,7 +31,7 @@
     .fullset-items {
       max-width: 63.875rem;
       margin: 0 auto;
-      
+
       @include vw(margin-top, 47, 34, 47);
       position: relative;
       display: flex;
