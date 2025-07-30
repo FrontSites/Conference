@@ -10,7 +10,7 @@
       if ($group) {
         foreach ($group as $item) {
           $image = $item["fullest-item-title"];
-          $title = $item["full-set-item-text"];
+          $title = $item["fullset-item-text"];
           $description = $item["description"];
       ?>
           <div class="fullset-item">
