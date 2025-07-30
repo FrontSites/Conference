@@ -109,7 +109,9 @@
           }
         }
       }
-   
+   @media (width <= 62em) {
+    margin: 0 auto;
+   }
     }
   }
 }
