@@ -92,6 +92,9 @@
                   text-decoration-line: line-through;
                   text-transform: uppercase;
                   color: rgba(255, 255, 255, 0.05);
+                  @media (width <= 23.4375em) {
+                    font-size: 2.6875rem;  
+                  }
                 }
 
                 .price-block__new-price {
@@ -110,6 +113,9 @@
                     line-height: 150%;
                     letter-spacing: 0.8px;
                     text-transform: uppercase;
+                  }
+                  @media (width <= 23.4375em) {
+                    font-size: 2.6875rem;  
                   }
                 }
               }
