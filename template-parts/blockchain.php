@@ -10,7 +10,7 @@
       <div class="block-chain-block__text">
         <?php the_field("blockchain-text"); ?>
       </div>
-      <?php get_template_part("template-parts/ticket-button"); ?>
+      <?php get_template_part("template-parts/buttons/ticket-button"); ?>
     </div>
   </div>
 </section>
