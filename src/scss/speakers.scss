@@ -13,13 +13,34 @@
       font-weight: 700;
       margin-bottom: 1.25rem;
     }
+
     p {
       text-align: center;
     }
   }
+
   .speakers-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
+    gap: 1.875rem;
+
+    .speakers-item {
+      border-radius: 1.5625rem;
+      background: #2C3055;
+      padding: 1.25rem;
+
+      .speakers-item__image {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 15px;
+        background: #222649;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 }
