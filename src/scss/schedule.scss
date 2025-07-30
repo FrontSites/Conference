@@ -17,14 +17,20 @@
         top: -30px;
         left: 0;
         content: "";
-        transform: rotate(-4.669deg);
+        transform: rotate(0deg);
         flex-shrink: 0;
         border-radius: 25px;
         background: #FF29AE;
         width: 100%;
         height: 100%;
+        opacity: 0;
         z-index: 1;
         transition: all 0.5s ease;
+      }
+      &.active {
+        &:before {
+          transform: rotate(-4.669deg);
+        }
       }
       
       // Активное состояние когда секция видна
