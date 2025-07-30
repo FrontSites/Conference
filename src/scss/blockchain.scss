@@ -2,6 +2,8 @@
 @use "./mixins" as *;
 
 .blockchain {
+  overflow: hidden;
+  border-radius: 25px 25px 0 0;
   @include vw(padding-top, 70, 50, 70);
   overflow: hidden;
   padding-bottom: 150%;
@@ -85,7 +87,8 @@
         }
         ul {
           margin-top: 0.9375rem;
-          padding-left: 2-0[x];
+          padding-left: 1.25rem;
+          margin-bottom: 0.9375rem;
           li {
             color: #D9D9D9;
             @include vw(font-size, 16, 15, 16);
