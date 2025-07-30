@@ -11,7 +11,7 @@
         <?php $price = $price['price-old-price']; ?>
         <?php $price = $price['price-new-price']; ?>
         <?php $price = $price['price-small-label']; ?>
-        <?php $price = $price['price-small-label']; ?>
+        <?php $price = $price['price-discount']; ?>
 
 
 
