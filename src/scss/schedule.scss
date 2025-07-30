@@ -49,12 +49,13 @@
       }
 
       .schedule-item {
+        padding-left: ;
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 0.625rem;
+        border-bottom: 0.0625rem solid #2C3055;
 
         .schedule-item-time {
           display: flex;
