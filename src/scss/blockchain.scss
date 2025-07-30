@@ -131,6 +131,20 @@
       @media (width <=62em) {
         margin: 0 auto;
       }
+      .main-button {
+        background: transparent;
+        border: 0.0625rem solid #fff;
+        max-width: 12.5rem;
+        @media (hover:hover) {
+          &:hover {
+            background: ;
+          }
+        }
+        img {
+          display: block;
+         
+        }
+      }
     }
   }
 }
