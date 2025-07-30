@@ -12,7 +12,7 @@
           <div class="price-item__wrapper">
             <div class="price-item">
               <h3><?php the_sub_field('price-item-title'); ?></h3>
-              <p><?php the_sub_field('price-description'); ?></p>
+              <div class="price-item__description"><?php the_sub_field('price-description'); ?></div>
               <div class="price-block">
                 <div class="price-block__item left">
                   <div class="price-block__old-price">
