@@ -23,12 +23,12 @@
 // FONTS ////////////////////////////////////////////////////////////////////////////////
 @font-face {
   font-family: 'Bebas Neue Cyrillic';
-  src: url('../../assets/fonts/BebasNeueCyrillic.eot');
-  src: local('../../assets/fonts/Bebas Neue Cyrillic'), local('BebasNeueCyrillic'),
-      url('../../assets/fonts/BebasNeueCyrillic.eot?#iefix') format('embedded-opentype'),
-      url('../../assets/fonts/BebasNeueCyrillic.woff2') format('woff2'),
-      url('../../assets/fonts/BebasNeueCyrillic.woff') format('woff'),
-      url('../../assets/fonts/BebasNeueCyrillic.ttf') format('truetype');
+  src: url('../assets/fonts/BebasNeueCyrillic.eot');
+  src: local('Bebas Neue Cyrillic'), local('BebasNeueCyrillic'),
+      url('../assets/fonts/BebasNeueCyrillic.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/BebasNeueCyrillic.woff2') format('woff2'),
+      url('../assets/fonts/BebasNeueCyrillic.woff') format('woff'),
+      url('../assets/fonts/BebasNeueCyrillic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
