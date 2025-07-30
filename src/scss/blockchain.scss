@@ -132,6 +132,9 @@
         margin: 0 auto;
       }
       .main-button {
+        margin-top: 2.5rem;
+        position: relative;
+        z-index: 3;
         background: transparent;
         border: 0.0625rem solid #fff;
         max-width: 12.5rem;
@@ -140,10 +143,17 @@
             background: #222649;
           }
         }
+
+        @media (hover:none) {
+          &:active {
+            background: #222649;
+          }
+        }
         img {
           display: block;
          
         }
+        @m
       }
     }
   }
