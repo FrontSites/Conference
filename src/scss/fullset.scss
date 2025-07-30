@@ -94,7 +94,6 @@
         }
 
         &:nth-last-of-type(5) {
-          transform: translateY(1.25rem);
           flex: 1 1 100%;
           display: flex;
           flex-direction: column;
@@ -103,7 +102,8 @@
           gap: 0.625rem;
 
           &:before {
-            top: 82px;
+            top: 3.75rem;
+            transform: translateX(-0.625rem);
             background: url(../../assets/images/line-1.svg) no-repeat center / 100%;
             width: 5px;
             height: 24px;
