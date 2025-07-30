@@ -12,6 +12,19 @@
       @media (width <= 37.5em) {
         display: flex;
         margin-top: 2.75rem;
+        
+        // Стили для активного состояния
+        &.active {
+          background: #F7E405;
+          color: #222649;
+          border-color: #F7E405;
+          
+          svg {
+            path {
+              fill: #222649;
+            }
+          }
+        }
       }
     }
     h2 {

@@ -90,13 +90,15 @@ function initSpeakersLoadMore() {
     }
   }
 
-  // Обновляем текст кнопки
+  // Обновляем текст кнопки и классы
   function updateButtonText() {
     const span = btn.querySelector('span');
     if (isExpanded) {
       span.textContent = hideText;
+      btn.classList.add('active');
     } else {
       span.textContent = lang === 'en' ? 'Load more' : 'Завантажити ще';
+      btn.classList.remove('active');
     }
   }
 
