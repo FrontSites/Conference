@@ -4,15 +4,15 @@
     <p><?php the_field('partners-tech-subtitle'); ?></p>
     <div class="partners-items">
       <?php
-      if (have_rows('partners-tech-items')) {
-        while (have_rows('partners-tech-items')) {
+      if (have_rows('tech-partners')) {
+        while (have_rows('tech-partners')) {
           the_row();
-          $image_tech = get_sub_field('partner-tech-image');
-          $link_tech = get_sub_field('partner-tech-link');
+          $image = get_sub_field('image');
+          $link = get_sub_field('link');
       ?>
-          <a href="<?php echo $link_tech; ?>" class="partners-item">
-            <?php if ($image_tech) : ?>
-              <img src="<?php echo $image_tech['url'] ? $image_tech['url'] : $image_tech; ?>" alt="<?php echo $image_tech['alt'] ? $image_tech['alt'] : 'Tech Partner'; ?>">
+          <a href="<?php echo $link; ?>" class="partners-item">
+            <?php if ($image) : ?>
+              <img src="<?php echo $image; ?>" alt="Tech Partner">
             <?php endif; ?>
           </a>
       <?php
