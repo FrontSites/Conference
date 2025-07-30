@@ -4,24 +4,27 @@
 .blockchain {
   border-top-right-radius: 1.5625rem;
   @include vw(padding-top, 70, 50, 70);
-  overflow: hidden;
   padding-bottom: 150%;
   position: relative;
-  &:after {
-    content: "";
-    background: #fff;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    width: 30px;
-    height: 1.875rem;
-    z-index: -1;
-  }
+  // &:after {
+  //   content: "";
+  //   background: #fff;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0px;
+  //   width: 30px;
+  //   height: 1.875rem;
+  //   z-index: -1;
+  // }
 
   .blockchain-bg {
+    border-top-right-radius: 1.5625rem;
     position: absolute;
     top: 0;
     left: 0;
+    img {
+      border-top-right-radius: 1.5625rem;
+    }
 
   }
 
