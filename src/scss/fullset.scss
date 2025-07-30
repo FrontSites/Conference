@@ -33,6 +33,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
 
       .fullset-circle {
         max-width: 43.125rem;
@@ -48,7 +49,7 @@
       }
 
       .fullset-item {
-        max-width: 20rem;
+        flex: 0 1 45%;
 
         h3 {
           color: #222649;
