@@ -4,6 +4,15 @@
 .fullset { 
   @include vw(padding-top, 100, 50, 100);
   .container {
-    
+    h2 {
+      text-align: center;
+      font-family: "Manrope";
+      @include vw(font-size, 48, 35, 48);
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.05rem;
+      color: #FFF;
+      margin-bottom: 1.25rem;
+    }
   }
 }
