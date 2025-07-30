@@ -70,7 +70,15 @@
         max-width: 14.25rem;
         @media (hover:hover) {
           &:hover {
-            background: ;
+            background: #FF29AE;
+            color: #fff;
+          }
+        }
+
+        @media (hover:none) {
+          &:active {
+            background: #FF29AE;
+            color: #fff;
           }
         }
       }
