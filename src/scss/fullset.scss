@@ -56,7 +56,7 @@
         &:before {
           content: "";
           position: absolute;
-          background: url(../../assets/images/line.svg) no-repeat  center/100%;
+          
          
         }
 
@@ -93,6 +93,11 @@
           align-items: center;
           justify-content: center;
           gap: 0.625rem;
+          &:before {
+            background: url(../../assets/images/line.svg) no-repeat  center/100%;
+            width: 1.5rem;
+            height: 0.1875rem;
+          }
          
         }
 
