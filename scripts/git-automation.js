@@ -364,28 +364,34 @@ backups/
     };
 
     watcher.on('change', (filePath) => {
-      changedFiles.push(filePath);
-      console.log(`📝 Изменён: ${path.basename(filePath)}`);
-      
-      // Дебаунсинг - ждём 10 секунд после последнего изменения
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 10000);
+      if (!isProcessing) {
+        changedFiles.push(filePath);
+        console.log(`📝 Изменён: ${path.basename(filePath)}`);
+        
+        // Дебаунсинг - ждём 10 секунд после последнего изменения
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(processChanges, 10000);
+      }
     });
 
     watcher.on('add', (filePath) => {
-      changedFiles.push(filePath);
-      console.log(`➕ Добавлен: ${path.basename(filePath)}`);
-      
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 10000);
+      if (!isProcessing) {
+        changedFiles.push(filePath);
+        console.log(`➕ Добавлен: ${path.basename(filePath)}`);
+        
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(processChanges, 10000);
+      }
     });
 
     watcher.on('unlink', (filePath) => {
-      changedFiles.push(filePath);
-      console.log(`🗑️ Удалён: ${path.basename(filePath)}`);
-      
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 10000);
+      if (!isProcessing) {
+        changedFiles.push(filePath);
+        console.log(`🗑️ Удалён: ${path.basename(filePath)}`);
+        
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(processChanges, 10000);
+      }
     });
 
     console.log('✅ Автоматическое отслеживание активировано');
