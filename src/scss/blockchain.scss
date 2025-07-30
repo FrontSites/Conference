@@ -42,8 +42,10 @@
           display: flex;
           flex-direction: column;
           row-gap: 1.25rem;
+          align-items: flex-start;
 
           li {
+            justify-content: flex-start;
             width: auto;
             display: flex;
             align-items: center;
