@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 .blockchain { 
+  @include vw(padding-top, 70,50,70);
   overflow: hidden;
   padding-bottom: 150%;
   position: relative;
@@ -26,7 +27,17 @@
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    
+    h2 {
+      font-family: "Bebas Neue Cyrillic", sans-serif;
+      margin-bottom: 1.25rem;
+    }
+    .block-chain-block__list {
+     ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.25rem;
+     }
+    }
   }
 }
 }
