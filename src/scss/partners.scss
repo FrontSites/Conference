@@ -51,7 +51,8 @@
       }
     }
     .main-button { 
-      
+      @include vw(margin-top, 60,44,66);
+      color: #fff;
     }
   }
 }
