@@ -25,6 +25,9 @@
         flex: 1 1 45%;
 
         .price-item {
+          padding-top: 2.1875rem;
+          padding-bottom: 2.1875rem;
+          @include vw(padding-left, 35,15,35);
           border-radius: 1.5625rem;
           background: #2C3055;
 
