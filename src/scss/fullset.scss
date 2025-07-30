@@ -1,0 +1,9 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.fullset { 
+  @include vw(padding-top, 100, 50, 100);
+  .container {
+    
+  }
+}
