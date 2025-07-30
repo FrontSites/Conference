@@ -2,6 +2,7 @@
 @use "./mixins" as *;
 
 .fullset {
+  margin-bottom: 18.75rem;
   @include vw(padding-top, 100, 50, 100);
 
   .container {
@@ -38,10 +39,10 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
+        z-index: 1;
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
         }
       }
     }
