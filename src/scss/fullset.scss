@@ -259,11 +259,23 @@
       &:before {
         display: none;
       }
+      h3 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
     }
     &:nth-last-of-type(3) {
       transform: none;
       &:before {
         display: none;
+      }
+      h3 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
       }
   }
   &:nth-last-of-type(2) {
