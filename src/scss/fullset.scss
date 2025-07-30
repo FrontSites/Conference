@@ -105,6 +105,32 @@
             text-align: left;
           }
         }
+
+        &:nth-last-of-type(2) {
+          @include vw(margin-top,106,30,106 );
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+          gap: 0.625rem;
+          p {
+            text-align: right;
+          }
+        }
+
+        &:nth-last-of-type(1) {
+         @include vw(margin-top,106,30,106 );
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 0.625rem;
+          p {
+            text-align: left;
+          }
+        }
+
+
       }
 
     }
