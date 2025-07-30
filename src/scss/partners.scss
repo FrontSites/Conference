@@ -89,5 +89,19 @@
      
     }
   }
-  ^
+  &.partners-media { 
+    .container {
+      .main-button {
+        max-width: 19.75rem;
+      }
+    }
+  }
+
+  &.partners-tech { 
+    .container {
+      .main-button {
+        max-width: 19.75rem;
+      }
+    }
+  }
 }
