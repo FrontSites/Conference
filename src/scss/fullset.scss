@@ -243,6 +243,12 @@
     flex: 1 1 100%;
     position: relative;
     z-index: 2;
+    h3 {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      justify-content: center;
+    }
     p {
       max-width: none;
       text-align: center;
