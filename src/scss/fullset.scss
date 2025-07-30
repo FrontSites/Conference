@@ -30,6 +30,9 @@
     }
 
     .fullset-items {
+      max-width: 63.875rem;
+      margin: 0 auto;
+      
       @include vw(margin-top, 47, 34, 47);
       position: relative;
       display: flex;
