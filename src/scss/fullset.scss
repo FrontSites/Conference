@@ -40,7 +40,9 @@
       .fullset-circle {
         max-width: 43.125rem;
         width: 100%;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 50%;
         left: 50%;
