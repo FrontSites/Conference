@@ -42,6 +42,7 @@
       }
 
       h2 {
+        color: #fff;
         font-weight: 700;
         @include vw(font-size, 48, 35, 48);
         position: relative;
@@ -58,9 +59,7 @@
           transform: rotate(-3.821deg);
           display: inline-block;
         }
-
-        color: #fff;
-        @include vw(font-size, 48,44,48);
+        @include vw(margin-bottom, 48,44,48);
       }
 
       .schedule-item {
