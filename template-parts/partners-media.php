@@ -10,7 +10,7 @@
           $image_media = get_sub_field('partner-media-image');
           $link_media = get_sub_field('partner-media-link');
       ?>
-          <a href="<?php echo $link_media; ?>" class="partners-item" <?php echo $link_media ? '' : 'style="pointer-events: none;"'; ?>>
+          <a href="<?php echo $link_media; ?>" class="partners-item">
             <?php if ($image_media) : ?>
               <img src="<?php echo $image_media['url'] ? $image_media['url'] : $image_media; ?>" alt="<?php echo $image_media['alt'] ? $image_media['alt'] : 'Media Partner'; ?>">
             <?php endif; ?>

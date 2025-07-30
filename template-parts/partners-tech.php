@@ -10,7 +10,7 @@
           $image_tech = get_sub_field('partner-tech-image');
           $link_tech = get_sub_field('partner-tech-link');
       ?>
-          <a href="<?php echo $link_tech; ?>" class="partners-item" <?php echo $link_tech ? '' : 'style="pointer-events: none;"'; ?>>
+          <a href="<?php echo $link_tech; ?>" class="partners-item">
             <?php if ($image_tech) : ?>
               <img src="<?php echo $image_tech['url'] ? $image_tech['url'] : $image_tech; ?>" alt="<?php echo $image_tech['alt'] ? $image_tech['alt'] : 'Tech Partner'; ?>">
             <?php endif; ?>
