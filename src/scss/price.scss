@@ -27,7 +27,8 @@
         .price-item {
           padding-top: 2.1875rem;
           padding-bottom: 2.1875rem;
-          @include vw(padding-left, 35,15,35);
+          @include vw(padding-left, 63,38,63);
+          @include vw(padding-right, 63,38,63);
           border-radius: 1.5625rem;
           background: #2C3055;
 
@@ -37,12 +38,14 @@
 
           .price-item__description {
             ul {
+              width: 100%;
               display: flex;
               flex-direction: column;
               padding-left: 1.25rem;
 
               li {
                 color: #FFF;
+                list-style-type: disc;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
