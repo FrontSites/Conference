@@ -10,6 +10,7 @@
     .schedule-items {
       
       @include vw(padding-left, 85, 25, 85);
+      @include vw(padding-right, 85, 25, 85);
       padding-top: 3.75rem;
       padding-bottom: 2.5rem;
       position: relative;
