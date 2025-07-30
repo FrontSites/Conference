@@ -2,8 +2,8 @@
   <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
   <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-circle.webp" alt="">
   <div class="container">
-    <div class="block-chain-block">
-      <?php the_field("blockchain-title"); ?>
+    <div class="blockchain-block">
+      h2<?php the_field("blockchain-title"); ?>
       <div class="block-chain-block__list">
         <?php the_field("blockchain-list"); ?>
       </div>
