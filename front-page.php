@@ -10,6 +10,7 @@ Template Name: Home
   <div class="main-content">
     <?php get_template_part('template-parts/blockchain'); ?>
     <?php get_template_part('template-parts/speakers'); ?>
+<?php get_template_part('template-parts/schedule'); ?>
 
 
     <?php get_footer() ?>
