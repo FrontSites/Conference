@@ -126,7 +126,13 @@
     max-width: 13.8125rem;
     margin: 0 auto;
     @include vw(margin-top, 61,44,61);
-    
+    @media (hover:hover) {
+      &:hover {
+        background: #FF29AE;
+        color: #fff;
+        border-color: transparent;
+      }
+    }
     }
   }
   }
