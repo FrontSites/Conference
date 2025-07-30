@@ -6,6 +6,7 @@
 
   .container {
     h2 {
+      @include vw(margin-bottom, 60,44,60);
       flex-shrink: 0;
       color: #FFF;
       text-align: center;
