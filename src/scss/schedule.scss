@@ -28,16 +28,7 @@
       }
       
       // Активное состояние когда секция видна
-      &.active {
-        transform: scale(1.02);
-        
-        &:before {
-          transform: rotate(-4.669deg) scale(1.05);
-          filter: brightness(1.2);
-        }
-        
-      
-      }
+    
       .schedule-items {
         z-index: 2;
         display: flex;
