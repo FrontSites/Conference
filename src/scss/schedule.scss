@@ -47,6 +47,11 @@
         z-index: 2;
         text-align: center;
         font-family: "Manrope";
+        strong {
+          border-radius: 0.3125rem;
+          background: #F7E405;
+          color: #222649;
+        }
 
         color: #fff;
         margin-bottom: 1.25rem;
