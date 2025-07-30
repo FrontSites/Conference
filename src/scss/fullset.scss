@@ -49,7 +49,7 @@
       }
 
       .fullset-item {
-        flex: 0 1 45%;
+        flex: 0 1 35%;
 
         h3 {
           color: #222649;
@@ -73,7 +73,7 @@
           line-height: 120%;
           letter-spacing: 0.05rem;
         }
-        &:nth-child(1) {
+        &:first-child {
           flex: 1 1 100%;
           h3 {
             max-width: 21.875rem;
