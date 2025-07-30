@@ -25,6 +25,9 @@
       background: #222649;
 
       &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
         content: "";
         transform: rotate(-4.669deg);
         flex-shrink: 0;
@@ -32,6 +35,7 @@
         background: #FF29AE;
         width: 100%;
         height: 100%;
+        z-index: -1;
       }
 
       .zip {
