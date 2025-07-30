@@ -3,7 +3,7 @@
   <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-circle.webp" alt="">
   <div class="container">
     <div class="blockchain-block">
-      h2<?php the_field("blockchain-title"); ?>
+      <h2><?php the_field("blockchain-title"); ?></h2>
       <div class="block-chain-block__list">
         <?php the_field("blockchain-list"); ?>
       </div>

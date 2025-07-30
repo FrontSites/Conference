@@ -72,6 +72,8 @@ body {
         @include vw(font-size, 64, 48, 64);
         font-weight: 400;
         line-height: 120%;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     h3 {
