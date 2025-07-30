@@ -1,5 +1,6 @@
 <section class="schedule">
   <div class="container">
+    <?php the_field("schedule-title"); ?>
     <div class="schedule-items">
       <div class="zip zip-top">
         <svg width="392" height="1281" viewBox="0 0 392 1281" fill="none" xmlns="http://www.w3.org/2000/svg">
