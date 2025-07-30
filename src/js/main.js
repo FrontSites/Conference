@@ -54,6 +54,7 @@ function initMenu() {
 } 
 
 function initSpeakersLoadMore() { 
+  if ($(window).width() <= 600) {
   const items = document.querySelectorAll('.speakers-item');
   const btn = document.querySelector('.load-more-button');
   if (!items.length || !btn) return;
@@ -119,4 +120,5 @@ function initSpeakersLoadMore() {
     }
     updateButtonText();
   });
+}
 }
