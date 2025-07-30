@@ -22,6 +22,7 @@
       @include vw(column-gap, 40, 20, 40);
 
       .price-item__wrapper {
+        overflow: hidden;
         flex: 0 1 35%;
         position: relative;
 
@@ -164,7 +165,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
+          width: 99%;
           height: 100%;
           border-radius: 1.5625rem;
           background: #F7E405;
@@ -183,7 +184,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
+          width: 99%;
           height: 100%;
           background: #2C3055;
           border-radius: 1.5625rem;
