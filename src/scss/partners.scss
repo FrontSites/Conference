@@ -54,6 +54,8 @@
       &._border {
         @include vw(margin-top, 60,44,66);
         color: #fff;
+        border-color: #fff;
+        max-width: 14.25rem;
       }
      
     }
