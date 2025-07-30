@@ -41,5 +41,6 @@
 
       <span><?php echo $load_more_text; ?></span>
     </div>
+
   </div>
 </section>

@@ -8,6 +8,7 @@
 
   .container {
     .load-more-button { 
+      cursor: pointer;
       display: none;
       @media (width <= 37.5em) {
         display: flex;
