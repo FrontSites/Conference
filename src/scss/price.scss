@@ -27,8 +27,8 @@
         .price-item {
           padding-top: 2.1875rem;
           padding-bottom: 2.1875rem;
-          @include vw(padding-left, 63,38,63);
-          @include vw(padding-right, 63,38,63);
+          @include vw(padding-left, 63, 38, 63);
+          @include vw(padding-right, 63, 38, 63);
           border-radius: 1.5625rem;
           background: #2C3055;
 
@@ -36,6 +36,9 @@
             font-family: "Bebas Neue";
             font-size: 4rem;
             text-align: center;
+            line-height: 120%;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
           }
 
           .price-item__description {
@@ -57,6 +60,18 @@
                 &::marker {
                   color: #fff;
                 }
+              }
+            }
+            .price-block {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .price-block__item {
+                &.left {
+                  display: flex;
+                  flex-direction: column;
+                }
+                
               }
             }
           }
