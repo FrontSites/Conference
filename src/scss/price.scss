@@ -63,30 +63,31 @@
               }
             }
 
-            .price-block {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
+          
+          }
+          .price-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-              .price-block__item {
-                &.left {
-                  display: flex;
-                  flex-direction: column;
+            .price-block__item {
+              &.left {
+                display: flex;
+                flex-direction: column;
 
-                  .price-block__old-price {
-                    font-size: 3rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 120%;
-                    letter-spacing: 0.15rem;
-                    text-decoration-line: line-through;
-                    text-transform: uppercase;
-                    color: #FFF;
-                    text-align: center;
-                  }
+                .price-block__old-price {
+                  font-size: 3rem;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 120%;
+                  letter-spacing: 0.15rem;
+                  text-decoration-line: line-through;
+                  text-transform: uppercase;
+                  color: rgba(255, 255, 255, 0.05);
                 }
-
+                .price-block__new-price {
               }
+
             }
           }
         }
