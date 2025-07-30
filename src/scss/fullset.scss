@@ -240,23 +240,47 @@
   }
   .fullset-item { 
     flex: 1 1 45%;
+    position: relative;
+    z-index: 2;
     p {
       text-align: center;
     }
     &:nth-last-of-type(5) {
       transform: none;
+      &:before {
+        display: none;
+      }
       p {
         text-align: center;
       }
     }
     &:nth-last-of-type(4) {
       transform: none;
+      &:before {
+        display: none;
+      }
     }
     &:nth-last-of-type(3) {
       transform: none;
+      &:before {
+        display: none;
+      }
+  }
+  &:nth-last-of-type(2) {
+    transform: none;
+    &:before {
+      display: none;
+    }
+}
+&:nth-last-of-type(1) {
+  transform: none;
+  &:before {
+    display: none;
   }
 }
 }
+}
   }
+  
 }
 }
