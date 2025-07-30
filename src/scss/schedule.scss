@@ -85,6 +85,13 @@
           margin-bottom: 0rem;
         }
       }
+      .main-button  {
+        max-width: 12.5rem;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        position: relative;
+        z-index: 2;
+      }
     }
   }
 }
