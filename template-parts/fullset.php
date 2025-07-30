@@ -14,12 +14,12 @@
           $text = get_sub_field("fullset-item-text");
       ?>
           <div class="fullset-item">
-            <div class="fullset-item-title">
-              <?php echo $title; ?>
-            </div>
-            <div class="fullset-item-text">
-              <?php echo $text; ?>
-            </div>
+
+            <h3><?php echo $title; ?></h3>
+
+
+            <p><?php echo $text; ?></p>
+
           </div>
       <?php
         }
