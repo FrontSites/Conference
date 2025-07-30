@@ -69,10 +69,9 @@
         background: #2C3055;
         padding: 1.25rem;
         padding-bottom: 2rem;
-        &:nth-child(2) {
           &::before {
             content: '';
-            transform: rotate(6.12deg);
+            transition: 0.3s ease;
             flex-shrink: 0;
             border-radius: 1.5625rem;
             background: #FF29AE;
@@ -100,7 +99,7 @@
             left: 0;
             z-index: -2;
           }
-        }
+      
         @media (width <=37.5em) {
 
           // Стили для анимации slideDown/slideUp
@@ -151,6 +150,16 @@
           font-weight: 400;
           line-height: 120%;
           letter-spacing: 0.0375rem;
+        }
+        @media (hover:hover) {
+          &:hover {
+            &::before { 
+              transform: rotate(6.12deg);
+              &:after {
+                
+              }
+            }
+          }
         }
       }
 
