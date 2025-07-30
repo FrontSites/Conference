@@ -10,7 +10,7 @@
           $image = get_sub_field('partner-image');
       ?>
           <div class="partners-item">
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            <img src="<?php echo $image; ?>" alt="Partner">
           </div>
       <?php
         }
