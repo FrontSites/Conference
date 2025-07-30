@@ -39,6 +39,10 @@
           bottom: -0.625rem;
           right: 0;
           z-index: 1;
+          @media (width <= 37.5em) {
+            top: 100%;
+            bottom: auto;
+          }
         }
       }
 
