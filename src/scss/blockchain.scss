@@ -153,7 +153,10 @@
           display: block;
          
         }
-        @m
+        @media (width <= 48em) {
+          margin: 0 auto;
+          margin-top: 2.5rem;
+        }
       }
     }
   }
