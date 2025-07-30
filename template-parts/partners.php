@@ -1,14 +1,14 @@
-<section class="partners">
+<section class="partners ">
   <div class="container">
     <h2><?php the_field('partners-title'); ?></h2>
     <p><?php the_field('partners-subtitle'); ?></p>
     <div class="partners-items">
       <?php
-      if (have_rows('partners')) {
-        while (have_rows('partners')) {
+      if (have_rows('partners-items')) {
+        while (have_rows('partners-items')) {
           the_row();
-          $image = get_sub_field('image');
-          $link = get_sub_field('link');
+          $image = get_sub_field('partner-image');
+          $link = get_sub_field('partner-link');
       ?>
           <a href="<?php echo $link; ?>" class="partners-item">
             <?php if ($image) : ?>
