@@ -212,7 +212,11 @@
 
 
     }
-
+@media (width <= 50em) {
+  .fullset-circle {
+    transform: translate(-50%, -50%);
+  }
+}
   }
 }
 }
