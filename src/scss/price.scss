@@ -14,5 +14,23 @@
       letter-spacing: 0.15rem;
       text-transform: uppercase;
     }
+    .price-items { 
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      @include vw(column-gap, 40,20,40);
+      .price-item__wrapper {
+        flex: 1 1 45%;
+        .price-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1.25rem;
+          background: #111;
+          border-radius: 1.25rem;
+        }
+      }
+    }
   }
 }
