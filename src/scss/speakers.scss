@@ -85,6 +85,7 @@
           }
 
           &::after {
+            transition: 0.3s ease;
             opacity: 0;
             content: '';
             transform: rotate(6.12deg);
@@ -155,9 +156,10 @@
           &:hover {
             &::before { 
               transform: rotate(6.12deg);
-              &:after {
-                
-              }
+              
+            }
+            &:after {
+              opacity: 1;
             }
           }
         }
