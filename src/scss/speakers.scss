@@ -2,8 +2,15 @@
 @use "./mixins" as *;
 
 .speakers {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  position: relative;
+  z-index: 3;
+  @include vw(padding-top, 70, 50, 70);
+
+  .container {
+    h2 {
+      text-align: center;
+    }
+  }
   .speakers-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
