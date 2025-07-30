@@ -44,6 +44,9 @@
           row-gap: 1.25rem;
 
           li {
+            display: flex;
+            align-items: center;
+            column-gap: 0.625rem;
             position: relative;
             padding: 0.4375rem 1.25rem;
             border-radius: 0.3125rem;
