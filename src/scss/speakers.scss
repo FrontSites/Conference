@@ -79,5 +79,8 @@
         letter-spacing: 0.0375rem;
       }
     }
+    @media (width <= 62em) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
