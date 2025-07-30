@@ -7,6 +7,8 @@ Template Name: Home
 
 <main>
   <?php get_template_part('template-parts/hero'); ?>
-<?php get_template_part('template-parts/blockchain'); ?>
+  <div class="main-content">
+    <?php get_template_part('template-parts/blockchain'); ?>
 
-  <?php get_footer() ?>
+
+    <?php get_footer() ?>
