@@ -24,6 +24,16 @@
       border: 0.3125rem solid #2C3055;
       background: #222649;
 
+      &:before {
+        content: "";
+        transform: rotate(-4.669deg);
+        flex-shrink: 0;
+        border-radius: 25px;
+        background: #FF29AE;
+        width: 100%;
+        height: 100%;
+      }
+
       .zip {
         position: absolute;
 
@@ -47,81 +57,81 @@
             right: -179px;
           }
         }
-     
-    }
 
-    h2 {
-      color: #fff;
-      font-weight: 700;
-      @include vw(font-size, 48, 35, 48);
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      font-family: "Manrope";
-      line-height: 120%;
-
-      strong {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem;
-        border-radius: 0.3125rem;
-        background: #F7E405;
-        color: #222649;
-        transform: rotate(-3.821deg);
-        display: inline-block;
       }
 
-      @include vw(margin-bottom, 48, 44, 48);
-    }
-
-    .schedule-item {
-      margin-bottom: 1.25rem;
-      padding-bottom: 1.25rem;
-      @include vw(padding-left, 65, 1, 65);
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      gap: 0.625rem;
-      border-bottom: 0.0625rem solid #2C3055;
-
-      .schedule-item-time {
-        display: flex;
-        align-items: center;
-        column-gap: 0.625rem;
-        color: #FFF;
-        font-size: 1rem;
-        font-style: normal;
+      h2 {
+        color: #fff;
         font-weight: 700;
+        @include vw(font-size, 48, 35, 48);
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        font-family: "Manrope";
         line-height: 120%;
-        letter-spacing: 0.05rem;
 
+        strong {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem;
+          border-radius: 0.3125rem;
+          background: #F7E405;
+          color: #222649;
+          transform: rotate(-3.821deg);
+          display: inline-block;
+        }
+
+        @include vw(margin-bottom, 48, 44, 48);
       }
 
-      .schedule-item-text {
-        color: #FFF;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 120%;
-        letter-spacing: 0.05rem;
+      .schedule-item {
+        margin-bottom: 1.25rem;
+        padding-bottom: 1.25rem;
+        @include vw(padding-left, 65, 1, 65);
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        border-bottom: 0.0625rem solid #2C3055;
+
+        .schedule-item-time {
+          display: flex;
+          align-items: center;
+          column-gap: 0.625rem;
+          color: #FFF;
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: 0.05rem;
+
+        }
+
+        .schedule-item-text {
+          color: #FFF;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 120%;
+          letter-spacing: 0.05rem;
+        }
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0rem;
+        }
+
+        @media (width <=37.5em) {
+          padding-left: 0rem;
+        }
       }
 
-      &:last-child {
-        border-bottom: none;
-        margin-bottom: 0rem;
+      .main-button {
+        max-width: 12.5rem;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        position: relative;
+        z-index: 2;
       }
-
-      @media (width <=37.5em) {
-        padding-left: 0rem;
-      }
-    }
-
-    .main-button {
-      max-width: 12.5rem;
-      margin: 0 auto;
-      margin-top: 2.5rem;
-      position: relative;
-      z-index: 2;
     }
   }
-}
 }
