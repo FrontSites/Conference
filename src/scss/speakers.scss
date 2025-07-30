@@ -15,13 +15,14 @@
         
         // Стили для активного состояния
         &.active {
-          background: #F7E405;
-          color: #222649;
-          border-color: #F7E405;
+        
           
           svg {
             path {
-              fill: #222649;
+              transform: rotate(180deg);
+              &.line {
+                
+              }
             }
           }
         }
