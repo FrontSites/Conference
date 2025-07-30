@@ -73,6 +73,9 @@
         background: url(../../assets/images/bg-speakerswebp.webp) no-repeat center/100%;
         filter: blur(6.25rem);
         z-index: -1;
+        @media (width <= 48em) {
+          display: none;
+        }
       }
       .speakers-item {
         position: relative;
