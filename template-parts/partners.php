@@ -9,9 +9,9 @@
           the_row();
           $image = get_sub_field('partner-image');
       ?>
-          <div class="partners-item">
+          <a href="<?php the_sub_field('partner-link'); ?>" class="partners-item">
             <img src="<?php echo $image; ?>" alt="Partner">
-          </div>
+          </a>
       <?php
         }
       }
