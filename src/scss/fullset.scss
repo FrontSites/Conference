@@ -220,12 +220,10 @@
   }
   .fullset-item {
     flex: 0 1 33%;
-    &:nth-last-of-type(2) {
-    }
-
-    &:nth-last-of-type(1) {
-    }
   }
+}
+@media (width <= 37.5em) {
+  justify-content: center;
 }
   }
 }
