@@ -7,8 +7,8 @@
       if (have_rows('partners-items')) {
         while (have_rows('partners-items')) {
           the_row();
-          $image = get_sub_field('partner-image');
-          $link = get_sub_field('partner-link');
+          $image_partner = get_sub_field('partner-image');
+          $link_partner = get_sub_field('partner-link');
       ?>
           <a href="<?php echo $link; ?>" class="partners-item" <?php echo $link ? '' : 'style="pointer-events: none;"'; ?>>
             <?php if ($image) : ?>
