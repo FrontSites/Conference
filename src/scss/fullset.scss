@@ -112,8 +112,10 @@
           p {
             text-align: left;
             max-width: 17.875rem;
-
           }
+          @media (width <= 62em) {
+            transform: translateX(1.5625rem);
+            }
         }
 
         &:nth-last-of-type(2) {
@@ -145,7 +147,7 @@
             max-width: 17.875rem;
           }
           @media (width <= 62em) {
-            transform: translateX(0.9375rem);
+            transform: translateX(1.5625rem);
             }
         }
 
