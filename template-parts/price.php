@@ -8,17 +8,17 @@
       <?php foreach ($prices as $price) : ?>
         <?php $title = $price['price-item-title']; ?>
         <?php $description = $price['price-description']; ?>
-        <?php $price = $price['price-old-price']; ?>
-        <?php $price = $price['price-new-price']; ?>
-        <?php $price = $price['price-small-label']; ?>
-        <?php $price = $price['price-discount']; ?>
+        <?php $price_old_price = $price['price-old-price']; ?>
+        <?php $price_new_price = $price['price-new-price']; ?>
+        <?php $price_small_label = $price['price-small-label']; ?>
+        <?php $price_discount = $price['price-discount']; ?>
 
 
 
         <div class="price-item__wrapper">
           <div class="price-item">
             <h3><?php echo $price['title']; ?></h3>
-            <p><?php echo $price['description']; ?></p>
+            <p><?php echo $description['description']; ?></p>
             <div class="price-block">
               <div class="price-block__item left">
                 <div class="price-block__old-price">
