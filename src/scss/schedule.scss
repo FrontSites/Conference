@@ -6,8 +6,10 @@
     position: relative;
 
     .schedule-items {
+      position: relative;
       overflow: hidden;
       max-width: 53.125rem;
+      width: 100%;
       margin: 0 auto;
       flex-direction: column;
       flex-shrink: 0;
