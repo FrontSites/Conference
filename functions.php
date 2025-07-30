@@ -23,7 +23,7 @@ function my_theme_enqueue_assets()
 {
     // Добавляем отладочную информацию
     error_log('my_theme_enqueue_assets called');
-    
+
     // Блокируем загрузку только на админских страницах
     if (is_admin()) {
         error_log('Admin page detected, skipping asset loading');
@@ -36,19 +36,19 @@ function my_theme_enqueue_assets()
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
     error_log('jQuery enqueued');
-    
+
     // Добавляем проверку jQuery
     wp_add_inline_script('jquery', 'console.log("jQuery loaded:", typeof jQuery);');
 
     // === Styles ===
     $css_main = '/assets/css/main.min.css';
     $css_path = get_template_directory() . $css_main;
-    
+
     // Проверяем существование файла
     if (!file_exists($css_path)) {
         error_log('CSS file not found: ' . $css_path);
     }
-    
+
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], filemtime($css_path));
 
     // Библиотечные стили — без filemtime и без версии
@@ -60,17 +60,17 @@ function my_theme_enqueue_assets()
     error_log('Loading main JS...');
     $js_main = '/assets/js/main.min.js';
     $js_path = get_template_directory() . $js_main;
-    
+
     // Проверяем существование файла
     if (!file_exists($js_path)) {
         error_log('JS file not found: ' . $js_path);
     } else {
         error_log('JS file found: ' . $js_path);
     }
-    
+
     $js_url = get_template_directory_uri() . $js_main;
     error_log('JS URL: ' . $js_url);
-    
+
     wp_enqueue_script('main-min', $js_url, ['jquery'], filemtime($js_path), true);
     error_log('JS script enqueued');
 
@@ -94,7 +94,7 @@ function my_theme_enqueue_assets()
             'apiKey' => GOOGLE_MAPS_API_KEY
         ]);
     }
-    
+
     // Добавляем тестовый скрипт для проверки
     wp_add_inline_script('main-min', 'console.log("JS loaded successfully!");');
 }
