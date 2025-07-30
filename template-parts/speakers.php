@@ -5,9 +5,9 @@
     <div class="speakers-items">
       <?php $speakers = get_field("speakers-items");
       foreach ($speakers as $speaker) {
-        $image = $speaker["image"];
-        $name = $speaker["name"];
-        $position = $speaker["position"];
+        $image = $speaker["speaker-image"];
+        $name = $speaker["speaker-name"];
+        $position = $speaker["speaker-position"];
 
       ?>
         <div class="speakers-item">
