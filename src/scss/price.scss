@@ -14,33 +14,43 @@
       letter-spacing: 0.15rem;
       text-transform: uppercase;
     }
-    .price-items { 
+
+    .price-items {
       display: flex;
       align-items: stretch;
       justify-content: space-between;
-      @include vw(column-gap, 40,20,40);
+      @include vw(column-gap, 40, 20, 40);
+
       .price-item__wrapper {
         flex: 1 1 45%;
+
         .price-item {
+          border-radius: 1.5625rem;
+          background: #2C3055;
+
           h3 {
             text-align: center;
           }
-          .price-item__description { 
+
+          .price-item__description {
             ul {
               display: flex;
               flex-direction: column;
               padding-left: 1.25rem;
+
               li {
+                color: #FFF;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: 0.05rem;
+
                 &::marker {
                   color: #fff;
                 }
               }
             }
           }
-          width: 100%;
-          padding: 1.25rem;
-          background: #111;
-          border-radius: 1.25rem;
         }
       }
     }
