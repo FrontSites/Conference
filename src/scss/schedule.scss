@@ -48,7 +48,10 @@
         z-index: 2;
         text-align: center;
         font-family: "Manrope";
+        line-height: 120%;
         strong {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem;
           border-radius: 0.3125rem;
           background: #F7E405;
           color: #222649;
