@@ -195,7 +195,13 @@
           text-align: left;
           max-width: 17.875rem;
         }
-
+        &:before {
+          top: 1.25rem;
+          left: -8.6rem;
+          background: url(../../assets/images/line-3.svg) no-repeat center / 100%;
+          width: 125px;
+          height: 5px;
+        }
         @media (width <=62em) {
           transform: translateX(1.5625rem);
         }
