@@ -120,7 +120,12 @@
           max-width: 17.875rem;
 
         }
-
+        &:before {
+          top: 82px;
+          background: url(../../assets/images/line-2.svg) no-repeat center / 100%;
+          width: 5px;
+          height: 24px;
+        }
         @media (width <=62em) {
           transform: translateX(-0.9375rem);
         }
