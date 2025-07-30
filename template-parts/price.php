@@ -16,7 +16,7 @@
               <div class="price-block">
                 <div class="price-block__item left">
                   <div class="price-block__old-price">
-                    <s><?php the_sub_field('price-old-price'); ?></s>
+                    <?php the_sub_field('price-old-price'); ?>
                   </div>
                   <div class="price-block__new-price">
                     <?php the_sub_field('price-new-price'); ?>
