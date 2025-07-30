@@ -6,6 +6,8 @@
     position: relative;
 
     .schedule-items {
+      @include vw(padding-left,85,25,85 );
+      padding-top: 3.75rem;
       position: relative;
       overflow: hidden;
       max-width: 53.125rem;
