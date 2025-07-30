@@ -48,7 +48,15 @@
           height: 100%;
           object-fit: cover;
         }
+        @media (width <= 48em) {
+        flex:  0 1 25%;
+        }
+
+        @media (width <= 32em) {
+          flex:  0 1 25%;
+          }
       }
+      
     }
     .main-button { 
       &._border {
