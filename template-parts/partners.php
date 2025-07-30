@@ -10,7 +10,7 @@
           $image_partner = get_sub_field('partner-image');
           $link_partner = get_sub_field('partner-link');
       ?>
-                      <a href="<?php echo $link_partner; ?>" class="partners-item">
+          <a href="<?php echo $link_partner; ?>" class="partners-item">
             <?php if ($image_partner) : ?>
               <img src="<?php echo $image_partner['url'] ? $image_partner['url'] : $image_partner; ?>" alt="<?php echo $image_partner['alt'] ? $image_partner['alt'] : 'Partner'; ?>">
             <?php endif; ?>
