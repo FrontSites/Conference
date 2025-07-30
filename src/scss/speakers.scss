@@ -30,7 +30,7 @@
   .speakers-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.875rem;
+    @include vw(gap, 30,15,30);
 
     .speakers-item {
       border-radius: 1.5625rem;
