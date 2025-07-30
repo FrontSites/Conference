@@ -7,10 +7,10 @@
       if (have_rows('partner-media-items')) {
         while (have_rows('partner-media-items')) {
           the_row();
-          $image = get_sub_field('partner-media-image');
+          $image_media = get_sub_field('partner-media-image');
       ?>
           <a href="<?php the_sub_field('partner-media-link'); ?>" class="partners-item">
-            <img src="<?php echo $image; ?>" alt="Partner">
+            <img src="<?php echo $image_media; ?>" alt="Partner">
           </a>
       <?php
         }
