@@ -4,7 +4,7 @@
     <p><?php the_field('partners-media-subtitle'); ?></p>
     <div class="partners-items">
       <?php
-      if (have_rows('media-partners')) {
+      if (have_rows('partners-media-items')) {
         while (have_rows('media-partners')) {
           the_row();
           $image = get_sub_field('image');
