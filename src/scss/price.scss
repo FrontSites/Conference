@@ -67,6 +67,7 @@
           }
 
           .price-block {
+            @include vw(margin-top,45,31,45 );
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
