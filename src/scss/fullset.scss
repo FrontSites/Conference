@@ -244,6 +244,7 @@
     position: relative;
     z-index: 2;
     p {
+      max-width: none;
       text-align: center;
     }
     &:nth-last-of-type(5) {
@@ -252,6 +253,7 @@
         display: none;
       }
       p {
+        max-width: none;
         text-align: center;
       }
     }
@@ -265,6 +267,7 @@
         text-align: center;
       }
       p {
+        max-width: none;
         text-align: center;
       }
     }
@@ -278,6 +281,7 @@
         text-align: center;
       }
       p {
+        max-width: none;
         text-align: center;
       }
   }
@@ -286,6 +290,9 @@
     transform: none;
     &:before {
       display: none;
+    }
+    p {
+      text-align: center;
     }
     align-items: center;
 }
