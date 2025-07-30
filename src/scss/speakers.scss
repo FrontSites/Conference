@@ -12,16 +12,21 @@
       @media (width <= 37.5em) {
         display: flex;
         margin-top: 2.75rem;
+        svg {
+          flex: none;
+          transition: 0.3s ease;
+        }
         
         // Стили для активного состояния
         &.active {
         
           
           svg {
+            transform: rotate(180deg);
             path {
-              transform: rotate(180deg);
+            
               &.line {
-                
+                      display: none;
               }
             }
           }
