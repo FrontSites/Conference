@@ -1,0 +1,26 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.schedule {
+  .container {
+    position: relative;
+    .schedule-items { 
+      max-width: 53.125rem;
+      margin: 0 auto;
+      flex-direction: column;
+      .zipp {
+        &.zip-top { 
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &.zip-bottom { 
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+  }
+}
+}
