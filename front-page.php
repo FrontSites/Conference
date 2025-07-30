@@ -10,10 +10,10 @@ Template Name: Home
   <div class="main-content">
     <?php get_template_part('template-parts/blockchain'); ?>
     <?php get_template_part('template-parts/speakers'); ?>
-<?php get_template_part('template-parts/schedule'); ?>
-<?php get_template_part('template-parts/fullset'); ?>
-<?php get_template_part('template-parts/partners'); ?>
-<?php get_template_part('template-parts/buttons/button-partner'); ?>
+    <?php get_template_part('template-parts/schedule'); ?>
+    <?php get_template_part('template-parts/fullset'); ?>
+    <?php get_template_part('template-parts/partners'); ?>
+
 
 
     <?php get_footer() ?>
