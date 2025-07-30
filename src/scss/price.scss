@@ -63,8 +63,9 @@
               }
             }
 
-          
+
           }
+
           .price-block {
             display: flex;
             align-items: center;
@@ -85,6 +86,7 @@
                   text-transform: uppercase;
                   color: rgba(255, 255, 255, 0.05);
                 }
+
                 .price-block__new-price {
                   font-size: 3rem;
                   font-style: normal;
@@ -93,17 +95,27 @@
                   letter-spacing: 0.15rem;
                   text-transform: uppercase;
                   color: #fff;
+
+                  span {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                  }
                 }
               }
+
               &.right {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                .price-block__small-label {
+
+                .price-block__small-label {}
               }
             }
-              }
-             
+
           }
         }
       }
