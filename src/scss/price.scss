@@ -22,7 +22,6 @@
       @include vw(column-gap, 40, 20, 40);
 
       .price-item__wrapper {
-        overflow: hidden;
         flex: 0 1 35%;
         position: relative;
 
@@ -160,38 +159,41 @@
           }
         }
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 99%;
-          height: 100%;
-          border-radius: 1.5625rem;
-          background: #F7E405;
-          z-index: 2;
-
-        }
+     
         &:last-child {
           .price-item { 
             border-radius: 25px 250px 25px 25px;
 
           }
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 99%;
+            height: 100%;
+            background: #2C3055;
+            border-radius: 1.5625rem;
+            background: rgba(247, 228, 5, 0.50);
+            filter: blur(3.125rem);
+            z-index: 1;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 99%;
+            height: 100%;
+            border-radius: 1.5625rem;
+            background: #F7E405;
+            z-index: 2;
+  
+          }
         }
 
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 99%;
-          height: 100%;
-          background: #2C3055;
-          border-radius: 1.5625rem;
-          background: rgba(247, 228, 5, 0.50);
-          filter: blur(3.125rem);
-          z-index: 1;
-        }
+     
       }
     }
   }
