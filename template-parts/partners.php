@@ -8,9 +8,12 @@
         while (have_rows('partners-items')) {
           the_row();
           $image = get_sub_field('partner-image');
+          $link = get_sub_field('partner-link');
       ?>
-          <a href="<?php the_sub_field('partner-link'); ?>" class="partners-item">
-            <img src="<?php echo $image; ?>" alt="Partner">
+          <a href="<?php echo $link; ?>" class="partners-item" <?php echo $link ? '' : 'style="pointer-events: none;"'; ?>>
+            <?php if ($image) : ?>
+              <img src="<?php echo $image['url'] ? $image['url'] : $image; ?>" alt="<?php echo $image['alt'] ? $image['alt'] : 'Partner'; ?>">
+            <?php endif; ?>
           </a>
       <?php
         }
