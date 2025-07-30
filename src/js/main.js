@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => { 
   initMenu();
   initSpeakersLoadMore();
+  initScheduleVisibility();
 })
 
 
@@ -121,4 +122,33 @@ function initSpeakersLoadMore() {
     updateButtonText();
   });
 }
+
+
+}
+
+function initScheduleVisibility() {
+  const scheduleSection = document.querySelector('.schedule');
+  const scheduleWrapper = document.querySelector('.shedule-wrapper');
+  
+  if (!scheduleSection || !scheduleWrapper) return;
+
+  // Создаем Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Секция видна - добавляем класс active
+        scheduleWrapper.classList.add('active');
+      } else {
+        // Секция не видна - убираем класс active
+        scheduleWrapper.classList.remove('active');
+      }
+    });
+  }, {
+    // Настройки observer
+    threshold: 0.3, // Секция считается видимой когда 30% её видно
+    rootMargin: '0px 0px -10% 0px' // Небольшой отступ снизу
+  });
+
+  // Начинаем наблюдение за секцией
+  observer.observe(scheduleSection);
 }
