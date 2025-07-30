@@ -4,23 +4,34 @@
 .schedule {
   .container {
     position: relative;
-    .schedule-items { 
+
+    .schedule-items {
+      overflow: hidden;
       max-width: 53.125rem;
       margin: 0 auto;
       flex-direction: column;
+      flex-shrink: 0;
+      border-radius: 1.5625rem;
+      border: 0.3125rem solid #2C3055;
+      background: #222649;
+
       .zipp {
-        &.zip-top { 
-          position: absolute;
+        position: absolute;
+        &.zip-top {
+          
           top: 0;
           left: 0;
+          z-index: -1;
         }
-        &.zip-bottom { 
+
+        &.zip-bottom {
           position: absolute;
           bottom: 0;
           right: 0;
+          z-index: -1;
         }
       }
 
+    }
   }
-}
 }
