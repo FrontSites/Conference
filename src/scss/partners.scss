@@ -52,6 +52,7 @@
     }
     .main-button { 
       &._border {
+        margin: 0 auto;
         @include vw(margin-top, 60,44,66);
         color: #fff;
         border-color: #fff;
