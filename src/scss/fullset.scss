@@ -223,16 +223,20 @@
   }
 }
 @media (width <= 37.5em) {
-  justify-content: center;
   .fullset-circle {
     transform: none;
     top: auto;
     left: auto;
+    img {
+      
+    }
   }
   .fullset-item { 
     &:nth-last-of-type(5) {
       transform: none;
-      
+      p {
+        text-align: center;
+      }
     }
     &:nth-last-of-type(4) {
       transform: none;
