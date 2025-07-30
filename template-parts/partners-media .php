@@ -4,7 +4,7 @@
     <p><?php the_field('partners-media-subtitle'); ?></p>
     <div class="partners-items">
       <?php
-      if (have_rows('partners-items')) {
+      if (have_rows('partners-media-items')) {
         while (have_rows('partners-media-items')) {
           the_row();
           $image = get_sub_field('partner-media-image');
@@ -17,6 +17,6 @@
       }
       ?>
     </div>
-    <?php get_template_part('template-parts/buttons/button-partner'); ?>
+    <?php get_template_part('template-parts/buttons/button-mediapartner'); ?>
   </div>
 </section>
