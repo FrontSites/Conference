@@ -26,9 +26,11 @@
       line-height: 120%;
       letter-spacing: 0.05rem;
       text-transform: uppercase;
+      
     }
 
     .fullset-items {
+      @include vw(margin-top, 47,34,47);
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -91,6 +93,8 @@
           gap: 0.625rem;
           p {
             text-align: right;
+            max-width: 17.875rem;
+
           }
         }
 
@@ -103,6 +107,8 @@
           gap: 0.625rem;
           p {
             text-align: left;
+            max-width: 17.875rem;
+
           }
         }
 
@@ -115,6 +121,8 @@
           gap: 0.625rem;
           p {
             text-align: right;
+            max-width: 17.875rem;
+
           }
         }
 
@@ -127,6 +135,7 @@
           gap: 0.625rem;
           p {
             text-align: left;
+            max-width: 17.875rem;
           }
         }
 
