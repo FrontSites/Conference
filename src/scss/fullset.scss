@@ -98,7 +98,7 @@
 
           }
           @media (width <= 62em) {
-           margin-left: -1.875rem;
+          
           }
         }
 
@@ -127,12 +127,10 @@
           p {
             text-align: right;
             max-width: 17.875rem;
-            @media (width <= 62em) {
-              margin-left: -1.875rem;
-             }
+            
 
           }
-         
+       
         }
 
         &:nth-last-of-type(1) {
