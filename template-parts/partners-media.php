@@ -1,4 +1,4 @@
-<section class="partners">
+<section class="partners partners-media">
   <div class="container">
     <h2><?php the_field('partners-media-title'); ?></h2>
     <p><?php the_field('partners-media-subtitle'); ?></p>
