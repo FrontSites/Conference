@@ -11,8 +11,8 @@
           $link_partner = get_sub_field('partner-link');
       ?>
           <a href="<?php echo $link; ?>" class="partners-item" <?php echo $link ? '' : 'style="pointer-events: none;"'; ?>>
-            <?php if ($image) : ?>
-              <img src="<?php echo $image['url'] ? $image['url'] : $image; ?>" alt="<?php echo $image['alt'] ? $image['alt'] : 'Partner'; ?>">
+            <?php if ($image_partner) : ?>
+              <img src="<?php echo $image_partner['url'] ? $image_partner['url'] : $image_partner; ?>" alt="<?php echo $image_partner['alt'] ? $image_partner['alt'] : 'Partner'; ?>">
             <?php endif; ?>
           </a>
       <?php
