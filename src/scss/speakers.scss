@@ -44,6 +44,11 @@
       background: #2C3055;
       padding: 1.25rem;
       padding-bottom: 2rem;
+      
+      // Стили для анимации slideDown/slideUp
+      &:nth-child(n+4) {
+        display: none; // По умолчанию скрываем элементы начиная с 4-го
+      }
 
       .speakers-item__image {
         padding: 0.875rem 0.4375rem;

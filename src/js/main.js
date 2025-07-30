@@ -58,34 +58,63 @@ function initSpeakersLoadMore() {
   const btn = document.querySelector('.load-more-button');
   if (!items.length || !btn) return;
 
-  let visible = 3;
   const lang = btn.dataset.lang;
-  const lessText = btn.dataset.less;
+  const hideText = btn.dataset.hide;
+  let isExpanded = false;
 
-  function updateView() {
+  // Скрываем все элементы кроме первых 3
+  function hideExtraItems() {
     items.forEach((item, i) => {
-      item.style.display = i < visible ? '' : 'none';
-    });
-    if (visible >= items.length) {
-      if (lang === 'en') {
-        btn.querySelector('span').textContent = lessText || 'Less more';
-      } else {
-        btn.style.display = 'none';
+      if (i >= 3) {
+        $(item).hide();
       }
-    } else {
-      btn.querySelector('span').textContent = lang === 'en' ? 'Load more' : 'Завантажити ще';
-      btn.style.display = '';
+    });
+  }
+
+  // Показываем все элементы с анимацией
+  function showAllItems() {
+    const hiddenItems = Array.from(items).slice(3);
+    if (hiddenItems.length > 0) {
+      $(hiddenItems).slideDown(300);
     }
   }
 
-  updateView();
-
-  btn.addEventListener('click', function () {
-    if (visible >= items.length && lang === 'en') {
-      visible = 3;
-    } else {
-      visible += 3;
+  // Скрываем лишние элементы с анимацией
+  function hideExtraItemsAnimated() {
+    const extraItems = Array.from(items).slice(3);
+    if (extraItems.length > 0) {
+      $(extraItems).slideUp(300, function() {
+        // После анимации убеждаемся что элементы скрыты
+        $(this).hide();
+      });
     }
-    updateView();
+  }
+
+  // Обновляем текст кнопки
+  function updateButtonText() {
+    const span = btn.querySelector('span');
+    if (isExpanded) {
+      span.textContent = hideText;
+    } else {
+      span.textContent = lang === 'en' ? 'Load more' : 'Завантажити ще';
+    }
+  }
+
+  // Инициализация
+  hideExtraItems();
+  updateButtonText();
+
+  // Обработчик клика
+  btn.addEventListener('click', function () {
+    if (isExpanded) {
+      // Скрываем лишние элементы
+      hideExtraItemsAnimated();
+      isExpanded = false;
+    } else {
+      // Показываем все элементы
+      showAllItems();
+      isExpanded = true;
+    }
+    updateButtonText();
   });
 }
