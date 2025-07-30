@@ -6,7 +6,7 @@
       <?php $partners = get_field('partners-items'); ?>
       <?php foreach ($partners as $partner) : ?>
         <div class="partners-item">
-          <img src="<?php echo $partner['image']['url']; ?>" alt="<?php echo $partner['partner-image']['alt']; ?>">
+          <img src="<?php echo $partner['partner-image']['url']; ?>" alt="<?php echo $partner['partner-image']['alt']; ?>">
         </div>
       <?php endforeach; ?>
     </div>
