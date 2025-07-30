@@ -52,7 +52,13 @@
 
       .fullset-item {
         flex: 0 1 35%;
-        
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          background: url(../../assets/images/line.svg) no-repeat  center/100%;
+         
+        }
 
         h3 {
           display: flex;
@@ -69,12 +75,7 @@
           padding: 0.625rem 0.75rem;
           border-radius: 3.125rem;
           background: #17F7E2;
-          &:before {
-            content: "";
-            position: absolute;
-            background: url(../../assets/images/line.svg) no-repeat  center/100%;
-           
-          }
+         
         }
 
         p {
@@ -92,15 +93,7 @@
           align-items: center;
           justify-content: center;
           gap: 0.625rem;
-          h3 {
-            &:before {
-              transform: rotate(90deg);
-              width: 24px;
-              height: 0.125rem;
-              top: 6.25rem;
-
-            }
-          }
+         
         }
 
         &:nth-last-of-type(4) {
