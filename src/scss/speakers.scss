@@ -123,10 +123,10 @@
     &._border {
     border: 1px solid #fff;
     color: #fff;
-    max-width: 12.8125rem;
+    max-width: 13.8125rem;
     margin: 0 auto;
-    margin-top: 2.75rem;
-    vw
+    @include vw(margin-top, 61,44,61);
+    
     }
   }
   }
