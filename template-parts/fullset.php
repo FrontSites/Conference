@@ -6,11 +6,12 @@
       <div class="fullset-circle">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fullset-bg.webp" alt="">
       </div>
-      <?php $group = get_field("fullset-items");
-      if ($group) {
-        foreach ($group as $item) {
-          $title = $item["fullest-item-title"];
-          $text = $item["fullset-item-text"];
+      <?php
+      if (have_rows("fullset-items")) {
+        while (have_rows("fullset-items")) {
+          the_row();
+          $title = get_sub_field("fullest-item-title");
+          $text = get_sub_field("fullset-item-text");
       ?>
           <div class="fullset-item">
             <div class="fullset-item-title">
