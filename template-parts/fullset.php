@@ -5,9 +5,6 @@
     <div class="fullset-items">
       <div class="fullset-circle">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fullset-bg.webp" alt="">
-
-
-
       </div>
       <?php
       if (have_rows("fullset-items")) {
