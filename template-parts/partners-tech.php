@@ -4,11 +4,11 @@
     <p><?php the_field('partners-tech-subtitle'); ?></p>
     <div class="partners-items">
       <?php
-      if (have_rows('tech-partners')) {
-        while (have_rows('tech-partners')) {
+      if (have_rows('partners-tech-items')) {
+        while (have_rows('partners-tech-items')) {
           the_row();
-          $image = get_sub_field('image');
-          $link = get_sub_field('link');
+          $image = get_sub_field('partners-tech-image');
+          $link = get_sub_field('partners-tech-link');
       ?>
           <a href="<?php echo $link; ?>" class="partners-item">
             <?php if ($image) : ?>
