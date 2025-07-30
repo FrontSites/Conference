@@ -68,7 +68,7 @@
 
           .price-block {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
 
             .price-block__item {
@@ -111,6 +111,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+                row-gap: 1.0625rem;
 
                 .price-block__small-label {
                   padding: 0.4375rem 0.3125rem;
