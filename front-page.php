@@ -12,6 +12,7 @@ Template Name: Home
     <?php get_template_part('template-parts/speakers'); ?>
 <?php get_template_part('template-parts/schedule'); ?>
 <?php get_template_part('template-parts/fullset'); ?>
+<?php get_template_part('template-parts/partners'); ?>
 
 
     <?php get_footer() ?>
