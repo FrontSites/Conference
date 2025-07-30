@@ -48,15 +48,22 @@
       }
 
       .fullset-item {
+        max-width: 20rem;
         h3 {
           color: #222649;
           text-align: center;
           font-family: 'Manrope';
-          @include vw(font-size, 16,12,16);
+          @include vw(font-size, 16, 12, 16);
           font-weight: 700;
           line-height: 120%;
-          letter-spacing: 0.8px;
+          letter-spacing: 0.05rem;
           text-transform: uppercase;
+          padding: 0.625rem 0.75rem;
+          border-radius: 3.125rem;
+          background: #17F7E2;
+        }
+        p {
+          
         }
       }
     }
