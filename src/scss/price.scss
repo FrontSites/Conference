@@ -33,8 +33,8 @@
           z-index: 3;
           padding-top: 2.1875rem;
           padding-bottom: 2.1875rem;
-          @include vw(padding-left, 63, 38, 63);
-          @include vw(padding-right, 63, 38, 63);
+          @include vw(padding-left, 63, 20, 63);
+          @include vw(padding-right, 63, 20, 63);
           border-radius: 1.5625rem;
           background: #2C3055;
 
