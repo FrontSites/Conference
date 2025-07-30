@@ -88,12 +88,7 @@ function my_theme_enqueue_assets()
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
 
-    // === Передача API ключа в JavaScript ===
-    if (defined('GOOGLE_MAPS_API_KEY')) {
-        wp_localize_script('main-min', 'mapConfig', [
-            'apiKey' => GOOGLE_MAPS_API_KEY
-        ]);
-    }
+
 
     // Добавляем тестовый скрипт для проверки
     wp_add_inline_script('main-min', 'console.log("JS loaded successfully!");');
@@ -104,10 +99,7 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_assets');
 
 
 
-// Подключение API ключей
-if (file_exists(get_template_directory() . '/config/api-keys.php')) {
-    require_once get_template_directory() . '/config/api-keys.php';
-}
+
 
 // Google Fonts асинхронная загрузка
 function add_google_fonts()
