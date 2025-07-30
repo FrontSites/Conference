@@ -29,6 +29,7 @@
       }
       &.active {
         &:before {
+          opacity: 1;
           transform: rotate(-4.669deg);
         }
       }
