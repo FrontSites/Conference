@@ -229,6 +229,18 @@
     top: auto;
     left: auto;
   }
+  .fullset-item { 
+    &:nth-last-of-type(5) {
+      transform: none;
+      
+    }
+    &:nth-last-of-type(4) {
+      transform: none;
+    }
+    &:nth-last-of-type(3) {
+      transform: none;
+  }
+}
 }
   }
 }
