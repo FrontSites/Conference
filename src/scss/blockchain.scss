@@ -1,43 +1,64 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.blockchain { 
-  @include vw(padding-top, 70,50,70);
+.blockchain {
+  @include vw(padding-top, 70, 50, 70);
   overflow: hidden;
   padding-bottom: 150%;
   position: relative;
-  .blockchain-bg { 
+
+  .blockchain-bg {
     position: absolute;
     top: 0;
     left: 0;
-   
+
   }
+
   .blockchain-circle {
     position: absolute;
     top: 0;
     right: 0rem;
     max-width: 100%;
     z-index: 1;
-}
-.container {
-  position: relative;
-  z-index: 4;
-  .blockchain-block {
-    max-width: 37.25rem;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    h2 {
-      font-family: "Bebas Neue Cyrillic", sans-serif;
-      margin-bottom: 1.25rem;
-    }
-    .block-chain-block__list {
-     ul {
+  }
+
+  .container {
+    position: relative;
+    z-index: 4;
+
+    .blockchain-block {
+      max-width: 37.25rem;
+      margin-left: auto;
       display: flex;
       flex-direction: column;
-      row-gap: 1.25rem;
-     }
+
+      h2 {
+        font-family: "Bebas Neue Cyrillic", sans-serif;
+        margin-bottom: 1.25rem;
+      }
+
+      .block-chain-block__list {
+        ul {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1.25rem;
+
+          li {
+            position: relative;
+            padding: 0.4375rem 1.25rem;
+            border-radius: 0.3125rem;
+            background: rgba(245, 245, 245, 0.05);
+            backdrop-filter: blur(1.5625rem);
+            &:before {
+              content: "";
+              width: 0.75rem;
+              height: 1.3125rem;
+              background: url(../../assets/images/zipper-yellow.svg) no-repeat center/100%;
+            }
+
+          }
+        }
+      }
     }
   }
-}
 }
