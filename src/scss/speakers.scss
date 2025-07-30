@@ -7,6 +7,13 @@
   @include vw(padding-top, 70, 50, 70);
 
   .container {
+    .load-more-button { 
+      display: none;
+      @media (width <= 37.5em) {
+        display: flex;
+        margin-top: 2.75rem;
+      }
+    }
     h2 {
       text-align: center;
       font-family: "Manrope";
