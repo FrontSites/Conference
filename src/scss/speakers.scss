@@ -66,12 +66,12 @@
       &:after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -9.375rem;
         left: 7.375rem;
         width: 66.0625rem;
         height: 44.0625rem;
         background: url(../../assets/images/bg-speakerswebp.webp) no-repeat center/100%;
-        filter: blur(15.625rem);
+        filter: blur(6.25rem);
         z-index: -1;
       }
       .speakers-item {
