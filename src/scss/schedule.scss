@@ -60,7 +60,7 @@
         }
 
         color: #fff;
-        margin-bottom: 1.25rem;
+        @include vw(font-size, 48,44,48);
       }
 
       .schedule-item {
