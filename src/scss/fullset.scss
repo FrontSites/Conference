@@ -226,7 +226,7 @@
   .fullset-circle {
     
     transform: none;
-    top: 3.125rem;
+    top: 4.6875rem;
     left: auto;
     img {
       max-width: none;
@@ -236,6 +236,7 @@
     }
   }
   .fullset-item { 
+    flex: 1 1 45%;
     p {
       text-align: center;
     }
