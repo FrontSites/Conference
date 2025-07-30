@@ -52,7 +52,7 @@
       text-transform: uppercase;
       @include vw(margin-bottom, 60, 30, 60);
     }
-  }
+  
 
   .speakers-items {
     display: grid;
@@ -117,8 +117,17 @@
     @media (width <= 37.5em) {
       grid-template-columns: repeat(1, 1fr);
     }
-    .speaker-button { 
-      border: 1px solid #fff;
+    
+  }
+  .main-button { 
+    &._border {
+    border: 1px solid #fff;
+    color: #fff;
+    max-width: 12.8125rem;
+    margin: 0 auto;
+    margin-top: 2.75rem;
+    vw
     }
+  }
   }
 }
