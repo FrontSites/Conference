@@ -1,7 +1,7 @@
 <section class="speakers">
   <div class="container">
     <h2><?php the_field("speakers-title"); ?></h2>
-
+    <p><?php the_field("speakers-subtitle"); ?></p>
     <div class="speakers-items">
       <?php $speakers = get_field("speakers-items");
       foreach ($speakers as $speaker) {
