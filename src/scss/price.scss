@@ -67,7 +67,7 @@
           }
 
           .price-block {
-            @include vw(margin-top,45,31,45 );
+            @include vw(margin-top, 45, 31, 45);
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
@@ -148,11 +148,38 @@
             }
 
           }
+
           .main-button {
             max-width: 10.5rem;
             margin: 0 auto;
             margin-top: 2.5rem;
           }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 1.5625rem;
+          background: #F7E405;
+
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #2C3055;
+          border-radius: 1.5625rem;
+          background: rgba(247, 228, 5, 0.50);
+          filter: blur(3.125rem);
+          z-index: -2;
         }
       }
     }
