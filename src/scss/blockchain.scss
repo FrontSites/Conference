@@ -50,6 +50,7 @@
             column-gap: 0.625rem;
             position: relative;
             padding: 0.4375rem 1.25rem;
+            @include vw(font-size, 20,15,20);
             border-radius: 0.3125rem;
             background: rgba(245, 245, 245, 0.05);
             backdrop-filter: blur(1.5625rem);
