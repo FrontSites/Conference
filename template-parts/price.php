@@ -30,8 +30,9 @@
                     <?php the_sub_field('price-discount'); ?>
                   </div>
                 </div>
-                <?php get_template_part('template-parts/buttons/ticket-button'); ?>
+
               </div>
+              <?php get_template_part('template-parts/buttons/ticket-button'); ?>
             </div>
           </div>
       <?php

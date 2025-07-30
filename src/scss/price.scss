@@ -18,11 +18,11 @@
     .price-items {
       display: flex;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: center;
       @include vw(column-gap, 40, 20, 40);
 
       .price-item__wrapper {
-        flex: 1 1 45%;
+        flex: 0 1 35%;
 
         .price-item {
           padding-top: 2.1875rem;
