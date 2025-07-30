@@ -224,6 +224,11 @@
 }
 @media (width <= 37.5em) {
   justify-content: center;
+  .fullset-circle {
+    transform: none;
+    top: auto;
+    left: auto;
+  }
 }
   }
 }
