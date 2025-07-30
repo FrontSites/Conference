@@ -14,7 +14,7 @@
         </svg>
 
       </div>
-      <?php $schedule = get_field("schedule");
+      <?php $schedule = get_field("schedule-items");
 
       foreach ($schedule as $item) {
         $title = $item["schedule-text"];
