@@ -341,7 +341,9 @@ backups/
         '**/.git/**',
         '**/backups/**',
         '**/*.log',
-        '**/*.bak'
+        '**/*.bak',
+        '**/assets/css/main.min.css',
+        '**/assets/js/main.min.js'
       ],
       persistent: true,
       ignoreInitial: true
@@ -349,12 +351,15 @@ backups/
 
     let changedFiles = [];
     let timeoutId = null;
+    let isProcessing = false;
 
-    const processChanges = () => {
-      if (changedFiles.length > 0) {
+    const processChanges = async () => {
+      if (changedFiles.length > 0 && !isProcessing) {
+        isProcessing = true;
         console.log(`📁 Изменения обнаружены: ${changedFiles.length} файлов`);
-        this.autoCommit([...changedFiles]);
+        await this.autoCommit([...changedFiles]);
         changedFiles = [];
+        isProcessing = false;
       }
     };
 
