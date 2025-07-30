@@ -28,6 +28,7 @@
       border-radius: 1.5625rem;
       background: #2C3055;
       padding: 1.25rem;
+      padding-bottom: 2rem;
 
       .speakers-item__image {
         display: flex;
@@ -39,6 +40,8 @@
         img {
           width: 100%;
           height: 100%;
+          max-width: none;
+          object-fit: cover;
         }
       }
     }
