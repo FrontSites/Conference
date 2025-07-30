@@ -5,21 +5,7 @@
     <div class="fullset-items">
       <div class="fullset-circle">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fullset-bg.webp" alt="">
-        <div class="line line-1">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line-22.svg" alt="description">
-        </div>
-        <div class="line line-2">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line-3.svg" alt="description">
-        </div>
-        <div class="line line-3">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line-22.svg" alt="description">
-        </div>
-        <div class="line line-4">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line-3.svg" alt="description">
-        </div>
-        <div class="line line-5">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/line-22.svg" alt="description">
-        </div>
+
 
 
       </div>

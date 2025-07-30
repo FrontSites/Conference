@@ -286,16 +286,16 @@
     transform: none;
     &:before {
       display: none;
-      align-items: center;
     }
+    align-items: center;
 }
 &:nth-last-of-type(1) {
   @include vw(font-size, 147,90,147);
   transform: none;
   &:before {
     display: none;
-    align-items: center;
   }
+  align-items: center;
 }
 }
 }
