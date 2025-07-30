@@ -224,8 +224,9 @@
 }
 @media (width <= 37.5em) {
   .fullset-circle {
+    
     transform: none;
-    top: auto;
+    top: 3.125rem;
     left: auto;
     img {
       max-width: none;
