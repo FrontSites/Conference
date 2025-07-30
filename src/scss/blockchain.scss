@@ -2,8 +2,7 @@
 @use "./mixins" as *;
 
 .blockchain {
-  overflow: hidden;
-  border-radius: 25px 25px 0 0;
+  border-top-right-radius: 1.5625rem;
   @include vw(padding-top, 70, 50, 70);
   overflow: hidden;
   padding-bottom: 150%;
