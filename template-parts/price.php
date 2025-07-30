@@ -8,7 +8,9 @@
       <?php foreach ($prices as $price) : ?>
         <?php $title = $price['price-item-title']; ?>
         <?php $description = $price['price-description']; ?>
-        <?php $price = $price['price-price']; ?>
+        <?php $price = $price['price-old-price']; ?>
+        <?php $price = $price['price-new-price']; ?>
+
         <div class="price-item__wrapper">
           <div class="price-item">
             <h3><?php echo $price['title']; ?></h3>
