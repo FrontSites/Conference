@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
   initMenu();
+  initSpeakersLoadMore();
 })
 
 
@@ -51,3 +52,40 @@ function initMenu() {
   // Вызываем функцию инициализации мобильного меню
   initMobileMenu();
 } 
+
+function initSpeakersLoadMore() { 
+  const items = document.querySelectorAll('.speakers-item');
+  const btn = document.querySelector('.load-more-button');
+  if (!items.length || !btn) return;
+
+  let visible = 3;
+  const lang = btn.dataset.lang;
+  const lessText = btn.dataset.less;
+
+  function updateView() {
+    items.forEach((item, i) => {
+      item.style.display = i < visible ? '' : 'none';
+    });
+    if (visible >= items.length) {
+      if (lang === 'en') {
+        btn.querySelector('span').textContent = lessText || 'Less more';
+      } else {
+        btn.style.display = 'none';
+      }
+    } else {
+      btn.querySelector('span').textContent = lang === 'en' ? 'Load more' : 'Завантажити ще';
+      btn.style.display = '';
+    }
+  }
+
+  updateView();
+
+  btn.addEventListener('click', function () {
+    if (visible >= items.length && lang === 'en') {
+      visible = 3;
+    } else {
+      visible += 3;
+    }
+    updateView();
+  });
+}
