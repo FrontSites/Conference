@@ -92,6 +92,11 @@
           align-items: center;
           justify-content: center;
           gap: 0.625rem;
+          h3 {
+            &:before {
+              transform: rotate(90deg);
+            }
+          }
         }
 
         &:nth-last-of-type(4) {
