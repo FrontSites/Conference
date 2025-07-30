@@ -125,6 +125,26 @@
                   line-height: 120%;
                   letter-spacing: 0.0187rem;
                 }
+
+                .price-block__discount {
+                  padding: 0.6875rem 0.75rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 0.625rem;
+                  flex-shrink: 0;
+                  border-radius: 0.3125rem;
+                  border: 0.0625rem solid #17F7E2;
+                  color: #17F7E2;
+                  text-align: center;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 120%;
+                  letter-spacing: 0.8px;
+                  text-transform: uppercase;
+
+                }
               }
             }
 
