@@ -137,17 +137,20 @@
                   border: 0.0625rem solid #17F7E2;
                   color: #17F7E2;
                   text-align: center;
-                  font-size: 16px;
-                  font-style: normal;
                   font-weight: 700;
                   line-height: 120%;
-                  letter-spacing: 0.8px;
+                  letter-spacing: 0.05rem;
                   text-transform: uppercase;
 
                 }
               }
             }
 
+          }
+          .main-button {
+            max-width: 10.5rem;
+            margin: 0 auto;
+            margin-top: 2.5rem;
           }
         }
       }
