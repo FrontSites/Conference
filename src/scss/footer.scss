@@ -9,6 +9,7 @@
     background: #1B1F3D;
     .footer-items { 
       display: grid;
+      align-items: center;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 1.25rem;
    
