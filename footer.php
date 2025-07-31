@@ -10,7 +10,9 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.svg" alt="logo">
           </a>
         </div>
-        <div class="footer-menu"></div>
+        <div class="footer-menu">
+
+        </div>
       </div>
     </div>
     <?php wp_nav_menu([
@@ -18,7 +20,7 @@
 
       'container'       => false,
       'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-      'menu_class'     => 'footer-menu', // navbar-2nd_level
+      'menu_class'     => 'main-menu', // navbar-2nd_level
     ]);
     ?>
   </div>
