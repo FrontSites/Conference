@@ -184,5 +184,7 @@
       margin-top: 3.4375rem;
     }
   }
-  @
+  @media (width <= 30em) {
+    background: #1B1F3D;
+  }
 }
