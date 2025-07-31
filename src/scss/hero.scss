@@ -102,7 +102,12 @@
             column-gap: 0.625rem;
             z-index: 1;
             color: #fff;
-
+            @media (width <= 30em) {
+              svg {
+                width: 0.875rem;
+                height: 1.1875rem;
+              }
+            }
           }
 
           .hero-time {

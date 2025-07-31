@@ -83,6 +83,12 @@
     @media (width <= 64em) {
       top: 0.6rem;
     }
+    @media (width <= 30em) {
+      svg {
+        width: 0.875rem;
+        height: 1.1875rem;
+      }
+    }
           }
     
           .hero-time {
