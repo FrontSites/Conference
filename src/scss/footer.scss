@@ -55,6 +55,11 @@
         }
       }
       .footer-item {
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.1875rem;
+        }
         display: flex;
         .main-button {
           max-width: 9.375rem;
