@@ -169,6 +169,7 @@
   }
 
   .footer-agency {
+    margin-top: 1.4375rem;
     column-gap: 0.4375rem;
     display: flex;
     align-items: center;
@@ -178,5 +179,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @m
   }
 }
