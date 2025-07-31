@@ -26,6 +26,9 @@
             letter-spacing: 0.15rem;
             text-transform: uppercase;
             margin-bottom: 1.25rem;
+            @media (width <= 30em) {
+              max-width: 16.25rem;
+            }
           }
           p {
             max-width: 28.875rem;
