@@ -208,10 +208,15 @@
       right: 1.25rem;
      }
      @media (width <= 43.75em) { 
-      position: static;
+      position: relative;
+      transform: translateY();
+      top: auto;
+      left: auto;
+      right: auto;
      }
       }
       @media (width <= 43.75em) {
+        align-items: center;
         border-radius: 0rem;
         .google-map { 
           border-radius: 0rem;
@@ -222,6 +227,4 @@
       padding-left: 0rem;
       padding-right: 0rem;
       
-    }
-  }
-}
+  
