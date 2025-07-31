@@ -34,7 +34,11 @@
         <?php get_template_part('template-parts/buttons/ticket-button'); ?>
       </div>
     </div>
+
   </div>
+  <a href="https://agency.kiev.ua/" class="footer-agency">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-agency.svg" alt="footer-agency">
+  </a>
 </footer>
 </div>
 <?php wp_footer(); ?>
