@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSpeakersLoadMore();
   initScheduleVisibility();
+  initHideError();
 })
 
 
@@ -151,4 +152,28 @@ function initScheduleVisibility() {
 
   // Начинаем наблюдение за секцией
   observer.observe(scheduleSection);
+}
+
+
+function initHideError() {
+  // add Class Error when form not validade
+document.addEventListener('wpcf7invalid', function (event) {
+  const $form = $(event.target);
+  
+  setTimeout(function () {
+    const $response = $form.find('.wpcf7-response-output');
+  
+    $response
+      .addClass('error')
+      .stop(true, true)
+      .css('opacity', 1)
+      .show();
+  
+    setTimeout(function () {
+      $response.fadeOut(400, function () {
+        $(this).removeClass('error').css('display', 'none');
+      });
+    }, 3000);
+  }, 100); 
+  }, false);
 }
