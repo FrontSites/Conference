@@ -33,10 +33,3 @@
 
   </div>
 </section>
-
-<div class="form-items">
-  <div class="form-item">
-    <input type="text" placeholder="Name">
-  </div>
- 
-</div>
