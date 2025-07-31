@@ -5,12 +5,27 @@ import viteImagemin from 'vite-plugin-imagemin';
 export default defineConfig({
   root: '.',
   publicDir: 'public',
+  
+  // Отключаем кэширование для мгновенного обновления
+  server: {
+    force: true,
+    hmr: {
+      overlay: false
+    },
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
+  },
+  
+  // Отключаем source maps для скорости
   build: {
+    sourcemap: false,
     outDir: 'assets',
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/scss/main.scss')
+        main: path.resolve(__dirname, 'index.php') // Используем основной PHP файл
       },
       output: {
         entryFileNames: 'js/[name].min.js',
@@ -21,6 +36,8 @@ export default defineConfig({
       }
     }
   },
+  
+  // Отключаем CSS препроцессор, так как Gulp уже компилирует SCSS
   css: {
     preprocessorOptions: {
       scss: {
@@ -28,6 +45,12 @@ export default defineConfig({
       }
     }
   },
+  
+  // Оптимизация для WordPress
+  define: {
+    'process.env.NODE_ENV': '"development"'
+  },
+  
   plugins: [
     viteImagemin({
       gifsicle: { optimizationLevel: 7 },
@@ -37,5 +60,10 @@ export default defineConfig({
       svgo: { plugins: [{ name: 'removeViewBox', active: false }] },
       webp: { quality: 80 }
     })
-  ]
+  ],
+  
+  // Исключаем скомпилированные файлы из обработки Vite
+  optimizeDeps: {
+    exclude: ['assets/css/main.min.css', 'assets/js/main.min.js']
+  }
 }); 
