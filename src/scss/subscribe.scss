@@ -17,6 +17,7 @@
 
         &.left {
           h2 {
+            max-width: 31.25rem;
             font-family: "Manrope";
             color: #FFF;
             @include vw(font-size, 48, 35, 48);
@@ -25,6 +26,9 @@
             letter-spacing: 0.15rem;
             text-transform: uppercase;
             margin-bottom: 1.25rem;
+          }
+          p {
+            max-width: 28.875rem;
           }
 
           flex: 0 1 60%;
