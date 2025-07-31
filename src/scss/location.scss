@@ -226,6 +226,9 @@
         }
       }
     }
+    @media (width <= 30em) {
+      align-items: flex-end;
+    }
     @media (width <= 43.75em) {
       padding-left: 0rem;
       padding-right: 0rem;
