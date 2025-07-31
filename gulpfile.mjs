@@ -1,4 +1,4 @@
-// gulpfile.mjs (Оптимизированная версия)
+// gulpfile.mjs (Максимально быстрая версия)
 
 import gulp from 'gulp';
 import gulpSass from 'gulp-sass';
@@ -16,14 +16,10 @@ import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import cache from 'gulp-cached';
-import remember from 'gulp-remember';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const sassCompiler = gulpSass(dartSass);
-
-let isCompiling = false;
 
 const paths = {
   scss: {
@@ -40,28 +36,33 @@ const paths = {
 const importStartMarker = '// AUTO-GENERATED IMPORTS START';
 const importEndMarker = '// AUTO-GENERATED IMPORTS END';
 
+// БЫСТРАЯ КОМПИЛЯЦИЯ SCSS
 export function compileScss(done) {
-  if (isCompiling) return done();
-  isCompiling = true;
-
+  console.log('⚡ Быстрая компиляция SCSS...');
+  
   gulp.src(paths.scss.main)
     .pipe(plumber(function (err) {
       console.error('SCSS error:', err.message);
       this.emit('end');
     }))
-    .pipe(cache('scss'))
-    .pipe(sassCompiler({ outputStyle: 'compressed' }))
+    .pipe(sassCompiler({ 
+      outputStyle: 'compressed',
+      sourceMap: false // Отключаем source maps для скорости
+    }))
     .pipe(postcss([autoprefixer()]))
-    .pipe(cleanCSS({ level: 1 }))
+    .pipe(cleanCSS({ 
+      level: 1,
+      format: 'keep-breaks' // Быстрее чем полная оптимизация
+    }))
     .pipe(rename({ basename: 'main', suffix: '.min' }))
     .pipe(gulp.dest(paths.scss.dest))
     .on('end', () => { 
-      isCompiling = false; 
-      console.log('✅ SCSS compiled.'); 
+      console.log('✅ SCSS скомпилирован мгновенно!'); 
       done(); 
     });
 }
 
+// БЫСТРОЕ ОБНОВЛЕНИЕ MAIN.SCSS
 export function updateMainScss(done) {
   const files = glob.sync(paths.scss.src);
   let scssFiles = files.filter(file =>
@@ -97,55 +98,72 @@ export function updateMainScss(done) {
     const after = currentContent.slice(endIndex);
     return fs.writeFile(paths.scss.main, `${before}\n${imports}\n${after}`, 'utf8');
   }).then(() => {
-    console.log(`📝 main.scss updated with ${scssFiles.length + 2} imports.`);
+    console.log(`📝 main.scss обновлён с ${scssFiles.length + 2} импортами.`);
     done();
   }).catch(done);
 }
 
+// БЫСТРАЯ МИНИФИКАЦИЯ JS
 export function minifyJs(done) {
+  console.log('⚡ Быстрая минификация JS...');
+  
   gulp.src(paths.js.src)
     .pipe(plumber(function (err) {
       console.error('JS error:', err.message);
       this.emit('end');
     }))
-    .pipe(cache('js'))
     .pipe(concat('main.min.js'))
     .pipe(uglify({ 
       compress: { 
         drop_console: true,
-        drop_debugger: true 
-      } 
+        drop_debugger: true,
+        passes: 1 // Только один проход для скорости
+      },
+      mangle: {
+        toplevel: false // Быстрее
+      }
     }))
     .pipe(gulp.dest(paths.js.dest))
     .on('end', () => { 
-      console.log('✅ JS minified.'); 
+      console.log('✅ JS минифицирован мгновенно!'); 
       done(); 
     });
 }
 
+// МГНОВЕННОЕ ОТСЛЕЖИВАНИЕ
 export const watchFiles = gulp.series(
   gulp.parallel(compileScss, minifyJs),
   () => {
-    console.log('👀 Watching files...');
+    console.log('👀 Мгновенное отслеживание файлов...');
     
-    // SCSS файлы - только при изменении
-    gulp.watch(paths.scss.src, { ignoreInitial: false }, gulp.series(compileScss))
-      .on('add', (filePath) => { 
-        console.log(`🆕 SCSS created: ${path.basename(filePath)}`); 
-        updateMainScss(() => compileScss(() => {})); 
-      })
-      .on('unlink', (filePath) => { 
-        console.log(`🗑️ SCSS deleted: ${path.basename(filePath)}`); 
-        updateMainScss(() => compileScss(() => {})); 
-      });
+    // SCSS файлы - мгновенная компиляция
+    gulp.watch(paths.scss.src, { ignoreInitial: false }, (done) => {
+      console.log('📝 SCSS изменён - мгновенная компиляция...');
+      compileScss(done);
+    })
+    .on('add', (filePath) => { 
+      console.log(`🆕 SCSS создан: ${path.basename(filePath)}`); 
+      updateMainScss(() => compileScss(() => {})); 
+    })
+    .on('unlink', (filePath) => { 
+      console.log(`🗑️ SCSS удалён: ${path.basename(filePath)}`); 
+      updateMainScss(() => compileScss(() => {})); 
+    });
 
-    // JS файлы - только при изменении
-    gulp.watch(paths.js.src, { ignoreInitial: false }, gulp.series(minifyJs))
-      .on('add', (filePath) => console.log(`🆕 JS created: ${path.basename(filePath)}`))
-      .on('unlink', (filePath) => console.log(`🗑️ JS deleted: ${path.basename(filePath)}`));
+    // JS файлы - мгновенная минификация
+    gulp.watch(paths.js.src, { ignoreInitial: false }, (done) => {
+      console.log('📜 JS изменён - мгновенная минификация...');
+      minifyJs(done);
+    })
+    .on('add', (filePath) => console.log(`🆕 JS создан: ${path.basename(filePath)}`))
+    .on('unlink', (filePath) => console.log(`🗑️ JS удалён: ${path.basename(filePath)}`));
   }
 );
 
+// БЫСТРАЯ СБОРКА
+export const build = gulp.series(updateMainScss, compileScss, minifyJs);
+
+// ZIP ПРОЕКТА
 export function zipProject(done) {
   fs.readFile('style.css', 'utf8').then(data => {
     const match = data.match(/Theme Name:\s*(.+)/i);
@@ -164,13 +182,13 @@ export function zipProject(done) {
         .pipe(gulp.dest('C:/Users/Bohdan stepanenko/Desktop'));
     });
   }).then(() => {
-    console.log('📦 Project zipped successfully.');
+    console.log('📦 Проект упакован успешно.');
     done();
   }).catch(err => {
-    console.error('❌ Zip error:', err);
+    console.error('❌ Ошибка упаковки:', err);
     done(err);
   });
 }
 
+// ЭКСПОРТЫ
 export default gulp.series(updateMainScss, compileScss, minifyJs, watchFiles);
-export const build = gulp.series(updateMainScss, compileScss, minifyJs);
