@@ -22,16 +22,18 @@
           ]);
           ?>
         </div>
-
-        <div class="footer-links">
-          <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
-            <?php echo get_theme_mod('contact_email', ''); ?>
-          </a>
-          <a href="tel:<?php echo get_theme_mod('contact_phone', ''); ?>">
-            <?php echo get_theme_mod('contact_phone', ''); ?>
-          </a>
+        <div class="footer-item">
+          <div class="footer-links">
+            <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
+              <?php echo get_theme_mod('contact_email', ''); ?>
+            </a>
+            <a href="tel:<?php echo get_theme_mod('contact_phone', ''); ?>">
+              <?php echo get_theme_mod('contact_phone', ''); ?>
+            </a>
+          </div>
+          <?php get_template_part('template-parts/buttons/ticket-button'); ?>
         </div>
-        <?php get_template_part('template-parts/buttons/ticket-button'); ?>
+
       </div>
     </div>
 
