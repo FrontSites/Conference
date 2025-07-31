@@ -1,4 +1,4 @@
-<section class="location">
+<section class="location" id="location">
   <div class="container">
     <h2><?php the_field('location-title'); ?></h2>
     <div class="location-wrapper">
