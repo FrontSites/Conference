@@ -82,7 +82,7 @@
           @include vw(font-size, 20, 15, 20);
           column-gap: 0.625rem;
           z-index: 1;
-          color: #fff;
+          color: #222649;
   
         }
   
@@ -93,7 +93,7 @@
           z-index: 1;
   
           p {
-            color: #222649;
+            color: #FFF;
             display: flex;
             flex-direction: column;
             @include vw(font-size, 24, 18, 24);
