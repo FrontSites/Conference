@@ -208,7 +208,15 @@
       right: 1.25rem;
      }
       }
+      @media (width <= 43.75em) {
+
+      }
     }
-   
+    @media (width <= 43.75em) {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      border-radius: 0rem;
+      
+    }
   }
 }
