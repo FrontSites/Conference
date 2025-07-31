@@ -87,9 +87,8 @@
         }
   
         .hero-time {
-          bottom: 0.625rem;
+          bottom: 40px;
           position: absolute;
-          bottom: 1.25rem;
           left: 1.875rem;
           z-index: 1;
   
@@ -98,6 +97,7 @@
             color: #FFF;
             display: flex;
             flex-direction: column;
+            text-align: left;
             @include vw(font-size, 24, 18, 24);
             font-size: 1.5rem;
             font-style: normal;
