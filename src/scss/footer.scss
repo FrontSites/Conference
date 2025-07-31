@@ -166,7 +166,10 @@
         }
       }
     }
-
+@media (width <= 30em) {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
   }
 
   .footer-agency {

@@ -59,7 +59,9 @@
     "memory:optimize": "node scripts/memory-cleaner.js optimize",
     "memory:emergency": "node scripts/memory-cleaner.js emergency",
     "dev-optimized": "node scripts/dev-optimized.js start",
-    "dev-ultra": "node scripts/dev-ultra.js start"
+    "dev-ultra": "node scripts/dev-ultra.js start",
+    "force-refresh": "node scripts/force-refresh.js refresh",
+    "force-watch": "node scripts/force-refresh.js watch"
   },
   "keywords": [],
   "author": "",

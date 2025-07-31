@@ -48,7 +48,7 @@
 @media (hover:active){
 .main-button.ticket:active{background:#790547;color:#fff;border-color:transparent}
 }
-.footer{background:#222649}
+.footer{background:#1a1d3a}
 .footer .footer-wrapper{padding-top:2.875rem;padding-bottom:2.875rem;background:#1b1f3d}
 .footer .footer-wrapper .footer-items{display:grid;align-items:center;grid-template-columns:1fr 1fr 1fr;-moz-column-gap:1.25rem;column-gap:1.25rem}
 .footer .footer-wrapper .footer-items .footer-links{display:none}
@@ -78,12 +78,12 @@
 .footer .footer-wrapper .footer-items .footer-menu{justify-self:center}
 .footer .footer-wrapper .footer-items .footer-item .footer-links{justify-self:center;display:none}
 }
-@media (width <= 30em){
-.footer .footer-wrapper{background:#222649}
-}
 .footer .footer-agency{margin-top:1.4375rem;-moz-column-gap:.4375rem;column-gap:.4375rem;display:flex;align-items:center;justify-content:center;color:#afafb4;font-size:10px;font-style:normal;font-weight:400;line-height:normal}
 @media (width <= 30em){
 .footer .footer-agency{margin-top:3.4375rem}
+}
+@media (width <= 30em){
+.footer{background:#1b1f3d}
 }
 .fullset{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .fullset .container h2{text-align:center;font-family:Manrope;font-size:clamp(35px,calc(3.3333333333vw),48px);font-weight:700;line-height:120%;letter-spacing:.05rem;color:#fff;margin-bottom:1.25rem}
