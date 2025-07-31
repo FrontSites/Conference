@@ -27,7 +27,7 @@
             <?php endif; ?>
           <?php } ?>
         </ul>
-
+        <?php echo do_shortcode('[contact-form-7 id="80f88b1" title="Subscribe"]'); ?>
       </div>
     </div>
 
