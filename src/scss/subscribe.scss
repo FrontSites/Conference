@@ -2,6 +2,9 @@
 @use "./mixins" as *;
 
 .subscribe {
+  @include vw(padding-top, 120,50,120);
+  @include vw(padding-bottom, 120,50,120);
+
   .container {
     .subscribe-items {
       display: flex;
