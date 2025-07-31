@@ -81,8 +81,7 @@
             .form-item {
 
               input:not([type="submit"]) {
-                max-width: 21.875rem;
-                width: 100%;
+              
                 &::placeholder {
                   color: #FFF;
                 }
@@ -154,6 +153,8 @@
               .form-item {
                 border: none;
                 input:not([type="submit"]) { 
+                  max-width: 21.875rem;
+                  width: 100%;
                   border: none;
                   max-width: none;
                   padding-right: 0.625rem;
