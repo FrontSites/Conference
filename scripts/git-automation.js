@@ -250,7 +250,9 @@ backups/
       // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
       console.log('⚙️ Компиляция файлов...');
       try {
-        await execAsync('npm run build');
+        // Используем только Gulp для компиляции, а не полную сборку
+        await execAsync('npm run scss');
+        await execAsync('npm run js');
         console.log('✅ Компиляция завершена');
       } catch (buildError) {
         console.error('❌ Ошибка компиляции:', buildError.message);
@@ -343,7 +345,11 @@ backups/
         '**/*.log',
         '**/*.bak',
         '**/assets/css/main.min.css',
-        '**/assets/js/main.min.js'
+        '**/assets/js/main.min.js',
+        '**/assets/css/*.min.css',
+        '**/assets/js/*.min.js',
+        '**/*.min.css',
+        '**/*.min.js'
       ],
       persistent: true,
       ignoreInitial: true
@@ -410,7 +416,9 @@ backups/
       // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
       console.log('⚙️ Компиляция файлов...');
       try {
-        await execAsync('npm run build');
+        // Используем только Gulp для компиляции, а не полную сборку
+        await execAsync('npm run scss');
+        await execAsync('npm run js');
         console.log('✅ Компиляция завершена');
       } catch (buildError) {
         console.error('❌ Ошибка компиляции:', buildError.message);
