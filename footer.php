@@ -36,8 +36,8 @@
     </div>
 
   </div>
-  <a href="https://generis.agency/" class="footer-agency">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-agency.svg" alt="footer-agency">
+  <a href="https://generis.agency/" class="footer-agency">Designed by
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/generis.svg" alt="footer-agency">
   </a>
 </footer>
 </div>
