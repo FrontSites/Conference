@@ -16,7 +16,7 @@
           h2 {
             font-family: "Manrope";
             color: #FFF;
-            @include vw(font-size, 48,35,48);
+            @include vw(font-size, 48, 35, 48);
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.15rem;
@@ -33,18 +33,21 @@
           flex-direction: column;
           justify-content: space-between;
           align-items: flex-end;
+
           ul {
             display: flex;
             align-items: stretch;
             column-gap: 1.25rem;
+
             li {
               a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
                 @media (hover:hover) {
                   &:hover {
-                    filter: drop-shadow(0 0 10px rgba(255,255, 255, 0.8));
+                    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
                   }
                 }
 
@@ -56,19 +59,35 @@
               }
             }
           }
+
           .form-items {
             display: flex;
             align-items: stretch;
             column-gap: 1.25rem;
+
             .form-item {
               height: auto;
               flex: 0 1 50%;
-              input:not([type="submit"]) { 
+
+              input:not([type="submit"]) {
                 &::placeholder {
                   color: #FFF;
                 }
-                padding: 17px 0px 1.25rem;
+
+                padding: 1.0625rem 0rem 1.0625rem 1.25rem;
                 background: transparent;
+                border-radius: 10px;
+                border: 1px solid #FFF;
+                backdrop-filter: blur(25px);
+                outline: none;
+                color: #FFF;
+                text-align: center;
+                font-family: 'Manrope';
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                letter-spacing: 0.75px;
 
               }
             }
