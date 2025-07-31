@@ -25,7 +25,7 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.php') // Используем основной PHP файл
+        main: path.resolve(__dirname, 'src/js/main.js') // Используем основной JS файл
       },
       output: {
         entryFileNames: 'js/[name].min.js',
@@ -51,6 +51,19 @@ export default defineConfig({
     'process.env.NODE_ENV': '"development"'
   },
   
+  // Явно указываем зависимости для оптимизации
+  optimizeDeps: {
+    include: [
+      'jquery',
+      'gsap',
+      'swiper'
+    ],
+    exclude: [
+      'assets/css/main.min.css', 
+      'assets/js/main.min.js'
+    ]
+  },
+  
   plugins: [
     viteImagemin({
       gifsicle: { optimizationLevel: 7 },
@@ -60,10 +73,5 @@ export default defineConfig({
       svgo: { plugins: [{ name: 'removeViewBox', active: false }] },
       webp: { quality: 80 }
     })
-  ],
-  
-  // Исключаем скомпилированные файлы из обработки Vite
-  optimizeDeps: {
-    exclude: ['assets/css/main.min.css', 'assets/js/main.min.js']
-  }
+  ]
 }); 
