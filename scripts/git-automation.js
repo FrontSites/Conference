@@ -12,7 +12,7 @@ class GitAutomation {
     this.isGitRepo = false;
     this.version = 1;
     this.lastCommitTime = 0;
-    this.commitDelay = 15000; // 15 секунд между коммитами
+    this.commitDelay = 10000; // 10 секунд между коммитами
     this.watchFiles = [
       'src/**/*',
       'gulpfile.mjs',
@@ -24,6 +24,7 @@ class GitAutomation {
     this.githubUsername = 'FrontSites';
     this.projectName = this.getProjectName();
     this.isProcessing = false;
+    this.watcher = null;
   }
 
   getProjectName() {
@@ -213,6 +214,27 @@ backups/
     }
   }
 
+  async forceCompile() {
+    console.log('⚙️ Принудительная компиляция...');
+    try {
+      // Останавливаем все процессы Gulp
+      await execAsync('taskkill /f /im node.exe').catch(() => {});
+      
+      // Ждём секунду
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Запускаем компиляцию
+      await execAsync('npm run scss');
+      await execAsync('npm run js');
+      
+      console.log('✅ Принудительная компиляция завершена');
+      return true;
+    } catch (error) {
+      console.error('❌ Ошибка принудительной компиляции:', error.message);
+      return false;
+    }
+  }
+
   async autoCommit(changedFiles = []) {
     if (!this.isGitRepo) {
       console.log('⚠️ Git репозиторий не инициализирован');
@@ -243,9 +265,14 @@ backups/
 
       console.log(`🔄 Подготовка к автокоммиту v${this.version}...`);
       
-      // ЖДЁМ ЧТОБЫ GULP ЗАКОНЧИЛ КОМПИЛЯЦИЮ
-      console.log('⏳ Ожидание завершения компиляции Gulp...');
-      await this.waitForGulpCompilation();
+      // ПРИНУДИТЕЛЬНО КОМПИЛИРУЕМ
+      const compileSuccess = await this.forceCompile();
+      
+      if (!compileSuccess) {
+        console.log('⚠️ Компиляция не удалась, пропускаем коммит');
+        this.isProcessing = false;
+        return;
+      }
       
       // Проверяем что скомпилированные файлы существуют
       const cssExists = await fs.pathExists('assets/css/main.min.css');
@@ -289,41 +316,6 @@ backups/
     }
   }
 
-  async waitForGulpCompilation() {
-    // Ждём максимум 30 секунд
-    const maxWaitTime = 30000;
-    const checkInterval = 1000;
-    let waited = 0;
-    
-    while (waited < maxWaitTime) {
-      try {
-        // Проверяем что файлы существуют и не изменяются
-        const cssStats = await fs.stat('assets/css/main.min.css');
-        const jsStats = await fs.stat('assets/js/main.min.js');
-        
-        // Ждём ещё секунду и проверяем снова
-        await new Promise(resolve => setTimeout(resolve, checkInterval));
-        
-        const cssStats2 = await fs.stat('assets/css/main.min.css');
-        const jsStats2 = await fs.stat('assets/js/main.min.js');
-        
-        // Если файлы не изменились за секунду, значит компиляция завершена
-        if (cssStats.mtime.getTime() === cssStats2.mtime.getTime() && 
-            jsStats.mtime.getTime() === jsStats2.mtime.getTime()) {
-          console.log('✅ Gulp компиляция завершена');
-          return;
-        }
-        
-      } catch (error) {
-        // Файлы ещё не существуют, продолжаем ждать
-      }
-      
-      waited += checkInterval;
-    }
-    
-    console.log('⚠️ Таймаут ожидания компиляции Gulp');
-  }
-
   generateCommitMessage(changedFiles) {
     const fileTypes = this.analyzeChangedFiles(changedFiles);
     
@@ -359,9 +351,9 @@ backups/
     }
 
     console.log('👀 Запуск автоматического отслеживания изменений...');
-    console.log('💡 Система будет ждать завершения компиляции Gulp перед коммитом');
+    console.log('💡 Система будет принудительно компилировать файлы перед каждым коммитом');
     
-    const watcher = chokidar.watch(this.watchFiles, {
+    this.watcher = chokidar.watch(this.watchFiles, {
       ignored: [
         '**/node_modules/**',
         '**/.git/**',
@@ -388,33 +380,33 @@ backups/
       }
     };
 
-    watcher.on('change', (filePath) => {
+    this.watcher.on('change', (filePath) => {
       changedFiles.push(filePath);
       console.log(`📝 Изменён: ${path.basename(filePath)}`);
       
-      // Дебаунсинг - ждём 5 секунд после последнего изменения
+      // Дебаунсинг - ждём 3 секунды после последнего изменения
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 5000);
+      timeoutId = setTimeout(processChanges, 3000);
     });
 
-    watcher.on('add', (filePath) => {
+    this.watcher.on('add', (filePath) => {
       changedFiles.push(filePath);
       console.log(`➕ Добавлен: ${path.basename(filePath)}`);
       
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 5000);
+      timeoutId = setTimeout(processChanges, 3000);
     });
 
-    watcher.on('unlink', (filePath) => {
+    this.watcher.on('unlink', (filePath) => {
       changedFiles.push(filePath);
       console.log(`🗑️ Удалён: ${path.basename(filePath)}`);
       
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(processChanges, 5000);
+      timeoutId = setTimeout(processChanges, 3000);
     });
 
     console.log('✅ Автоматическое отслеживание активировано');
-    console.log('💡 Изменения будут коммититься автоматически через 5 секунд после последнего изменения');
+    console.log('💡 Изменения будут коммититься автоматически через 3 секунды после последнего изменения');
   }
 
   async manualCommit(message = null) {
@@ -433,9 +425,14 @@ backups/
     try {
       console.log('🔄 Подготовка к ручному коммиту...');
       
-      // ЖДЁМ ЧТОБЫ GULP ЗАКОНЧИЛ КОМПИЛЯЦИЮ
-      console.log('⏳ Ожидание завершения компиляции Gulp...');
-      await this.waitForGulpCompilation();
+      // ПРИНУДИТЕЛЬНО КОМПИЛИРУЕМ
+      const compileSuccess = await this.forceCompile();
+      
+      if (!compileSuccess) {
+        console.log('⚠️ Компиляция не удалась, пропускаем коммит');
+        this.isProcessing = false;
+        return;
+      }
       
       // Проверяем что скомпилированные файлы существуют
       const cssExists = await fs.pathExists('assets/css/main.min.css');
@@ -491,6 +488,7 @@ backups/
       console.log(`Версия: v${this.version}`);
       console.log(`Проект: ${this.projectName}`);
       console.log(`Обработка: ${this.isProcessing ? 'Да' : 'Нет'}`);
+      console.log(`Отслеживание: ${this.watcher ? 'Активно' : 'Неактивно'}`);
       
       if (status.trim()) {
         console.log('\n📝 Неcохранённые изменения:');
@@ -509,6 +507,10 @@ backups/
   }
 
   async stopWatching() {
+    if (this.watcher) {
+      this.watcher.close();
+      this.watcher = null;
+    }
     console.log('🛑 Автоматическое отслеживание остановлено');
   }
 }
@@ -547,6 +549,10 @@ if (process.argv[2]) {
       });
       break;
       
+    case 'stop':
+      gitAuto.stopWatching();
+      break;
+      
     default:
       console.log(`
 🌐 GIT AUTOMATION SYSTEM
@@ -558,12 +564,14 @@ if (process.argv[2]) {
   commit   Сделать ручной коммит (опционально с сообщением)
   status   Показать статус Git
   push     Принудительно сделать коммит и push
+  stop     Остановить автоматическое отслеживание
 
 Примеры:
   node scripts/git-automation.js init
   node scripts/git-automation.js watch
   node scripts/git-automation.js commit "Добавил новую функцию"
   node scripts/git-automation.js status
+  node scripts/git-automation.js stop
       `);
   }
 }
