@@ -149,7 +149,11 @@
               }
             }
     
-           
+            @media (width <=62em) {
+              bottom: 1.875rem;
+              right: 1.875rem;
+    
+            }
           }
     
           @media (hover:hover) {
