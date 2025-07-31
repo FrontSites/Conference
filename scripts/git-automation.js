@@ -12,36 +12,32 @@ class GitAutomation {
     this.isGitRepo = false;
     this.version = 1;
     this.lastCommitTime = 0;
-    this.commitDelay = 30000; // 30 секунд между коммитами
+    this.commitDelay = 15000; // 15 секунд между коммитами
     this.watchFiles = [
       'src/**/*',
       'gulpfile.mjs',
       'vite.config.js',
       'package.json',
       '*.php',
-      'template-parts/**/*',
-      'assets/css/**/*',
-      'assets/js/**/*'
+      'template-parts/**/*'
     ];
-    this.githubUsername = 'FrontSites'; // Твой GitHub username
+    this.githubUsername = 'FrontSites';
     this.projectName = this.getProjectName();
+    this.isProcessing = false;
   }
 
   getProjectName() {
     try {
-      // Сначала пытаемся получить название из package.json
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (packageJson.name && packageJson.name !== 'template') {
         return packageJson.name;
       }
     } catch {}
     
-    // Если в package.json нет названия или оно "template", берём название папки
     try {
       const currentDir = process.cwd();
       const folderName = path.basename(currentDir);
       
-      // Очищаем название от специальных символов для GitHub
       const cleanName = folderName
         .toLowerCase()
         .replace(/[^a-z0-9-]/g, '-')
@@ -101,14 +97,10 @@ class GitAutomation {
     try {
       console.log('🚀 Инициализация Git репозитория...');
       
-      // Инициализация Git
       await execAsync('git init');
       await execAsync('git branch -M main');
-      
-      // Создание .gitignore
       await this.createGitignore();
       
-      // Первый коммит
       await execAsync('git add .');
       await execAsync('git commit -m "🎉 Initial commit - WordPress Theme Development System v2.0"');
       
@@ -191,7 +183,6 @@ backups/
     try {
       console.log('🌐 Создание репозитория на GitHub...');
       
-      // Используем GitHub CLI если доступен
       try {
         await execAsync('gh --version');
         
@@ -200,11 +191,8 @@ backups/
         
         console.log(`✅ Репозиторий создан: https://github.com/${this.githubUsername}/${this.projectName}`);
         
-        // Добавляем remote origin
         const remoteUrl = `https://github.com/${this.githubUsername}/${this.projectName}.git`;
         await execAsync(`git remote add origin ${remoteUrl}`);
-        
-        // Пушим первый коммит
         await execAsync('git push -u origin main');
         
         console.log('🚀 Код загружен на GitHub!');
@@ -231,53 +219,51 @@ backups/
       return;
     }
 
+    if (this.isProcessing) {
+      console.log('⏳ Уже обрабатывается предыдущий коммит...');
+      return;
+    }
+
     const now = Date.now();
     if (now - this.lastCommitTime < this.commitDelay) {
       console.log('⏳ Ожидание перед следующим коммитом...');
       return;
     }
 
+    this.isProcessing = true;
+
     try {
       // Проверяем есть ли изменения
       const { stdout: status } = await execAsync('git status --porcelain');
       if (!status.trim()) {
         console.log('📝 Нет изменений для коммита');
+        this.isProcessing = false;
         return;
       }
 
       console.log(`🔄 Подготовка к автокоммиту v${this.version}...`);
       
-      // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
-      console.log('⚙️ Компиляция файлов...');
-      try {
-        // Используем только Gulp для компиляции, а не полную сборку
-        await execAsync('npm run scss');
-        await execAsync('npm run js');
-        console.log('✅ Компиляция завершена');
-      } catch (buildError) {
-        console.error('❌ Ошибка компиляции:', buildError.message);
-        console.log('⚠️ Коммит отменён из-за ошибки компиляции');
+      // ЖДЁМ ЧТОБЫ GULP ЗАКОНЧИЛ КОМПИЛЯЦИЮ
+      console.log('⏳ Ожидание завершения компиляции Gulp...');
+      await this.waitForGulpCompilation();
+      
+      // Проверяем что скомпилированные файлы существуют
+      const cssExists = await fs.pathExists('assets/css/main.min.css');
+      const jsExists = await fs.pathExists('assets/js/main.min.js');
+      
+      if (!cssExists || !jsExists) {
+        console.log('⚠️ Скомпилированные файлы не найдены, пропускаем коммит');
+        this.isProcessing = false;
         return;
       }
       
-      // 2. Проверяем что компиляция прошла успешно
-      try {
-        await fs.access('assets/css/main.min.css');
-        await fs.access('assets/js/main.min.js');
-        console.log('✅ Скомпилированные файлы найдены');
-      } catch (fileError) {
-        console.error('❌ Скомпилированные файлы не найдены');
-        console.log('⚠️ Коммит отменён');
-        return;
-      }
+      console.log('✅ Скомпилированные файлы найдены');
       
-      // 3. ТЕПЕРЬ ДЕЛАЕМ КОММИТ
+      // ДЕЛАЕМ КОММИТ
       console.log(`📝 Создание коммита v${this.version}...`);
       
-      // Добавляем все изменения (включая скомпилированные файлы)
       await execAsync('git add .');
       
-      // Создаём коммит с версией
       const commitMessage = this.generateCommitMessage(changedFiles);
       await execAsync(`git commit -m "${commitMessage}"`);
       
@@ -298,13 +284,50 @@ backups/
       
     } catch (error) {
       console.error('❌ Ошибка автокоммита:', error.message);
+    } finally {
+      this.isProcessing = false;
     }
+  }
+
+  async waitForGulpCompilation() {
+    // Ждём максимум 30 секунд
+    const maxWaitTime = 30000;
+    const checkInterval = 1000;
+    let waited = 0;
+    
+    while (waited < maxWaitTime) {
+      try {
+        // Проверяем что файлы существуют и не изменяются
+        const cssStats = await fs.stat('assets/css/main.min.css');
+        const jsStats = await fs.stat('assets/js/main.min.js');
+        
+        // Ждём ещё секунду и проверяем снова
+        await new Promise(resolve => setTimeout(resolve, checkInterval));
+        
+        const cssStats2 = await fs.stat('assets/css/main.min.css');
+        const jsStats2 = await fs.stat('assets/js/main.min.js');
+        
+        // Если файлы не изменились за секунду, значит компиляция завершена
+        if (cssStats.mtime.getTime() === cssStats2.mtime.getTime() && 
+            jsStats.mtime.getTime() === jsStats2.mtime.getTime()) {
+          console.log('✅ Gulp компиляция завершена');
+          return;
+        }
+        
+      } catch (error) {
+        // Файлы ещё не существуют, продолжаем ждать
+      }
+      
+      waited += checkInterval;
+    }
+    
+    console.log('⚠️ Таймаут ожидания компиляции Gulp');
   }
 
   generateCommitMessage(changedFiles) {
     const fileTypes = this.analyzeChangedFiles(changedFiles);
     
-    let message = `🚀 Build & Commit v${this.version}`;
+    let message = `🚀 Auto Commit v${this.version}`;
     
     if (fileTypes.length > 0) {
       message += ` - ${fileTypes.join(', ')}`;
@@ -336,6 +359,7 @@ backups/
     }
 
     console.log('👀 Запуск автоматического отслеживания изменений...');
+    console.log('💡 Система будет ждать завершения компиляции Gulp перед коммитом');
     
     const watcher = chokidar.watch(this.watchFiles, {
       ignored: [
@@ -344,8 +368,6 @@ backups/
         '**/backups/**',
         '**/*.log',
         '**/*.bak',
-        '**/assets/css/main.min.css',
-        '**/assets/js/main.min.js',
         '**/assets/css/*.min.css',
         '**/assets/js/*.min.js',
         '**/*.min.css',
@@ -357,51 +379,42 @@ backups/
 
     let changedFiles = [];
     let timeoutId = null;
-    let isProcessing = false;
 
     const processChanges = async () => {
-      if (changedFiles.length > 0 && !isProcessing) {
-        isProcessing = true;
+      if (changedFiles.length > 0) {
         console.log(`📁 Изменения обнаружены: ${changedFiles.length} файлов`);
         await this.autoCommit([...changedFiles]);
         changedFiles = [];
-        isProcessing = false;
       }
     };
 
     watcher.on('change', (filePath) => {
-      if (!isProcessing) {
-        changedFiles.push(filePath);
-        console.log(`📝 Изменён: ${path.basename(filePath)}`);
-        
-        // Дебаунсинг - ждём 10 секунд после последнего изменения
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(processChanges, 10000);
-      }
+      changedFiles.push(filePath);
+      console.log(`📝 Изменён: ${path.basename(filePath)}`);
+      
+      // Дебаунсинг - ждём 5 секунд после последнего изменения
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(processChanges, 5000);
     });
 
     watcher.on('add', (filePath) => {
-      if (!isProcessing) {
-        changedFiles.push(filePath);
-        console.log(`➕ Добавлен: ${path.basename(filePath)}`);
-        
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(processChanges, 10000);
-      }
+      changedFiles.push(filePath);
+      console.log(`➕ Добавлен: ${path.basename(filePath)}`);
+      
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(processChanges, 5000);
     });
 
     watcher.on('unlink', (filePath) => {
-      if (!isProcessing) {
-        changedFiles.push(filePath);
-        console.log(`🗑️ Удалён: ${path.basename(filePath)}`);
-        
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(processChanges, 10000);
-      }
+      changedFiles.push(filePath);
+      console.log(`🗑️ Удалён: ${path.basename(filePath)}`);
+      
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(processChanges, 5000);
     });
 
     console.log('✅ Автоматическое отслеживание активировано');
-    console.log('💡 Изменения будут коммититься автоматически каждые 10 секунд после последнего изменения');
+    console.log('💡 Изменения будут коммититься автоматически через 5 секунд после последнего изменения');
   }
 
   async manualCommit(message = null) {
@@ -410,34 +423,32 @@ backups/
       return;
     }
 
+    if (this.isProcessing) {
+      console.log('⏳ Уже обрабатывается предыдущий коммит...');
+      return;
+    }
+
+    this.isProcessing = true;
+
     try {
       console.log('🔄 Подготовка к ручному коммиту...');
       
-      // 1. СНАЧАЛА КОМПИЛИРУЕМ ФАЙЛЫ
-      console.log('⚙️ Компиляция файлов...');
-      try {
-        // Используем только Gulp для компиляции, а не полную сборку
-        await execAsync('npm run scss');
-        await execAsync('npm run js');
-        console.log('✅ Компиляция завершена');
-      } catch (buildError) {
-        console.error('❌ Ошибка компиляции:', buildError.message);
-        console.log('⚠️ Коммит отменён из-за ошибки компиляции');
+      // ЖДЁМ ЧТОБЫ GULP ЗАКОНЧИЛ КОМПИЛЯЦИЮ
+      console.log('⏳ Ожидание завершения компиляции Gulp...');
+      await this.waitForGulpCompilation();
+      
+      // Проверяем что скомпилированные файлы существуют
+      const cssExists = await fs.pathExists('assets/css/main.min.css');
+      const jsExists = await fs.pathExists('assets/js/main.min.js');
+      
+      if (!cssExists || !jsExists) {
+        console.log('⚠️ Скомпилированные файлы не найдены, пропускаем коммит');
+        this.isProcessing = false;
         return;
       }
       
-      // 2. Проверяем что компиляция прошла успешно
-      try {
-        await fs.access('assets/css/main.min.css');
-        await fs.access('assets/js/main.min.js');
-        console.log('✅ Скомпилированные файлы найдены');
-      } catch (fileError) {
-        console.error('❌ Скомпилированные файлы не найдены');
-        console.log('⚠️ Коммит отменён');
-        return;
-      }
+      console.log('✅ Скомпилированные файлы найдены');
       
-      // 3. ТЕПЕРЬ ДЕЛАЕМ КОММИТ
       const commitMessage = message || `🔄 Manual commit v${this.version}`;
       
       console.log('📝 Создание коммита...');
@@ -458,6 +469,8 @@ backups/
       
     } catch (error) {
       console.error('❌ Ошибка ручного коммита:', error.message);
+    } finally {
+      this.isProcessing = false;
     }
   }
 
@@ -477,6 +490,7 @@ backups/
       console.log(`Ветка: ${branch.trim()}`);
       console.log(`Версия: v${this.version}`);
       console.log(`Проект: ${this.projectName}`);
+      console.log(`Обработка: ${this.isProcessing ? 'Да' : 'Нет'}`);
       
       if (status.trim()) {
         console.log('\n📝 Неcохранённые изменения:');
@@ -495,7 +509,6 @@ backups/
   }
 
   async stopWatching() {
-    // Логика остановки будет реализована при необходимости
     console.log('🛑 Автоматическое отслеживание остановлено');
   }
 }
