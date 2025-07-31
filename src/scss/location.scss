@@ -114,6 +114,10 @@
               }
             }
     
+            @media (width <= 64em) {
+              left: 1.25rem;
+            }
+            
             @media (width <=62em) {
               bottom: 0.625rem;
             }
