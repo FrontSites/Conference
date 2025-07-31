@@ -193,7 +193,8 @@
           @media (width <= 30em) {
             align-items: flex-end;
             transform: translateX(3.125rem);
-            width: 25rem;
+            width: 100%;
+            max-width: 25rem;
           }
         }
       }
