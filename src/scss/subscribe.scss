@@ -62,11 +62,10 @@
 
           .form-items {
             display: flex;
-            align-items: stretch;
+            align-items: flex-end;
             column-gap: 1.25rem;
 
             .form-item {
-              height: auto;
               flex: 0 1 50%;
 
               input:not([type="submit"]) {
