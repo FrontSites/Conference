@@ -1,4 +1,4 @@
-<section class="speakers">
+<section class="speakers" id="speakers">
   <div class="container">
     <h2><?php the_field("speakers-title"); ?></h2>
     <p><?php the_field("speakers-subtitle"); ?></p>
