@@ -152,6 +152,7 @@
                 input:not([type="submit"]) { 
                   border: none;
                   max-width: none;
+                  padding-right: 0.625rem;
                 }
                 .main-button {
                   max-width: 9.5rem;
