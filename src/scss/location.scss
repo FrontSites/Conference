@@ -87,12 +87,14 @@
         }
   
         .hero-time {
+          bottom: 0.625rem;
           position: absolute;
           bottom: 1.25rem;
           left: 1.875rem;
           z-index: 1;
   
           p {
+            margin-bottom: 0rem;
             color: #FFF;
             display: flex;
             flex-direction: column;
