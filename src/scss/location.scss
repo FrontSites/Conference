@@ -80,7 +80,9 @@
             column-gap: 0.625rem;
             z-index: 1;
             color: #222649;
-    
+    @media (width <= 64em) {
+      top: 0.6rem;
+    }
           }
     
           .hero-time {
@@ -115,6 +117,7 @@
             @media (width <=62em) {
               bottom: 0.625rem;
             }
+            
           }
     
           .circle-button__wrap {
