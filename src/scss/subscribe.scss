@@ -156,6 +156,10 @@
                   max-width: 9.5rem;
                   margin-left: auto;
                 }
+                &:last-child {
+                  max-width: 9.5rem;
+                  width: 100%;
+                }
               }
             }
           }
