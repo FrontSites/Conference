@@ -52,6 +52,13 @@ function my_theme_enqueue_assets()
     // Принудительно обновляем CSS с уникальной версией для разработки
     $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
+    
+    // Отладочная информация для разработки
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('CSS loaded with version: ' . $css_version);
+        error_log('CSS file path: ' . $css_path);
+        error_log('CSS file exists: ' . (file_exists($css_path) ? 'YES' : 'NO'));
+    }
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
@@ -73,7 +80,9 @@ function my_theme_enqueue_assets()
     $js_url = get_template_directory_uri() . $js_main;
     error_log('JS URL: ' . $js_url);
 
-    wp_enqueue_script('main-min', $js_url, ['jquery'], filemtime($js_path), true);
+    // Принудительно обновляем JS с уникальной версией для разработки
+    $js_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($js_path);
+    wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
     error_log('JS script enqueued');
 
     // Library
