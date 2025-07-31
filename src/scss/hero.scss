@@ -192,9 +192,13 @@
           }
           @media (width <= 30em) {
             align-items: flex-end;
+            transform: translateX(3.75rem);
             width: 100%;
             max-width: none;
             flex: 1 1 100%;
+            .hero-location {
+              right: 3.125rem;
+            }
           }
         }
       }
