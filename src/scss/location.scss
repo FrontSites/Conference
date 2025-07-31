@@ -207,6 +207,9 @@
      @media (width <= 64em) {
       right: 1.25rem;
      }
+     @media (width <= 43.75em) { 
+      position: static;
+     }
       }
       @media (width <= 43.75em) {
         border-radius: 0rem;
