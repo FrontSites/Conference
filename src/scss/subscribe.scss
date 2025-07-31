@@ -93,6 +93,21 @@
                 background: #fff;
                 color: #222649;
                 max-width: 9.5rem;
+                width: 100%;
+                outline: none !important;
+                border: none !important;
+                @media (hover:hover) {
+                  &:hover {
+                    background: #FF29AE;
+                    color: #FFF;
+                  }
+                }
+                @media (hover:none) {
+                  &:active {
+                    background: #FF29AE;
+                    color: #FFF;  
+                  }
+                }
               }
             }
           }
