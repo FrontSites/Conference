@@ -212,6 +212,18 @@
      }
      @media (width <= 64em) {
       right: 1.25rem;
+      .location-item {
+      .circle-button__wrap {
+        width: 9.375rem;
+        height: 9.375rem;
+        .circle-button {
+          svg {
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+      }
      }
      @media (width <= 43.75em) { 
       position: relative;
