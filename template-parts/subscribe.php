@@ -1,4 +1,4 @@
-<section class="subscribe-block">
+<section class="subscribe">
   <div class="container">
     <div class="subscribe-items">
       <div class="subscribe-item left">
