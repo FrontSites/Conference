@@ -209,7 +209,7 @@
      }
      @media (width <= 43.75em) { 
       position: relative;
-      transform: translateY();
+      transform: translateY(-6.125rem);
       top: auto;
       left: auto;
       right: auto;
@@ -227,4 +227,6 @@
       padding-left: 0rem;
       padding-right: 0rem;
       
-  
+    }
+  }
+}
