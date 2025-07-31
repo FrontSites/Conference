@@ -55,6 +55,9 @@
         }
       }
       .footer-item {
+        justify-self: flex-end;
+        display: flex;
+        @include vw(column-gap, 63,30,63);
         .footer-links {
           display: flex;
           flex-direction: column;
@@ -88,7 +91,7 @@
             }
           }
         }
-        display: flex;
+       
         .main-button {
           max-width: 9.375rem;
         }
