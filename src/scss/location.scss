@@ -3,7 +3,6 @@
 
 .location {
   @include vw(padding-top, 100, 50, 100);
-  @include vw(padding-bottom, 100, 50, 100);
 
   .container {
     position: relative;

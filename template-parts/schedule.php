@@ -1,4 +1,4 @@
-<section class="schedule">
+<section class="schedule" id="rent">
   <div class="container">
     <div class="shedule-wrapper">
       <div class="schedule-items">
