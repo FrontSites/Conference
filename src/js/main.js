@@ -179,5 +179,36 @@ document.addEventListener('wpcf7invalid', function (event) {
 }
 
 function initHeaderScroll() {
+  var lastScrollTop = 0;
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    var secondSectionTop = $('section:nth-of-type(2)').offset().top; // Определение положения второй секции
+    var windowWidth = $(window).width();
   
+    if (windowWidth <= 768) { // Для мобильных устройств
+      if (scrollTop > secondSectionTop) {
+        if (scrollTop > lastScrollTop) {
+          // Прокрутка вниз
+          $(".header").addClass("scrolled");
+        } else if (scrollTop < lastScrollTop) {
+          // Прокрутка вверх
+          $(".header").removeClass("scrolled");
+        }
+      } else {
+        $(".header").removeClass("scrolled");
+      }
+    } else {
+      if (scrollTop > lastScrollTop) {
+        // Прокрутка вниз
+        $(".header").addClass("scrolled");
+      } else if (scrollTop === 0) {
+        // Вверху экрана
+        $(".header").removeClass("scrolled");
+      } else {
+        // Прокрутка вверх
+        $(".header").removeClass("scrolled");
+      }
+    }
+    lastScrollTop = scrollTop;
+  });
 }
