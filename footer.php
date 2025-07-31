@@ -3,6 +3,16 @@
 
 <footer class="footer">
   <div class="container">
+    <div class="footer-items">
+      <div class="footer-item">
+        <div class="logo">
+          <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.svg" alt="logo">
+          </a>
+        </div>
+        <div class="footer-menu"></div>
+      </div>
+    </div>
     <?php wp_nav_menu([
       'theme_location' => 'footer-site-menu',
 
