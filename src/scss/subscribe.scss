@@ -119,6 +119,16 @@
           }
         }
       }
+      @media (width <= 62em) {
+        .subscribe-item { 
+          &.left {
+            flex: 1 1 50%;
+          }
+          &.right {
+            flex: 1 1 50%;
+          }
+        }
+      }
     }
   }
 }
