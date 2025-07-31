@@ -141,6 +141,9 @@
         .main-button {
           max-width: 9.375rem;
         }
+        @media (width <= 30em) {
+          margin-top: 0.75rem;
+        }
       }
 
       @media (width <=64em) {
