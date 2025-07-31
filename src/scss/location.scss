@@ -209,13 +209,15 @@
      }
       }
       @media (width <= 43.75em) {
-
+        border-radius: 0rem;
+        .google-map { 
+          border-radius: 0rem;
+        }
       }
     }
     @media (width <= 43.75em) {
       padding-left: 0rem;
       padding-right: 0rem;
-      border-radius: 0rem;
       
     }
   }
