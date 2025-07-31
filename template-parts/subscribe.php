@@ -1,4 +1,4 @@
-<div class="subscribe-block">
+<section class="subscribe-block">
   <div class="container">
     <div class="subscribe-items">
       <div class="subscribe-item left">
@@ -32,5 +32,11 @@
     </div>
 
   </div>
-</div>
+</section>
+
+<div class="form-items">
+  <div class="form-item">
+    <input type="text" placeholder="Name">
+  </div>
+ 
 </div>
