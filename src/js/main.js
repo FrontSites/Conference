@@ -177,3 +177,7 @@ document.addEventListener('wpcf7invalid', function (event) {
   }, 100); 
   }, false);
 }
+
+function initHeaderScroll() {
+  
+}
