@@ -51,13 +51,8 @@ export default defineConfig({
     'process.env.NODE_ENV': '"development"'
   },
   
-  // Явно указываем зависимости для оптимизации
+  // Отключаем оптимизацию зависимостей для WordPress темы
   optimizeDeps: {
-    include: [
-      'jquery',
-      'gsap',
-      'swiper'
-    ],
     exclude: [
       'assets/css/main.min.css', 
       'assets/js/main.min.js'
