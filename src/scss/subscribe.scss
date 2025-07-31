@@ -16,6 +16,7 @@
         height: auto;
 
         &.left {
+          flex: 0 1 60%;
           h2 {
             max-width: 31.25rem;
             font-family: "Manrope";
