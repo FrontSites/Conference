@@ -17,6 +17,7 @@ Template Name: Home
     <?php get_template_part('template-parts/partners-media'); ?>
     <?php get_template_part('template-parts/partners-tech'); ?>
     <?php get_template_part('template-parts/location'); ?>
+<?php get_template_part('template-parts/subscribe'); ?>
 
 
 
