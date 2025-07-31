@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpeakersLoadMore();
   initScheduleVisibility();
   initHideError();
+  initHeaderScroll();
 })
 
 
