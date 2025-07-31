@@ -6,12 +6,13 @@
   @include vw(padding-bottom, 100, 50, 100);
 
   .container {
+    position: relative;
     h2 {
       text-align: center;
       font-family: "Manrope";
       @include vw(font-size, 48, 35, 48);
       font-weight: 700;
-      margin-bottom: 1.25rem;
+      @include vw(margin-bottom, 60,44,60);
     }
 
     p {
@@ -48,5 +49,125 @@
         }
       }
     }
+    .location-block { 
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      flex: 0 1 25rem;
+      .location-item {
+        .hero-image {
+          width: 100%;
+          height: 100%;
+  
+          img {
+            max-width: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+  
+  
+        .hero-location {
+          position: absolute;
+          top: 1.4375rem;
+          right: 1.25rem;
+          display: flex;
+          align-items: center;
+          @include vw(font-size, 20, 15, 20);
+          column-gap: 0.625rem;
+          z-index: 1;
+          color: #fff;
+  
+        }
+  
+        .hero-time {
+          position: absolute;
+          @include vw(bottom, 90, 5, 90);
+          left: 1.875rem;
+          z-index: 1;
+  
+          p {
+            color: #FFF;
+            display: flex;
+            flex-direction: column;
+            @include vw(font-size, 24, 18, 24);
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 0.075rem;
+  
+            strong {
+              transform: translateY(0.625rem);
+              font-size: 3rem;
+              font-style: normal;
+              font-weight: 700;
+  
+            }
+          }
+  
+          @media (width <=62em) {
+            bottom: 0.625rem;
+          }
+        }
+  
+        .circle-button__wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.625rem;
+          border-radius: 50%;
+          max-width: 9.375rem;
+          width: 100%;
+          height: 9.375rem;
+          position: absolute;
+          bottom: 2.875rem;
+          right: 2.875rem;
+          background: #fff;
+  
+          .circle-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #FF29AE;
+            height: 100%;
+            transition: all 0.3s ease;
+  
+            svg {
+              transition: transform, all 0.3s ease;
+            }
+          }
+  
+          @media (width <=62em) {
+            bottom: 1.875rem;
+            right: 1.875rem;
+  
+          }
+        }
+  
+        @media (hover:hover) {
+          &:hover {
+            .circle-button__wrap {
+              .circle-button {
+                background: #222649;
+  
+                svg {
+                  transform: translate(-0.75rem, -0.75rem);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    
+    }
+    }
   }
-}
