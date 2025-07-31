@@ -107,7 +107,7 @@
 
           .hero-time {
             position: absolute;
-            @include vw(bottom, 90, 5, 90);
+            bottom: 2.5rem;
             left: 1.875rem;
             z-index: 1;
 
