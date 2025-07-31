@@ -191,6 +191,7 @@
           }
           @media (width <= 30em) {
             align-items: flex-end;
+            transform: translateX(1.25rem);
           }
         }
       }
