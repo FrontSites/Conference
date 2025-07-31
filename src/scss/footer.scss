@@ -1,3 +1,9 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
+.footer {
+  background: #222649;
+  .footer-wrapper {
+    background: #1B1F3D;
+  }
+}
