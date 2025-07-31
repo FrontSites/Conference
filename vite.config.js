@@ -25,7 +25,7 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/js/main.js') // Используем основной JS файл
+        main: path.resolve(__dirname, 'index.html') // Используем HTML файл как точку входа
       },
       output: {
         entryFileNames: 'js/[name].min.js',
