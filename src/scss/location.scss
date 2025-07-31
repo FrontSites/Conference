@@ -209,10 +209,13 @@
      }
      @media (width <= 43.75em) { 
       position: relative;
-      transform: translateY(-6.125rem);
+      transform: translateY(-4.375rem);
       top: auto;
       left: auto;
       right: auto;
+     }
+     @media (width <= 30em) {
+      right: 0rem;
      }
       }
       @media (width <= 43.75em) {
