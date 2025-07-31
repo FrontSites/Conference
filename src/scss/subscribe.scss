@@ -146,6 +146,7 @@
             .form-items {
               border: 1px solid #FFF;
               border-radius: 10px;
+              justify-content: space-between;
               .form-item {
                 border: none;
                 input:not([type="submit"]) { 
