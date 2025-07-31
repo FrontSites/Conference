@@ -138,10 +138,21 @@
       }
       @media (width <= 48em) {
         flex-direction: column;
-        @include vw(row-gap, 25rem);
+        row-gap: 2.75rem;
         .subscribe-item { 
           &.right {
+            row-gap: 2.75rem;
             align-items: flex-start;
+            .form-items {
+              border: 1px solid #FFF;
+              .form-item {
+                border: none;
+                input:not([type="submit"]) { 
+                  border: none;
+                  max-width: none;
+                }
+              }
+            }
           }
         }
       }
