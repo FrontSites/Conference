@@ -97,6 +97,10 @@
           max-width: 9.375rem;
         }
       }
+      @media (width <= 64em) {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
