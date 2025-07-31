@@ -189,6 +189,9 @@
               }
             }
           }
+          @media (width <= 30em) {
+            align-items: flex-end;
+          }
         }
       }
 
