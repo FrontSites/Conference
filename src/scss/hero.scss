@@ -194,7 +194,7 @@
             align-items: flex-end;
             transform: translateX(3.75rem);
             width: 25rem;
-            max-width: none;
+            max-width: none !important;
             flex: 1 1 100%;
             .hero-location {
               right: 3.125rem;
