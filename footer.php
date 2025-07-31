@@ -36,7 +36,7 @@
     </div>
 
   </div>
-  <a href="https://agency.kiev.ua/" class="footer-agency">
+  <a href="https://generis.agency/" class="footer-agency">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-agency.svg" alt="footer-agency">
   </a>
 </footer>
