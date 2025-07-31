@@ -179,6 +179,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    @m
+    @media (width <= 30em) {
+      margin-top: 3.4375rem;
+    }
   }
 }
