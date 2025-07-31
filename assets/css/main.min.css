@@ -79,7 +79,7 @@
 .footer .footer-wrapper .footer-items .footer-item .footer-links{justify-self:center;display:none}
 }
 @media (width <= 30em){
-.footer .footer-wrapper{padding-top:0;padding-bottom:0}
+.footer .footer-wrapper{padding-top:0;padding-bottom:0;background:0 0}
 }
 .footer .footer-agency{padding-top:1.25rem;border-top:1px solid #fff;margin-top:1.4375rem;-moz-column-gap:.4375rem;column-gap:.4375rem;display:flex;align-items:center;justify-content:center;color:#afafb4;font-size:10px;font-style:normal;font-weight:400;line-height:normal}
 @media (width <= 30em){
