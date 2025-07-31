@@ -6,5 +6,15 @@
   .footer-wrapper {
     background: #1B1F3D;
     .footer-items { 
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 1.25rem;
+      .logo {
+        
+      }
+      .footer-menu {
+        
+      }
+    }
   }
 }
