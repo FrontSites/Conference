@@ -235,7 +235,7 @@ backups/
     console.log('⚡ Максимальная оптимизация системы...');
     
     // Устанавливаем переменные окружения для максимальной производительности
-    process.env.NODE_OPTIONS = '--max-old-space-size=8192 --expose-gc --optimize-for-size';
+    process.env.NODE_OPTIONS = '--max-old-space-size=8192 --expose-gc';
     process.env.VITE_NODE_OPTIONS = '--max-old-space-size=8192';
     process.env.UV_THREADPOOL_SIZE = '256';
     process.env.GULP_OPTIMIZE = 'true';
