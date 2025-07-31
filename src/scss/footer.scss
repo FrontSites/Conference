@@ -13,6 +13,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 1.25rem;
    .footer-links {
+    a {
     display: none;
     color: #fff;
     font-size: 0.9375rem;
@@ -41,6 +42,7 @@
       }
     }
    }
+  }
       .footer-menu {
         justify-self: center ;
         ul {
