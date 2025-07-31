@@ -54,6 +54,12 @@
           }
         }
       }
+      .footer-item {
+        display: flex;
+        .main-button {
+          max-width: 9.375rem;
+        }
+      }
     }
   }
 }

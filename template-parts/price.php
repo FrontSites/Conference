@@ -32,7 +32,17 @@
                 </div>
 
               </div>
-              <?php get_template_part('template-parts/buttons/ticket-button'); ?>
+
+              <a href="<?php the_sub_field('price-link'); ?>" class="main-button ticket">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.svg" alt="description">
+                <?php
+                if (function_exists('the_field')) {
+                  the_field("ticket_button_text", "option");
+                } else {
+                  echo 'Buy Ticket';
+                }
+                ?>
+              </a>
             </div>
           </div>
       <?php

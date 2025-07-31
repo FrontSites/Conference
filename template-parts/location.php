@@ -28,7 +28,7 @@
             <?php the_field("hero-time"); ?>
           </div>
         </a>
-      </div
-        </div>
+      </div>
     </div>
+  </div>
 </section>

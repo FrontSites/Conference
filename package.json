@@ -83,6 +83,8 @@
     "concurrently": "^8.2.2",
     "fs-extra": "^11.1.1",
     "gulp": "^5.0.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-remember": "^1.0.1",
     "imagemin-webp": "^8.0.0",
     "postcss": "^8.4.0",
     "rimraf": "^5.0.0",

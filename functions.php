@@ -88,7 +88,21 @@ function my_theme_enqueue_assets()
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
 
-
+    // === Google Maps API Key ===
+    if (defined('GOOGLE_MAPS_API_KEY')) {
+        // Определяем текущий язык
+        $current_lang = 'uk'; // По умолчанию украинский
+        if (function_exists('pll_current_language')) {
+            $current_lang = pll_current_language();
+        } elseif (function_exists('icl_object_id')) {
+            $current_lang = ICL_LANGUAGE_CODE;
+        }
+        
+        wp_localize_script('main-min', 'mapConfig', [
+            'apiKey' => GOOGLE_MAPS_API_KEY,
+            'language' => $current_lang
+        ]);
+    }
 
     // Добавляем тестовый скрипт для проверки
     wp_add_inline_script('main-min', 'console.log("JS loaded successfully!");');
