@@ -215,22 +215,16 @@ backups/
   }
 
   async forceCompile() {
-    console.log('⚙️ Принудительная компиляция...');
+    console.log('⚡ Быстрая компиляция...');
     try {
-      // Останавливаем все процессы Gulp
-      await execAsync('taskkill /f /im node.exe').catch(() => {});
-      
-      // Ждём секунду
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Запускаем компиляцию
+      // Запускаем быструю компиляцию
       await execAsync('npm run scss');
       await execAsync('npm run js');
       
-      console.log('✅ Принудительная компиляция завершена');
+      console.log('✅ Быстрая компиляция завершена');
       return true;
     } catch (error) {
-      console.error('❌ Ошибка принудительной компиляции:', error.message);
+      console.error('❌ Ошибка компиляции:', error.message);
       return false;
     }
   }
