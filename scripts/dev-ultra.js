@@ -1,4 +1,4 @@
-// Dev Ultra - Полная автоматизация разработки с Git
+// Dev Ultra - Максимально быстрая автоматизация разработки
 import { spawn } from 'child_process';
 import { exec } from 'child_process';
 import { promisify } from 'util';
@@ -40,30 +40,32 @@ class DevUltra {
 
   async start() {
     console.log(`
-🚀 DEV ULTRA - ПОЛНАЯ АВТОМАТИЗАЦИЯ
-====================================
+🚀 DEV ULTRA - МАКСИМАЛЬНО БЫСТРАЯ АВТОМАТИЗАЦИЯ
+===============================================
 
-🎯 Цель: Автоматическая настройка Git + разработка
+🎯 Цель: Мгновенная компиляция + автоматический Git
 📦 Проект: ${this.projectName}
 👤 GitHub: ${this.githubUsername}
+⚡ Скорость: МАКСИМАЛЬНАЯ
     `);
 
     try {
       // 1. Проверяем и инициализируем Git
       await this.setupGit();
       
-      // 2. Оптимизируем систему
-      await this.optimizeSystem();
+      // 2. Максимальная оптимизация системы
+      await this.maximizePerformance();
       
-      // 3. Запускаем все процессы разработки
-      await this.startAllProcesses();
+      // 3. Запускаем только необходимые процессы
+      await this.startOptimizedProcesses();
       
       // 4. Настраиваем обработчики
       this.setupSignalHandlers();
       
       this.isRunning = true;
-      console.log('\n✅ DEV ULTRA запущен!');
+      console.log('\n✅ DEV ULTRA запущен с максимальной скоростью!');
       console.log('🌐 GitHub: https://github.com/' + this.githubUsername + '/' + this.projectName);
+      console.log('⚡ Компиляция: МГНОВЕННАЯ');
       console.log('💡 Для остановки нажмите Ctrl+C');
       
     } catch (error) {
@@ -73,7 +75,7 @@ class DevUltra {
   }
 
   async setupGit() {
-    console.log('🔧 Настройка Git...');
+    console.log('🔧 Быстрая настройка Git...');
     
     try {
       // Проверяем статус Git
@@ -93,7 +95,7 @@ class DevUltra {
       await this.createGitHubRepo();
       
     } catch (error) {
-      console.log('📁 Git репозиторий не найден или повреждён, инициализируем заново...');
+      console.log('📁 Git репозиторий не найден, инициализируем...');
       
       // Удаляем повреждённый .git если есть
       try {
@@ -116,7 +118,7 @@ class DevUltra {
       
       // Первый коммит
       await execAsync('git add .');
-      await execAsync('git commit -m "🎉 Initial commit - DEV ULTRA Setup"');
+      await execAsync('git commit -m "🎉 Initial commit - DEV ULTRA MAX SPEED"');
       
       console.log('✅ Git репозиторий инициализирован');
       
@@ -199,7 +201,7 @@ backups/
       try {
         await execAsync('gh --version');
         
-        const createCommand = `gh repo create ${this.githubUsername}/${this.projectName} --public --description "WordPress Theme Development System with DEV ULTRA automation" --clone=false`;
+        const createCommand = `gh repo create ${this.githubUsername}/${this.projectName} --public --description "WordPress Theme Development System with DEV ULTRA MAX SPEED" --clone=false`;
         await execAsync(createCommand);
         
         console.log(`✅ Репозиторий создан: https://github.com/${this.githubUsername}/${this.projectName}`);
@@ -229,21 +231,27 @@ backups/
     }
   }
 
-  async optimizeSystem() {
-    console.log('⚡ Оптимизация системы...');
+  async maximizePerformance() {
+    console.log('⚡ Максимальная оптимизация системы...');
     
-    // Устанавливаем переменные окружения для оптимизации
-    process.env.NODE_OPTIONS = '--max-old-space-size=4096 --expose-gc';
-    process.env.VITE_NODE_OPTIONS = '--max-old-space-size=4096';
-    process.env.UV_THREADPOOL_SIZE = '128';
+    // Устанавливаем переменные окружения для максимальной производительности
+    process.env.NODE_OPTIONS = '--max-old-space-size=8192 --expose-gc --optimize-for-size';
+    process.env.VITE_NODE_OPTIONS = '--max-old-space-size=8192';
+    process.env.UV_THREADPOOL_SIZE = '256';
+    process.env.GULP_OPTIMIZE = 'true';
+    process.env.SASS_OPTIMIZE = 'true';
     
-    console.log('✅ Система оптимизирована');
+    // Отключаем source maps для скорости
+    process.env.GENERATE_SOURCEMAP = 'false';
+    process.env.VITE_SOURCEMAP = 'false';
+    
+    console.log('✅ Система оптимизирована для максимальной скорости');
   }
 
-  async startAllProcesses() {
-    console.log('🚀 Запуск всех процессов разработки...');
+  async startOptimizedProcesses() {
+    console.log('🚀 Запуск оптимизированных процессов...');
     
-    // Запускаем основные процессы
+    // Запускаем только самые необходимые процессы для максимальной скорости
     const processes = [
       {
         name: 'Vite Dev Server',
@@ -252,7 +260,7 @@ backups/
         color: '\x1b[36m' // Cyan
       },
       {
-        name: 'Gulp Automation',
+        name: 'Gulp MAX SPEED',
         command: 'npm',
         args: ['run', 'gulp'],
         color: '\x1b[33m' // Yellow
@@ -262,12 +270,6 @@ backups/
         command: 'npm',
         args: ['run', 'git:watch'],
         color: '\x1b[32m' // Green
-      },
-      {
-        name: 'Memory Cleaner',
-        command: 'npm',
-        args: ['run', 'memory:auto'],
-        color: '\x1b[35m' // Magenta
       }
     ];
 
@@ -275,7 +277,7 @@ backups/
       await this.spawnProcess(processConfig);
     }
     
-    console.log('✅ Все процессы разработки запущены');
+    console.log('✅ Оптимизированные процессы запущены');
   }
 
   async spawnProcess(config) {
@@ -310,7 +312,7 @@ backups/
       });
 
       // Даём процессу время на запуск
-      setTimeout(resolve, 1000);
+      setTimeout(resolve, 500); // Уменьшили время ожидания
     });
   }
 
@@ -340,7 +342,7 @@ backups/
   async cleanup() {
     if (!this.isRunning) return;
     
-    console.log('\n🧹 Очистка ресурсов...');
+    console.log('\n🧹 Быстрая очистка ресурсов...');
     
     try {
       // Завершаем все процессы
@@ -363,12 +365,13 @@ backups/
   }
 
   async showStatus() {
-    console.log('\n📊 СТАТУС DEV ULTRA:');
-    console.log('====================');
+    console.log('\n📊 СТАТУС DEV ULTRA MAX SPEED:');
+    console.log('==============================');
     
     console.log(`🔄 Статус: ${this.isRunning ? '🟢 Активен' : '🔴 Остановлен'}`);
     console.log(`📈 Процессов: ${this.processes.length}`);
     console.log(`📦 Проект: ${this.projectName}`);
+    console.log(`⚡ Скорость: МАКСИМАЛЬНАЯ`);
     console.log(`🌐 GitHub: https://github.com/${this.githubUsername}/${this.projectName}`);
     
     for (const processInfo of this.processes) {
@@ -395,11 +398,11 @@ if (process.argv[2]) {
       
     default:
       console.log(`
-🚀 DEV ULTRA - ПОЛНАЯ АВТОМАТИЗАЦИЯ
-====================================
+🚀 DEV ULTRA - МАКСИМАЛЬНО БЫСТРАЯ АВТОМАТИЗАЦИЯ
+===============================================
 
 Команды:
-  start     Запустить DEV ULTRA (автоматическая настройка Git + разработка)
+  start     Запустить DEV ULTRA MAX SPEED
   status    Показать статус процессов
 
 Пример:
