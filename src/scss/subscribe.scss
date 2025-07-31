@@ -136,6 +136,15 @@
           }
         }
       }
+      @media (width <= 48em) {
+        flex-direction: column;
+        @include vw(row-gap, 25rem);
+        .subscribe-item { 
+          &.right {
+            align-items: flex-start;
+          }
+        }
+      }
     }
   }
 }
