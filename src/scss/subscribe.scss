@@ -76,6 +76,8 @@
               flex: 0 1 50%;
 
               input:not([type="submit"]) {
+                max-width: 21.875rem;
+                width: 100%;
                 &::placeholder {
                   color: #FFF;
                 }
