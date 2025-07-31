@@ -7,7 +7,7 @@
            <?php the_field("hero-bottom-text"); ?>
          </div>
        </div>
-       <a href="/#rent" class="hero-item right">
+       <a href="/#agenda" class="hero-item right">
          <div class="hero-image">
            <img src="<?php the_field("hero-image"); ?>" alt="">
          </div>
