@@ -154,6 +154,10 @@
               right: 1.875rem;
     
             }
+            @media (width <= 75.625em) {
+                bottom: 3.875rem;
+                right: 3.875rem;
+            }
           }
     
           @media (hover:hover) {
