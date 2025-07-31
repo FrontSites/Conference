@@ -10,7 +10,14 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.svg" alt="logo">
           </a>
         </div>
-
+        <div class="footer-links">
+          <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
+            <?php echo get_theme_mod('contact_email', ''); ?>
+          </a>
+          <a href="tel:<?php echo get_theme_mod('contact_phone', ''); ?>">
+            <?php echo get_theme_mod('contact_phone', ''); ?>
+          </a>
+        </div>
 
         <div class="footer-menu">
           <?php wp_nav_menu([
