@@ -49,7 +49,9 @@ function my_theme_enqueue_assets()
         error_log('CSS file not found: ' . $css_path);
     }
 
-    wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], filemtime($css_path));
+    // Принудительно обновляем CSS с уникальной версией для разработки
+    $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
+    wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
