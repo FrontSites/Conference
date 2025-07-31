@@ -174,7 +174,10 @@
           }
         }
   
-      
+      @media (width <= 64em) {
+        right: auto;
+        left: 1.875rem;
+      }
       }
     }
    
