@@ -8,7 +8,7 @@
     <div class="location-block">
       <a href="/#rent" class="location-item">
         <div class="hero-image">
-          <img src="<?php the_field("hero-image"); ?>" alt="">
+          <img src="<?php the_field("location-image"); ?>" alt="">
         </div>
         <div class="circle-button__wrap">
           <div class="circle-button">
