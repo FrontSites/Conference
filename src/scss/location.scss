@@ -221,7 +221,8 @@
       right: auto;
      }
      @media (width <= 30em) {
-      right: 0rem;
+      right: -1.25rem;
+      max-width: 25rem;
      }
       }
       @media (width <= 43.75em) {
