@@ -362,5 +362,9 @@
         }
       }
     }
+    @media (width <= 30em) {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
   }
 }
