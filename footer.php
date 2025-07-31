@@ -4,25 +4,25 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-items">
-      <div class="footer-item">
-        <div class="logo">
-          <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.svg" alt="logo">
-          </a>
-        </div>
-        <div class="footer-menu">
+      <div class="logo">
+        <a href="<?php echo home_url(); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.svg" alt="logo">
+        </a>
+      </div>
 
-        </div>
+
+      <div class="footer-menu">
+        <?php wp_nav_menu([
+          'theme_location' => 'footer-site-menu',
+
+          'container'       => false,
+          'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          'menu_class'     => 'main-menu', // navbar-2nd_level
+        ]);
+        ?>
       </div>
     </div>
-    <?php wp_nav_menu([
-      'theme_location' => 'footer-site-menu',
 
-      'container'       => false,
-      'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-      'menu_class'     => 'main-menu', // navbar-2nd_level
-    ]);
-    ?>
   </div>
 </footer>
 </div>
