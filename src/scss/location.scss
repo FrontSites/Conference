@@ -143,6 +143,9 @@
   
             svg {
               transition: transform, all 0.3s ease;
+              path {
+                transition: fill, all 0.3s ease;
+              }
             }
           }
   
@@ -161,6 +164,9 @@
   
                 svg {
                   transform: translate(-0.75rem, -0.75rem);
+                  path {
+                    fill: #fff;
+                  }
                 }
               }
             }
