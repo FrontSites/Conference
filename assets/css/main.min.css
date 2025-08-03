@@ -417,7 +417,7 @@ body img{pointer-events:none}
 .popup-wrapper .popup h2{max-width:37.5rem;margin:0 auto;color:#fff;text-align:center;font-family:Manrope;font-size:clamp(18px,calc(1.3888888889vw),20px);font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase}
 .popup-wrapper .popup .close-button{cursor:pointer;right:1.375rem;top:1.375rem;position:absolute}
 @media (width <= 48em){
-.popup-wrapper .popup .close-button{width:1.875rem;height:1.875rem}
+.popup-wrapper .popup .close-button{width:1.875rem;height:1.875rem;right:.625rem;top:.625rem}
 .popup-wrapper .popup .close-button svg{width:1.5625rem;height:1.5625rem}
 }
 .popup-wrapper .popup .form-items{display:flex;flex-direction:column;max-width:21.875rem;margin:0 auto;margin-top:2rem;row-gap:1.25rem}
