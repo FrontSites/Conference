@@ -91,6 +91,8 @@
   .select2-dropdown {
     .select2-results {
       padding: 0.625rem !important;
+      border-bottom-left-radius: 0.625rem !important;
+      border-bottom-right-radius: 0.625rem !important;
       border: 0.0625rem solid #FFF !important;
       background: #222649 !important;
       .select2-results__options {
