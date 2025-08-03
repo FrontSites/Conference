@@ -83,7 +83,12 @@
             padding-top: 0.6875rem!important;
             padding-bottom: 0.6875rem !important;
             color: #FFF !important;
-          
+            .select2-selection__rendered {
+              color: #FFF !important;
+            }
+            .select2-selection__arrow {
+              color: #FFF !important;
+            }
           }
       }
     }
