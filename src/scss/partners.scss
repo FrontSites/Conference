@@ -93,7 +93,7 @@
     }
 
     .partner-blocks__wrapper {
-      @include vw(margin-top, 50,);
+      margin-top: 3.125rem;
       @include vw(padding-left, 110, 30, 110);
       @include vw(padding-right, 110, 30, 110);
       @include vw(padding-top, 50, 30, 50);
