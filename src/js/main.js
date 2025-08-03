@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScheduleVisibility();
   initHideError();
   initHeaderScroll();
+  initMaskPhone();
 })
 
 
