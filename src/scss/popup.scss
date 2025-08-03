@@ -118,11 +118,11 @@
           }
       }
       .select2-dropdown {
-        background: #222649 !important;
-        border: 0.0625rem solid #FFF !important;
-        border-radius: 0.625rem !important;
-        padding: 0.625rem !important;
         .select2-results {
+          border-radius: 0.625rem !important;
+          padding: 0.625rem !important;
+          border: 0.0625rem solid #FFF !important;
+          background: #222649 !important;
           .select2-results__options {
             .select2-results__option {
               color: #FFF !important;
