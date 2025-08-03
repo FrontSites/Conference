@@ -101,6 +101,7 @@
       align-items: center;
       justify-content: center;
       @include vw(row-gap, 50, 30, 50);
+      
 
       .partners-blocks {
         display: flex;
