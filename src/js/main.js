@@ -237,3 +237,24 @@ function initSelect() {
 }
 
 
+function initPopup() { 
+  $(".popup-btn").each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      $("body").addClass("hidden");
+      // Показываем попап
+      $(".popup-wrapper").fadeIn(200);
+      setTimeout(function () {
+        $(".popup").addClass("show");
+      }, 300);
+      setTimeout(function () {
+        $(".popup-wrapper").css({ display: "flex" });
+      }, 50);
+    });
+  });
+  $(".close-btn").click(function () {
+    $(".popup").removeClass("show");
+    $("body").removeClass("hidden");
+    $(".popup-wrapper").fadeOut();
+  });
+}
