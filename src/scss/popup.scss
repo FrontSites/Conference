@@ -116,7 +116,12 @@
               }
             }
           }
-      
+      &.select2-container--open {
+        .select2-selection {
+          border-bottom-left-radius: 0px !important;
+          border-bottom-right-radius: 0px !important;
+        }
+      }
       }
      
     }
