@@ -91,6 +91,17 @@
             .select2-selection__arrow {
               color: #FFF !important;
               position: relative;
+              &:after {
+                content: '';
+                width: 0.75rem;
+                height: 0.75rem;
+                background: url('../img/arrow-drop.svg') no-repeat center center;
+                background-size: contain;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+              }
               b {
                 display: none !important;
               }
