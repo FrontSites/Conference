@@ -122,7 +122,9 @@
           border-bottom-right-radius: 0px !important;
         }
         .select2-selection__arrow {
-          transform: rotate(180deg) !important;
+          &:after {
+            transform: rotate(180deg) !important;
+          }
         }
       }
       }
