@@ -28,7 +28,7 @@
     }
 
     .partners-items {
-      
+
       max-width: 63.875rem;
       margin: 0 auto;
       margin-top: 2.75rem;
@@ -50,26 +50,30 @@
           height: 100%;
           object-fit: cover;
         }
-        @media (width <= 48em) {
-        flex:  0 1 25%;
+
+        @media (width <=48em) {
+          flex: 0 1 25%;
         }
 
-        @media (width <= 30em) {
-          flex:  0 1 45%;
-          }
+        @media (width <=30em) {
+          flex: 0 1 45%;
+        }
       }
-      @media (width <= 30em) {
+
+      @media (width <=30em) {
         row-gap: 3.125rem;
       }
-      
+
     }
-    .main-button { 
+
+    .main-button {
       &._border {
         margin: 0 auto;
-        @include vw(margin-top, 60,44,66);
+        @include vw(margin-top, 60, 44, 66);
         color: #fff;
         border-color: #fff;
         max-width: 14.25rem;
+
         @media (hover:hover) {
           &:hover {
             background: #FF29AE;
@@ -86,35 +90,41 @@
           }
         }
       }
-     
+
     }
-    .partner-blocks__wrapper { 
+
+    .partner-blocks__wrapper {
+      border-radius: 1.5625rem;
+      border: 0.3125rem solid #2C3055;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      @include vw(row-gap, 50,30,50);
-      .partners-blocks {  
+      @include vw(row-gap, 50, 30, 50);
+
+      .partners-blocks {
         display: flex;
         flex-wrap: wrap;
+
         .partner-block {
           flex: 1 1 45%;
         }
-    }
-  }
-  &.partners-media { 
-    .container {
-      .main-button {
-        max-width: 19.75rem;
       }
     }
-  }
 
-  &.partners-tech { 
-    .container {
-      .main-button {
-        max-width: 19.75rem;
+    &.partners-media {
+      .container {
+        .main-button {
+          max-width: 19.75rem;
+        }
+      }
+    }
+
+    &.partners-tech {
+      .container {
+        .main-button {
+          max-width: 19.75rem;
+        }
       }
     }
   }
-}
