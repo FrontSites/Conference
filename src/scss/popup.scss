@@ -48,6 +48,7 @@
     }
 
     .form-items {
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       max-width: 21.875rem;
