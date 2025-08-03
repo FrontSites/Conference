@@ -87,10 +87,12 @@
             color: #FFF !important;
             .select2-selection__rendered {
               color: #FFF !important;
+              position: relative !important;
+              display: flex !;
+
             }
             .select2-selection__arrow {
               color: #FFF !important;
-              position: relative !important;
               &:after {
                 content: '';
                 width: 0.75rem;
