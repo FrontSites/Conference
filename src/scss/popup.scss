@@ -171,6 +171,11 @@
 }
 .wpcf7-response-output { 
 &.error {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   background: #FF29AE !important;
   color: #fff !important;
   border-radius: 0.625rem !important;
