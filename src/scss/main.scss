@@ -89,6 +89,7 @@
 
 .select2-container { 
   .select2-dropdown {
+    transform: translateY(1.875rem) !important;
     background: transparent !important;
     border-radius:  0px !important;
     border: none !important;
