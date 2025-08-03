@@ -405,7 +405,7 @@ body img{pointer-events:none}
 .partners .container .partner-blocks__wrapper{padding-left:clamp(30px,calc(7.6388888889vw),110px);padding-right:clamp(30px,calc(7.6388888889vw),110px);padding-top:clamp(30px,calc(3.4722222222vw),50px);padding-bottom:clamp(30px,calc(3.4722222222vw),50px);border-radius:1.5625rem;border:.3125rem solid #2c3055;display:flex;flex-direction:column;align-items:center;justify-content:center;row-gap:clamp(30px,calc(3.4722222222vw),50px);max-width:52.5rem;margin:0 auto}
 .partners .container .partner-blocks__wrapper .partners-blocks{display:flex;flex-wrap:wrap}
 .partners .container .partner-blocks__wrapper .partners-blocks .partner-block{flex:1 1 45%}
-.partners .container .partner-blocks__wrapper h3{font-size:clamp(18px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;line-height:120%;letter-spacing:1px;text-transform:uppercase}
+.partners .container .partner-blocks__wrapper h3{font-size:clamp(18px,calc(1.3888888889vw),20px);max-width:23.75rem;margin:0 auto;font-style:normal;font-weight:700;line-height:120%;letter-spacing:1px;text-transform:uppercase}
 .partners .container.partners-media .container .main-button{max-width:19.75rem}
 .partners .container.partners-tech .container .main-button{max-width:19.75rem}
 .price{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
