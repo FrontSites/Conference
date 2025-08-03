@@ -213,3 +213,4 @@ function initHeaderScroll() {
     lastScrollTop = scrollTop;
   });
 }
+
