@@ -15,6 +15,7 @@
   align-items: center;
 
   .popup {
+    position: relative;
     @include vw(padding-left,126,30,126 );
     @include vw(padding-right, 126,30,126);
     @include vw(padding-top, 76,30,76);
@@ -37,5 +38,8 @@
     border-radius: 1.5625rem;
     border: 0.3125rem solid #2C3055;
     background: #222649;
+  }
+  .close-button {
+    position: absolute;
   }
 }
