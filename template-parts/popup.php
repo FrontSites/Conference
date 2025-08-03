@@ -22,7 +22,9 @@
     [email* email class:email placeholder "E-mail"]
   </div>
 
-  <div class="form-item"></div>
+  <div class="form-item">
+    [select* choose class:select "Стати спікером" "Стати спонсором" "Стати медіапартнером" "Стати технічним партнером"]
+  </div>
 
   <div class="form-item"></div>
 
