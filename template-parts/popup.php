@@ -11,7 +11,6 @@
 
 <div class="form-items">
   <div class="form-item"></div>
-  <div class="form-item"></div>
 
   <div class="form-item"></div>
 
@@ -19,5 +18,7 @@
 
   <div class="form-item"></div>
 
-  <div class="form-button"></div>
+  <div class="form-item"></div>
+
+
 </div>
