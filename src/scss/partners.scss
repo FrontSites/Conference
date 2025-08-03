@@ -109,6 +109,7 @@
       margin: 0 auto;
 
       .partners-blocks {
+        @include vw(column-gap, 30,20,30);
         display: flex;
         flex-wrap: wrap;
 
