@@ -402,6 +402,7 @@ body img{pointer-events:none}
 @media (hover:none){
 .partners .container .main-button._border:active{background:#ff29ae;color:#fff;border-color:transparent}
 }
+.partners .container .partner-blocks__wrapper{display:flex;flex-direction:column;align-items:center;justify-content:center}
 .partners.partners-media .container .main-button{max-width:19.75rem}
 .partners.partners-tech .container .main-button{max-width:19.75rem}
 .price{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
