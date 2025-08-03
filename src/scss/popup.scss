@@ -171,7 +171,9 @@
 }
 .wpcf7-response-output { 
 &.error {
-  background: #fff !important;
+  background: #FF29AE !important;
+  color: #fff !important;
+  border-radius: 0.625rem;
 }
 }
 }
