@@ -101,16 +101,16 @@
             padding-top: 0.6875rem!important;
             padding-bottom: 0.6875rem !important;
             color: #FFF !important;
-                                       .select2-selection__rendered {
-                padding: 0rem !important;
-                color: #FFF !important;
-                opacity: 0.8 !important;
-                position: relative !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                max-width: none !important;
-              }
+                                                                               .select2-selection__rendered {
+                 padding: 0rem !important;
+                 color: #FFF !important;
+                 opacity: 0.8;
+                 position: relative !important;
+                 display: flex !important;
+                 align-items: center !important;
+                 justify-content: space-between !important;
+                 max-width: none !important;
+               }
             .select2-selection__arrow {
               color: #FFF !important;
               position: absolute !important;
