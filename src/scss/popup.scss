@@ -21,6 +21,12 @@
     @include vw(padding-right, 126, 30, 126);
     @include vw(padding-top, 76, 30, 76);
     @include vw(padding-bottom, 40, 30, 40);
+    max-width: 53.125rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1.5625rem;
+    border: 0.3125rem solid #2C3055;
+    background: #222649;
 
     h2 {
       max-width: 37.5rem;
@@ -35,11 +41,7 @@
       text-transform: uppercase;
     }
 
-    max-width: 53.125rem;
-    margin: 0 auto;
-    border-radius: 1.5625rem;
-    border: 0.3125rem solid #2C3055;
-    background: #222649;
+   
 
     .close-button {
       cursor: pointer;
