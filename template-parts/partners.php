@@ -20,7 +20,14 @@
       }
       ?>
     </div>
-    .partners-blocks
-
+    <div class="partners-blocks">
+      <?php $blocks = get_field('partners-blocks'); ?>
+      <?php foreach ($blocks as $block) : ?>
+        <div class="partners-block">
+          <h3><?php echo $block['title']; ?></h3>
+          <p><?php echo $block['description']; ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
   </div>
 </section>
