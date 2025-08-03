@@ -172,6 +172,7 @@
   &.partners-media {
     .container {
       .main-button {
+        @include vw(margin-top, 60,44,60);
         max-width: 19.75rem;
       }
     }
@@ -180,6 +181,7 @@
   &.partners-tech {
     .container {
       .main-button {
+        @include vw(margin-top, 60,44,60);
         max-width: 19.75rem;
       }
     }
