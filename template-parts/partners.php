@@ -20,14 +20,16 @@
       }
       ?>
     </div>
-    <div class="partners-blocks">
-      <?php $blocks = get_field('partners-blocks'); ?>
-      <?php foreach ($blocks as $block) : ?>
-        <div class="partners-block">
-          <h3><?php echo $block['title']; ?></h3>
-          <p><?php echo $block['description']; ?></p>
-        </div>
-      <?php endforeach; ?>
+    <div class="partner-blocks__wrapper">
+      <h3><?php the_field('partners-blocks-title'); ?></h3>
+      <div class="partners-blocks">
+        <?php $blocks = get_field('partners-blocks'); ?>
+        <?php foreach ($blocks as $block) : ?>
+          <div class="partners-block">
+            <h3><?php echo $block['title']; ?></h3>
+            <p><?php echo $block['description']; ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </div>
-  </div>
 </section>
