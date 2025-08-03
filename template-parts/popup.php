@@ -26,7 +26,10 @@
     [select* choose class:select "Стати спікером" "Стати спонсором" "Стати медіапартнером" "Стати технічним партнером"]
   </div>
 
-  <div class="form-item"></div>
+  <div class="form-item">
+    [text* company-name class:company placeholder "НГазва компанії"]
+
+  </div>
 
   [submit class:main-button "Відправити"]
 </div>
