@@ -96,9 +96,8 @@
             .select2-selection__arrow {
               color: #FFF !important;
               position: absolute !important;
-              right: 0 !important;
-              top: 50% !important;
-              transform: translateY(-50%) !important;
+              right: 0.9375rem !important;
+              top:  !important;
               &:after {
                 content: '';
                 width: 0.75rem;
