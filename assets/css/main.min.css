@@ -354,7 +354,7 @@
 @media (width <= 43.75em){
 .location .container{padding-left:0;padding-right:0}
 }
-*{outline:0!important;box-sizing:border-box}
+*{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
 *{box-sizing:border-box}
 }
