@@ -2,6 +2,8 @@
 @use "./mixins" as *;
 
 .popup-wrapper {
+  padding-left: 0.9375rem;
+  padding-bottom: 0.9375rem;
   
   position: fixed;
   top: 0;
