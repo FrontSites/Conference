@@ -153,7 +153,16 @@
       color: #FFF;
       @media (hover:hover) {
         &:hover {
-          
+          background: #790547;
+          color: #fff;
+          border-color: transparent;
+        }
+      }
+      @media (hover:none) {
+        &:active {
+          background: #790547;
+          color: #fff;
+          border-color: transparent;
         }
       }
     }
