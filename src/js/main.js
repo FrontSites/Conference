@@ -252,7 +252,7 @@ function initPopup() {
       }, 50);
     });
   });
-  $(".close-btn").click(function () {
+  $(".close-button").click(function () {
     $(".popup").removeClass("show");
     $("body").removeClass("hidden");
     $(".popup-wrapper").fadeOut();
