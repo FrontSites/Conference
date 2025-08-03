@@ -53,11 +53,14 @@
       row-gap: 1.25rem;
 
       .form-item {
+        width: 100%;
         input {
-          padding: 15px 20px;
-          border-radius: 10px;
-          border: 1px solid #FFF;
-          backdrop-filter: blur(25px);
+          outline: none;
+          width: 100%;
+          padding: 0.9375rem 1.25rem;
+          border-radius: 0.625rem;
+          border: 0.0625rem solid #FFF;
+          backdrop-filter: blur(1.5625rem);
         }
       }
     }
