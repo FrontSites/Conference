@@ -20,6 +20,6 @@
       }
       ?>
     </div>
-    <?php get_template_part('template-parts/buttons/button-partner'); ?>
+    .
   </div>
 </section>
