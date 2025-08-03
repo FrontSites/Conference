@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMaskPhone();
   initSelect();
+  initPopup();
 })
 
 
