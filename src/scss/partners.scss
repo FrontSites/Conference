@@ -118,9 +118,11 @@
       }
 
       h3 {
+        font-family: 'Manrope';
         @include vw(font-size, 20,18,20);
         max-width: 23.75rem;
         margin: 0 auto;
+        text-align: center;
         font-style: normal;
         font-weight: 700;
         line-height: 120%;
