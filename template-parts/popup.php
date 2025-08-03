@@ -15,7 +15,7 @@
   </div>
 
   <div class="form-item">
-
+    [tel* phone class:phone placeholder "+380__-___-__-__"]
   </div>
 
   <div class="form-item"></div>
