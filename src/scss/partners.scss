@@ -148,7 +148,9 @@
           }
         }
         @media (width <= 48em) {
-          .
+          .partners-block { {
+            flex: 1 1 100%;
+          }
         }
       }
 
