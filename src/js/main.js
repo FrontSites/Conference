@@ -223,6 +223,10 @@ function initMaskPhone() {
 
 function initSelect() {
   $('.select').select2({
-    minimumResultsForSearch: Infinity
+    minimumResultsForSearch: Infinity,
+    placeholder: function() {
+      return $(this).data('placeholder') || 'Выберите опцию';
+    },
+    allowClear: true
   });
 }
