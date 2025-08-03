@@ -13,8 +13,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .popup {
     max-width: 53.125rem;
     margin: 0 auto;
+    border-radius: 1.5625rem;
+    border: 0.3125rem solid #2C3055;
+    background: #222649;
   }
 }
