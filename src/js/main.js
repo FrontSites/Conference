@@ -230,5 +230,8 @@ function initSelect() {
   }).on('select2:unselect', function() {
     // Когда убираем выбор - возвращаем прозрачность
     $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '0.8');
+  }).on('select2:opening', function() {
+    // При открытии списка тоже делаем текст белым
+    $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '1');
   });
 }
