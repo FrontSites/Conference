@@ -395,7 +395,7 @@ body img{pointer-events:none}
 @media (width <= 30em){
 .partners .container .partners-items{row-gap:3.125rem}
 }
-.partners .container .main-button._border{margin:0 auto;margin-top:clamp(44px,calc(4.1666666667vw),66px);color:#fff;border-color:#fff;max-width:14.25rem}
+.partners .container .main-button._border{margin:0 auto;color:#fff;border-color:#fff;max-width:14.25rem}
 @media (hover:hover){
 .partners .container .main-button._border:hover{background:#ff29ae;color:#fff;border-color:transparent}
 }
