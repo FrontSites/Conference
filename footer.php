@@ -50,6 +50,7 @@
   </a>
 </footer>
 </div>
+<?php get_template_part('template-parts/popup'); ?>
 <?php wp_footer(); ?>
 </body>
 
