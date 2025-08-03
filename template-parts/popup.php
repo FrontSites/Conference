@@ -2,7 +2,7 @@
   <div class="popup">
     <div class="popup-wrapper__top">
 
-      <h3>Залиши свою інформацію, щоб ми могли зв’язатися з тобою та обговорити деталі партнерства</h3>
+      <h3><?php the_field("popup-title"); ?></h3>
     </div>
 
   </div>
