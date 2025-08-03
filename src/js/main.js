@@ -224,5 +224,11 @@ function initMaskPhone() {
 function initSelect() {
   $('.select').select2({
     minimumResultsForSearch: Infinity
+  }).on('select2:select', function() {
+    // Когда выбираем опцию - делаем текст полностью белым
+    $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '1');
+  }).on('select2:unselect', function() {
+    // Когда убираем выбор - возвращаем прозрачность
+    $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '0.8');
   });
 }
