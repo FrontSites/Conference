@@ -96,8 +96,8 @@
     .partner-blocks__wrapper {
       @include vw(padding-left, 110,30,110);
       @include vw(padding-right, 110,30,110);
-      @include vw(padding-top, );
-      @include vw(padding-bottom, );
+      @include vw(padding-top, 50,30,50);
+      @include vw(padding-bottom, 50,30,50);
       border-radius: 1.5625rem;
       border: 0.3125rem solid #2C3055;
       display: flex;
