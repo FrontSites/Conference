@@ -110,6 +110,7 @@
                 background: url('../../assets/images/arrow-drop.svg') no-repeat center center;
                 background-size: contain;
                 position: absolute;
+                transition: transform, 0.3s ease;
               }
               b {
                 display: none !important;
