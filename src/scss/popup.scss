@@ -104,21 +104,17 @@
                          .select2-selection__rendered {
                padding: 0rem !important;
                color: #FFF !important;
+               opacity: 0.8 !important;
                position: relative !important;
                display: flex !important;
                align-items: center !important;
                justify-content: space-between !important;
                max-width: none !important;
+             }
 
-               // Стили для placeholder
-               .select2-selection__placeholder {
-                 color: #FFF !important;
-                 opacity: 0.8 !important;
-               }
-
-               // Стили для выбранного значения
-               .select2-selection__choice {
-                 color: #FFF !important;
+             // Когда есть выбранное значение - делаем текст полностью белым
+             &.select2-container--default .select2-selection--single .select2-selection__rendered {
+               &:not(:has(.select2-selection__placeholder)) {
                  opacity: 1 !important;
                }
              }
