@@ -28,5 +28,5 @@
 
   <div class="form-item"></div>
 
-
+  [submit class:main-button "Відправити"]
 </div>
