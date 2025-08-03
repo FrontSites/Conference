@@ -432,7 +432,7 @@ body img{pointer-events:none}
 .popup-wrapper .popup .form-items .form-item .select2-container .select2-selection .select2-selection__arrow b{display:none!important}
 .popup-wrapper .popup .form-items .form-item .select2-container.select2-container--open .select2-selection{border-bottom-left-radius:0!important;border-bottom-right-radius:0!important}
 .popup-wrapper .popup .form-items .form-item .select2-container.select2-container--open .select2-selection__arrow:after{transform:rotate(180deg)!important}
-.popup-wrapper .popup .form-items .main-button{background:#ff29ae;outline:0;border:none;padding-top:.9375rem;padding-bottom:.9375rem;color:#fff}
+.popup-wrapper .popup .form-items .main-button{margin-top:clamp(30px,calc(3.6111111111vw),52px);background:#ff29ae;outline:0;border:none;padding-top:.9375rem;padding-bottom:.9375rem;color:#fff}
 @media (hover:hover){
 .popup-wrapper .popup .form-items .main-button:hover{background:#790547;color:#fff;border-color:transparent}
 }

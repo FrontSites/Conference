@@ -145,6 +145,7 @@
      
     }
     .main-button {
+      @include vw(margin-top, 52,30,52);
       background: #FF29AE;
       outline: none;
       border: none;
