@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHideError();
   initHeaderScroll();
   initMaskPhone();
+  initSelect();
 })
 
 
@@ -221,6 +222,7 @@ function initMaskPhone() {
 
 
 function initSelect() {
-  $('.select').select2();
-  
+  $('.select').select2({
+    minimumResultsForSearch: Infinity
+  });
 }
