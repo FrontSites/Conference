@@ -38,11 +38,16 @@
     border-radius: 1.5625rem;
     border: 0.3125rem solid #2C3055;
     background: #222649;
+    .close-button {
+      cursor: pointer;
+      right: 1.375rem;
+      top: 1.375rem;
+      position: absolute;
+    }
+
+    .form-items {
+      
+    }
   }
-  .close-button {
-    cursor: pointer;
-    right: 1.375rem;
-    top: 1.375rem;
-    position: absolute;
-  }
+  
 }
