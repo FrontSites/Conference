@@ -11,10 +11,12 @@
 
 <div class="form-items">
   <div class="form-item">
-
+    [text Name class:name placeholder "Name"]
   </div>
 
-  <div class="form-item"></div>
+  <div class="form-item">
+
+  </div>
 
   <div class="form-item"></div>
 
