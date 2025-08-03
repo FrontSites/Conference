@@ -170,8 +170,11 @@
     &.partners-media {
       .container {
         .main-button {
-          max-width: 20.3125rem;
-          @include vw(margin-top, 60,44,60);
+          &._border {
+            max-width: 20.3125rem;
+            @include vw(margin-top, 60,44,60);
+          }
+        
         }
       }
     }
@@ -179,8 +182,10 @@
     &.partners-tech {
       .container {
         .main-button {
-          max-width: 20.3125rem;
-          @include vw(margin-top, 60,44,60);
+          &._border {
+            max-width: 20.3125rem;
+            @include vw(margin-top, 60,44,60);
+          }
         }
       }
     }
