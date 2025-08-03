@@ -419,6 +419,9 @@ body img{pointer-events:none}
 .popup-wrapper .popup .form-items{display:flex;flex-direction:column;max-width:21.875rem;margin:0 auto;margin-top:2rem;row-gap:1.25rem}
 .popup-wrapper .popup .form-items .form-item{width:100%}
 .popup-wrapper .popup .form-items .form-item input{font-family:Manrope;font-size:1rem;height:100%;width:88%;background:0 0;outline:0;padding:.875rem 1.25rem;border-radius:.625rem;border:.0625rem solid #fff;-webkit-backdrop-filter:blur(1.5625rem);backdrop-filter:blur(1.5625rem);color:#fff}
+@media (width <= 80em){
+.popup-wrapper .popup .form-items .form-item input{width:100%}
+}
 .popup-wrapper .popup .form-items .form-item input::-moz-placeholder{color:#fff;opacity:.8}
 .popup-wrapper .popup .form-items .form-item input::placeholder{color:#fff;opacity:.8}
 .popup-wrapper .popup .form-items .form-item .select2-container{width:100%!important;background:0 0!important;max-width:none!important}
