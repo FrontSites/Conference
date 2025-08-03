@@ -406,7 +406,7 @@ body img{pointer-events:none}
 .partners .container .partner-blocks__wrapper .partners-blocks{-moz-column-gap:clamp(20px,calc(2.0833333333vw),30px);column-gap:clamp(20px,calc(2.0833333333vw),30px);row-gap:clamp(20px,calc(2.7777777778vw),40px);display:flex;justify-content:space-between;flex-wrap:wrap}
 .partners .container .partner-blocks__wrapper .partners-blocks .partners-block{flex:1 1 35%}
 .partners .container .partner-blocks__wrapper .partners-blocks .partners-block h3{text-align:left;color:#17f7e2;font-family:Manrope;font-size:1rem;font-style:normal;font-weight:700;line-height:120%;text-transform:none;letter-spacing:.05rem}
-.partners .container .partner-blocks__wrapper .partners-blocks .partners-block p{color:#fff;font-size:1rem;font-style:normal;font-weight:400;line-height:120%;text-align:left;letter-spacing:.05rem;text-transform:none}
+.partners .container .partner-blocks__wrapper .partners-blocks .partners-block p{max-width:18.75rem;color:#fff;font-size:1rem;font-style:normal;font-weight:400;line-height:120%;text-align:left;letter-spacing:.05rem;text-transform:none}
 .partners .container .partner-blocks__wrapper>h3{font-family:Manrope;font-size:clamp(18px,calc(1.3888888889vw),20px);max-width:23.75rem;margin:0 auto;text-align:center;font-style:normal;font-weight:700;line-height:120%;letter-spacing:1px;text-transform:uppercase}
 .partners .container.partners-media .container .main-button{max-width:19.75rem}
 .partners .container.partners-tech .container .main-button{max-width:19.75rem}
