@@ -15,9 +15,9 @@
   align-items: center;
 
   .popup {
-    @include vw(padding-left, );
-    @include vw(padding-right, );
-    @include vw(padding-top, );
+    @include vw(padding-left,126,30,126 );
+    @include vw(padding-right, 126,30,126);
+    @include vw(padding-top, 76,30,76);
     @include vw(padding-bottom, );
     h2 {
       max-width: 37.5rem;
