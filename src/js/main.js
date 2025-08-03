@@ -235,3 +235,5 @@ function initSelect() {
     $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '1');
   });
 }
+
+
