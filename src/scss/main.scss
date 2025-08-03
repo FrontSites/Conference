@@ -89,6 +89,9 @@
 
 .select2-container { 
   .select2-dropdown {
+    background: transparent !important;
+    border-radius:  0px !important;
+    border: none !important;
     .select2-results {
       padding: 0.625rem !important;
       border-bottom-left-radius: 0.625rem !important;
