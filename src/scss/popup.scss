@@ -1,0 +1,126 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.popup-wrapper {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 38, 73, 0.50);
+  backdrop-filter: blur(1.5625rem);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popup {
+    position: relative;
+    @include vw(padding-left, 126, 30, 126);
+    @include vw(padding-right, 126, 30, 126);
+    @include vw(padding-top, 76, 30, 76);
+    @include vw(padding-bottom, 40, 30, 40);
+    max-width: 53.125rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1.5625rem;
+    border: 0.3125rem solid #2C3055;
+    background: #222649;
+
+    h2 {
+      max-width: 37.5rem;
+      margin: 0 auto;
+      color: #FFF;
+      text-align: center;
+      font-family: 'Manrope';
+      @include vw(font-size, 20, 18, 20);
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.0625rem;
+      text-transform: uppercase;
+    }
+
+   
+
+    .close-button {
+      cursor: pointer;
+      right: 1.375rem;
+      top: 1.375rem;
+      position: absolute;
+    }
+
+    .form-items {
+      box-sizing: border-box !important;
+      display: flex;
+      flex-direction: column;
+      max-width: 21.875rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+      row-gap: 1.25rem;
+
+      .form-item {
+        width: 100%;
+        input {
+          height: 100%;
+          background: transparent;
+          outline: none;
+          width: 100%;
+          padding: 1.0938rem 1.25rem;
+          border-radius: 0.625rem;
+          border: 0.0625rem solid #FFF;
+          backdrop-filter: blur(1.5625rem);
+          color: #FFF;
+          &::placeholder {
+            color: #FFF;
+            opacity: 0.8;
+          }
+        }
+        .select2-container { 
+          width: 100% !important;
+          background: transparent !important;
+          max-width: none !important;
+          .select2-selection {
+            max-width: none !important;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            background: transparent !important;
+            border: 0.0625rem solid #FFF !important;
+            border-radius: 0.625rem !important;
+            height: 100% !important;
+            padding-top: 0.6875rem!important;
+            padding-bottom: 0.6875rem !important;
+            color: #FFF !important;
+            .select2-selection__rendered {
+              color: #FFF !important;
+              position: relative !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
+              max-width: none !important;
+
+            }
+            .select2-selection__arrow {
+              color: #FFF !important;
+              position: absolute !important;
+              right: 0.9375rem !important;
+              top: 1.25rem !important;
+              &:after {
+                content: '';
+                width: 0.75rem;
+                height: 0.75rem;
+                background: url('../../assets/images/arrow-drop.svg') no-repeat center center;
+                background-size: contain;
+                position: absolute;
+              }
+              b {
+                display: none !important;
+              }
+            }
+          }
+      }
+    }
+  }
+
+}
+}
