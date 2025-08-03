@@ -20,6 +20,7 @@
       }
       ?>
     </div>
-    .
+    .partners-blocks
+
   </div>
 </section>
