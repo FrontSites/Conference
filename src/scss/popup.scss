@@ -46,7 +46,11 @@
     }
 
     .form-items {
-      
+      max-width: 2.1875rem;
+      margin: 0 auto;
+      .form-item {
+        margin-bottom: 1.25rem;
+      }
     }
   }
   
