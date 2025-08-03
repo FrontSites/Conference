@@ -16,17 +16,18 @@
 
   .popup {
     position: relative;
-    @include vw(padding-left,126,30,126 );
-    @include vw(padding-right, 126,30,126);
-    @include vw(padding-top, 76,30,76);
-    @include vw(padding-bottom,40,30,40 );
+    @include vw(padding-left, 126, 30, 126);
+    @include vw(padding-right, 126, 30, 126);
+    @include vw(padding-top, 76, 30, 76);
+    @include vw(padding-bottom, 40, 30, 40);
+
     h2 {
       max-width: 37.5rem;
       margin: 0 auto;
       color: #FFF;
       text-align: center;
       font-family: 'Manrope';
-      @include vw(font-size, 20,18,20);
+      @include vw(font-size, 20, 18, 20);
       font-weight: 700;
       line-height: 120%;
       letter-spacing: 0.0625rem;
@@ -38,6 +39,7 @@
     border-radius: 1.5625rem;
     border: 0.3125rem solid #2C3055;
     background: #222649;
+
     .close-button {
       cursor: pointer;
       right: 1.375rem;
@@ -49,10 +51,20 @@
       max-width: 2.1875rem;
       margin: 0 auto;
       row-gap: 1.25rem;
+
       .form-item {
-        i
+        input {
+          display: flex;
+          padding: 15px 20px;
+          align-items: center;
+          gap: 10px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 1px solid #FFF;
+          backdrop-filter: blur(25px);
+        }
       }
     }
   }
-  
+
 }
