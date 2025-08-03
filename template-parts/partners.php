@@ -26,8 +26,8 @@
         <?php $blocks = get_field('partners-blocks'); ?>
         <?php foreach ($blocks as $block) : ?>
           <div class="partners-block">
-            <h3><?php echo $block['title']; ?></h3>
-            <p><?php echo $block['description']; ?></p>
+            <h3><?php echo $block['partnners-block-title']; ?></h3>
+            <p><?php echo $block['partnners-block-description']; ?></p>
           </div>
         <?php endforeach; ?>
       </div>
