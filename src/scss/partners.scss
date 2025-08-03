@@ -167,26 +167,20 @@
     }
 
 
-    &.partners-media {
-      .container {
-        .main-button {
-          &._border {
-            max-width: 20.3125rem;
-            @include vw(margin-top, 60,44,60);
-          }
-        
-        }
+  
+  }
+  &.partners-media {
+    .container {
+      .main-button {
+        max-width: 19.75rem;
       }
     }
+  }
 
-    &.partners-tech {
-      .container {
-        .main-button {
-          &._border {
-            max-width: 20.3125rem;
-            @include vw(margin-top, 60,44,60);
-          }
-        }
+  &.partners-tech {
+    .container {
+      .main-button {
+        max-width: 19.75rem;
       }
     }
   }
