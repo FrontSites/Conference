@@ -87,4 +87,21 @@
 
 
 
-.se
+.select2-container { 
+  .select2-dropdown {
+    .select2-results {
+      border-radius: 0.625rem !important;
+      padding: 0.625rem !important;
+      border: 0.0625rem solid #FFF !important;
+      background: #222649 !important;
+      .select2-results__options {
+        .select2-results__option {
+          color: #FFF !important;
+          &:hover {
+            background: #2C3055 !important;
+          }
+        }
+      }
+    }
+  } 
+}
