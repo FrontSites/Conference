@@ -112,6 +112,7 @@
         @include vw(column-gap, 30,20,30);
         @include vw(row-gap, 40,20,40);
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
 
         .partners-block {
