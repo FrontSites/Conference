@@ -18,7 +18,9 @@
     [tel* phone class:phone placeholder "+380__-___-__-__"]
   </div>
 
-  <div class="form-item"></div>
+  <div class="form-item">
+    [email* email class:email placeholder "E-mail"]
+  </div>
 
   <div class="form-item"></div>
 
