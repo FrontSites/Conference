@@ -88,11 +88,17 @@
             .select2-selection__rendered {
               color: #FFF !important;
               position: relative !important;
-              display: flex !;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
 
             }
             .select2-selection__arrow {
               color: #FFF !important;
+              position: absolute !important;
+              right: 0 !important;
+              top: 50% !important;
+              transform: translateY(-50%) !important;
               &:after {
                 content: '';
                 width: 0.75rem;
