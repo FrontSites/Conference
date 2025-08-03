@@ -422,7 +422,7 @@ body img{pointer-events:none}
 .popup-wrapper .popup .form-items .form-item input::-moz-placeholder{color:#fff;opacity:.8}
 .popup-wrapper .popup .form-items .form-item input::placeholder{color:#fff;opacity:.8}
 .popup-wrapper .popup .form-items .form-item .select2-container{width:100%!important;background:0 0!important}
-.popup-wrapper .popup .form-items .form-item .select2-container .select2-selection{background:0 0!important;border:.0625rem solid #fff!important;border-radius:.625rem!important;height:100%!important;padding-top:1rem!important;padding-bottom:1rem!important}
+.popup-wrapper .popup .form-items .form-item .select2-container .select2-selection{background:0 0!important;border:.0625rem solid #fff!important;border-radius:.625rem!important;height:100%!important;padding-top:.9375rem!important;padding-bottom:.9375rem!important}
 .price{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .price .container h2{margin-bottom:clamp(44px,calc(4.1666666667vw),60px);flex-shrink:0;color:#fff;text-align:center;font-family:Manrope;font-size:clamp(30px,calc(3.3333333333vw),48px);font-weight:700;line-height:120%;letter-spacing:.15rem;text-transform:uppercase}
 .price .container .price-items{display:flex;align-items:stretch;justify-content:center;-moz-column-gap:clamp(20px,calc(2.7777777778vw),40px);column-gap:clamp(20px,calc(2.7777777778vw),40px)}
