@@ -11,7 +11,7 @@
 
 <div class="form-items">
   <div class="form-item">
-    [text Name class:name placeholder "Name"]
+    [text* Name class:name placeholder "Name"]
   </div>
 
   <div class="form-item">
