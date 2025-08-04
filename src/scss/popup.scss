@@ -185,6 +185,8 @@
 .wpcf7-response-output { 
   display: none !important;
 &.error {
+  display: flex !important;
+  flex-direction: column !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
   position: absolute !important;
