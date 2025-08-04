@@ -6,7 +6,7 @@
   padding-bottom: 0.9375rem;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -45,18 +45,20 @@
       text-transform: uppercase;
     }
 
-   
+
 
     .close-button {
       cursor: pointer;
       right: 1.375rem;
       top: 1.375rem;
       position: absolute;
-      @media (width <= 48em) {
+
+      @media (width <=48em) {
         width: 1.875rem;
         height: 1.875rem;
         right: 0.625rem;
         top: 0.625rem;
+
         svg {
           width: 1.5625rem;
           height: 1.5625rem;
@@ -74,6 +76,7 @@
 
       .form-item {
         width: 100%;
+
         input {
           font-family: 'Manrope';
           font-size: 1rem;
@@ -86,11 +89,13 @@
           border: 0.0625rem solid #FFF;
           backdrop-filter: blur(1.5625rem);
           color: #FFF;
+
           &::placeholder {
             color: #FFF;
             opacity: 0.8;
           }
-          @media (width <= 80em) {
+
+          @media (width <=80em) {
             width: 100%;
           }
 
@@ -98,10 +103,12 @@
             border-color: #FF29AE !important;
           }
         }
-        .select2-container { 
+
+        .select2-container {
           width: 100% !important;
           background: transparent !important;
           max-width: none !important;
+
           .select2-selection {
             max-width: none !important;
             padding-left: 1.25rem;
@@ -110,24 +117,27 @@
             border: 0.0625rem solid #FFF !important;
             border-radius: 0.625rem !important;
             height: 100% !important;
-            padding-top: 0.6875rem!important;
+            padding-top: 0.6875rem !important;
             padding-bottom: 0.6875rem !important;
             color: #FFF !important;
-                                                                               .select2-selection__rendered {
-                 padding: 0rem !important;
-                 color: #FFF !important;
-                 opacity: 0.8;
-                 position: relative !important;
-                 display: flex !important;
-                 align-items: center !important;
-                 justify-content: space-between !important;
-                 max-width: none !important;
-               }
+
+            .select2-selection__rendered {
+              padding: 0rem !important;
+              color: #FFF !important;
+              opacity: 0.8;
+              position: relative !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
+              max-width: none !important;
+            }
+
             .select2-selection__arrow {
               color: #FFF !important;
               position: absolute !important;
               right: 0.9375rem !important;
               top: 1.25rem !important;
+
               &:after {
                 content: '';
                 width: 0.75rem;
@@ -137,77 +147,98 @@
                 position: absolute;
                 transition: transform, 0.3s ease;
               }
+
               b {
                 display: none !important;
               }
             }
           }
-      &.select2-container--open {
-        .select2-selection {
-          border-bottom-left-radius: 0px !important;
-          border-bottom-right-radius: 0px !important;
+
+          &.select2-container--open {
+            .select2-selection {
+              border-bottom-left-radius: 0px !important;
+              border-bottom-right-radius: 0px !important;
+            }
+
+            .select2-selection__arrow {
+              &:after {
+                transform: rotate(180deg) !important;
+              }
+            }
+          }
         }
-        .select2-selection__arrow {
-          &:after {
-            transform: rotate(180deg) !important;
+
+      }
+
+      .main-button {
+        @include vw(margin-top, 52, 30, 52);
+        background: #FF29AE;
+        outline: none;
+        border: none;
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        color: #FFF;
+
+        @media (hover:hover) {
+          &:hover {
+            background: #790547;
+            color: #fff;
+            border-color: transparent;
+          }
+        }
+
+        @media (hover:none) {
+          &:active {
+            background: #790547;
+            color: #fff;
+            border-color: transparent;
           }
         }
       }
-      }
-     
     }
-    .main-button {
-      @include vw(margin-top, 52,30,52);
-      background: #FF29AE;
-      outline: none;
-      border: none;
-      padding-top: 0.9375rem;
-      padding-bottom: 0.9375rem;
-      color: #FFF;
-      @media (hover:hover) {
-        &:hover {
-          background: #790547;
-          color: #fff;
-          border-color: transparent;
-        }
-      }
-      @media (hover:none) {
-        &:active {
-          background: #790547;
-          color: #fff;
-          border-color: transparent;
-        }
+
+    .popup-success {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h3 {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Manrope';
+        @include vw(font-size, 20,18,20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
       }
     }
-  }
-  .popup-success { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
   }
 
-}
-.wpcf7-response-output { 
-  display: none !important;
-&.error {
-  display: flex !important;
-  flex-direction: column !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  background: #FF29AE !important;
-  color: #fff !important;
-  border-radius: 0.625rem !important;
-  padding: 1.25rem !important;
-  border: none !important;
-  text-align: center !important;
-  max-width: 31.25rem !important;
-  margin: 0 auto !important;
-}
-}
+  .wpcf7-response-output {
+    display: none !important;
+
+    &.error {
+      display: flex !important;
+      flex-direction: column !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      position: absolute !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      background: #FF29AE !important;
+      color: #fff !important;
+      border-radius: 0.625rem !important;
+      padding: 1.25rem !important;
+      border: none !important;
+      text-align: center !important;
+      max-width: 31.25rem !important;
+      margin: 0 auto !important;
+    }
+  }
 }
 
 .wpcf7-not-valid-tip {
