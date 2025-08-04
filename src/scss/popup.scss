@@ -180,6 +180,12 @@
       }
     }
   }
+  .popup-success { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
 }
 .wpcf7-response-output { 

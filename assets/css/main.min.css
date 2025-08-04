@@ -444,6 +444,7 @@ body img{pointer-events:none}
 @media (hover:none){
 .popup-wrapper .popup .form-items .main-button:active{background:#790547;color:#fff;border-color:transparent}
 }
+.popup-wrapper .popup .popup-success{display:flex;justify-content:center;align-items:center;flex-direction:column}
 .popup-wrapper .wpcf7-response-output{display:none!important}
 .popup-wrapper .wpcf7-response-output.error{display:flex!important;flex-direction:column!important;top:50%!important;transform:translateY(-50%)!important;position:absolute!important;left:50%!important;transform:translateX(-50%)!important;background:#ff29ae!important;color:#fff!important;border-radius:.625rem!important;padding:1.25rem!important;border:none!important;text-align:center!important;max-width:31.25rem!important;margin:0 auto!important}
 .wpcf7-not-valid-tip{color:#ff29ae!important;font-size:.875rem}
