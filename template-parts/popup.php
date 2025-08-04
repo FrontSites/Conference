@@ -8,5 +8,11 @@
       <h2><?php the_field("popup-title"); ?></h2>
     </div>
     <?php echo do_shortcode('[contact-form-7 id="542cab5" title="Попап"]'); ?>
+    <div class="popup-success">
+      <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.0891 40.7842C33.1942 46.4053 11.6651 46.4053 4.9109 40.7842C-1.98402 35.1631 -1.28047 11.1331 4.9109 4.80942C11.1023 -1.51427 33.8977 -1.51427 40.0891 4.80942C46.2805 11.1331 46.984 35.1632 40.0891 40.7842Z" fill="#F7E405" />
+      </svg>
+
+    </div>
   </div>
 </section>
