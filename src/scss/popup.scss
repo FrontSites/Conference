@@ -220,6 +220,21 @@
         width: 100%;
         margin: 0 auto;
         @include vw(margin-top, 60,30,60);
+        color: #ffff;
+        @media (hover:hover) {
+          &:hover {
+            background: #fff;
+            color: #222649;
+            border-color: transparent;
+          }
+        }
+        @media (hover:none) {
+          &:active {
+            background: #fff;
+            color: #222649;
+
+          }
+        }
       }
     }
 
