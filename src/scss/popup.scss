@@ -94,7 +94,9 @@
             width: 100%;
           }
 
-          
+          &.wpcf7-not-valid {
+            border-color: #FF29AE !important;
+          }
         }
         .select2-container { 
           width: 100% !important;
@@ -197,4 +199,9 @@
   margin: 0 auto !important;
 }
 }
+}
+
+.wpcf7-not-valid-tip {
+  color: #FF29AE !important;
+  font-size: 0.875rem;
 }
