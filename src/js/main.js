@@ -191,6 +191,12 @@ document.addEventListener('wpcf7invalid', function (event) {
       $popupSuccess.fadeIn(300);
     });
   }, false);
+
+  // Обработчик для кнопки в popup-success
+  $(document).on('click', '.popup-success .main-button', function() {
+    const $popup = $(this).closest('.popup-wrapper');
+    $popup.fadeOut(300);
+  });
 }
 
 function initHeaderScroll() {
