@@ -184,10 +184,12 @@ document.addEventListener('wpcf7invalid', function (event) {
     const $form = $(event.target);
     const $popup = $form.closest('.popup-wrapper');
     const $formItems = $popup.find('.form-items');
+    const $popupTitle = $popup.find('h2');
     const $popupSuccess = $popup.find('.popup-success');
     
-    // Скрываем форму и показываем сообщение об успехе
-    $formItems.fadeOut(300, function() {
+    // Скрываем форму, заголовок и показываем сообщение об успехе
+    $formItems.fadeOut(300);
+    $popupTitle.fadeOut(300, function() {
       $popupSuccess.fadeIn(300);
     });
   }, false);
