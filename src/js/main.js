@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPopup();
 })
 
-
 function initMenu() {
   function initMobileMenu() {
     function setupMobileMenuHandlers() {
@@ -158,7 +157,6 @@ function initScheduleVisibility() {
   observer.observe(scheduleSection);
 }
 
-
 function initHideError() {
   // add Class Error when form not validade
 document.addEventListener('wpcf7invalid', function (event) {
@@ -179,6 +177,19 @@ document.addEventListener('wpcf7invalid', function (event) {
       });
     }, 3000);
   }, 100); 
+  }, false);
+
+  // Показываем popup-success при успешной отправке
+  document.addEventListener('wpcf7mailsent', function (event) {
+    const $form = $(event.target);
+    const $popup = $form.closest('.popup-wrapper');
+    const $formItems = $popup.find('.form-items');
+    const $popupSuccess = $popup.find('.popup-success');
+    
+    // Скрываем форму и показываем сообщение об успехе
+    $formItems.fadeOut(300, function() {
+      $popupSuccess.fadeIn(300);
+    });
   }, false);
 }
 
@@ -221,7 +232,6 @@ function initMaskPhone() {
   $('.phone').mask('+380 (99) 999-99-99');
 }
 
-
 function initSelect() {
   $('.select').select2({
     minimumResultsForSearch: Infinity
@@ -236,7 +246,6 @@ function initSelect() {
     $(this).next('.select2-container').find('.select2-selection__rendered').css('opacity', '1');
   });
 }
-
 
 function initPopup() { 
   $(".popup-btn").each(function () {
