@@ -208,10 +208,9 @@
         text-align: center;
         font-family: 'Manrope';
         @include vw(font-size, 20,18,20);
-        font-style: normal;
         font-weight: 700;
         line-height: 120%;
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
         text-transform: uppercase;
       }
     }
