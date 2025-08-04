@@ -190,7 +190,7 @@ document.addEventListener('wpcf7invalid', function (event) {
     // Скрываем форму, заголовок и показываем сообщение об успехе
     $formItems.fadeOut(300);
     $popupTitle.fadeOut(300, function() {
-      $popupSuccess.fadeIn(300);
+      $popupSuccess.css('display', 'flex').fadeIn(300);
     });
   }, false);
 
