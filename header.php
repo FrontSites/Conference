@@ -6,6 +6,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+  <meta name="description" content="Join the Web3 Conference 2025 in Ukraine — blockchain, NFT technologies. Inspiring speakers and exciting program. Register now!">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content=" ">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Web3 Conference in Ukraine 2025 | Fullset Blockchain Conference">
+  <meta property="og:description" content="Join the Web3 Conference 2025 in Ukraine — blockchain, NFT technologies. Inspiring speakers and exciting program. Register now!">
+  <meta property="og:image" content="">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="">
+  <meta property="twitter:url" content="/">
+  <meta name="twitter:title" content="Web3 Conference in Ukraine 2025 | Fullset Blockchain Conference">
+  <meta name="twitter:description" content="Join the Web3 Conference 2025 in Ukraine — blockchain, NFT technologies. Inspiring speakers and exciting program. Register now!">
+
   <?php
   // Получить заголовок SEO Yoast
   $yoast_title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
