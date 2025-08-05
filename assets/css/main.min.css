@@ -561,7 +561,7 @@ body img{pointer-events:none}
 .subscribe .container .subscribe-items{display:flex;justify-content:space-between;align-items:stretch;-moz-column-gap:1.875rem;column-gap:1.875rem}
 .subscribe .container .subscribe-items .subscribe-item{height:auto}
 .subscribe .container .subscribe-items .subscribe-item.left{flex:0 1 70%}
-.subscribe .container .subscribe-items .subscribe-item.left h2{max-width:31.25rem;font-family:Manrope;color:#fff;font-size:clamp(35px,calc(3.3333333333vw),48px);font-weight:700;line-height:120%;letter-spacing:.15rem;text-transform:uppercase;margin-bottom:1.25rem}
+.subscribe .container .subscribe-items .subscribe-item.left h2{max-width:43.75rem;font-family:Manrope;color:#fff;font-size:clamp(35px,calc(3.3333333333vw),48px);font-weight:700;line-height:120%;letter-spacing:.15rem;text-transform:uppercase;margin-bottom:1.25rem}
 @media (width <= 30em){
 .subscribe .container .subscribe-items .subscribe-item.left h2{max-width:16.25rem}
 }
