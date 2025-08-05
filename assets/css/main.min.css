@@ -365,7 +365,7 @@
 .lang-en .location .container .location-block .location-item .hero-location{font-size:1rem;top:1.4375rem;align-items:flex-start;max-width:12.5rem}
 .lang-en .location .container .location-block .location-item .hero-location svg{flex:none}
 @media (width <= 62em){
-.lang-en .location .container .location-block .location-item .hero-location{top:.9375rem}
+.lang-en .location .container .location-block .location-item .hero-location{top:.9375rem;font-size:.875rem}
 }
 @media (width <= 30em){
 .lang-en .location .container .location-block .location-item .hero-location{right:1.875rem;top:.9375rem}
