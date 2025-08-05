@@ -400,6 +400,9 @@
               svg {
                 flex: none;
               }
+              @media (width <= 30em) {
+                right: 1.875rem;
+              }
             }
           }
         }
