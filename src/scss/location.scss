@@ -279,8 +279,9 @@
               flex: none;
             }
             @media (width <= 62em) {
-              top: 0.9375rem;
+              top: 0.625rem;
               font-size: 0.875rem;
+              right: 0.625rem;
             }
             @media (width <= 30em) {
               right: 1.875rem;
