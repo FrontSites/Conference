@@ -269,19 +269,22 @@
   .location {
     .container {
       .location-block {
-            .hero-location {
-              font-size: 1rem;
-              top: 1.4375rem;
-              align-items: flex-start;
-              max-width: 12.5rem;
-              svg {
-                flex: none;
-              }
-              @media (width <= 30em) {
-                right: 1.875rem;
-                top: 0.9375rem;
-              }
+        .location-item {
+          .hero-location {
+            font-size: 1rem;
+            top: 1.4375rem;
+            align-items: flex-start;
+            max-width: 12.5rem;
+            svg {
+              flex: none;
             }
+            @media (width <= 30em) {
+              right: 1.875rem;
+              top: 0.9375rem;
+            }
+          }
+        }
+         
           
        
       }

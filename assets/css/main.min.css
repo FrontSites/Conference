@@ -362,10 +362,10 @@
 @media (width <= 43.75em){
 .location .container{padding-left:0;padding-right:0}
 }
-.lang-en .location .container .location-block .hero-location{font-size:1rem;top:1.4375rem;align-items:flex-start;max-width:12.5rem}
-.lang-en .location .container .location-block .hero-location svg{flex:none}
+.lang-en .location .container .location-block .location-item .hero-location{font-size:1rem;top:1.4375rem;align-items:flex-start;max-width:12.5rem}
+.lang-en .location .container .location-block .location-item .hero-location svg{flex:none}
 @media (width <= 30em){
-.lang-en .location .container .location-block .hero-location{right:1.875rem;top:.9375rem}
+.lang-en .location .container .location-block .location-item .hero-location{right:1.875rem;top:.9375rem}
 }
 *{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
