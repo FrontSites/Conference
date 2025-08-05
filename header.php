@@ -51,26 +51,54 @@
             </div>
           </div>
           <div class="languages-menu">
-
-            <?php wp_nav_menu([
-              'theme_location' => 'languages-menu',
-
-              'container'       => false,
-              'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'menu_class'     => 'language-menu', // navbar-2nd_level
-            ]);
+            <?php
+            // Проверяем, есть ли Polylang
+            if (function_exists('pll_the_languages')) {
+              // Отображаем языки через Polylang
+              pll_the_languages([
+                'dropdown' => 0,
+                'show_flags' => 1,
+                'show_names' => 1,
+                'hide_if_empty' => 0,
+                'raw' => 0,
+                'item_spacing' => 'preserve'
+              ]);
+            } else {
+              // Fallback - обычное меню WordPress
+              wp_nav_menu([
+                'theme_location' => 'languages-menu',
+                'container'       => false,
+                'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'menu_class'     => 'language-menu',
+                'fallback_cb'    => false, // Не показываем ничего, если меню не создано
+              ]);
+            }
             ?>
           </div>
           <div class="header-wrapper">
             <div class="languages-menu">
-
-              <?php wp_nav_menu([
-                'theme_location' => 'languages-menu',
-
-                'container'       => false,
-                'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'menu_class'     => 'language-menu', // navbar-2nd_level
-              ]);
+              <?php
+              // Проверяем, есть ли Polylang
+              if (function_exists('pll_the_languages')) {
+                // Отображаем языки через Polylang
+                pll_the_languages([
+                  'dropdown' => 0,
+                  'show_flags' => 1,
+                  'show_names' => 1,
+                  'hide_if_empty' => 0,
+                  'raw' => 0,
+                  'item_spacing' => 'preserve'
+                ]);
+              } else {
+                // Fallback - обычное меню WordPress
+                wp_nav_menu([
+                  'theme_location' => 'languages-menu',
+                  'container'       => false,
+                  'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'menu_class'     => 'language-menu',
+                  'fallback_cb'    => false, // Не показываем ничего, если меню не создано
+                ]);
+              }
               ?>
             </div>
             <?php wp_nav_menu([
