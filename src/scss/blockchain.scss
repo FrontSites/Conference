@@ -102,7 +102,7 @@
           letter-spacing: 0.8px;
 
           &:first-child {
-            @include vw(margin-top, 60,30,60);
+            @include vw(margin-top, 50,44,50);
             text-transform: uppercase;
             @include vw(margin-bottom, 35, 15, 35);
           }
