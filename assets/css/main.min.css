@@ -22,10 +22,10 @@
 }
 .blockchain .container .blockchain-block .main-button{margin-top:2.5rem;position:relative;z-index:3;background:0 0;border:.0625rem solid #fff;max-width:12.5rem}
 @media (hover:hover){
-.blockchain .container .blockchain-block .main-button:hover{background:#222649}
+.blockchain .container .blockchain-block .main-button:hover{background:#ff29ae;color:#fff}
 }
 @media (hover:none){
-.blockchain .container .blockchain-block .main-button:active{background:#222649}
+.blockchain .container .blockchain-block .main-button:active{background:#ff29ae;color:#fff}
 }
 .blockchain .container .blockchain-block .main-button img{display:block}
 @media (width <= 48em){

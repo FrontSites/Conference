@@ -140,13 +140,17 @@
         max-width: 12.5rem;
         @media (hover:hover) {
           &:hover {
-            background: #;
+            background: #FF29AE;
+            color: #fff;
+            border-color: transparent;
           }
         }
 
         @media (hover:none) {
           &:active {
-            background: #222649;
+            background: #FF29AE;
+            color: #fff;
+            border-color: transparent;
           }
         }
         img {
