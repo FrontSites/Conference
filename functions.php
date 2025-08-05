@@ -337,7 +337,7 @@ function custom_customize_register($wp_customize)
     ));
 
     // Социальные сети
-    $social_networks = array('instagram', 'telegram', 'linkedin', 'facebook', 'twitter', 'youtube, tiktok');
+    $social_networks = array('instagram', 'telegram', 'linkedin', 'facebook', 'twitter', 'youtube', 'tiktok');
 
     foreach ($social_networks as $network) {
         // Добавляем поле для ссылки на социальную сеть
