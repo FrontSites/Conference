@@ -48,7 +48,7 @@
 @media (hover:active){
 .main-button.ticket:active{background:#790547;color:#fff;border-color:transparent}
 }
-.footer{background:#1a1d3a}
+.footer{background:#222649}
 .footer .footer-wrapper{padding-top:2.875rem;padding-bottom:2.875rem;background:#1b1f3d}
 .footer .footer-wrapper .footer-items{display:grid;align-items:center;grid-template-columns:1fr 1fr 1fr;-moz-column-gap:1.25rem;column-gap:1.25rem}
 .footer .footer-wrapper .footer-items .footer-links{display:none}
