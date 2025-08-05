@@ -283,6 +283,7 @@
 @media (width <= 30em){
 .hero .container{padding-left:0;padding-right:0}
 }
+.lang-en .hero .container .hero-items .hero-item.right .hero-location{max-width:12.5rem}
 .location{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .location .container{position:relative}
 .location .container h2{text-align:center;font-family:Manrope;font-size:clamp(35px,calc(3.3333333333vw),48px);font-weight:700;margin-bottom:clamp(44px,calc(4.1666666667vw),60px)}

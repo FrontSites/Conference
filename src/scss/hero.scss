@@ -389,8 +389,15 @@
 .lang-en {
   .hero {
     .container {
-      .hero-items { 
-        .hero
+      .hero-items {
+        .hero-item {
+          &.right {
+            .hero-location {
+              max-width: 12.5rem;
+              
+            }
+          }
+        }
       }
     }
   }
