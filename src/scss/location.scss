@@ -278,6 +278,9 @@
             svg {
               flex: none;
             }
+            @media (width <= 62em) {
+              top: 0.9375rem;
+            }
             @media (width <= 30em) {
               right: 1.875rem;
               top: 0.9375rem;
