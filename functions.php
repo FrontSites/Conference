@@ -52,7 +52,7 @@ function my_theme_enqueue_assets()
     // Принудительно обновляем CSS с уникальной версией для разработки
     $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
-    
+
     // Отладочная информация для разработки
     if (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('CSS loaded with version: ' . $css_version);
@@ -108,7 +108,7 @@ function my_theme_enqueue_assets()
         } elseif (function_exists('icl_object_id')) {
             $current_lang = ICL_LANGUAGE_CODE;
         }
-        
+
         wp_localize_script('main-min', 'mapConfig', [
             'apiKey' => GOOGLE_MAPS_API_KEY,
             'language' => $current_lang
@@ -337,7 +337,7 @@ function custom_customize_register($wp_customize)
     ));
 
     // Социальные сети
-    $social_networks = array('instagram', 'telegram', 'linkedin', 'facebook', 'twitter', 'youtube');
+    $social_networks = array('instagram', 'telegram', 'linkedin', 'facebook', 'twitter', 'youtube, tiktok');
 
     foreach ($social_networks as $network) {
         // Добавляем поле для ссылки на социальную сеть
