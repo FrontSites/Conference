@@ -156,6 +156,9 @@
             letter-spacing: 0.0625rem;
             text-align: center;
             margin-top: 0.8125rem;
+            &:empty {
+              display: none;
+            }
           }
         }
 
@@ -177,6 +180,9 @@
         }
 
         .speaker-label {
+          transform: rotate(9.953deg);
+          max-width: 10.9375rem;
+          
           color: #22274A;
           font-size: 20px;
           font-style: normal;
