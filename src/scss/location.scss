@@ -268,9 +268,7 @@
 .lang-en {
   .location {
     .container {
-      .hero-items {
-        .hero-item {
-          &.right {
+      .location-block {
             .hero-location {
               @include vw(font-size, 18,16,18);
               top: 1.4375rem;
@@ -284,8 +282,8 @@
                 top: 0.9375rem;
               }
             }
-          }
-        }
+          
+       
       }
     }
   }
