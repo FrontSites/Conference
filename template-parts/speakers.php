@@ -8,7 +8,7 @@
         $image = $speaker["speaker-image"];
         $name = $speaker["speaker-name"];
         $position = $speaker["speaker-position"];
-
+        $label = $speaker["speaker-label"];
       ?>
         <div class="speakers-item">
           <div class="speakers-item__image">
