@@ -283,7 +283,7 @@
 @media (width <= 30em){
 .hero .container{padding-left:0;padding-right:0}
 }
-.lang-en .hero .container .hero-items .hero-item.right .hero-location{font-size:clamp(16px,calc(1.25vw),18px);top:1.4375rem;align-items:flex-start;max-width:12.5rem}
+.lang-en .hero .container .hero-items .hero-item.right .hero-location{font-size:1rem;top:1.4375rem;align-items:flex-start;max-width:12.5rem}
 .lang-en .hero .container .hero-items .hero-item.right .hero-location svg{flex:none}
 @media (width <= 30em){
 .lang-en .hero .container .hero-items .hero-item.right .hero-location{right:1.875rem;top:.9375rem}
@@ -362,7 +362,7 @@
 @media (width <= 43.75em){
 .location .container{padding-left:0;padding-right:0}
 }
-.lang-en .location .container .location-block .hero-location{font-size:clamp(16px,calc(1.25vw),18px);top:1.4375rem;align-items:flex-start;max-width:12.5rem}
+.lang-en .location .container .location-block .hero-location{font-size:1rem;top:1.4375rem;align-items:flex-start;max-width:12.5rem}
 .lang-en .location .container .location-block .hero-location svg{flex:none}
 @media (width <= 30em){
 .lang-en .location .container .location-block .hero-location{right:1.875rem;top:.9375rem}
