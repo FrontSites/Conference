@@ -37,7 +37,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" <?php body_class(); ?>>
+<body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" class="lang-<?php echo esc_attr(substr(get_locale(), 0, 2)); ?>" <?php body_class(); ?>>
   <div class="page__wrapper">
     <!-- Header -->
     <header class="header">
