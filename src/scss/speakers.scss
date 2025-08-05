@@ -179,10 +179,13 @@
           color: #22274A;
           font-size: 20px;
           font-style: normal;
+          padding: 7px 15px;
           font-weight: 700;
           line-height: 120%;
           letter-spacing: 1px;
           text-transform: uppercase;
+          border-radius: 5px;
+          background: #F7E405;
 
           &:empty {
             display: none;
