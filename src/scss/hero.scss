@@ -393,6 +393,7 @@
         .hero-item {
           &.right {
             .hero-location {
+              @include vw(font-size, 18,16,18);
               top: 1.4375rem;
               align-items: flex-start;
               max-width: 12.5rem;

@@ -283,7 +283,7 @@
 @media (width <= 30em){
 .hero .container{padding-left:0;padding-right:0}
 }
-.lang-en .hero .container .hero-items .hero-item.right .hero-location{top:1.4375rem;align-items:flex-start;max-width:12.5rem}
+.lang-en .hero .container .hero-items .hero-item.right .hero-location{font-size:clamp(16px,calc(1.25vw),18px);top:1.4375rem;align-items:flex-start;max-width:12.5rem}
 .lang-en .hero .container .hero-items .hero-item.right .hero-location svg{flex:none}
 .location{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .location .container{position:relative}
