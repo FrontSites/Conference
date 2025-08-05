@@ -169,6 +169,12 @@
             display: none;
           }
         }
+        .speaker-label {
+           
+          &:empty {
+            display: none;
+          }
+        }
         @media (hover:hover) {
           &:hover {
             &::before { 
