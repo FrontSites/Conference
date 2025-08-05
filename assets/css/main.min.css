@@ -554,7 +554,7 @@ body img{pointer-events:none}
 .speakers .container .speakers-items .speakers-item .speakers-item__name h3:empty{display:none}
 .speakers .container .speakers-items .speakers-item p{max-width:10.625rem;color:#fff;margin:0 auto;margin-top:.8125rem;text-align:center;font-size:.75rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0375rem}
 .speakers .container .speakers-items .speakers-item p:empty{display:none}
-.speakers .container .speakers-items .speakers-item .speaker-label{transform:rotate(9.953deg);max-width:10.9375rem;color:#22274a;font-size:20px;font-style:normal;padding:7px 15px;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-align:center;text-transform:uppercase;border-radius:.3125rem;background:#f7e405}
+.speakers .container .speakers-items .speakers-item .speaker-label{transform:rotate(9.953deg) translateY(-1.875rem);max-width:10.9375rem;margin:0 auto;color:#22274a;font-size:20px;font-style:normal;padding:7px 15px;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-align:center;text-transform:uppercase;border-radius:.3125rem;background:#f7e405}
 .speakers .container .speakers-items .speakers-item .speaker-label:empty{display:none}
 @media (hover:hover){
 .speakers .container .speakers-items .speakers-item:hover::before{opacity:1;transform:rotate(6.12deg)}

@@ -180,8 +180,9 @@
         }
 
         .speaker-label {
-          transform: rotate(9.953deg);
+          transform: rotate(9.953deg) translateY(-1.875rem);
           max-width: 10.9375rem;
+          margin: 0 auto;
           
           color: #22274A;
           font-size: 20px;
