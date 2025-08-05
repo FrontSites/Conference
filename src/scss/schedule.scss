@@ -11,7 +11,7 @@
       box-sizing: border-box;
       margin: 0 auto;
       transition: all 0.5s ease;
-      
+
       &:before {
         position: absolute;
         top: -30px;
@@ -40,10 +40,11 @@
         height: 100%;
         opacity: 1;
         z-index: 3;
-        backdrop-filter: blur(30px);
-        mix-blend-mode:exclusion ;
+        background: rgba(34, 38, 73, 0.50);
+        backdrop-filter: blur(1.5625rem);
+        mix-blend-mode: exclusion;
       }
-      
+
 
       &.active {
         &:before {
@@ -51,9 +52,9 @@
           transform: rotate(-4.669deg);
         }
       }
-      
+
       // Активное состояние когда секция видна
-    
+
       .schedule-items {
         z-index: 2;
         display: flex;
@@ -63,32 +64,32 @@
         padding-bottom: 2.5rem;
         position: relative;
         overflow: hidden;
-       
+
         flex-direction: column;
         flex-shrink: 0;
         border-radius: 1.5625rem;
         border: 0.3125rem solid #2C3055;
         background: #222649;
         transition: all 0.5s ease;
-  
-       
-  
+
+
+
         .zip {
           position: absolute;
-  
+
           &.zip-top {
-  
+
             top: -0.625rem;
             left: -0.625rem;
             z-index: 1;
           }
-  
+
           &.zip-bottom {
             position: absolute;
             bottom: -0.625rem;
             right: 0;
             z-index: 1;
-  
+
             @media (width <=37.5em) {
               top: 74%;
               bottom: auto;
@@ -96,9 +97,9 @@
               right: -179px;
             }
           }
-  
+
         }
-  
+
         h2 {
           color: #fff;
           font-weight: 700;
@@ -108,7 +109,7 @@
           text-align: center;
           font-family: "Manrope";
           line-height: 120%;
-  
+
           strong {
             padding-left: 0.9375rem;
             padding-right: 0.9375rem;
@@ -118,10 +119,10 @@
             transform: rotate(-3.821deg);
             display: inline-block;
           }
-  
+
           @include vw(margin-bottom, 48, 44, 48);
         }
-  
+
         .schedule-item {
           margin-bottom: 1.25rem;
           padding-bottom: 1.25rem;
@@ -132,7 +133,7 @@
           flex-direction: column;
           gap: 0.625rem;
           border-bottom: 0.0625rem solid #2C3055;
-  
+
           .schedule-item-time {
             display: flex;
             align-items: center;
@@ -143,9 +144,9 @@
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.05rem;
-  
+
           }
-  
+
           .schedule-item-text {
             color: #FFF;
             font-size: 1rem;
@@ -153,17 +154,17 @@
             line-height: 120%;
             letter-spacing: 0.05rem;
           }
-  
+
           &:last-child {
             border-bottom: none;
             margin-bottom: 0rem;
           }
-  
+
           @media (width <=37.5em) {
             padding-left: 0rem;
           }
         }
-  
+
         .main-button {
           max-width: 12.5rem;
           margin: 0 auto;

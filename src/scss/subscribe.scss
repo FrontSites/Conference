@@ -16,7 +16,7 @@
         height: auto;
 
         &.left {
-          flex: 0 1 60%;
+          flex: 0 1 70%;
           h2 {
             max-width: 31.25rem;
             font-family: "Manrope";
@@ -39,7 +39,7 @@
         }
 
         &.right {
-          flex: 0 1 40%;
+          flex: 0 1 30%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
