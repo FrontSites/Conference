@@ -18,6 +18,9 @@
             <h3><?php echo $name; ?></h3>
           </div>
           <p><?php echo $position; ?></p>
+          <div class="speaker-label">
+            <?php echo $label; ?>
+          </div>
         </div>
       <?php } ?>
     </div>
