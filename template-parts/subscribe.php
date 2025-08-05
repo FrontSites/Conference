@@ -6,7 +6,7 @@
         <p><?php the_field("subscribe_subtitle"); ?></p>
       </div>
       <div class="subscribe-item right">
-        <?php $social_networks = ['tiktok', 'instagram', 'facebook', 'twitter', 'telegram', 'youtube',]; ?>
+        <?php $social_networks = ['tiktok', 'instagram', 'facebook', 'twitter', 'telegram', 'linkedin', 'youtube',]; ?>
         <ul>
           <?php foreach ($social_networks as $network) {
             $url = get_theme_mod("{$network}_url");
