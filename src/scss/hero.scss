@@ -394,7 +394,9 @@
           &.right {
             .hero-location {
               max-width: 12.5rem;
-              
+              svg {
+                flex: none;
+              }
             }
           }
         }
