@@ -17,7 +17,7 @@
           <div class="speakers-item__name">
             <h3><?php echo $name; ?></h3>
 
-            <?php echo $position; ?>
+
 
 
           </div>
