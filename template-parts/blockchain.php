@@ -1,11 +1,14 @@
 <section class="blockchain">
-  <div class="blockchain-img-block">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
-    <div class="blockchain-img-text">
-      <?php the_field("sched-item-text"); ?>
+  <div class="blockchain-wrapper">
+    <div class="blockchain-img-block">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
+      <div class="blockchain-img-text">
+        <?php the_field("sched-item-text"); ?>
+      </div>
     </div>
+    <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
   </div>
-  <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
+
   <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-circle.webp" alt="">
   <div class="container">
     <div class="blockchain-block">
