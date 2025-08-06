@@ -22,6 +22,9 @@
     row-gap: 0.625rem;
     background: #2A2F5D;
     border-radius: 0.3125rem;
+    &:first-child {
+      transform: rotate(9.953deg);
+    }
    }
   }
   @include vw(padding-top, 70, 50, 70);
