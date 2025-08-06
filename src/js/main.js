@@ -1,5 +1,6 @@
 // Тестовый код для проверки загрузки JavaScript
 console.log("🚀 JavaScript файл загружен!", new Date().toLocaleTimeString());
+alert("JavaScript работает! Время: " + new Date().toLocaleTimeString());
 
 // Проверка загрузки стилей
 function checkStylesLoaded() {
