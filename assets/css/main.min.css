@@ -24,7 +24,7 @@
 @media (width <= 62em){
 .blockchain .container .blockchain-block{margin:0 auto}
 }
-.blockchain .container .blockchain-block .main-button{margin-top:2.5rem;position:relative;z-index:3;background:0 0;border:.0625rem solid #fff;max-width:12.5rem}
+.blockchain .container .blockchain-block .main-button{margin-top:2.5rem;position:relative;z-index:3;background:0 0;border:.0625rem solid #fff;max-width:13.5rem}
 @media (hover:hover){
 .blockchain .container .blockchain-block .main-button:hover{background:#ff29ae;color:#fff;border-color:transparent}
 }
