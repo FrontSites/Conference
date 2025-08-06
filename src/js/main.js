@@ -58,6 +58,9 @@ function initGoogleMaps() {
 
 // Инициализация карты (вызывается Google Maps API)
 function initLocationMap() {
+  // Сбрасываем флаг загрузки
+  window.googleMapsLoading = false;
+  
   const mapElement = document.getElementById("map");
   if (!mapElement || typeof google === "undefined" || !google.maps) {
     if (mapElement) {
