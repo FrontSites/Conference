@@ -35,6 +35,13 @@ function my_theme_enqueue_assets()
     // Принудительно обновляем версию для очистки кеша
     $js_version = time();
     wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
+    
+    // Добавляем заголовки для очистки кеша
+    if (!is_admin()) {
+        header('Cache-Control: no-cache, no-store, must-revalidate');
+        header('Pragma: no-cache');
+        header('Expires: 0');
+    }
 
     // Library
     wp_enqueue_script('select2', get_template_directory_uri() . '/assets/library/select2/select2.min.js', ['jquery'], null, true);
