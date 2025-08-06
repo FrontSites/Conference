@@ -20,8 +20,8 @@ function my_theme_enqueue_assets()
     $css_main = '/assets/css/main.min.css';
     $css_path = get_template_directory() . $css_main;
 
-    // Используем filemtime для кеширования, но только если файл существует
-    $css_version = file_exists($css_path) ? filemtime($css_path) : '1.0.0';
+    // Принудительно обновляем CSS с уникальной версией для разработки
+    $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
 
     // Библиотечные стили — без filemtime и без версии
@@ -244,15 +244,72 @@ function add_image_optimization()
 }
 add_action('wp_footer', 'add_image_optimization');
 
+add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
+add_filter('wpcf7_autop_or_not', '__return_false');
+# Исправление MIME типа для SVG файлов.
+function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
+{
+
+    // WP 5.1 +
+    if (version_compare($GLOBALS['wp_version'], '5.1.0', '>=')) {
+        $dosvg = in_array($real_mime, ['image/svg', 'image/svg+xml']);
+    } else {
+        $dosvg = ('.svg' === strtolower(substr($filename, -4)));
+    }
+
+    // mime тип был обнулен, поправим его
+    // а также проверим право пользователя
+    if ($dosvg) {
+
+        // разрешим
+        if (current_user_can('manage_options')) {
+
+            $data['ext'] = 'svg';
+            $data['type'] = 'image/svg+xml';
+        }
+        // запретим
+        else {
+            $data['ext'] = false;
+            $data['type'] = false;
+        }
+    }
+
+    return $data;
+}
 
 
+register_nav_menus([
+    'main-menu' => __('Main Menu'),
+    'languages-menu' => __('Languages Menu'),
+]);
 
+// Функция для правильного отображения меню в зависимости от языка
+function get_language_specific_menu($menu_location)
+{
+    // Определяем текущий язык
+    $current_lang = 'uk'; // По умолчанию украинский
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+    } elseif (function_exists('icl_object_id')) {
+        $current_lang = ICL_LANGUAGE_CODE;
+    }
 
+    // Получаем локации меню
+    $locations = get_nav_menu_locations();
 
+    // Проверяем, есть ли меню для текущей локации
+    if (isset($locations[$menu_location])) {
+        $menu_id = $locations[$menu_location];
+        $menu = wp_get_nav_menu_object($menu_id);
 
+        if ($menu) {
+            return wp_get_nav_menu_items($menu_id);
+        }
+    }
 
-
-
+    // Если меню не найдено, возвращаем пустой массив
+    return [];
+}
 
 
 function custom_customize_register($wp_customize)
