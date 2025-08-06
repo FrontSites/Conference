@@ -4,7 +4,7 @@
     <div class="location-wrapper">
       <div id="map" class="google-map"></div>
       <div class="location-block">
-        <a href="/#rent" class="location-item">
+        <a href="https://maps.app.goo.gl/uB5V33NyCkzciwrt5" class="location-item">
           <div class="hero-image">
             <img src="<?php the_field("location-image"); ?>" alt="">
           </div>
