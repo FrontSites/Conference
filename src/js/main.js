@@ -113,14 +113,6 @@ function initLocationMap() {
 
   const isEnglish = window.mapConfig.language === 'en';
   
-  // Создаем элемент маркера
-  const pinElement = document.createElement('div');
-  pinElement.innerHTML = `
-    <img src="${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg" 
-         style="width: 40px; height: 40px; cursor: pointer;" 
-         alt="${isEnglish ? 'Parkovy Congress and Exhibition Center' : 'Парковий Конгресно-виставковий центр'}">
-  `;
-  
   // Создаем обычный маркер (совместимый API)
   const marker = new google.maps.Marker({
     position: { lat: 50.44921066476974, lng: 30.5407736837048 },
