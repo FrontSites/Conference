@@ -46,6 +46,9 @@
     @media (width <= 64em) {
       left: -3.125rem;
     }
+    @media (width <= 62em) {
+      position: static;
+    }
   }
 
   @include vw(padding-top, 70, 50, 70);
