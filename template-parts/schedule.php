@@ -1,5 +1,11 @@
 <section class="schedule" id="agenda">
   <div class="container">
+    <div class="shedule-block">
+      <div class="shedule-title">
+        <?php the_field("schedule-title"); ?>
+      </div>
+
+    </div>
     <div class="shedule-wrapper">
       <div class="schedule-items">
         <?php the_field("schedule-title"); ?>
