@@ -16,14 +16,11 @@ function my_theme_enqueue_assets()
     }
 
     // === jQuery ===
-    error_log('Loading jQuery...');
+
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
-    error_log('jQuery enqueued');
-
     // Добавляем проверку jQuery
-    wp_add_inline_script('jquery', 'console.log("jQuery loaded:", typeof jQuery);');
 
     // === Styles ===
     $css_main = '/assets/css/main.min.css';
