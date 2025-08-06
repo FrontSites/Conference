@@ -1,7 +1,11 @@
 <section class="schedule" id="agenda">
   <div class="sched-img-block">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
-    .
+    <div class="sched-img-text">
+      <h2>
+        <?php the_field("schedule-title"); ?>
+      </h2>
+    </div>
   </div>
   <div class="container">
     <div class="shedule-block" style="display:<?php the_field('shedule-block-display') ?>">
