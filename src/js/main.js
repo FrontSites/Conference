@@ -274,8 +274,8 @@ function initLocationMap() {
     content: `
       <div style="padding: 15px; max-width: 280px; font-family: 'Manrope', sans-serif;">
         <div style="display: flex; align-items: center; margin-bottom: 8px;">
-          <img src="${window.location.origin}/wp-content/themes/conference/assets/images/logo.svg" 
-               style="width: 30px; height: 30px; margin-right: 10px;" alt="Logo">
+          <img src="${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg" 
+               style="width: 30px; height: 30px; margin-right: 10px;" alt="Pin">
           <span style="font-weight: 700; font-size: 16px; color: #333; text-transform: uppercase;">FULLSET</span>
         </div>
         <div style="text-align: left;">
