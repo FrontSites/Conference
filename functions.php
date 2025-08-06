@@ -93,15 +93,11 @@ function svg_upload_allow($mimes)
     return $mimes;
 }
 
-// Convert images to webP - оптимизированная версия
+// Convert images to webP
 add_filter('wp_generate_attachment_metadata', 'convert_image_to_webp_on_upload');
 
 function convert_image_to_webp_on_upload($metadata)
 {
-    // Проверяем, включена ли конвертация в настройках
-    if (!get_option('enable_webp_conversion', true)) {
-        return $metadata;
-    }
 
     $upload_dir = wp_upload_dir();
     $base_dir = trailingslashit($upload_dir['basedir']);
