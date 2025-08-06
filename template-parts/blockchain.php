@@ -1,7 +1,7 @@
 <section class="blockchain">
-  <div class="sched-img-block">
+  <div class="blockchain-img-block">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
-    <div class="sched-img-text">
+    <div class="blockchain-img-text">
       <?php the_field("sched-item-text"); ?>
     </div>
     <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
