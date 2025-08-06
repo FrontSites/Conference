@@ -61,7 +61,6 @@
 
           li {
             a {
-              overflow: hidden;
               @include vw(padding-top, 15, 10, 15);
               @include vw(padding-bottom, 15, 10, 15);
               color: #fff;
