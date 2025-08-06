@@ -38,9 +38,10 @@
         color: #222649;
       }
       &:last-child { 
+
         background: #FF29AE;
         max-width: 19.125rem;
-        transform: rotate(-7.895deg);
+        transform: rotate(-7.895deg) translate(-50px, -3.75rem);
         color: #fff;
       }
     }

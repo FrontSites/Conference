@@ -1,8 +1,8 @@
 .blockchain{border-top-right-radius:1.5625rem;padding-top:clamp(50px,calc(4.8611111111vw),70px);position:relative}
 .blockchain .blockchain-img-block{display:flex;flex-direction:column;align-items:center;max-width:153.125rem;position:absolute;left:2.25rem;top:22.375rem;z-index:3}
 .blockchain .blockchain-img-block p{padding:7px 15px;justify-content:center;align-items:center;display:flex;flex-direction:column;row-gap:.625rem;background:#2a2f5d;border-radius:.3125rem;border-radius:5px;font-size:clamp(18px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase}
-.blockchain .blockchain-img-block p:first-child{transform:rotate(9.953deg) translate(-3.125rem,-50px);background:#f7e405;max-width:10.125rem;color:#222649}
-.blockchain .blockchain-img-block p:last-child{background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg);color:#fff}
+.blockchain .blockchain-img-block p:first-child{transform:rotate(9.953deg) translate(-3.125rem,-3.75rem);background:#f7e405;max-width:10.125rem;color:#222649}
+.blockchain .blockchain-img-block p:last-child{background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg) translate(-50px,-3.75rem);color:#fff}
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
 .blockchain .blockchain-bg{position:absolute;top:0;left:0;width:50%}
 @media (width <= 62em){
