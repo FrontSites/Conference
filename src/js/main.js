@@ -54,16 +54,12 @@ window.addEventListener('resize', () => {
 // Google Maps инициализация
 function initGoogleMaps() {
   const mapElement = document.getElementById("map");
-  console.log('initGoogleMaps called, mapElement:', mapElement);
-  console.log('window.mapConfig:', window.mapConfig);
   
   if (!mapElement) {
-    console.log('Map element not found');
     return;
   }
   
   if (!window.mapConfig || !window.mapConfig.apiKey) {
-    console.log('Map config or API key not found');
     return;
   }
 
@@ -311,7 +307,6 @@ function initScheduleVisibility() {
   const scheduleWrapper = document.querySelector('.shedule-wrapper');
   
   if (!scheduleSection || !scheduleWrapper) {
-    console.log('⚠️ Элементы расписания не найдены');
     return;
   }
 
@@ -326,7 +321,6 @@ function initScheduleVisibility() {
       if (entry.isIntersecting) {
         // Секция видна - добавляем класс active
         scheduleWrapper.classList.add('active');
-        console.log('📅 Расписание активировано');
       } else {
         // Секция не видна - убираем класс active
         scheduleWrapper.classList.remove('active');
@@ -344,7 +338,6 @@ function initScheduleVisibility() {
   // Дополнительная проверка через 2 секунды
   setTimeout(() => {
     if (!scheduleWrapper.classList.contains('active')) {
-      console.log('🔄 Принудительная активация расписания...');
       scheduleWrapper.classList.add('active');
     }
   }, 2000);
