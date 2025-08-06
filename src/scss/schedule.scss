@@ -5,6 +5,28 @@
   @include vw(padding-top, 100, 50, 100);
 
   .container {
+    h2 {
+      color: #fff;
+      font-weight: 700;
+      @include vw(font-size, 48, 35, 48);
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      font-family: "Manrope";
+      line-height: 120%;
+
+      strong {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        border-radius: 0.3125rem;
+        background: #F7E405;
+        color: #222649;
+        transform: rotate(-3.821deg);
+        display: inline-block;
+      }
+
+      @include vw(margin-bottom, 48, 44, 48);
+    }
     .shedule-block {
       position: relative;
       height: 53.125rem;
@@ -19,9 +41,7 @@
         width: 100%;
         height: 100%;
       }
-      h2 {
-        
-      }
+     
     }
 
     .shedule-wrapper {
@@ -104,28 +124,7 @@
 
         }
 
-        h2 {
-          color: #fff;
-          font-weight: 700;
-          @include vw(font-size, 48, 35, 48);
-          position: relative;
-          z-index: 2;
-          text-align: center;
-          font-family: "Manrope";
-          line-height: 120%;
-
-          strong {
-            padding-left: 0.9375rem;
-            padding-right: 0.9375rem;
-            border-radius: 0.3125rem;
-            background: #F7E405;
-            color: #222649;
-            transform: rotate(-3.821deg);
-            display: inline-block;
-          }
-
-          @include vw(margin-bottom, 48, 44, 48);
-        }
+        
 
         .schedule-item {
           margin-bottom: 1.25rem;
