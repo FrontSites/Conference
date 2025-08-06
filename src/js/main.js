@@ -272,19 +272,19 @@ function initLocationMap() {
 
   const infowindow = new google.maps.InfoWindow({
     content: `
-      <div style="padding: 6px 10px; max-width: 250px; font-family: 'Manrope', sans-serif;">
-        <div style="display: flex; align-items: center; margin-bottom: 4px;">
+      <div style="padding: 3px 10px; max-width: 250px; font-family: 'Manrope', sans-serif;">
+        <div style="display: flex; align-items: center; margin-bottom: 3px;">
           <img src="${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg" 
-               style="width: 22px; height: 22px; margin-right: 6px;" alt="Pin">
-          <span style="font-weight: 700; font-size: 14px; color: #333; text-transform: uppercase;">FULLSET</span>
+               style="width: 24px; height: 24px; margin-right: 8px;" alt="Pin">
+          <span style="font-weight: 700; font-size: 15px; color: #333; text-transform: uppercase;">FULLSET</span>
         </div>
         <div style="text-align: left;">
-          <h3 style="margin: 0 0 3px 0; color: #666; font-size: 13px; font-weight: 400; text-align: left;">${
+          <h3 style="margin: 0 0 2px 0; color: #666; font-size: 14px; font-weight: 400; text-align: left;">${
             isEnglish
               ? "Parkovy Congress and Exhibition Center"
               : "Парковий Конгресно-виставковий центр"
           }</h3>
-          <p style="margin: 0; color: #333; font-size: 12px; font-weight: 600; text-align: left;">${
+          <p style="margin: 0; color: #333; font-size: 13px; font-weight: 700; text-align: left;">${
             isEnglish ? "Naberezhne Shose, 2" : "Набережне шосе, 2"
           }</p>
         </div>
