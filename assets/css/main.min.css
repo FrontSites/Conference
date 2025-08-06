@@ -42,6 +42,9 @@
 .blockchain .container .blockchain-block .main-button{margin:0 auto;margin-top:2.5rem}
 }
 @media (width <= 62em){
+.blockchain .container{margin-top:-14.8125rem}
+}
+@media (width <= 62em){
 .blockchain{margin-top:11.25rem;padding-top:0}
 }
 .main-button{display:flex;justify-content:center;align-items:center;padding:12px 1.25rem;border-radius:.625rem;-moz-column-gap:.625rem;column-gap:.625rem;font-size:.9375rem;line-height:120%;text-align:center;letter-spacing:.0469rem;text-transform:uppercase}

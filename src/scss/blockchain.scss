@@ -217,9 +217,13 @@
         }
       }
     }
+    @media (width <= 62em) {
+      margin-top: -14.8125rem;
+    }
   }
   @media (width <= 62em) {
     margin-top: 11.25rem;
     padding-top: 0rem;
   }
+  
 }
