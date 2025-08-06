@@ -145,18 +145,18 @@ function convert_all_images_in_assets_to_webp()
 
 }
 
-// Регистрация расписания (еженедельно вместо ежедневно)
-if (!wp_next_scheduled('convert_assets_images_to_webp_weekly')) {
-    wp_schedule_event(time(), 'weekly', 'convert_assets_images_to_webp_weekly');
+// Регистрация расписания (ежедневно)
+if (!wp_next_scheduled('convert_assets_images_to_webp_daily')) {
+    wp_schedule_event(time(), 'daily', 'convert_assets_images_to_webp_daily');
 }
 
-// Отменить при деактивации темы
+// Отменить при деактивации темы (чтобы не висело)
 add_action('switch_theme', function () {
-    wp_clear_scheduled_hook('convert_assets_images_to_webp_weekly');
+    wp_clear_scheduled_hook('convert_assets_images_to_webp_daily');
 });
 
 // Хук на задачу
-add_action('convert_assets_images_to_webp_weekly', 'convert_all_images_in_assets_to_webp');
+add_action('convert_assets_images_to_webp_daily', 'convert_all_images_in_assets_to_webp');
 
 function convert_to_webp($filepath)
 {
