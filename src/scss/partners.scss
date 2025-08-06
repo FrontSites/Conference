@@ -177,7 +177,10 @@
         @include vw(margin-top, 60,44,60);
         max-width: 14.75rem;
       }
-      @media (width <= 68.75em) {}
+      @media (width <= 81.875em) {
+        max-width: 19.75rem;
+
+      }
     }
   }
 
