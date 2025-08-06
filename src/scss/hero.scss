@@ -2,6 +2,8 @@
 @use "./mixins" as *;
 
 .hero {
+  position: relative;
+  z-index: 3;
   padding-bottom: 2.5rem;
   @include vw(padding-top, 150, 114, 150);
 
