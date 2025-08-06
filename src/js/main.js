@@ -30,12 +30,12 @@ window.addEventListener('load', () => {
   const scheduleSection = document.querySelector('.schedule');
   
   if (mapElement && !mapElement.innerHTML.trim()) {
-    console.log('🔄 Повторная инициализация карты...');
+ 
     initGoogleMaps();
   }
   
   if (scheduleSection && !document.querySelector('.shedule-wrapper.active')) {
-    console.log('🔄 Повторная инициализация расписания...');
+   
     initScheduleVisibility();
   }
 });
@@ -45,7 +45,6 @@ let resizeTimeout;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
-    console.log('🔄 Переинициализация после изменения размера окна...');
     initMenu();
     initSpeakersLoadMore();
     initScheduleVisibility();
