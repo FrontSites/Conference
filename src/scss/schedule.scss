@@ -44,7 +44,10 @@
       h2 {
         margin-top: 3.75rem;
       }
-     
+     .main-button { 
+      position: relative;
+      z-index: 3;
+     }
     }
 
     .shedule-wrapper {
