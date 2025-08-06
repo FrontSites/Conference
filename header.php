@@ -58,6 +58,11 @@
   <?php wp_head(); ?>
 
 <body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" class="lang-<?php echo esc_attr(substr(get_locale(), 0, 2)); ?>" <?php body_class(); ?>>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSXTB6CF"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <div class="page__wrapper">
     <!-- Header -->
     <header class="header">
