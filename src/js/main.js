@@ -48,7 +48,7 @@ function initGoogleMaps() {
   const script = document.createElement("script");
   const language = window.mapConfig.language || 'uk';
   const timestamp = Date.now(); // Добавляем уникальный параметр
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&loading=async&callback=initLocationMap&v=weekly`;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&callback=initLocationMap&v=weekly`;
   script.async = true;
   script.defer = true;
   
