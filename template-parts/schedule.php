@@ -1,6 +1,10 @@
 <section class="schedule" id="agenda">
   <div class="container">
     <div class="shedule-block" style="display:<?php the_field("shedule-block-display") ?>">
+      <div class="schedule-bg">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/schedule-bg.png" alt="description">
+
+      </div>
       <div class="shedule-title">
         <?php the_field("schedule-title"); ?>
       </div>
