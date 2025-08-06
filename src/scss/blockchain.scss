@@ -218,5 +218,7 @@
       }
     }
   }
-  @m
+  @media (width <= 62em) {
+    padding-top: 11.25rem;
+  }
 }
