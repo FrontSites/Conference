@@ -4,6 +4,10 @@
 .blockchain {
   border-top-right-radius: 1.5625rem;
 
+  .blockchain-wrapper {
+    position: relative;
+  }
+
   .blockchain-img-block {
     display: flex;
     flex-direction: column;
