@@ -278,7 +278,6 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 register_nav_menus([
     'main-menu' => __('Main Menu'),
     'languages-menu' => __('Languages Menu'),
-    'footer-site-menu' => __('Footer Menu'),
 ]);
 
 // Функция для правильного отображения меню в зависимости от языка
@@ -308,21 +307,7 @@ function get_language_specific_menu($menu_location) {
     return [];
 }
 
-// Функция для отладки меню
-function debug_menu_locations() {
-    if (current_user_can('manage_options')) {
-        $locations = get_nav_menu_locations();
-        echo '<div style="background: #f0f0f0; padding: 10px; margin: 10px; border: 1px solid #ccc;">';
-        echo '<h3>Debug: Menu Locations</h3>';
-        echo '<p>Current language: ' . (function_exists('pll_current_language') ? pll_current_language() : 'Not set') . '</p>';
-        echo '<p>Menu locations:</p>';
-        echo '<pre>' . print_r($locations, true) . '</pre>';
-        echo '</div>';
-    }
-}
 
-// Добавляем отладку в админ-панель
-add_action('admin_notices', 'debug_menu_locations');
 
 
 
