@@ -32,8 +32,8 @@ function my_theme_enqueue_assets()
     $js_path = get_template_directory() . $js_main;
     $js_url = get_template_directory_uri() . $js_main;
 
-    // Используем filemtime для кеширования, но только если файл существует
-    $js_version = file_exists($js_path) ? filemtime($js_path) : '1.0.0';
+    // Принудительно обновляем JS с уникальной версией для разработки
+    $js_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($js_path);
     wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
 
     // Library
