@@ -8,7 +8,10 @@
     .shedule-block {
       flex-direction: column;
       align-items: center;
-      justify-content: baseline;
+      justify-content: space-between;
+      .schedule-bg { 
+        img 
+      }
     }
 
     .shedule-wrapper {
