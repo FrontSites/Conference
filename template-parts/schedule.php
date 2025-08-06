@@ -2,8 +2,7 @@
   <div class="sched-img-block">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
     <div class="sched-img-text">
-      <p class="sched-item left"><?php the_field("sched-item-left-text"); ?></p>
-      <p class="sched-item right"><?php the_field("sched-item-right-text"); ?></p>
+      <?php the_field("sched-item-text"); ?>
     </div>
   </div>
   <div class="container">
