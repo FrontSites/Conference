@@ -32,7 +32,7 @@
       text-transform: uppercase;
 
       &:first-child {
-        transform: rotate(9.953deg);
+        transform: rotate(9.953deg) translate(0, -3.125rem);
         background: #F7E405;
         max-width: 12.125rem;
       }
