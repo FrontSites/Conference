@@ -55,6 +55,10 @@
         }
         img {
           border-radius: 1.5625rem;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          max-width: none;
         }
       }
       h2 {
