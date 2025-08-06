@@ -276,11 +276,8 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 
 
 register_nav_menus([
-    'main-menu' => (' (main-menu)'),
-]);
-
-register_nav_menus([
-    'languages-menu' => (' (languages-menu)'),
+    'main-menu' => __('Main Menu'),
+    'languages-menu' => __('Languages Menu'),
 ]);
 
 
