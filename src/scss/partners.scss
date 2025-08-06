@@ -170,6 +170,8 @@
   
   }
   &.partners-media {
+  @include vw(padding-top, 100, 50, 100);
+
     .container {
       .main-button {
         @include vw(margin-top, 60,44,60);
@@ -179,6 +181,8 @@
   }
 
   &.partners-tech {
+  @include vw(padding-top, 100, 50, 100);
+
     .container {
       .main-button {
         @include vw(margin-top, 60,44,60);
