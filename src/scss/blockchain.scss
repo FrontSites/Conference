@@ -17,6 +17,7 @@
     z-index: 3;
 
     p {
+      position: relative;
       padding: 7px 7px;
       text-align: center;
       background: #2A2F5D;
@@ -34,6 +35,7 @@
         background: #F7E405;
         max-width: 10.125rem;
         color: #222649;
+        @m
       }
       &:last-child { 
 
