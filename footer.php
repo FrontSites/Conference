@@ -21,7 +21,7 @@
 
         <div class="footer-menu">
           <?php wp_nav_menu([
-            'theme_location' => 'footer-site-menu',
+            'theme_location' => 'main-menu',
 
             'container'       => false,
             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
