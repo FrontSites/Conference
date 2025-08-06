@@ -23,6 +23,11 @@ function my_theme_enqueue_assets()
     // Используем filemtime для версионирования с проверкой
     $css_version = file_exists($css_path) ? filemtime($css_path) : '1.0.0';
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
+    
+    // Принудительная загрузка стилей в head для предотвращения белого экрана
+    add_action('wp_head', function() use ($css_main, $css_version) {
+        echo '<link rel="stylesheet" href="' . get_template_directory_uri() . $css_main . '?ver=' . $css_version . '" type="text/css" media="all" />';
+    }, 1);
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
@@ -32,8 +37,8 @@ function my_theme_enqueue_assets()
     $js_path = get_template_directory() . $js_main;
     $js_url = get_template_directory_uri() . $js_main;
 
-    // Используем filemtime для версионирования
-    $js_version = filemtime($js_path);
+    // Используем filemtime для версионирования с проверкой
+    $js_version = file_exists($js_path) ? filemtime($js_path) : '1.0.0';
     wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
 
     // Library
