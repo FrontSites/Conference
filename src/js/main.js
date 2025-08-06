@@ -19,6 +19,11 @@ function initGoogleMaps() {
   const mapElement = document.getElementById("map");
   if (!mapElement || !window.mapConfig || !window.mapConfig.apiKey) return;
 
+  // Глобальная переменная для отслеживания загрузки
+  if (window.googleMapsLoading) {
+    return;
+  }
+
   // Проверяем, не загружен ли уже Google Maps API
   if (window.google && window.google.maps) {
     initLocationMap();
@@ -30,6 +35,9 @@ function initGoogleMaps() {
     return;
   }
 
+  // Устанавливаем флаг загрузки
+  window.googleMapsLoading = true;
+
   const script = document.createElement("script");
   const language = window.mapConfig.language || 'uk';
   const timestamp = Date.now(); // Добавляем уникальный параметр
@@ -38,6 +46,7 @@ function initGoogleMaps() {
   script.defer = true;
   
   script.onerror = function () {
+    window.googleMapsLoading = false;
     const mapElement = document.getElementById("map");
     if (mapElement) {
       mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Карта временно недоступна</div>';
