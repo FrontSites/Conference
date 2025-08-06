@@ -22,6 +22,8 @@
   <meta name="twitter:title" content="Web3 Conference in Ukraine 2025 | Fullset Blockchain Conference">
   <meta name="twitter:description" content="Join the Web3 Conference 2025 in Ukraine — blockchain, NFT technologies. Inspiring speakers and exciting program. Register now!">
 
+
+
   <?php
   // Получить заголовок SEO Yoast
   $yoast_title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
@@ -34,6 +36,25 @@
   // Вывести заголовок в тег <title>
   echo '<title>' . esc_html($yoast_title) . '</title>';
   ?>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WSXTB6CF');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <?php wp_head(); ?>
 
 <body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" class="lang-<?php echo esc_attr(substr(get_locale(), 0, 2)); ?>" <?php body_class(); ?>>
