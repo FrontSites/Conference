@@ -175,8 +175,9 @@
     .container {
       .main-button {
         @include vw(margin-top, 60,44,60);
-        max-width: 15.75rem;
+        max-width: 14.75rem;
       }
+      @media (width <= 68.75em) {}
     }
   }
 
