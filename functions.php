@@ -191,18 +191,17 @@ function convert_to_webp($filepath)
     }
 }
 
-// Добавляем кеширование только для изображений (CSS и JS не кешируем)
+// Добавляем кеширование для статических файлов
 function add_cache_headers()
 {
     if (!is_admin()) {
-        // НЕ кешируем CSS и JS файлы для разработки
+        // Кеширование для CSS и JS файлов
         if (strpos($_SERVER['REQUEST_URI'], '.css') !== false || strpos($_SERVER['REQUEST_URI'], '.js') !== false) {
-            header('Cache-Control: no-cache, no-store, must-revalidate');
-            header('Pragma: no-cache');
-            header('Expires: 0');
+            header('Cache-Control: public, max-age=31536000'); // 1 год
+            header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 31536000));
         }
 
-        // Кеширование только для изображений
+        // Кеширование для изображений
         if (
             strpos($_SERVER['REQUEST_URI'], '.jpg') !== false ||
             strpos($_SERVER['REQUEST_URI'], '.jpeg') !== false ||
