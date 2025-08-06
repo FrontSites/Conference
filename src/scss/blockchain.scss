@@ -3,6 +3,8 @@
 
 .blockchain {
   border-top-right-radius: 1.5625rem;
+  overflow: hidden;
+
 
 
   @include vw(padding-top, 70, 50, 70);
