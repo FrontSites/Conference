@@ -86,12 +86,12 @@ function my_theme_enqueue_assets()
     error_log('JS script enqueued');
 
     // Library
-    wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/library/swiper/swiper-bundle.min.js', ['jquery'], null, true);
-    wp_enqueue_script('inteltel', get_template_directory_uri() . '/assets/library/intel-input/intlTelInputWithUtils.min.js', ['jquery'], null, true);
+
+
     wp_enqueue_script('select2', get_template_directory_uri() . '/assets/library/select2/select2.min.js', ['jquery'], null, true);
     wp_enqueue_script('jquery-mask', get_template_directory_uri() . '/assets/library/maskedinput/jquery.maskedinput.js', ['jquery'], null, true);
-    wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/library/gsap/gsap.min.js', ['jquery'], null, true);
-    wp_enqueue_script('scroll-trigger', get_template_directory_uri() . '/assets/library/gsap/ScrollTrigger.min.js', ['gsap'], null, true);
+
+
     wp_enqueue_script('justvalidation', get_template_directory_uri() . '/assets/library/validation/just-validate.production.min.js', ['jquery'], null, true);
 
     // === AJAX параметры для main.min.js ===
