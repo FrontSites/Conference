@@ -34,6 +34,11 @@ function initGoogleMaps() {
   const existingScripts = document.querySelectorAll('script[src*="maps.googleapis.com"]');
   existingScripts.forEach(script => script.remove());
 
+  // Очищаем глобальные переменные Google Maps
+  if (window.google) {
+    delete window.google;
+  }
+
   // Устанавливаем флаг загрузки
   window.googleMapsLoading = true;
 
