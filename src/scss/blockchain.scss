@@ -45,6 +45,9 @@
         max-width: 19.125rem;
         transform: rotate(-7.895deg) translate(1.875rem, -2.1875rem);
         color: #fff;
+        @media (width <= 30em) {
+          z-index: 1;
+        }
       }
     }
     @media (width <= 64em) {

@@ -6,6 +6,9 @@
 .blockchain .blockchain-img-block p:first-child{z-index:2}
 }
 .blockchain .blockchain-img-block p:last-child{background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg) translate(1.875rem,-2.1875rem);color:#fff}
+@media (width <= 30em){
+.blockchain .blockchain-img-block p:last-child{z-index:1}
+}
 @media (width <= 64em){
 .blockchain .blockchain-img-block{left:-3.125rem}
 }
