@@ -6,6 +6,8 @@
 
   .blockchain-img-block {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 153.125rem;
     position: absolute;
     left: 2.25rem;
