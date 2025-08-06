@@ -34,8 +34,8 @@
             <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
               <?php echo get_theme_mod('contact_email', ''); ?>
             </a>
-            <a href="tel:<?php echo get_theme_mod('contact_phone', ''); ?>">
-              <?php echo get_theme_mod('contact_phone', ''); ?>
+            <a href="https://t.me/FullsetconfBot" target="_blank">
+              @FullsetconfBot
             </a>
           </div>
           <?php get_template_part('template-parts/buttons/ticket-button'); ?>
