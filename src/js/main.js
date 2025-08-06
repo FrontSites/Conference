@@ -30,10 +30,9 @@ function initGoogleMaps() {
     return;
   }
 
-  // Проверяем, не загружается ли уже скрипт
-  if (document.querySelector('script[src*="maps.googleapis.com"]')) {
-    return;
-  }
+  // Удаляем все существующие скрипты Google Maps
+  const existingScripts = document.querySelectorAll('script[src*="maps.googleapis.com"]');
+  existingScripts.forEach(script => script.remove());
 
   // Устанавливаем флаг загрузки
   window.googleMapsLoading = true;
