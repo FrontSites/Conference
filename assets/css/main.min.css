@@ -455,7 +455,7 @@ body img{pointer-events:none}
 .partners.partners-media{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .partners.partners-media .container .main-button{margin-top:clamp(44px,calc(4.1666666667vw),60px);max-width:14.75rem}
 @media (width <= 81.875em){
-.partners.partners-media .container{max-width:19.75rem}
+.partners.partners-media .container .main-button{max-width:19.75rem}
 }
 .partners.partners-tech{padding-top:clamp(50px,calc(6.9444444444vw),100px)}
 .partners.partners-tech .container .main-button{margin-top:clamp(44px,calc(4.1666666667vw),60px);max-width:19.75rem}
