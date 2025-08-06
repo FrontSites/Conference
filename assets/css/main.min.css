@@ -77,7 +77,7 @@
 }
 @media (width <= 64em){
 .footer .footer-wrapper .footer-items{display:flex;flex-direction:column;align-items:center;row-gap:32px}
-.footer .footer-wrapper .footer-items .footer-links{display:flex;-moz-column-gap:1.875rem;column-gap:1.875rem}
+.footer .footer-wrapper .footer-items .footer-links{display:flex;justify-content:flex-start;-moz-column-gap:1.875rem;column-gap:1.875rem}
 .footer .footer-wrapper .footer-items .footer-menu{justify-self:center}
 .footer .footer-wrapper .footer-items .footer-item .footer-links{justify-self:center;display:none}
 }
