@@ -19,6 +19,17 @@ function initGoogleMaps() {
   const mapElement = document.getElementById("map");
   if (!mapElement || !window.mapConfig || !window.mapConfig.apiKey) return;
 
+  // Проверяем, не загружен ли уже Google Maps API
+  if (window.google && window.google.maps) {
+    initLocationMap();
+    return;
+  }
+
+  // Проверяем, не загружается ли уже скрипт
+  if (document.querySelector('script[src*="maps.googleapis.com"]')) {
+    return;
+  }
+
   const script = document.createElement("script");
   const language = window.mapConfig.language || 'uk';
   script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&loading=async&callback=initLocationMap`;
