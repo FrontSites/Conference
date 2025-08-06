@@ -47,7 +47,10 @@
       left: -3.125rem;
     }
     @media (width <= 62em) {
-      position: static;
+      position: relative;
+      top: auto;
+      left: auto;
+      
     }
   }
 
