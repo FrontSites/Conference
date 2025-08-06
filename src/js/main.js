@@ -49,7 +49,7 @@ function initGoogleMaps() {
   const script = document.createElement("script");
   const language = window.mapConfig.language || 'uk';
   const timestamp = Date.now(); // Добавляем уникальный параметр
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&loading=async&callback=initLocationMap&v=weekly&libraries=marker`;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&loading=async&callback=initLocationMap&v=weekly`;
   script.async = true;
   script.defer = true;
   
@@ -113,37 +113,17 @@ function initLocationMap() {
 
   const isEnglish = window.mapConfig.language === 'en';
   
-  // Создаем маркер (пробуем AdvancedMarkerElement, если доступен, иначе обычный Marker)
-  let marker;
-  
-  if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
-    // Используем новый AdvancedMarkerElement
-    const pinElement = document.createElement('div');
-    pinElement.innerHTML = `
-      <img src="${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg" 
-           style="width: 40px; height: 40px; cursor: pointer;" 
-           alt="${isEnglish ? 'Parkovy Congress and Exhibition Center' : 'Парковий Конгресно-виставковий центр'}">
-    `;
-    
-    marker = new google.maps.marker.AdvancedMarkerElement({
-      position: { lat: 50.44921066476974, lng: 30.5407736837048 },
-      map: map,
-      title: isEnglish ? "Parkovy Congress and Exhibition Center" : "Парковий Конгресно-виставковий центр",
-      content: pinElement
-    });
-  } else {
-    // Используем обычный Marker как fallback
-    marker = new google.maps.Marker({
-      position: { lat: 50.44921066476974, lng: 30.5407736837048 },
-      map: map,
-      title: isEnglish ? "Parkovy Congress and Exhibition Center" : "Парковий Конгресно-виставковий центр",
-      icon: {
-        url: `${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg`,
-        scaledSize: new google.maps.Size(40, 40),
-        anchor: new google.maps.Point(20, 40)
-      }
-    });
-  }
+  // Создаем обычный маркер (стабильный API)
+  const marker = new google.maps.Marker({
+    position: { lat: 50.44921066476974, lng: 30.5407736837048 },
+    map: map,
+    title: isEnglish ? "Parkovy Congress and Exhibition Center" : "Парковий Конгресно-виставковий центр",
+    icon: {
+      url: `${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg`,
+      scaledSize: new google.maps.Size(40, 40),
+      anchor: new google.maps.Point(20, 40)
+    }
+  });
 
   const infowindow = new google.maps.InfoWindow({
     content: `
