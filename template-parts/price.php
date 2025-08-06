@@ -1,5 +1,5 @@
-<section class="price">
-  <div class="container">
+<section class="price" id="price">
+  <div class=" container">
     <h2>
       <?php the_field('price-title'); ?>
     </h2>
