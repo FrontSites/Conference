@@ -32,8 +32,8 @@ function my_theme_enqueue_assets()
     $js_path = get_template_directory() . $js_main;
     $js_url = get_template_directory_uri() . $js_main;
 
-    // Используем filemtime для версионирования
-    $js_version = filemtime($js_path);
+    // Принудительно обновляем версию для очистки кеша
+    $js_version = time();
     wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
 
     // Library
