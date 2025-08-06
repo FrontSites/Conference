@@ -35,6 +35,11 @@
   echo '<title>' . esc_html($yoast_title) . '</title>';
   ?>
   <?php wp_head(); ?>
+  
+  <!-- Тест консоли -->
+  <script>
+    console.log('🧪 Тест консоли из header.php - ' + new Date().toLocaleTimeString());
+  </script>
 
 <body id="page-<?php echo esc_attr(get_post_field('post_name', get_post())); ?>" class="lang-<?php echo esc_attr(substr(get_locale(), 0, 2)); ?>" <?php body_class(); ?>>
   <div class="page__wrapper">
