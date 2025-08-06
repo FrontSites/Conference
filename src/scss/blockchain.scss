@@ -47,6 +47,8 @@
         color: #fff;
         @media (width <= 30em) {
           z-index: 1;
+        transform: rotate(-7.895deg) translate(1.875rem, -px);
+
         }
       }
     }
