@@ -117,16 +117,9 @@ function convert_image_to_webp_on_upload($metadata)
     return $metadata;
 }
 
-// Оптимизированная конвертация assets изображений - запускается только при необходимости
+// convert webp in /assets/images/
 function convert_all_images_in_assets_to_webp()
 {
-    // Проверяем, нужно ли конвертировать
-    $last_conversion = get_option('last_assets_conversion', 0);
-    $conversion_interval = 7 * DAY_IN_SECONDS; // Раз в неделю
-
-    if (time() - $last_conversion < $conversion_interval) {
-        return;
-    }
 
     $dir = get_template_directory() . '/assets/images/';
     $images = glob($dir . '*.{jpg,jpeg,png}', GLOB_BRACE);
@@ -150,8 +143,6 @@ function convert_all_images_in_assets_to_webp()
         }
     }
 
-    // Обновляем время последней конвертации
-    update_option('last_assets_conversion', time());
 }
 
 // Регистрация расписания (еженедельно вместо ежедневно)
