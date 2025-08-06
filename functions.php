@@ -6,53 +6,37 @@
  */
 function my_theme_enqueue_assets()
 {
-    // Добавляем отладочную информацию
-    error_log('my_theme_enqueue_assets called');
-
     // Блокируем загрузку только на админских страницах
     if (is_admin()) {
-        error_log('Admin page detected, skipping asset loading');
         return;
     }
 
     // === jQuery ===
-
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1', true);
     wp_enqueue_script('jquery');
-    // Добавляем проверку jQuery
 
     // === Styles ===
     $css_main = '/assets/css/main.min.css';
     $css_path = get_template_directory() . $css_main;
 
-
-    // Принудительно обновляем CSS с уникальной версией для разработки
-    $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
+    // Используем filemtime для кеширования, но только если файл существует
+    $css_version = file_exists($css_path) ? filemtime($css_path) : '1.0.0';
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
 
-
     // === Scripts ===
-    error_log('Loading main JS...');
     $js_main = '/assets/js/main.min.js';
     $js_path = get_template_directory() . $js_main;
-
-
-
     $js_url = get_template_directory_uri() . $js_main;
 
-
-    // Принудительно обновляем JS с уникальной версией для разработки
-    $js_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($js_path);
+    // Используем filemtime для кеширования, но только если файл существует
+    $js_version = file_exists($js_path) ? filemtime($js_path) : '1.0.0';
     wp_enqueue_script('main-min', $js_url, ['jquery'], $js_version, true);
-    error_log('JS script enqueued');
 
     // Library
-
-
     wp_enqueue_script('select2', get_template_directory_uri() . '/assets/library/select2/select2.min.js', ['jquery'], null, true);
     wp_enqueue_script('jquery-mask', get_template_directory_uri() . '/assets/library/maskedinput/jquery.maskedinput.js', ['jquery'], null, true);
 
@@ -76,31 +60,24 @@ function my_theme_enqueue_assets()
             'language' => $current_lang
         ]);
     }
-
-    // Добавляем тестовый скрипт для проверки
-    wp_add_inline_script('main-min', 'console.log("JS loaded successfully!");');
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_assets');
 
-
-
-
-
-
-
-// Google Fonts асинхронная загрузка
+// Google Fonts асинхронная загрузка с preload
 function add_google_fonts()
 {
 ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    </noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
 <?php
 }
 
 add_action('wp_head', 'add_google_fonts');
-
 
 // more tools for posts
 add_theme_support('post-thumbnails');
@@ -113,15 +90,19 @@ add_filter('upload_mimes', 'svg_upload_allow');
 function svg_upload_allow($mimes)
 {
     $mimes['svg'] = 'image/svg+xml';
-
     return $mimes;
 }
 
-// Convert images to webP
+// Convert images to webP - оптимизированная версия
 add_filter('wp_generate_attachment_metadata', 'convert_image_to_webp_on_upload');
 
 function convert_image_to_webp_on_upload($metadata)
 {
+    // Проверяем, включена ли конвертация в настройках
+    if (!get_option('enable_webp_conversion', true)) {
+        return $metadata;
+    }
+
     $upload_dir = wp_upload_dir();
     $base_dir = trailingslashit($upload_dir['basedir']);
 
@@ -140,23 +121,17 @@ function convert_image_to_webp_on_upload($metadata)
     return $metadata;
 }
 
-// convert webp in /assets/images/
-
-// Регистрация расписания (ежедневно)
-if (!wp_next_scheduled('convert_assets_images_to_webp_daily')) {
-    wp_schedule_event(time(), 'daily', 'convert_assets_images_to_webp_daily');
-}
-
-// Отменить при деактивации темы (чтобы не висело)
-add_action('switch_theme', function () {
-    wp_clear_scheduled_hook('convert_assets_images_to_webp_daily');
-});
-
-// Хук на задачу
-add_action('convert_assets_images_to_webp_daily', 'convert_all_images_in_assets_to_webp');
-
+// Оптимизированная конвертация assets изображений - запускается только при необходимости
 function convert_all_images_in_assets_to_webp()
 {
+    // Проверяем, нужно ли конвертировать
+    $last_conversion = get_option('last_assets_conversion', 0);
+    $conversion_interval = 7 * DAY_IN_SECONDS; // Раз в неделю
+
+    if (time() - $last_conversion < $conversion_interval) {
+        return;
+    }
+
     $dir = get_template_directory() . '/assets/images/';
     $images = glob($dir . '*.{jpg,jpeg,png}', GLOB_BRACE);
 
@@ -178,8 +153,23 @@ function convert_all_images_in_assets_to_webp()
             }
         }
     }
+
+    // Обновляем время последней конвертации
+    update_option('last_assets_conversion', time());
 }
 
+// Регистрация расписания (еженедельно вместо ежедневно)
+if (!wp_next_scheduled('convert_assets_images_to_webp_weekly')) {
+    wp_schedule_event(time(), 'weekly', 'convert_assets_images_to_webp_weekly');
+}
+
+// Отменить при деактивации темы
+add_action('switch_theme', function () {
+    wp_clear_scheduled_hook('convert_assets_images_to_webp_weekly');
+});
+
+// Хук на задачу
+add_action('convert_assets_images_to_webp_weekly', 'convert_all_images_in_assets_to_webp');
 
 function convert_to_webp($filepath)
 {
@@ -201,74 +191,58 @@ function convert_to_webp($filepath)
     }
 }
 
-
-
-add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
-add_filter('wpcf7_autop_or_not', '__return_false');
-# Исправление MIME типа для SVG файлов.
-function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
+// Добавляем кеширование для статических файлов
+function add_cache_headers()
 {
-
-    // WP 5.1 +
-    if (version_compare($GLOBALS['wp_version'], '5.1.0', '>=')) {
-        $dosvg = in_array($real_mime, ['image/svg', 'image/svg+xml']);
-    } else {
-        $dosvg = ('.svg' === strtolower(substr($filename, -4)));
-    }
-
-    // mime тип был обнулен, поправим его
-    // а также проверим право пользователя
-    if ($dosvg) {
-
-        // разрешим
-        if (current_user_can('manage_options')) {
-
-            $data['ext'] = 'svg';
-            $data['type'] = 'image/svg+xml';
+    if (!is_admin()) {
+        // Кеширование для CSS и JS файлов
+        if (strpos($_SERVER['REQUEST_URI'], '.css') !== false || strpos($_SERVER['REQUEST_URI'], '.js') !== false) {
+            header('Cache-Control: public, max-age=31536000'); // 1 год
+            header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 31536000));
         }
-        // запретим
-        else {
-            $data['ext'] = false;
-            $data['type'] = false;
+
+        // Кеширование для изображений
+        if (
+            strpos($_SERVER['REQUEST_URI'], '.jpg') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '.jpeg') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '.png') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '.webp') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '.svg') !== false
+        ) {
+            header('Cache-Control: public, max-age=31536000'); // 1 год
+            header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 31536000));
         }
     }
-
-    return $data;
 }
+add_action('send_headers', 'add_cache_headers');
 
-
-register_nav_menus([
-    'main-menu' => __('Main Menu'),
-    'languages-menu' => __('Languages Menu'),
-]);
-
-// Функция для правильного отображения меню в зависимости от языка
-function get_language_specific_menu($menu_location)
+// Оптимизация загрузки изображений
+function add_image_optimization()
 {
-    // Определяем текущий язык
-    $current_lang = 'uk'; // По умолчанию украинский
-    if (function_exists('pll_current_language')) {
-        $current_lang = pll_current_language();
-    } elseif (function_exists('icl_object_id')) {
-        $current_lang = ICL_LANGUAGE_CODE;
+    if (!is_admin()) {
+        echo '<script>
+        // Lazy loading для изображений
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = document.querySelectorAll("img[data-src]");
+            var imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove("lazy");
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(function(img) {
+                imageObserver.observe(img);
+            });
+        });
+        </script>';
     }
-
-    // Получаем локации меню
-    $locations = get_nav_menu_locations();
-
-    // Проверяем, есть ли меню для текущей локации
-    if (isset($locations[$menu_location])) {
-        $menu_id = $locations[$menu_location];
-        $menu = wp_get_nav_menu_object($menu_id);
-
-        if ($menu) {
-            return wp_get_nav_menu_items($menu_id);
-        }
-    }
-
-    // Если меню не найдено, возвращаем пустой массив
-    return [];
 }
+add_action('wp_footer', 'add_image_optimization');
 
 
 
