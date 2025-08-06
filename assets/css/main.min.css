@@ -4,7 +4,7 @@
 .blockchain .blockchain-img-block p:first-child{transform:rotate(9.953deg) translate(-3.125rem,-3.75rem);background:#f7e405;max-width:10.125rem;color:#222649}
 .blockchain .blockchain-img-block p:last-child{background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg) translate(1.875rem,-2.1875rem);color:#fff}
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
-.blockchain .blockchain-bg{position:absolute;top:0;left:0;width:50%}
+.blockchain .blockchain-bg{position:absolute;top:0;left:0;width:77.8125rem}
 @media (width <= 62em){
 .blockchain .blockchain-bg{display:none}
 }
