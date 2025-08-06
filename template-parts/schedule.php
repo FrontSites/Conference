@@ -1,6 +1,4 @@
 <section class="schedule" id="agenda">
-
-  </div>
   <div class="container">
     <div class="shedule-block" style="display:<?php the_field('shedule-block-display') ?>">
       <div class="schedule-bg">
