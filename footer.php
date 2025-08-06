@@ -31,7 +31,7 @@
         </div>
         <div class="footer-item">
           <div class="footer-links">
-            <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
+            <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?>">
               <?php echo get_theme_mod('contact_email', ''); ?>
             </a>
             <a href="https://t.me/FullsetconfBot" target="_blank">
