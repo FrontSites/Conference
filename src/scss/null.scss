@@ -125,7 +125,7 @@ body {
     .main-content { 
         background: #222649;
         border-top-right-radius: 1.5625rem;
-        overflow: hidden;
+        overflow-x: hidden;
 @media (width <= 62em) {
     border-top-left-radius: 1.5625rem;
 }

@@ -391,7 +391,7 @@ body ul{padding:0;margin:0}
 body ul li{list-style-type:none;outline:0}
 body img{outline:0;display:block;max-inline-size:100%}
 body p{padding:0;margin:0}
-body .main-content{background:#222649;border-top-right-radius:1.5625rem;overflow:hidden}
+body .main-content{background:#222649;border-top-right-radius:1.5625rem;overflow-x:hidden}
 @media (width <= 62em){
 body .main-content{border-top-left-radius:1.5625rem}
 }
