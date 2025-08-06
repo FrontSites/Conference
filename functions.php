@@ -62,8 +62,7 @@ function my_theme_enqueue_assets()
 
     // Библиотечные стили — без filemtime и без версии
     wp_enqueue_style('select2-css', get_template_directory_uri() . '/assets/library/select2/select2.min.css');
-    wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/library/swiper/swiper-bundle.min.css');
-    wp_enqueue_style('intel-tel-css', get_template_directory_uri() . '/assets/library/intel-input/intlTelInput.min.css');
+
 
     // === Scripts ===
     error_log('Loading main JS...');
@@ -90,9 +89,6 @@ function my_theme_enqueue_assets()
 
     wp_enqueue_script('select2', get_template_directory_uri() . '/assets/library/select2/select2.min.js', ['jquery'], null, true);
     wp_enqueue_script('jquery-mask', get_template_directory_uri() . '/assets/library/maskedinput/jquery.maskedinput.js', ['jquery'], null, true);
-
-
-    wp_enqueue_script('justvalidation', get_template_directory_uri() . '/assets/library/validation/just-validate.production.min.js', ['jquery'], null, true);
 
     // === AJAX параметры для main.min.js ===
     wp_localize_script('main-min', 'ajax_object', [
