@@ -43,6 +43,9 @@
         color: #fff;
       }
     }
+    @media (width <= 64em) {
+      left: -3.125rem;
+    }
   }
 
   @include vw(padding-top, 70, 50, 70);
