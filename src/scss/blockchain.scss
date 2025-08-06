@@ -50,12 +50,12 @@
       position: relative;
       top: auto;
       left: auto;
+      margin-top: -6.25rem;
       
     }
   }
 
-  @include vw(padding-top, 70, 50, 70);
-  position: relative;
+ 
 
   &:before {
     content: "";
