@@ -53,6 +53,5 @@
         <?php get_template_part("template-parts/buttons/ticket-button"); ?>
       </div>
     </div>
-
   </div>
 </section>
