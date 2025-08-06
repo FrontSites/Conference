@@ -27,6 +27,27 @@ function my_theme_enqueue_assets()
     // Принудительная загрузка стилей в head для предотвращения белого экрана
     add_action('wp_head', function() use ($css_main, $css_version) {
         echo '<link rel="stylesheet" href="' . get_template_directory_uri() . $css_main . '?ver=' . $css_version . '" type="text/css" media="all" />';
+        
+        // Fallback стили на случай, если основной CSS не загрузится
+        echo '<style>
+            body { 
+                background: #000; 
+                color: #fff; 
+                font-family: Arial, sans-serif; 
+                margin: 0; 
+                padding: 20px; 
+            }
+            .loading { 
+                text-align: center; 
+                padding: 50px; 
+                font-size: 18px; 
+            }
+            .error { 
+                color: #ff6b6b; 
+                text-align: center; 
+                padding: 50px; 
+            }
+        </style>';
     }, 1);
 
     // Библиотечные стили — без filemtime и без версии
