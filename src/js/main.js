@@ -272,15 +272,22 @@ function initLocationMap() {
 
   const infowindow = new google.maps.InfoWindow({
     content: `
-      <div style="padding: 10px; max-width: 200px;">
-        <h3 style="margin: 0 0 5px 0; color: #333;">${
-          isEnglish
-            ? "Parkovy Congress and Exhibition Center"
-            : "Парковий Конгресно-виставковий центр"
-        }</h3>
-        <p style="margin: 0; color: #666; font-size: 14px;">${
-          isEnglish ? "Naberezhne Shose, 2" : "Набережне шосе, 2"
-        }</p>
+      <div style="padding: 15px; max-width: 280px; font-family: 'Manrope', sans-serif;">
+        <div style="display: flex; align-items: center; margin-bottom: 8px;">
+          <img src="${window.location.origin}/wp-content/themes/conference/assets/images/logo.svg" 
+               style="width: 30px; height: 30px; margin-right: 10px;" alt="Logo">
+          <span style="font-weight: 700; font-size: 16px; color: #333; text-transform: uppercase;">FULLSET</span>
+        </div>
+        <div style="text-align: left;">
+          <h3 style="margin: 0 0 5px 0; color: #333; font-size: 14px; font-weight: 600; text-align: left;">${
+            isEnglish
+              ? "Parkovy Congress and Exhibition Center"
+              : "Парковий Конгресно-виставковий центр"
+          }</h3>
+          <p style="margin: 0; color: #666; font-size: 12px; text-align: left;">${
+            isEnglish ? "Naberezhne Shose, 2" : "Набережне шосе, 2"
+          }</p>
+        </div>
       </div>
     `,
   });
