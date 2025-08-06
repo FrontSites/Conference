@@ -35,7 +35,9 @@
         background: #F7E405;
         max-width: 10.125rem;
         color: #222649;
-        @m
+        @media (width <= 30em) {
+          z-index: 2;
+        }
       }
       &:last-child { 
 
