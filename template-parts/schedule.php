@@ -10,7 +10,7 @@
       </div>
       <?php get_template_part("template-parts/buttons/ticket-button"); ?>
     </div>
-    <div class="shedule-wrapper">
+    <div class="shedule-wrapper" style="display:<?php the_field("shedule-wrapper-display") ?>">
       <div class="schedule-items">
         <?php the_field("schedule-title"); ?>
         <div class="zip zip-top">
