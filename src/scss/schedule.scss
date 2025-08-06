@@ -6,11 +6,14 @@
 
   .container {
     .shedule-block {
+      max-width: 53.125rem;
+      margin: 0 auto;
+      w
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
       .schedule-bg { 
-        img 
+        position: absolute;
       }
     }
 
