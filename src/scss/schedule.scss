@@ -48,7 +48,7 @@
           border-radius: 25px;
           background: linear-gradient(180deg, rgba(34, 38, 73, 0.50) 0%, rgba(34, 38, 73, 0.00) 100%);
           backdrop-filter: blur(12.5px);
-          
+          z-index: -1;
           position: absolute;
           top: 0;
           left: 0;
