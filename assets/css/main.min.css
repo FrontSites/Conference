@@ -61,7 +61,7 @@
 .footer .footer-wrapper .footer-items .footer-menu{justify-self:center}
 .footer .footer-wrapper .footer-items .footer-menu ul{-moz-column-gap:clamp(15px,calc(2.0833333333vw),30px);column-gap:clamp(15px,calc(2.0833333333vw),30px);display:flex;align-items:center}
 .footer .footer-wrapper .footer-items .footer-menu ul li a{padding-top:clamp(10px,calc(1.0416666667vw),15px);padding-bottom:clamp(10px,calc(1.0416666667vw),15px);color:#fff;font-size:.9375rem;font-weight:400;line-height:120%;letter-spacing:.0469rem;position:relative}
-.footer .footer-wrapper .footer-items .footer-menu ul li a::after{content:"";position:absolute;left:0;bottom:-.125rem;width:100%;height:2px;transform-origin:right;transform:scaleX(0);background:#fff;transition:transform .3s ease-in-out}
+.footer .footer-wrapper .footer-items .footer-menu ul li a::after{content:"";position:absolute;left:0;bottom:.625rem;width:100%;height:2px;transform-origin:right;transform:scaleX(0);background:#fff;transition:transform .3s ease-in-out}
 @media (hover:hover){
 .footer .footer-wrapper .footer-items .footer-menu ul li a:hover::after{transform-origin:left;transform:scaleX(1)}
 }
