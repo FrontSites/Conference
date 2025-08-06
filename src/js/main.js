@@ -1,4 +1,9 @@
+// Оптимизированная инициализация - все в одном месте
 document.addEventListener('DOMContentLoaded', () => { 
+  // Инициализация Google Maps (если есть карта)
+  initGoogleMaps();
+  
+  // Инициализация остальных компонентов
   initMenu();
   initSpeakersLoadMore();
   initScheduleVisibility();
@@ -7,7 +12,98 @@ document.addEventListener('DOMContentLoaded', () => {
   initMaskPhone();
   initSelect();
   initPopup();
-})
+});
+
+// Google Maps инициализация
+function initGoogleMaps() {
+  const mapElement = document.getElementById("map");
+  if (!mapElement || !window.mapConfig || !window.mapConfig.apiKey) return;
+
+  const script = document.createElement("script");
+  const language = window.mapConfig.language || 'uk';
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${window.mapConfig.apiKey}&language=${language}&callback=initLocationMap`;
+  script.async = true;
+  script.defer = true;
+  
+  script.onerror = function () {
+    const mapElement = document.getElementById("map");
+    if (mapElement) {
+      mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Карта временно недоступна</div>';
+    }
+  };
+  
+  document.head.appendChild(script);
+}
+
+// Инициализация карты (вызывается Google Maps API)
+function initLocationMap() {
+  const mapElement = document.getElementById("map");
+  if (!mapElement || typeof google === "undefined" || !google.maps) {
+    if (mapElement) {
+      mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Карта временно недоступна</div>';
+    }
+    return;
+  }
+
+  const customStyle = [
+    { featureType: "all", elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
+    { featureType: "all", elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
+    { featureType: "all", elementType: "labels.text.stroke", stylers: [{ color: "#ffffff" }] },
+    { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
+    { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#cccccc" }] },
+    { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
+    { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#f0f0f0" }] },
+    { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#999999" }] },
+    { featureType: "poi", elementType: "geometry", stylers: [{ color: "#e0e0e0" }] },
+    { featureType: "poi", elementType: "labels.icon", stylers: [{ color: "#666666" }] },
+    { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#e8e8e8" }] },
+    { featureType: "water", elementType: "geometry", stylers: [{ color: "#d0d0d0" }] },
+    { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
+    { featureType: "transit", elementType: "geometry", stylers: [{ color: "#e0e0e0" }] },
+    { featureType: "transit", elementType: "labels.icon", stylers: [{ color: "#666666" }] },
+    { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
+    { featureType: "administrative", elementType: "geometry", stylers: [{ color: "#f0f0f0" }] },
+    { featureType: "administrative", elementType: "labels.text.fill", stylers: [{ color: "#333333" }] }
+  ];
+
+  const map = new google.maps.Map(mapElement, {
+    zoom: 16,
+    center: { lat: 50.44921066476974, lng: 30.5407736837048 },
+    styles: customStyle,
+    disableDefaultUI: true,
+    zoomControl: true,
+    zoomControlOptions: { position: google.maps.ControlPosition.RIGHT_BOTTOM },
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+    gestureHandling: "cooperative"
+  });
+
+  const isEnglish = window.mapConfig.language === 'en';
+  const marker = new google.maps.Marker({
+    position: { lat: 50.44921066476974, lng: 30.5407736837048 },
+    map: map,
+    title: isEnglish ? "Parkovy Congress and Exhibition Center" : "Парковий Конгресно-виставковий центр",
+    icon: {
+      url: window.location.origin + '/wp-content/themes/conference/assets/images/pin.svg',
+      scaledSize: new google.maps.Size(40, 40),
+      anchor: new google.maps.Point(20, 40)
+    }
+  });
+
+  const infowindow = new google.maps.InfoWindow({
+    content: `
+      <div style="padding: 10px; max-width: 200px;">
+        <h3 style="margin: 0 0 5px 0; color: #333;">${isEnglish ? 'Parkovy Congress and Exhibition Center' : 'Парковий Конгресно-виставковий центр'}</h3>
+        <p style="margin: 0; color: #666; font-size: 14px;">${isEnglish ? 'Naberezhne Shose, 2' : 'Набережне шосе, 2'}</p>
+      </div>
+    `
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
+}
 
 function initMenu() {
   function initMobileMenu() {
@@ -126,8 +222,6 @@ function initSpeakersLoadMore() {
     updateButtonText();
   });
 }
-
-
 }
 
 function initScheduleVisibility() {
@@ -203,18 +297,18 @@ document.addEventListener('wpcf7invalid', function (event) {
 
 function initHeaderScroll() {
   var lastScrollTop = 0;
-  $(window).scroll(function () {
-    var scrollTop = $(this).scrollTop();
-    var secondSectionTop = $('section:nth-of-type(2)').offset().top; // Определение положения второй секции
+  var ticking = false;
+  
+  function updateHeader() {
+    var scrollTop = $(window).scrollTop();
+    var secondSectionTop = $('section:nth-of-type(2)').offset().top;
     var windowWidth = $(window).width();
   
-    if (windowWidth <= 768) { // Для мобильных устройств
+    if (windowWidth <= 768) {
       if (scrollTop > secondSectionTop) {
         if (scrollTop > lastScrollTop) {
-          // Прокрутка вниз
           $(".header").addClass("scrolled");
         } else if (scrollTop < lastScrollTop) {
-          // Прокрутка вверх
           $(".header").removeClass("scrolled");
         }
       } else {
@@ -222,17 +316,22 @@ function initHeaderScroll() {
       }
     } else {
       if (scrollTop > lastScrollTop) {
-        // Прокрутка вниз
         $(".header").addClass("scrolled");
       } else if (scrollTop === 0) {
-        // Вверху экрана
         $(".header").removeClass("scrolled");
       } else {
-        // Прокрутка вверх
         $(".header").removeClass("scrolled");
       }
     }
     lastScrollTop = scrollTop;
+    ticking = false;
+  }
+  
+  $(window).scroll(function () {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
   });
 }
 
