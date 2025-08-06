@@ -6,6 +6,7 @@
 
   .container {
     .shedule-block {
+      position: relative;
       height: 53.125rem;
       max-width: 53.125rem;
       margin: 0 auto;
@@ -17,6 +18,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
+
         
       }
     }
