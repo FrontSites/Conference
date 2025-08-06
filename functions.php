@@ -281,7 +281,8 @@ register_nav_menus([
 ]);
 
 // Функция для правильного отображения меню в зависимости от языка
-function get_language_specific_menu($menu_location) {
+function get_language_specific_menu($menu_location)
+{
     // Определяем текущий язык
     $current_lang = 'uk'; // По умолчанию украинский
     if (function_exists('pll_current_language')) {
@@ -289,20 +290,20 @@ function get_language_specific_menu($menu_location) {
     } elseif (function_exists('icl_object_id')) {
         $current_lang = ICL_LANGUAGE_CODE;
     }
-    
+
     // Получаем локации меню
     $locations = get_nav_menu_locations();
-    
+
     // Проверяем, есть ли меню для текущей локации
     if (isset($locations[$menu_location])) {
         $menu_id = $locations[$menu_location];
         $menu = wp_get_nav_menu_object($menu_id);
-        
+
         if ($menu) {
             return wp_get_nav_menu_items($menu_id);
         }
     }
-    
+
     // Если меню не найдено, возвращаем пустой массив
     return [];
 }
