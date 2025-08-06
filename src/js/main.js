@@ -14,10 +14,8 @@ function initializeAll() {
     initSelect();
     initPopup();
     
-    console.log('✅ Все компоненты инициализированы успешно');
+    
   } catch (error) {
-    console.error('❌ Ошибка при инициализации:', error);
-    // Повторная попытка через 1 секунду
     setTimeout(initializeAll, 1000);
   }
 }
