@@ -35,6 +35,10 @@
         transform: rotate(9.953deg);
         background: #F7E405;
       }
+      &:last-child { 
+        background: #FF29AE;
+        transform: rotate(-7.895deg);
+      }
     }
   }
 
