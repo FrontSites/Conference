@@ -20,8 +20,8 @@ function my_theme_enqueue_assets()
     $css_main = '/assets/css/main.min.css';
     $css_path = get_template_directory() . $css_main;
 
-    // Принудительно обновляем CSS с уникальной версией для разработки
-    $css_version = defined('WP_DEBUG') && WP_DEBUG ? time() : filemtime($css_path);
+    // Используем filemtime для версионирования
+    $css_version = filemtime($css_path);
     wp_enqueue_style('style-min', get_template_directory_uri() . $css_main, [], $css_version);
 
     // Библиотечные стили — без filemtime и без версии
