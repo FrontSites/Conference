@@ -313,27 +313,44 @@ function initScheduleVisibility() {
   const scheduleSection = document.querySelector('.schedule');
   const scheduleWrapper = document.querySelector('.shedule-wrapper');
   
-  if (!scheduleSection || !scheduleWrapper) return;
+  if (!scheduleSection || !scheduleWrapper) {
+    console.log('⚠️ Элементы расписания не найдены');
+    return;
+  }
 
-  // Создаем Intersection Observer
-  const observer = new IntersectionObserver((entries) => {
+  // Очищаем предыдущий observer если есть
+  if (window.scheduleObserver) {
+    window.scheduleObserver.disconnect();
+  }
+
+  // Создаем Intersection Observer с улучшенными настройками
+  window.scheduleObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Секция видна - добавляем класс active
         scheduleWrapper.classList.add('active');
+        console.log('📅 Расписание активировано');
       } else {
         // Секция не видна - убираем класс active
         scheduleWrapper.classList.remove('active');
       }
     });
   }, {
-    // Настройки observer
-    threshold: 0.3, // Секция считается видимой когда 30% её видно
-    rootMargin: '0px 0px -10% 0px' // Небольшой отступ снизу
+    // Улучшенные настройки observer
+    threshold: [0, 0.1, 0.3, 0.5], // Множественные пороги для лучшей точности
+    rootMargin: '0px 0px -5% 0px' // Уменьшенный отступ для более быстрой реакции
   });
 
   // Начинаем наблюдение за секцией
-  observer.observe(scheduleSection);
+  window.scheduleObserver.observe(scheduleSection);
+  
+  // Дополнительная проверка через 2 секунды
+  setTimeout(() => {
+    if (!scheduleWrapper.classList.contains('active')) {
+      console.log('🔄 Принудительная активация расписания...');
+      scheduleWrapper.classList.add('active');
+    }
+  }, 2000);
 }
 
 function initHideError() {
