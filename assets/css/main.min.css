@@ -512,7 +512,7 @@ body img{pointer-events:none}
 .schedule .container h2 strong{padding-left:.9375rem;padding-right:.9375rem;border-radius:.3125rem;background:#f7e405;color:#222649;transform:rotate(-3.821deg);display:inline-block}
 .schedule .container .shedule-block{position:relative;height:53.125rem;max-width:53.125rem;margin:0 auto;width:100%;flex-direction:column;align-items:center;justify-content:space-between}
 .schedule .container .shedule-block .schedule-bg{position:absolute;width:100%;height:100%}
-.schedule .container .shedule-block .schedule-bg img{border-radius:1.5625rem;border:5px solid #2c3055}
+.schedule .container .shedule-block .schedule-bg img{border-radius:1.5625rem;border:5px solid transparent;background:linear-gradient(white,#fff) padding-box,linear-gradient(180deg,rgba(34,38,73,.5) 0,rgba(34,38,73,0) 100%) border-box}
 .schedule .container .shedule-block h2{margin-top:3.75rem}
 .schedule .container .shedule-block .main-button{position:relative;z-index:3;margin-bottom:3.75rem;max-width:12.5rem;width:100%}
 @media (width <= 30em){

@@ -42,7 +42,9 @@
         height: 100%;
         img {
           border-radius: 1.5625rem;
-          border: 5px solid #2C3055;
+  border: 5px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(180deg, rgba(34, 38, 73, 0.50) 0%, rgba(34, 38, 73, 0.00) 100%) border-box;
         }
       }
       h2 {
