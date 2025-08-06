@@ -1,6 +1,31 @@
+// Проверка загрузки стилей
+function checkStylesLoaded() {
+  const styleSheets = Array.from(document.styleSheets);
+  const mainStyle = styleSheets.find(sheet => 
+    sheet.href && sheet.href.includes('main.min.css')
+  );
+  
+  if (!mainStyle) {
+    console.error('❌ Основные стили не загружены!');
+    // Показываем fallback стили
+    document.body.style.background = '#000';
+    document.body.style.color = '#fff';
+    document.body.innerHTML = '<div class="error">Стили не загрузились. Обновите страницу.</div>';
+    return false;
+  }
+  
+  console.log('✅ Стили загружены успешно');
+  return true;
+}
+
 // Надежная инициализация с повторными попытками
 function initializeAll() {
   try {
+    // Проверяем загрузку стилей
+    if (!checkStylesLoaded()) {
+      return;
+    }
+    
     // Инициализация Google Maps (если есть карта)
     initGoogleMaps();
     
@@ -14,8 +39,10 @@ function initializeAll() {
     initSelect();
     initPopup();
     
-    
+    console.log('✅ Все компоненты инициализированы успешно');
   } catch (error) {
+    console.error('❌ Ошибка при инициализации:', error);
+    // Повторная попытка через 1 секунду
     setTimeout(initializeAll, 1000);
   }
 }
