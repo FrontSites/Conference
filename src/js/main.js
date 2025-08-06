@@ -1,16 +1,57 @@
-// Оптимизированная инициализация - все в одном месте
-document.addEventListener('DOMContentLoaded', () => { 
-  // Инициализация Google Maps (если есть карта)
-  initGoogleMaps();
-  // Инициализация остальных компонентов
-  initMenu();
-  initSpeakersLoadMore();
-  initScheduleVisibility();
-  initHideError();
-  initHeaderScroll();
-  initMaskPhone();
-  initSelect();
-  initPopup();
+// Надежная инициализация с повторными попытками
+function initializeAll() {
+  try {
+    // Инициализация Google Maps (если есть карта)
+    initGoogleMaps();
+    
+    // Инициализация остальных компонентов
+    initMenu();
+    initSpeakersLoadMore();
+    initScheduleVisibility();
+    initHideError();
+    initHeaderScroll();
+    initMaskPhone();
+    initSelect();
+    initPopup();
+    
+    console.log('✅ Все компоненты инициализированы успешно');
+  } catch (error) {
+    console.error('❌ Ошибка при инициализации:', error);
+    // Повторная попытка через 1 секунду
+    setTimeout(initializeAll, 1000);
+  }
+}
+
+// Инициализация при загрузке DOM
+document.addEventListener('DOMContentLoaded', initializeAll);
+
+// Дополнительная инициализация при полной загрузке страницы
+window.addEventListener('load', () => {
+  // Проверяем, что все элементы загрузились
+  const mapElement = document.getElementById("map");
+  const scheduleSection = document.querySelector('.schedule');
+  
+  if (mapElement && !mapElement.innerHTML.trim()) {
+    console.log('🔄 Повторная инициализация карты...');
+    initGoogleMaps();
+  }
+  
+  if (scheduleSection && !document.querySelector('.shedule-wrapper.active')) {
+    console.log('🔄 Повторная инициализация расписания...');
+    initScheduleVisibility();
+  }
+});
+
+// Инициализация при изменении размера окна (для адаптивности)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    console.log('🔄 Переинициализация после изменения размера окна...');
+    initMenu();
+    initSpeakersLoadMore();
+    initScheduleVisibility();
+  }, 300);
 });
 
 // Google Maps инициализация
