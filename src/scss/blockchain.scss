@@ -246,7 +246,9 @@
     .blockchain-img-block {  
       p {
         &:first-child {
+          max-width: 14.125rem;
       }
+    }
     }
   }
 }
