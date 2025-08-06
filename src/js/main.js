@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
   // Инициализация Google Maps (если есть карта)
   initGoogleMaps();
-  
   // Инициализация остальных компонентов
   initMenu();
   initSpeakersLoadMore();
