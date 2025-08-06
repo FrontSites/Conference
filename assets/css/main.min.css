@@ -483,7 +483,7 @@ body img{pointer-events:none}
 .price .container .price-items .price-item__wrapper .price-item .price-item__description ul{width:100%;display:flex;flex-direction:column;padding-left:1.25rem}
 .price .container .price-items .price-item__wrapper .price-item .price-item__description ul li{width:100%;color:#fff;list-style-type:disc;font-style:normal;font-weight:400;line-height:150%;letter-spacing:.05rem}
 .price .container .price-items .price-item__wrapper .price-item .price-item__description ul li::marker{color:#fff}
-.price .container .price-items .price-item__wrapper .price-item .price-block{margin-top:clamp(31px,calc(3.125vw),45px);display:flex;align-items:flex-end;justify-content:space-between}
+.price .container .price-items .price-item__wrapper .price-item .price-block{flex:1 1 100%;margin-top:clamp(31px,calc(3.125vw),45px);display:flex;align-items:flex-end;justify-content:space-between}
 .price .container .price-items .price-item__wrapper .price-item .price-block .price-block__item.left{display:flex;flex-direction:column}
 .price .container .price-items .price-item__wrapper .price-item .price-block .price-block__item.left .price-block__old-price{font-size:3rem;font-style:normal;font-weight:700;line-height:120%;letter-spacing:.15rem;text-decoration-line:line-through;text-transform:uppercase;color:rgba(255,255,255,.05)}
 @media (width <= 23.4375em){
