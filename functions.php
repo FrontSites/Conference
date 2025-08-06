@@ -1,19 +1,4 @@
 <?php
-/* <?= get_permalink(HOME_PAGEID) ?> */
-// // Определяем текущий язык или устанавливаем 'ru' по умолчанию
-// define("LANG", !function_exists('pll_current_language') ? 'ru' : pll_current_language());
-
-// // Функция для получения значения в зависимости от языка
-// function showLang($trans_text)
-// {
-//   return $trans_text[defined('LANG') ? LANG : 'ru'];
-// }
-
-// // Получаем ID главной страницы в зависимости от языка
-// define("HOME_PAGEID", showLang(['ru' => 23, 'uk' => 1]));
-
-// Style asds
-
 // functions.php
 
 /**
