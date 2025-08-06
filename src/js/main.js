@@ -1,3 +1,6 @@
+// Тестовый код для проверки загрузки JavaScript
+console.log('🚀 JavaScript файл загружен!', new Date().toLocaleTimeString());
+
 // Проверка загрузки стилей
 function checkStylesLoaded() {
   const styleSheets = Array.from(document.styleSheets);
