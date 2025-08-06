@@ -280,6 +280,49 @@ register_nav_menus([
     'languages-menu' => __('Languages Menu'),
 ]);
 
+// Функция для правильного отображения меню в зависимости от языка
+function get_language_specific_menu($menu_location) {
+    // Определяем текущий язык
+    $current_lang = 'uk'; // По умолчанию украинский
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+    } elseif (function_exists('icl_object_id')) {
+        $current_lang = ICL_LANGUAGE_CODE;
+    }
+    
+    // Получаем локации меню
+    $locations = get_nav_menu_locations();
+    
+    // Проверяем, есть ли меню для текущей локации
+    if (isset($locations[$menu_location])) {
+        $menu_id = $locations[$menu_location];
+        $menu = wp_get_nav_menu_object($menu_id);
+        
+        if ($menu) {
+            return wp_get_nav_menu_items($menu_id);
+        }
+    }
+    
+    // Если меню не найдено, возвращаем пустой массив
+    return [];
+}
+
+// Функция для отладки меню
+function debug_menu_locations() {
+    if (current_user_can('manage_options')) {
+        $locations = get_nav_menu_locations();
+        echo '<div style="background: #f0f0f0; padding: 10px; margin: 10px; border: 1px solid #ccc;">';
+        echo '<h3>Debug: Menu Locations</h3>';
+        echo '<p>Current language: ' . (function_exists('pll_current_language') ? pll_current_language() : 'Not set') . '</p>';
+        echo '<p>Menu locations:</p>';
+        echo '<pre>' . print_r($locations, true) . '</pre>';
+        echo '</div>';
+    }
+}
+
+// Добавляем отладку в админ-панель
+add_action('admin_notices', 'debug_menu_locations');
+
 
 
 
