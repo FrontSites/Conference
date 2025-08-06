@@ -16,7 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 // Google Maps инициализация
 function initGoogleMaps() {
   const mapElement = document.getElementById("map");
-  if (!mapElement || !window.mapConfig || !window.mapConfig.apiKey) return;
+  console.log('initGoogleMaps called, mapElement:', mapElement);
+  console.log('window.mapConfig:', window.mapConfig);
+  
+  if (!mapElement) {
+    console.log('Map element not found');
+    return;
+  }
+  
+  if (!window.mapConfig || !window.mapConfig.apiKey) {
+    console.log('Map config or API key not found');
+    return;
+  }
 
   // Глобальная переменная для отслеживания загрузки
   if (window.googleMapsLoading) {
