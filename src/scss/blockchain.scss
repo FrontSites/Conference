@@ -5,13 +5,21 @@
   border-top-right-radius: 1.5625rem;
 
   .blockchain-img-block {
+    display: flex;
     max-width: 153.125rem;
     position: absolute;
     left: 2.25rem;
     top: 22.375rem;
     z-index: 3;
    p {
-    
+    padding: 7px 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+    background: #2A2F5D;
+    border-radius: 0.3125rem;
    }
   }
   @include vw(padding-top, 70, 50, 70);
