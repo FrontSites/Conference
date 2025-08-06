@@ -1,6 +1,6 @@
 <section class="schedule" id="agenda">
   <div class="container">
-    <div class="shedule-block" style="display: <?php echo $schedule ? 'block' : 'none'; ?>">
+    <div class="shedule-block" style="display:<?php the_field("schedule-title") ? 'block' : 'none'; ?>">
       <div class="shedule-title">
         <?php the_field("schedule-title"); ?>
       </div>
