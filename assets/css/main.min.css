@@ -159,7 +159,7 @@
 .fullset .container .fullset-items .fullset-item:nth-last-of-type(1):before{display:none}
 .fullset .container .fullset-items .fullset-item:nth-last-of-type(1) p{max-width:none;text-align:center}
 }
-.header{position:fixed;padding-top:1.5rem;padding-bottom:1.5rem;width:100%;background:#000;z-index:100;transition:transform .6s ease}
+.header{position:fixed;padding-top:1.5rem;padding-bottom:1.5rem;width:100%;background:#fff;z-index:100;transition:transform .6s ease}
 .header.scrolled{transform:translateY(-300%)}
 .header .container .header-block{-moz-column-gap:.9375rem;column-gap:.9375rem;display:grid;align-items:center;grid-template-columns:.1fr .65fr .3fr .7fr}
 .header .container .header-block .btn_nav{display:none}
