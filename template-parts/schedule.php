@@ -1,6 +1,6 @@
 <section class="schedule" id="agenda">
   <div class="container">
-    <div class="shedule-block" style="display:<?php the_field("shedule-block-display") ?>">
+    <div class="shedule-block" style="display:<?php the_field('shedule-block-display') ?>">
       <div class="schedule-bg">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-schedule.png" alt="description">
 
@@ -10,7 +10,7 @@
       </div>
       <?php get_template_part("template-parts/buttons/ticket-button"); ?>
     </div>
-    <div class="shedule-wrapper" style="display:<?php the_field("shedule-wrapper-display") ?>">
+    <div class="shedule-wrapper" style="display:<?php the_field('shedule-wrapper-display') ?>">
       <div class="schedule-items">
         <?php the_field("schedule-title"); ?>
         <div class="zip zip-top">
