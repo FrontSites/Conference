@@ -7,7 +7,7 @@
 }
 .blockchain .blockchain-img-block p:last-child{background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg) translate(1.875rem,-2.1875rem);color:#fff}
 @media (width <= 30em){
-.blockchain .blockchain-img-block p:last-child{z-index:1;transform:rotate(-7.895deg) translate(1.875rem,-3.4375rem)}
+.blockchain .blockchain-img-block p:last-child{z-index:1;transform:rotate(-7.895deg) translate(1.875rem,-4.0625rem)}
 }
 @media (width <= 64em){
 .blockchain .blockchain-img-block{left:-3.125rem}
