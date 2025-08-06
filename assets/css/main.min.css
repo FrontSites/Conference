@@ -605,7 +605,7 @@ body img{pointer-events:none}
 @media (width <= 37.5em){
 .speakers .container .speakers-items{grid-template-columns:repeat(1,1fr)}
 }
-.speakers .container .main-button._border{border:1px solid #fff;color:#fff;max-width:13.8125rem;margin:0 auto;margin-top:clamp(44px,calc(4.2361111111vw),61px)}
+.speakers .container .main-button._border{border:1px solid #fff;color:#fff;max-width:15.8125rem;margin:0 auto;margin-top:clamp(44px,calc(4.2361111111vw),61px)}
 @media (hover:hover){
 .speakers .container .main-button._border:hover{background:#ff29ae;color:#fff;border-color:transparent}
 }
