@@ -278,6 +278,7 @@ function fix_svg_mime_type($data, $file, $filename, $mimes, $real_mime = '')
 register_nav_menus([
     'main-menu' => __('Main Menu'),
     'languages-menu' => __('Languages Menu'),
+    'footer-site-menu' => __('Footer Menu'),
 ]);
 
 // Функция для правильного отображения меню в зависимости от языка

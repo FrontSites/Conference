@@ -11,7 +11,7 @@
           </a>
         </div>
         <div class="footer-links">
-          <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?></a>">
+          <a href="mailto:<?php echo get_theme_mod('contact_email', ''); ?>">
             <?php echo get_theme_mod('contact_email', ''); ?>
           </a>
           <a href="tel:<?php echo get_theme_mod('contact_phone', ''); ?>">
