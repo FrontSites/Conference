@@ -7,18 +7,16 @@ function checkStylesLoaded() {
     (sheet) => sheet.href && sheet.href.includes("main.min.css")
   );
 
-  if (!mainStyle) {
-    console.error("❌ Основные стили не загружены!");
-    // Показываем fallback стили
-    document.body.style.background = "#000";
-    document.body.style.color = "#fff";
-    document.body.innerHTML =
-      '<div class="error">Стили не загрузились. Обновите страницу.</div>';
-    return false;
-  }
+     if (!mainStyle) {
+     // Показываем fallback стили
+     document.body.style.background = "#000";
+     document.body.style.color = "#fff";
+     document.body.innerHTML =
+       '<div class="error">Стили не загрузились. Обновите страницу.</div>';
+     return false;
+   }
 
-  console.log("✅ Стили загружены успешно");
-  return true;
+   return true;
 }
 
 // Надежная инициализация с повторными попытками
@@ -39,15 +37,12 @@ function initializeAll() {
     initHideError();
     initHeaderScroll();
     initMaskPhone();
-    initSelect();
-    initPopup();
-
-    console.log("✅ Все компоненты инициализированы успешно");
-  } catch (error) {
-    console.error("❌ Ошибка при инициализации:", error);
-    // Повторная попытка через 1 секунду
-    setTimeout(initializeAll, 1000);
-  }
+         initSelect();
+     initPopup();
+   } catch (error) {
+     // Повторная попытка через 1 секунду
+     setTimeout(initializeAll, 1000);
+   }
 }
 
 // Инициализация при загрузке DOM
