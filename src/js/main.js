@@ -121,12 +121,16 @@ function initLocationMap() {
          alt="${isEnglish ? 'Parkovy Congress and Exhibition Center' : 'Парковий Конгресно-виставковий центр'}">
   `;
   
-  // Создаем AdvancedMarkerElement (новый API)
-  const marker = new google.maps.marker.AdvancedMarkerElement({
+  // Создаем обычный маркер (совместимый API)
+  const marker = new google.maps.Marker({
     position: { lat: 50.44921066476974, lng: 30.5407736837048 },
     map: map,
     title: isEnglish ? "Parkovy Congress and Exhibition Center" : "Парковий Конгресно-виставковий центр",
-    content: pinElement
+    icon: {
+      url: `${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg`,
+      scaledSize: new google.maps.Size(40, 40),
+      anchor: new google.maps.Point(20, 40)
+    }
   });
 
   const infowindow = new google.maps.InfoWindow({
