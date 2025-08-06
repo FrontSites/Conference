@@ -2,7 +2,6 @@
 @use "./mixins" as *;
 
 .blockchain {
-  @include vw(padding-top, );
   border-top-right-radius: 1.5625rem;
   position: relative;
  
@@ -51,7 +50,7 @@
       position: relative;
       top: auto;
       left: auto;
-
+      
     }
   }
 
