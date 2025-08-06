@@ -203,33 +203,7 @@ function add_cache_headers()
 }
 add_action('send_headers', 'add_cache_headers');
 
-// Оптимизация загрузки изображений
-function add_image_optimization()
-{
-    if (!is_admin()) {
-        echo '<script>
-        // Lazy loading для изображений
-        document.addEventListener("DOMContentLoaded", function() {
-            var images = document.querySelectorAll("img[data-src]");
-            var imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        var img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove("lazy");
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(function(img) {
-                imageObserver.observe(img);
-            });
-        });
-        </script>';
-    }
-}
-add_action('wp_footer', 'add_image_optimization');
+
 
 add_filter('wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5);
 add_filter('wpcf7_autop_or_not', '__return_false');
