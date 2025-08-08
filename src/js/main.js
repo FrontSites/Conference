@@ -275,7 +275,9 @@ function initLocationMap() {
     content: `
       <div style="padding: 3px 10px; max-width: 250px; font-family: 'Manrope', sans-serif;">
         <div style="display: flex; align-items: center; margin-bottom: 3px;">
-          <img src="${window.location.origin}/wp-content/themes/conference/assets/images/pin.svg" 
+          <img src="${
+            window.location.origin
+          }/wp-content/themes/conference/assets/images/pin.svg" 
                style="width: 24px; height: 24px; margin-right: 8px;" alt="Pin">
           <span style="font-weight: 700; font-size: 15px; color: #333; text-transform: uppercase;">FULLSET</span>
         </div>
@@ -610,30 +612,33 @@ function initPopup() {
 
 // Инициализация таймера конференции
 function initTimer() {
-  console.log('=== TIMER INITIALIZATION START ===');
-  console.log('Initializing conference timer...');
-  console.log('timer_ajax available:', typeof timer_ajax !== 'undefined');
-  if (typeof timer_ajax !== 'undefined') {
-    console.log('timer_ajax object:', timer_ajax);
+  console.log("=== TIMER INITIALIZATION START ===");
+  console.log("Initializing conference timer...");
+  console.log("timer_ajax available:", typeof timer_ajax !== "undefined");
+  if (typeof timer_ajax !== "undefined") {
+    console.log("timer_ajax object:", timer_ajax);
   }
-  
+
   class ConferenceTimer {
     constructor() {
-      console.log('=== CONFERENCE TIMER CONSTRUCTOR ===');
-      console.log('ConferenceTimer constructor called');
-      console.log('jQuery available:', typeof $ !== 'undefined');
-      console.log('jQuery version:', typeof $ !== 'undefined' ? $.fn.jquery : 'not available');
-      
-      this.timerElement = $('#conference-timer');
-      this.daysElement = $('#timer-days');
-      this.hoursElement = $('#timer-hours');
-      this.minutesElement = $('#timer-minutes');
-      this.secondsElement = $('#timer-seconds');
-      this.daysLabelElement = $('#timer-days-label');
-      this.hoursLabelElement = $('#timer-hours-label');
-      this.minutesLabelElement = $('#timer-minutes-label');
-      this.secondsLabelElement = $('#timer-seconds-label');
-      this.pricesElement = $('#timer-prices');
+      console.log("=== CONFERENCE TIMER CONSTRUCTOR ===");
+      console.log("ConferenceTimer constructor called");
+      console.log("jQuery available:", typeof $ !== "undefined");
+      console.log(
+        "jQuery version:",
+        typeof $ !== "undefined" ? $.fn.jquery : "not available"
+      );
+
+      this.timerElement = $("#conference-timer");
+      this.daysElement = $("#timer-days");
+      this.hoursElement = $("#timer-hours");
+      this.minutesElement = $("#timer-minutes");
+      this.secondsElement = $("#timer-seconds");
+      this.daysLabelElement = $("#timer-days-label");
+      this.hoursLabelElement = $("#timer-hours-label");
+      this.minutesLabelElement = $("#timer-minutes-label");
+      this.secondsLabelElement = $("#timer-seconds-label");
+      this.pricesElement = $("#timer-prices");
       this.interval = null;
       this.endTime = 0;
       this.isPaused = false;
@@ -641,126 +646,129 @@ function initTimer() {
       this.isHidden = false;
       this.serverTimeOffset = 0;
       this.labels = window.timerLabels || {
-        days: ['день', 'дня', 'днів'],
-        hours: ['година', 'години', 'годин'],
-        minutes: ['хвилина', 'хвилини', 'хвилин'],
-        seconds: ['секунда', 'секунди', 'секунд']
+        days: ["день", "дня", "днів"],
+        hours: ["година", "години", "годин"],
+        minutes: ["хвилина", "хвилини", "хвилин"],
+        seconds: ["секунда", "секунди", "секунд"],
       };
-      
-      console.log('Timer elements found:', {
+
+      console.log("Timer elements found:", {
         timer: this.timerElement.length,
         days: this.daysElement.length,
         hours: this.hoursElement.length,
         minutes: this.minutesElement.length,
         seconds: this.secondsElement.length,
-        prices: this.pricesElement.length
+        prices: this.pricesElement.length,
       });
-      
+
       this.init();
     }
 
     init() {
       if (this.timerElement.length === 0) {
-        console.log('Timer element not found');
+        console.log("Timer element not found");
         return;
       }
 
-      console.log('Initializing timer...');
+      console.log("Initializing timer...");
       this.loadTimerData();
       this.startTimer();
     }
 
     loadTimerData() {
-      console.log('Loading timer data...');
-      
+      console.log("Loading timer data...");
+
       // Проверяем, есть ли timer_ajax
-      if (typeof timer_ajax === 'undefined') {
-        console.error('timer_ajax is not defined');
+      if (typeof timer_ajax === "undefined") {
+        console.error("timer_ajax is not defined");
         return;
       }
-      
+
       $.ajax({
         url: timer_ajax.ajaxurl,
-        type: 'POST',
+        type: "POST",
         data: {
-          action: 'get_timer_data',
-          nonce: timer_ajax.nonce
+          action: "get_timer_data",
+          nonce: timer_ajax.nonce,
         },
         success: (response) => {
-          console.log('Timer data loaded:', response);
-          console.log('Response success:', response.success);
-          console.log('Response data:', response.data);
-          
-                      if (response.success && response.data) {
-              const data = response.data;
-              this.isEnabled = data.enabled;
-              this.isPaused = data.paused;
-              this.isHidden = data.hidden;
-              this.endTime = data.endTimestamp * 1000; // Конвертируем в миллисекунды
-              this.labels = data.labels || this.labels;
-              
-              // Отладочная информация для данных таймера
-              console.log('=== TIMER DATA DEBUG ===');
-              console.log('Raw endTimestamp:', data.endTimestamp);
-              console.log('Calculated endTime:', this.endTime);
-              console.log('Current Date.now():', Date.now());
-              console.log('Time difference (ms):', this.endTime - Date.now());
-              console.log('Time difference (days):', (this.endTime - Date.now()) / (1000 * 60 * 60 * 24));
-            
+          console.log("Timer data loaded:", response);
+          console.log("Response success:", response.success);
+          console.log("Response data:", response.data);
+
+          if (response.success && response.data) {
+            const data = response.data;
+            this.isEnabled = data.enabled;
+            this.isPaused = data.paused;
+            this.isHidden = data.hidden;
+            this.endTime = data.endTimestamp * 1000; // Конвертируем в миллисекунды
+            this.labels = data.labels || this.labels;
+
+            // Отладочная информация для данных таймера
+            console.log("=== TIMER DATA DEBUG ===");
+            console.log("Raw endTimestamp:", data.endTimestamp);
+            console.log("Calculated endTime:", this.endTime);
+            console.log("Current Date.now():", Date.now());
+            console.log("Time difference (ms):", this.endTime - Date.now());
+            console.log(
+              "Time difference (days):",
+              (this.endTime - Date.now()) / (1000 * 60 * 60 * 24)
+            );
+
             // Обновляем заголовок таймера
             if (data.texts && data.texts.title) {
-              $('.timer-title').text(data.texts.title);
+              $(".timer-title").text(data.texts.title);
             }
-            
-            console.log('Timer status:', {
+
+            console.log("Timer status:", {
               enabled: this.isEnabled,
               paused: this.isPaused,
               hidden: this.isHidden,
               endTime: this.endTime,
-              currentTime: Date.now()
+              currentTime: Date.now(),
             });
-            
+
             // Вычисляем разницу между серверным и клиентским временем
             const serverTime = data.timeLeft;
             const clientTime = Math.max(0, this.endTime - Date.now());
             this.serverTimeOffset = clientTime - serverTime;
-            
+
             // Обновляем цены
             this.updatePrices(data);
-            
+
             // Проверяем статус таймера
             if (!this.isEnabled || this.isHidden) {
-              console.log('Timer is disabled or hidden');
+              console.log("Timer is disabled or hidden");
               this.hideTimer();
               return;
             }
-            
+
             if (data.expired) {
-              console.log('Timer has expired');
+              console.log("Timer has expired");
               this.hideTimer();
               return;
             }
-            
+
             this.showTimer();
             this.updateDisplay();
           } else {
-            console.error('Timer data response was not successful');
+            console.error("Timer data response was not successful");
           }
         },
         error: (xhr, status, error) => {
-          console.error('Ошибка загрузки данных таймера:', error);
-          console.error('Status:', status);
-          console.error('Response:', xhr.responseText);
-        }
+          console.error("Ошибка загрузки данных таймера:", error);
+          console.error("Status:", status);
+          console.error("Response:", xhr.responseText);
+        },
       });
     }
 
     updatePrices(data) {
-      console.log('Updating prices with data:', data);
-      
+      console.log("Updating prices with data:", data);
+
       // Создаем HTML для цен
-      let pricesHtml = '';
-      
+      let pricesHtml = "";
+
       // REGULAR билет
       pricesHtml += `
         <div class="price-block__item left">
@@ -780,7 +788,7 @@ function initTimer() {
           </div>
         </div>
       `;
-      
+
       // VIP билет
       pricesHtml += `
         <div class="price-block__item left">
@@ -800,9 +808,9 @@ function initTimer() {
           </div>
         </div>
       `;
-      
+
       this.pricesElement.html(pricesHtml);
-      console.log('Prices updated');
+      console.log("Prices updated");
     }
 
     startTimer() {
@@ -810,7 +818,7 @@ function initTimer() {
         clearInterval(this.interval);
       }
 
-      console.log('Starting timer interval');
+      console.log("Starting timer interval");
       this.interval = setInterval(() => {
         if (!this.isPaused && this.isEnabled && !this.isHidden) {
           this.updateDisplay();
@@ -823,76 +831,87 @@ function initTimer() {
       const timeLeft = Math.max(0, this.endTime - now);
 
       if (timeLeft <= 0) {
-        console.log('Time left is 0, hiding timer');
+        console.log("Time left is 0, hiding timer");
         this.hideTimer();
         return;
       }
 
       const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // Отладочная информация
-      console.log('=== TIMER UPDATE DEBUG ===');
-      console.log('Current time (now):', now);
-      console.log('End time:', this.endTime);
-      console.log('Time left (ms):', timeLeft);
-      console.log('Calculated values:', { days, hours, minutes, seconds });
-      console.log('Elements found:', {
+      console.log("=== TIMER UPDATE DEBUG ===");
+      console.log("Current time (now):", now);
+      console.log("End time:", this.endTime);
+      console.log("Time left (ms):", timeLeft);
+      console.log("Calculated values:", { days, hours, minutes, seconds });
+      console.log("Elements found:", {
         days: this.daysElement.length,
         hours: this.hoursElement.length,
         minutes: this.minutesElement.length,
-        seconds: this.secondsElement.length
+        seconds: this.secondsElement.length,
       });
 
       // Проверяем, что элементы существуют перед обновлением
       if (this.daysElement.length > 0) {
-        this.daysElement.text(days.toString().padStart(2, '0'));
-        console.log('Days updated to:', days.toString().padStart(2, '0'));
+        this.daysElement.text(days.toString().padStart(2, "0"));
+        console.log("Days updated to:", days.toString().padStart(2, "0"));
       } else {
-        console.error('Days element not found!');
+        console.error("Days element not found!");
       }
 
       if (this.hoursElement.length > 0) {
-        this.hoursElement.text(hours.toString().padStart(2, '0'));
-        console.log('Hours updated to:', hours.toString().padStart(2, '0'));
+        this.hoursElement.text(hours.toString().padStart(2, "0"));
+        console.log("Hours updated to:", hours.toString().padStart(2, "0"));
       } else {
-        console.error('Hours element not found!');
+        console.error("Hours element not found!");
       }
 
       if (this.minutesElement.length > 0) {
-        this.minutesElement.text(minutes.toString().padStart(2, '0'));
-        console.log('Minutes updated to:', minutes.toString().padStart(2, '0'));
+        this.minutesElement.text(minutes.toString().padStart(2, "0"));
+        console.log("Minutes updated to:", minutes.toString().padStart(2, "0"));
       } else {
-        console.error('Minutes element not found!');
+        console.error("Minutes element not found!");
       }
 
       if (this.secondsElement.length > 0) {
-        this.secondsElement.text(seconds.toString().padStart(2, '0'));
-        console.log('Seconds updated to:', seconds.toString().padStart(2, '0'));
+        this.secondsElement.text(seconds.toString().padStart(2, "0"));
+        console.log("Seconds updated to:", seconds.toString().padStart(2, "0"));
       } else {
-        console.error('Seconds element not found!');
+        console.error("Seconds element not found!");
       }
 
       // Обновляем подписи с правильными окончаниями
       this.daysLabelElement.text(this.getTimeLabel(days, this.labels.days));
       this.hoursLabelElement.text(this.getTimeLabel(hours, this.labels.hours));
-      this.minutesLabelElement.text(this.getTimeLabel(minutes, this.labels.minutes));
-      this.secondsLabelElement.text(this.getTimeLabel(seconds, this.labels.seconds));
+      this.minutesLabelElement.text(
+        this.getTimeLabel(minutes, this.labels.minutes)
+      );
+      this.secondsLabelElement.text(
+        this.getTimeLabel(seconds, this.labels.seconds)
+      );
     }
 
     getTimeLabel(number, labels) {
       // Для английского языка
-      if (labels[0] === 'day' || labels[0] === 'hour' || labels[0] === 'minute' || labels[0] === 'second') {
+      if (
+        labels[0] === "day" ||
+        labels[0] === "hour" ||
+        labels[0] === "minute" ||
+        labels[0] === "second"
+      ) {
         return number === 1 ? labels[0] : labels[1];
       }
-      
+
       // Для украинского языка
       if (number >= 11 && number <= 19) {
         return labels[2]; // днів, годин, хвилин, секунд
       }
-      
+
       const lastDigit = number % 10;
       if (lastDigit === 1) {
         return labels[0]; // день, година, хвилина, секунда
@@ -904,12 +923,12 @@ function initTimer() {
     }
 
     showTimer() {
-      console.log('Showing timer');
+      console.log("Showing timer");
       this.timerElement.show();
     }
 
     hideTimer() {
-      console.log('Hiding timer');
+      console.log("Hiding timer");
       this.timerElement.hide();
       if (this.interval) {
         clearInterval(this.interval);
@@ -929,17 +948,17 @@ function initTimer() {
   window.conferenceTimer = new ConferenceTimer();
 
   // Обработка видимости страницы для точности таймера
-  document.addEventListener('visibilitychange', function() {
+  document.addEventListener("visibilitychange", function () {
     if (window.conferenceTimer && !document.hidden) {
-      console.log('Page became visible, reloading timer data');
+      console.log("Page became visible, reloading timer data");
       window.conferenceTimer.loadTimerData();
     }
   });
 
   // Обработка фокуса окна для синхронизации времени
-  window.addEventListener('focus', function() {
+  window.addEventListener("focus", function () {
     if (window.conferenceTimer) {
-      console.log('Window focused, reloading timer data');
+      console.log("Window focused, reloading timer data");
       window.conferenceTimer.loadTimerData();
     }
   });

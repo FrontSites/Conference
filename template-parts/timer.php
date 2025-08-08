@@ -46,22 +46,7 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
         </div>
     </div>
 
-    <div class="timer-prices">
-        <div class="price-block__item left">
-            <div class="price-block__old-price">
-                <?php echo $timer_old_price; ?>
-            </div>
-            <div class="price-block__new-price">
-                <?php echo $timer_new_price; ?>
-            </div>
-        </div>
-        <div class="price-block__item right">
-            <div class="price-block__small-label">
-                <?php echo $timer_small_label; ?>
-            </div>
-            <div class="price-block__discount">
-                <?php echo $timer_discount; ?>
-            </div>
-        </div>
+    <div class="timer-prices" id="timer-prices">
+        <!-- Цены будут загружены через JavaScript -->
     </div>
 </div>
