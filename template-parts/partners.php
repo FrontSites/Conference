@@ -25,10 +25,10 @@
       <div class="partners-blocks">
         <?php $blocks = get_field('partners-blocks'); ?>
         <?php foreach ($blocks as $block) : ?>
-          <div class="partners-block">
+          <a href="<?php echo $block['partners-block-link']; ?>" class=" partners-block">
             <h3><?php echo $block['partners-block-title']; ?></h3>
             <p><?php echo $block['partners-block-description']; ?></p>
-          </div>
+          </a>
         <?php endforeach; ?>
       </div>
       <?php get_template_part('template-parts/buttons/button-partner'); ?>
