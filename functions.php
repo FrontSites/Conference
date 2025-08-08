@@ -850,24 +850,16 @@ function display_conference_timer() {
             </div>
         </div>
         
-        <div class="timer-prices">
-            <div class="price-block__item left">
-                <div class="price-block__old-price">
-                    <?php echo $timer_old_price; ?>
-                </div>
-                <div class="price-block__new-price">
-                    <?php echo $timer_new_price; ?>
-                </div>
-            </div>
-            <div class="price-block__item right">
-                <div class="price-block__small-label">
-                    <?php echo $timer_small_label; ?>
-                </div>
-                <div class="price-block__discount">
-                    <?php echo $timer_discount; ?>
-                </div>
-            </div>
+        <!-- Цены будут обновляться через JavaScript -->
+        <div class="timer-prices" id="timer-prices">
+            <!-- Содержимое будет загружено динамически -->
         </div>
+    </div>
+    
+    <script>
+        // Передаем локализацию в JavaScript
+        window.timerLabels = <?php echo json_encode($labels); ?>;
+    </script>
     </div>
     <?php
 }
