@@ -533,7 +533,7 @@ function timer_admin_page() {
         update_option('timer_vip_discount', sanitize_text_field($_POST['timer_vip_discount']));
         update_option('timer_vip_small_label', sanitize_text_field($_POST['timer_vip_small_label']));
         
-        echo '<div class="notice notice-success"><p>Настройки таймера сохранены!</p></div>';
+        echo '<div class="notice notice-success"><p>Налаштування таймера збережено!</p></div>';
     }
 
     // Получение текущих настроек
