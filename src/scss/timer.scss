@@ -12,9 +12,19 @@
   align-items: center;
   border-radius: 25px;
   background: linear-gradient(180deg, #2C3055 0%, rgba(44, 48, 85, 0.00) 92.8%);
-  .timer-container { 
-    display: flex;
-    justify-content: center;
+
+  .timer-container {
+    h3 {
+      color: #FFF;
+      text-align: center;
+      font-family: 'Manrope';
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.0625rem;
+      text-transform: uppercase;
+    }
+
     .timer-display {
       display: flex;
       align-items: stretch;
