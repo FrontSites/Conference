@@ -32,12 +32,10 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
                 <span class="timer-number" id="timer-hours">00</span>
                 <span class="timer-label" id="timer-hours-label">годин</span>
             </div>
-            <div class="timer-separator">:</div>
             <div class="timer-unit">
                 <span class="timer-number" id="timer-minutes">00</span>
                 <span class="timer-label" id="timer-minutes-label">хвилин</span>
             </div>
-            <div class="timer-separator">:</div>
             <div class="timer-unit">
                 <span class="timer-number" id="timer-seconds">00</span>
                 <span class="timer-label" id="timer-seconds-label">секунд</span>
