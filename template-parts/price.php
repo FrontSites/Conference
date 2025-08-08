@@ -35,8 +35,9 @@
           // Значения по умолчанию — из ACF
           $old_price = get_sub_field('price-old-price');
           $new_price = get_sub_field('price-new-price');
-          $discount = get_sub_field('price-discount');
-          $small_label = get_sub_field('price-small-label');
+          // Больше не используем мелкую подпись и скидку
+          $discount = '';
+          $small_label = '';
 
           // Если включен таймер — подменяем данными из админки таймера
           if ($timer_enabled) {
@@ -68,12 +69,8 @@
                   </div>
                 </div>
                 <div class="price-block__item right">
-                  <div class="price-block__small-label">
-                    <?php echo $small_label; ?>
-                  </div>
-                  <div class="price-block__discount">
-                    <?php echo $discount; ?>
-                  </div>
+                  <div class="price-block__small-label"></div>
+                  <div class="price-block__discount"></div>
                 </div>
 
               </div>
