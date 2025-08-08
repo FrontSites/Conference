@@ -830,22 +830,22 @@ function display_conference_timer() {
             <div class="timer-display">
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-days">00</span>
-                    <span class="timer-label">дней</span>
+                    <span class="timer-label" id="timer-days-label">дней</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-hours">00</span>
-                    <span class="timer-label">часов</span>
+                    <span class="timer-label" id="timer-hours-label">часов</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-minutes">00</span>
-                    <span class="timer-label">минут</span>
+                    <span class="timer-label" id="timer-minutes-label">минут</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-seconds">00</span>
-                    <span class="timer-label">секунд</span>
+                    <span class="timer-label" id="timer-seconds-label">секунд</span>
                 </div>
             </div>
         </div>
