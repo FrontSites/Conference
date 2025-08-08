@@ -53,6 +53,10 @@
       }
       ?>
     </div>
+    <?php
+    // Выводим таймер конференции
+    get_template_part('template-parts/timer');
+    ?>
   </div>
   <script>
     window.addEventListener('load', function() {
