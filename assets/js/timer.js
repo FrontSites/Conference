@@ -76,6 +76,11 @@
                         this.endTime = data.endTimestamp * 1000; // Конвертируем в миллисекунды
                         this.labels = data.labels || this.labels;
                         
+                        // Обновляем заголовок таймера
+                        if (data.texts && data.texts.title) {
+                            $('.timer-title').text(data.texts.title);
+                        }
+                        
                         console.log('Timer status:', {
                             enabled: this.isEnabled,
                             paused: this.isPaused,
