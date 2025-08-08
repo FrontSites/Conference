@@ -667,6 +667,7 @@ body img{pointer-events:none}
 @media (width <= 23.75rem){
 .conference-timer .timer-container .timer-display .timer-unit{width:3.75rem;height:3.75rem}
 .conference-timer .timer-container .timer-display .timer-unit .timer-number{font-size:1.75rem}
+.conference-timer .timer-container .timer-display .timer-unit .timer-label{font-size:.5rem}
 }
 @font-face{font-family:"Bebas Neue Cyrillic";src:url(../../assets/fonts/BebasNeueCyrillic.eot);src:local("../../assets/fonts/Bebas Neue Cyrillic"),local("BebasNeueCyrillic"),url(../../assets/fonts/BebasNeueCyrillic.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/BebasNeueCyrillic.woff2) format("woff2"),url(../../assets/fonts/BebasNeueCyrillic.woff) format("woff"),url(../../assets/fonts/BebasNeueCyrillic.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
 .container{max-width:1280px;margin:0 auto;padding:0 5rem}
