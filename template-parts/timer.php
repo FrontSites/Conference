@@ -51,3 +51,18 @@ $timer_title = get_option('timer_title' . $suffix, $default_titles[$current_lang
         </div>
     </div>
 </div>
+<script>
+  window.addEventListener('load', function () {
+    var $ = window.jQuery;
+    var $timer = $('#conference-timer');
+    if (!$ || !$timer.length || typeof window.timer_ajax === 'undefined') return;
+
+    $.post(window.timer_ajax.ajaxurl, { action: 'get_timer_data', nonce: window.timer_ajax.nonce })
+      .done(function (resp) {
+        if (!resp || !resp.success || !resp.data) return;
+        if (resp.data.expired) {
+          $timer.addClass('hidden');
+        }
+      });
+  });
+  </script>
