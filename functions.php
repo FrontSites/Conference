@@ -780,19 +780,16 @@ function get_timer_data() {
     
     $labels = $time_labels[$current_lang] ?? $time_labels['uk'];
     
-    // Локализация для текста
-    $text_labels = [
-        'uk' => [
-            'title' => 'До кінця акції залишилось:',
-            'economy' => 'Економія'
-        ],
-        'en' => [
-            'title' => 'Time until promotion ends:',
-            'economy' => 'Save'
-        ]
+    // Заголовок таймера из опций (языковой)
+    $suffix = '_' . $current_lang;
+    $default_titles = [
+        'uk' => 'До кінця акції залишилось:',
+        'en' => 'Time until promotion ends:'
     ];
-    
-    $texts = $text_labels[$current_lang] ?? $text_labels['uk'];
+    $texts = [
+        'title' => get_option('timer_title' . $suffix, $default_titles[$current_lang] ?? $default_titles['uk']),
+        'economy' => $current_lang === 'en' ? 'Save' : 'Економія'
+    ];
     
     $response_data = [
         'enabled' => (bool)$timer_enabled,
