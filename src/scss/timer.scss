@@ -73,6 +73,9 @@
         @media (width <= 23.75rem) {
           width: 3.75rem;
           height: 3.75rem;
+          .timer-number { 
+            font-size: 1.75rem;
+          }
         }
       }
     }
