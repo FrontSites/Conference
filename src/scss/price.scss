@@ -145,10 +145,10 @@
                 }
 
                 .price-block__discount {
-                  display: flex;
-                  flex
+                  text-align: center;
                   padding: 0.6875rem 0.75rem;
                   display: flex;
+                  flex-direction: column;
                   justify-content: center;
                   align-items: center;
                   gap: 0.625rem;
