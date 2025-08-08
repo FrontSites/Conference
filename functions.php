@@ -566,7 +566,7 @@ function timer_admin_page() {
                     <td>
                         <label>
                             <input type="checkbox" name="timer_enabled" value="1" <?php checked($timer_enabled, 1); ?>>
-                            Включить таймер
+                            Увімкнути таймер
                         </label>
                     </td>
                 </tr>
