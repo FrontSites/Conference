@@ -22,7 +22,7 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
 
 <div id="conference-timer" class="conference-timer">
     <div class="timer-container">
-        <!-- <div class="timer-title">До конца акции осталось:</div> -->
+        <div class="timer-title">До кінця акції залишилось:</div>
         <div class="timer-display">
             <div class="timer-unit">
                 <span class="timer-number" id="timer-days">00</span>
