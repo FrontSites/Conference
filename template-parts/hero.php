@@ -1,4 +1,7 @@
  <section class="hero">
+   <div class="hero-background">
+     <img src="<?php the_field("hero-background"); ?>" alt="">
+   </div>
    <div class="container">
      <div class="hero-items">
        <div class="hero-item left">
