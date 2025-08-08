@@ -20,6 +20,10 @@
       object-fit: cover;
       max-width: none;
     }
+    @media (width <= 48em) {
+      top: 0;
+      left: 0;
+    }
   }
   background: #fff;
   color: #222649;
