@@ -666,18 +666,18 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row">Скидка (VIP)</th>
+                    <th scope="row">Знижка (VIP)</th>
                     <td>
                         <input type="text" name="timer_vip_discount" value="<?php echo esc_attr($timer_vip_discount); ?>" class="regular-text">
-                        <p class="description">Например: -33% или -100₴</p>
+                        <p class="description">Наприклад: -33% або -100₴</p>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Маленькая подпись (VIP)</th>
+                    <th scope="row">Мала підпис (VIP)</th>
                     <td>
                         <input type="text" name="timer_vip_small_label" value="<?php echo esc_attr($timer_vip_small_label); ?>" class="regular-text">
-                        <p class="description">Например: Экономия или Save</p>
+                        <p class="description">Наприклад: Економія або Save</p>
                     </td>
                 </tr>
             </table>
