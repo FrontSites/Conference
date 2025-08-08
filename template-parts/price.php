@@ -6,9 +6,7 @@
     
     <?php
     // Выводим таймер конференции
-    if (function_exists('display_conference_timer')) {
-        display_conference_timer();
-    }
+    get_template_part('template-parts/timer');
     ?>
     
     <div class="price-items">
