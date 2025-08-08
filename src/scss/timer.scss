@@ -38,13 +38,15 @@
       justify-content: center;
 
       .timer-unit {
+        max-width: 6.25rem;
+        width: 100%;
+        height: 6.25rem;
         flex: none;
         border-radius: 1.5625rem;
         border: 0.0625rem solid #17F7E2;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1.125rem;
         .timer-number {
           color: #FFF;
           text-align: center;

@@ -661,7 +661,7 @@ body img{pointer-events:none}
 .conference-timer .timer-container{display:flex;flex-direction:column;align-items:center;justify-content:center;row-gap:1.625rem}
 .conference-timer .timer-container h3{color:#fff;text-align:center;font-family:Manrope;font-size:1.25rem;font-weight:700;line-height:120%;row-gap:1.625rem;letter-spacing:.0625rem;text-transform:uppercase}
 .conference-timer .timer-container .timer-display{display:flex;align-items:stretch;justify-content:center}
-.conference-timer .timer-container .timer-display .timer-unit{flex:none;border-radius:1.5625rem;border:.0625rem solid #17f7e2;display:flex;flex-direction:column;align-items:center;padding:1.125rem}
+.conference-timer .timer-container .timer-display .timer-unit{max-width:6.25rem;width:100%;height:6.25rem;flex:none;border-radius:1.5625rem;border:.0625rem solid #17f7e2;display:flex;flex-direction:column;align-items:center}
 .conference-timer .timer-container .timer-display .timer-unit .timer-number{color:#fff;text-align:center;font-size:48px;font-style:normal;font-weight:700;line-height:120%;letter-spacing:.15rem;text-transform:uppercase}
 @font-face{font-family:"Bebas Neue Cyrillic";src:url(../../assets/fonts/BebasNeueCyrillic.eot);src:local("../../assets/fonts/Bebas Neue Cyrillic"),local("BebasNeueCyrillic"),url(../../assets/fonts/BebasNeueCyrillic.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/BebasNeueCyrillic.woff2) format("woff2"),url(../../assets/fonts/BebasNeueCyrillic.woff) format("woff"),url(../../assets/fonts/BebasNeueCyrillic.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
 .container{max-width:1280px;margin:0 auto;padding:0 5rem}
