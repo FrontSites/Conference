@@ -643,6 +643,14 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
+                    <th scope="row">Заголовок таймера</th>
+                    <td>
+                        <input type="text" name="timer_title" value="<?php echo esc_attr($timer_title); ?>" class="regular-text">
+                        <p class="description">Многоязычное поле. Сохраняется для языка: <?php echo esc_html($admin_lang); ?>.</p>
+                    </td>
+                </tr>
+
+                <tr>
                     <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
                         Ціни для REGULAR квитка
                     </th>
