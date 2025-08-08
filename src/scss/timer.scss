@@ -15,6 +15,10 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
-    
+    .timer-display {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
   }
 }
