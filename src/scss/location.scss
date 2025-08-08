@@ -260,6 +260,9 @@
           right: -1.25rem;
           max-width: 25rem;
         }
+        @media (width <= 30em) {
+          top: 47px;
+        }
       }
 
       @media (width <=43.75em) {

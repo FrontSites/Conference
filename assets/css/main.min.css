@@ -386,6 +386,9 @@
 @media (width <= 30em){
 .location .container .location-wrapper .location-block{right:-1.25rem;max-width:25rem}
 }
+@media (width <= 30em){
+.location .container .location-wrapper .location-block{top:47px}
+}
 @media (width <= 43.75em){
 .location .container .location-wrapper{align-items:center;border-radius:0}
 .location .container .location-wrapper .google-map{border-radius:0}
