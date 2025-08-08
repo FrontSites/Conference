@@ -538,10 +538,18 @@ function timer_admin_page() {
     $timer_hidden = get_option('timer_hidden', 0);
     $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
     $timer_end_time = get_option('timer_end_time', '23:59');
-    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
-    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
-    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
-    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    
+    // Цены для REGULAR билета
+    $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
+    $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
+    $timer_regular_discount = get_option('timer_regular_discount', '<span>-33%</span>');
+    $timer_regular_small_label = get_option('timer_regular_small_label', '<span>Экономия</span>');
+    
+    // Цены для VIP билета
+    $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
+    $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
+    $timer_vip_discount = get_option('timer_vip_discount', '<span>-33%</span>');
+    $timer_vip_small_label = get_option('timer_vip_small_label', '<span>Экономия</span>');
     ?>
     
     <div class="wrap">
