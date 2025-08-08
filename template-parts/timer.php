@@ -26,17 +26,17 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
         <div class="timer-display">
             <div class="timer-unit">
                 <span class="timer-number" id="timer-days">00</span>
-                <span class="timer-label">LДнів</span>
+                <span class="timer-label">днів</span>
             </div>
             <div class="timer-separator">:</div>
             <div class="timer-unit">
                 <span class="timer-number" id="timer-hours">00</span>
-                <span class="timer-label">часов</span>
+                <span class="timer-label">годин</span>
             </div>
             <div class="timer-separator">:</div>
             <div class="timer-unit">
                 <span class="timer-number" id="timer-minutes">00</span>
-                <span class="timer-label">минут</span>
+                <span class="timer-label">хвилин</span>
             </div>
             <div class="timer-separator">:</div>
             <div class="timer-unit">
