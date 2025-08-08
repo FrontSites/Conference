@@ -1,9 +1,6 @@
 <?php
 
-/**
- * Шаблон таймера конференции
- * Используется для отображения обратного отсчета до окончания акции
- */
+
 
 // Проверяем, включен ли таймер
 $timer_enabled = get_option('timer_enabled', 0);
@@ -18,11 +15,25 @@ $timer_old_price = get_option('timer_old_price', '<span>299</span>');
 $timer_new_price = get_option('timer_new_price', '<span>199</span>');
 $timer_discount = get_option('timer_discount', '<span>-33%</span>');
 $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+
+// Языковой заголовок таймера
+$current_lang = 'uk';
+if (function_exists('pll_current_language')) {
+    $current_lang = pll_current_language();
+} elseif (defined('ICL_LANGUAGE_CODE')) {
+    $current_lang = ICL_LANGUAGE_CODE;
+}
+$suffix = '_' . $current_lang;
+$default_titles = [
+    'uk' => 'До кінця акції залишилось:',
+    'en' => 'Time until promotion ends:',
+];
+$timer_title = get_option('timer_title' . $suffix, $default_titles[$current_lang] ?? $default_titles['uk']);
 ?>
 
 <div id="conference-timer" class="conference-timer">
     <div class="timer-container">
-        <h3>Встигни купити вигідно</h3>
+        <h3><?php echo esc_html($timer_title); ?></h3>
         <div class="timer-display">
             <div class="timer-unit">
                 <span class="timer-number" id="timer-days">00</span>
