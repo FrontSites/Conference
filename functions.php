@@ -557,7 +557,7 @@ function timer_admin_page() {
     ?>
     
     <div class="wrap">
-        <h1>Управление таймером конференции</h1>
+        <h1>Управління таймером конференції</h1>
         
         <form method="post" action="">
             <table class="form-table">
