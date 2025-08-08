@@ -592,14 +592,14 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row">Дата окончания</th>
+                    <th scope="row">Дата закінчення</th>
                     <td>
                         <input type="date" name="timer_end_date" value="<?php echo esc_attr($timer_end_date); ?>" required>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Время окончания</th>
+                    <th scope="row">Час закінчення</th>
                     <td>
                         <input type="time" name="timer_end_time" value="<?php echo esc_attr($timer_end_time); ?>" required>
                     </td>
@@ -607,7 +607,7 @@ function timer_admin_page() {
                 
                 <tr>
                     <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
-                        Цены для REGULAR билета
+                        Ціни для REGULAR квитка
                     </th>
                 </tr>
                 
