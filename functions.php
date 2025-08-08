@@ -721,13 +721,13 @@ function get_timer_data() {
     $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
     $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
     $timer_regular_discount = get_option('timer_regular_discount', '-33%');
-    $timer_regular_small_label = get_option('timer_regular_small_label', 'Экономия');
+    $timer_regular_small_label = get_option('timer_regular_small_label', 'Економія');
     
     // Цены для VIP билета
     $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
     $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
     $timer_vip_discount = get_option('timer_vip_discount', '-33%');
-    $timer_vip_small_label = get_option('timer_vip_small_label', 'Экономия');
+    $timer_vip_small_label = get_option('timer_vip_small_label', 'Економія');
     
     $end_datetime = $timer_end_date . ' ' . $timer_end_time;
     $end_timestamp = strtotime($end_datetime);
