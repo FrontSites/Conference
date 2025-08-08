@@ -70,6 +70,10 @@
           line-height: 150%;
           letter-spacing: 0.0375rem;
         }
+        @media (width <= 23.75rem) {
+          width: 3.75rem;
+          height: 3.75rem;
+        }
       }
     }
   }
