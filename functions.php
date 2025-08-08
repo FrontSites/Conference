@@ -602,33 +602,77 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row">Старая цена</th>
+                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: center; font-weight: bold;">
+                        Цены для REGULAR билета
+                    </th>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Старая цена (REGULAR)</th>
                     <td>
-                        <input type="text" name="timer_old_price" value="<?php echo esc_attr($timer_old_price); ?>" class="regular-text">
+                        <input type="text" name="timer_regular_old_price" value="<?php echo esc_attr($timer_regular_old_price); ?>" class="regular-text">
                         <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Новая цена</th>
+                    <th scope="row">Новая цена (REGULAR)</th>
                     <td>
-                        <input type="text" name="timer_new_price" value="<?php echo esc_attr($timer_new_price); ?>" class="regular-text">
+                        <input type="text" name="timer_regular_new_price" value="<?php echo esc_attr($timer_regular_new_price); ?>" class="regular-text">
                         <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Скидка</th>
+                    <th scope="row">Скидка (REGULAR)</th>
                     <td>
-                        <input type="text" name="timer_discount" value="<?php echo esc_attr($timer_discount); ?>" class="regular-text">
+                        <input type="text" name="timer_regular_discount" value="<?php echo esc_attr($timer_regular_discount); ?>" class="regular-text">
                         <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Маленькая подпись</th>
+                    <th scope="row">Маленькая подпись (REGULAR)</th>
                     <td>
-                        <input type="text" name="timer_small_label" value="<?php echo esc_attr($timer_small_label); ?>" class="regular-text">
+                        <input type="text" name="timer_regular_small_label" value="<?php echo esc_attr($timer_regular_small_label); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: center; font-weight: bold;">
+                        Цены для VIP билета
+                    </th>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Старая цена (VIP)</th>
+                    <td>
+                        <input type="text" name="timer_vip_old_price" value="<?php echo esc_attr($timer_vip_old_price); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Новая цена (VIP)</th>
+                    <td>
+                        <input type="text" name="timer_vip_new_price" value="<?php echo esc_attr($timer_vip_new_price); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Скидка (VIP)</th>
+                    <td>
+                        <input type="text" name="timer_vip_discount" value="<?php echo esc_attr($timer_vip_discount); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Маленькая подпись (VIP)</th>
+                    <td>
+                        <input type="text" name="timer_vip_small_label" value="<?php echo esc_attr($timer_vip_small_label); ?>" class="regular-text">
                         <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
                     </td>
                 </tr>
