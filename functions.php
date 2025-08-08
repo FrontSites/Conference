@@ -612,18 +612,18 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row">Старая цена (REGULAR)</th>
+                    <th scope="row">Стара ціна (REGULAR)</th>
                     <td>
                         <input type="text" name="timer_regular_old_price" value="<?php echo esc_attr($timer_regular_old_price); ?>" class="regular-text">
-                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                        <p class="description">Використовуйте тег &lt;span&gt; для стилізації</p>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Новая цена (REGULAR)</th>
+                    <th scope="row">Нова ціна (REGULAR)</th>
                     <td>
                         <input type="text" name="timer_regular_new_price" value="<?php echo esc_attr($timer_regular_new_price); ?>" class="regular-text">
-                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                        <p class="description">Використовуйте тег &lt;span&gt; для стилізації</p>
                     </td>
                 </tr>
                 
