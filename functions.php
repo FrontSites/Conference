@@ -682,19 +682,19 @@ function timer_admin_page() {
                 </tr>
             </table>
             
-            <?php submit_button('Сохранить настройки', 'primary', 'submit_timer_settings'); ?>
+            <?php submit_button('Зберегти налаштування', 'primary', 'submit_timer_settings'); ?>
         </form>
         
         <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-left: 4px solid #0073aa;">
-            <h3>Информация о таймере</h3>
-            <p><strong>Текущий статус:</strong> 
-                <?php echo $timer_enabled ? 'Включен' : 'Выключен'; ?> | 
-                <?php echo $timer_paused ? 'Остановлен' : 'Работает'; ?> | 
-                <?php echo $timer_hidden ? 'Скрыт' : 'Видим'; ?>
+            <h3>Інформація про таймер</h3>
+            <p><strong>Поточний статус:</strong> 
+                <?php echo $timer_enabled ? 'Увімкнено' : 'Вимкнено'; ?> | 
+                <?php echo $timer_paused ? 'Зупинено' : 'Працює'; ?> | 
+                <?php echo $timer_hidden ? 'Приховано' : 'Видимо'; ?>
             </p>
-            <p><strong>Время окончания:</strong> <?php echo $timer_end_date . ' ' . $timer_end_time; ?></p>
-            <p><strong>Цены REGULAR:</strong> Старая: <?php echo $timer_regular_old_price; ?> | Новая: <?php echo $timer_regular_new_price; ?></p>
-            <p><strong>Цены VIP:</strong> Старая: <?php echo $timer_vip_old_price; ?> | Новая: <?php echo $timer_vip_new_price; ?></p>
+            <p><strong>Час закінчення:</strong> <?php echo $timer_end_date . ' ' . $timer_end_time; ?></p>
+            <p><strong>Ціни REGULAR:</strong> Стара: <?php echo $timer_regular_old_price; ?> | Нова: <?php echo $timer_regular_new_price; ?></p>
+            <p><strong>Ціни VIP:</strong> Стара: <?php echo $timer_vip_old_price; ?> | Нова: <?php echo $timer_vip_new_price; ?></p>
         </div>
     </div>
     <?php
