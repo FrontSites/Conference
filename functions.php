@@ -702,6 +702,15 @@ function timer_admin_page() {
 
 // AJAX обработчик для получения данных таймера
 function get_timer_data() {
+    // Проверяем nonce для безопасности
+    if (!wp_verify_nonce($_POST['nonce'], 'timer_nonce')) {
+        wp_send_json_error('Invalid nonce');
+        return;
+    }
+    
+    // Логируем запрос для отладки
+    error_log('Timer AJAX request received');
+    
     $timer_enabled = get_option('timer_enabled', 0);
     $timer_paused = get_option('timer_paused', 0);
     $timer_hidden = get_option('timer_hidden', 0);
