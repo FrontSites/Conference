@@ -693,7 +693,8 @@ function timer_admin_page() {
                 <?php echo $timer_hidden ? 'Скрыт' : 'Видим'; ?>
             </p>
             <p><strong>Время окончания:</strong> <?php echo $timer_end_date . ' ' . $timer_end_time; ?></p>
-            <p><strong>Цены:</strong> Старая: <?php echo $timer_old_price; ?> | Новая: <?php echo $timer_new_price; ?></p>
+            <p><strong>Цены REGULAR:</strong> Старая: <?php echo $timer_regular_old_price; ?> | Новая: <?php echo $timer_regular_new_price; ?></p>
+            <p><strong>Цены VIP:</strong> Старая: <?php echo $timer_vip_old_price; ?> | Новая: <?php echo $timer_vip_new_price; ?></p>
         </div>
     </div>
     <?php
