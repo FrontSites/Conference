@@ -240,7 +240,7 @@
 .header .container .header-block .header-wrapper .languages-menu ul li a{width:100%;padding:0;height:100%}
 }
 .hero{position:relative;z-index:3;padding-bottom:2.5rem;padding-top:clamp(114px,calc(10.4166666667vw),150px);background:#fff;color:#222649}
-.hero .hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
+.hero .hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden}
 .hero .container{margin-left:auto}
 .hero .container .hero-items{max-width:68.375rem;margin-left:auto;-moz-column-gap:clamp(30px,calc(11.9444444444vw),172px);column-gap:clamp(30px,calc(11.9444444444vw),172px);display:flex;justify-content:flex-end}
 .hero .container .hero-items .hero-item.left{flex:0 1 50%}
