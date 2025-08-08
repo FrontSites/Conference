@@ -24,6 +24,7 @@ function checkStylesLoaded() {
 
 // Надежная инициализация с повторными попытками
 function initializeAll() {
+  console.log('=== INITIALIZE ALL START ===');
   try {
     // Проверяем загрузку стилей
     if (!checkStylesLoaded()) {
