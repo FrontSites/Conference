@@ -684,14 +684,10 @@ function get_timer_data() {
     // Цены для REGULAR билета
     $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
     $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
-    $timer_regular_discount = get_option('timer_regular_discount', '-33%');
-    $timer_regular_small_label = get_option('timer_regular_small_label', 'Економія');
     
     // Цены для VIP билета
     $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
     $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
-    $timer_vip_discount = get_option('timer_vip_discount', '-33%');
-    $timer_vip_small_label = get_option('timer_vip_small_label', 'Економія');
     
     // Корректно вычисляем время окончания в часовом поясе сайта WordPress
     $timezone = wp_timezone();
@@ -754,15 +750,11 @@ function get_timer_data() {
         'endTimestamp' => $end_timestamp,
         'regular' => [
             'oldPrice' => $timer_regular_old_price,
-            'newPrice' => $timer_regular_new_price,
-            'discount' => $timer_regular_discount,
-            'smallLabel' => $timer_regular_small_label
+            'newPrice' => $timer_regular_new_price
         ],
         'vip' => [
             'oldPrice' => $timer_vip_old_price,
-            'newPrice' => $timer_vip_new_price,
-            'discount' => $timer_vip_discount,
-            'smallLabel' => $timer_vip_small_label
+            'newPrice' => $timer_vip_new_price
         ],
         'labels' => $labels,
         'texts' => $texts,
