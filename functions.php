@@ -436,6 +436,21 @@ function sanitize_custom_html($input)
     ));
 }
 
+// Разрешаем безопасный HTML в ценах (например, <span>)
+function sanitize_price_html($input) {
+    $allowed = [
+        'span' => [
+            'class' => true,
+            'style' => true,
+        ],
+        'strong' => [],
+        'b' => [],
+        'em' => [],
+        'i' => [],
+    ];
+    return wp_kses($input, $allowed);
+}
+
 
 
 // Удаление автоматического оборачивания пустых тегов вокруг полей CF7
