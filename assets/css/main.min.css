@@ -99,7 +99,7 @@
 }
 .footer .footer-wrapper .footer-items .footer-item .main-button{max-width:9.375rem}
 @media (width <= 30em){
-.footer .footer-wrapper .footer-items .footer-item .main-button{max-width:10.375rem}
+.footer .footer-wrapper .footer-items .footer-item .main-button{max-width:12.375rem;width:100%}
 }
 @media (width <= 30em){
 .footer .footer-wrapper .footer-items .footer-item{margin-top:.75rem}
