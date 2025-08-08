@@ -645,7 +645,7 @@ function timer_admin_page() {
                 
                 <tr>
                     <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
-                        Цены для VIP билета
+                        Ціни для VIP квитка
                     </th>
                 </tr>
                 
