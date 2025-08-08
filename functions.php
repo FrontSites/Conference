@@ -669,7 +669,7 @@ function timer_admin_page() {
                     <th scope="row">Скидка (VIP)</th>
                     <td>
                         <input type="text" name="timer_vip_discount" value="<?php echo esc_attr($timer_vip_discount); ?>" class="regular-text">
-                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                        <p class="description">Например: -33% или -100₴</p>
                     </td>
                 </tr>
                 
@@ -677,7 +677,7 @@ function timer_admin_page() {
                     <th scope="row">Маленькая подпись (VIP)</th>
                     <td>
                         <input type="text" name="timer_vip_small_label" value="<?php echo esc_attr($timer_vip_small_label); ?>" class="regular-text">
-                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                        <p class="description">Например: Экономия или Save</p>
                     </td>
                 </tr>
             </table>
