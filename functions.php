@@ -539,10 +539,21 @@ function timer_admin_page() {
         update_option('timer_hidden', isset($_POST['timer_hidden']) ? 1 : 0);
         update_option('timer_end_date', sanitize_text_field($_POST['timer_end_date']));
         update_option('timer_end_time', sanitize_text_field($_POST['timer_end_time']));
-        update_option('timer_regular_old_price', sanitize_price_html($_POST['timer_regular_old_price']));
-        update_option('timer_regular_new_price', sanitize_price_html($_POST['timer_regular_new_price']));
-        update_option('timer_vip_old_price', sanitize_price_html($_POST['timer_vip_old_price']));
-        update_option('timer_vip_new_price', sanitize_price_html($_POST['timer_vip_new_price']));
+
+        // Определяем язык админки (Polylang/WPML)
+        $admin_lang = 'uk';
+        if (function_exists('pll_current_language')) {
+            $admin_lang = pll_current_language();
+        } elseif (defined('ICL_LANGUAGE_CODE')) {
+            $admin_lang = ICL_LANGUAGE_CODE;
+        }
+        $suffix = '_' . $admin_lang;
+
+        // Сохраняем цены в языко-зависимые опции
+        update_option('timer_regular_old_price' . $suffix, sanitize_price_html($_POST['timer_regular_old_price']));
+        update_option('timer_regular_new_price' . $suffix, sanitize_price_html($_POST['timer_regular_new_price']));
+        update_option('timer_vip_old_price' . $suffix, sanitize_price_html($_POST['timer_vip_old_price']));
+        update_option('timer_vip_new_price' . $suffix, sanitize_price_html($_POST['timer_vip_new_price']));
         
         echo '<div class="notice notice-success"><p>Налаштування таймера збережено!</p></div>';
     }
@@ -554,13 +565,21 @@ function timer_admin_page() {
     $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
     $timer_end_time = get_option('timer_end_time', '23:59');
     
-    // Цены для REGULAR билета
-    $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
-    $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
+    // Определяем язык админки для вывода цен
+    $admin_lang = 'uk';
+    if (function_exists('pll_current_language')) {
+        $admin_lang = pll_current_language();
+    } elseif (defined('ICL_LANGUAGE_CODE')) {
+        $admin_lang = ICL_LANGUAGE_CODE;
+    }
+    $suffix = '_' . $admin_lang;
+
+    // Цены для REGULAR/VIP с учетом языка (fallback на общие опции)
+    $timer_regular_old_price = get_option('timer_regular_old_price' . $suffix, get_option('timer_regular_old_price', '<span>299</span>'));
+    $timer_regular_new_price = get_option('timer_regular_new_price' . $suffix, get_option('timer_regular_new_price', '<span>199</span>'));
     
-    // Цены для VIP билета
-    $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
-    $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
+    $timer_vip_old_price = get_option('timer_vip_old_price' . $suffix, get_option('timer_vip_old_price', '<span>599</span>'));
+    $timer_vip_new_price = get_option('timer_vip_new_price' . $suffix, get_option('timer_vip_new_price', '<span>399</span>'));
     ?>
     
     <div class="wrap">
