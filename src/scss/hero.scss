@@ -2,6 +2,8 @@
 @use "./mixins" as *;
 
 .hero {
+  background: #fff;
+  color: #222649;
   position: relative;
   z-index: 3;
   padding-bottom: 2.5rem;
@@ -25,8 +27,7 @@
       left: 0;
     }
   }
-  background: #fff;
-  color: #222649;
+ 
 
   .container {
     margin-left: auto;
