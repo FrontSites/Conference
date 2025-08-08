@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Шаблон таймера конференции
  * Используется для отображения обратного отсчета до окончания акции
@@ -21,11 +22,11 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
 
 <div id="conference-timer" class="conference-timer">
     <div class="timer-container">
-        <div class="timer-title">До конца акции осталось:</div>
+        <!-- <div class="timer-title">До конца акции осталось:</div> -->
         <div class="timer-display">
             <div class="timer-unit">
                 <span class="timer-number" id="timer-days">00</span>
-                <span class="timer-label">дней</span>
+                <span class="timer-label">LДнів</span>
             </div>
             <div class="timer-separator">:</div>
             <div class="timer-unit">
@@ -44,7 +45,7 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
             </div>
         </div>
     </div>
-    
+
     <div class="timer-prices">
         <div class="price-block__item left">
             <div class="price-block__old-price">
