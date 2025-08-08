@@ -1,6 +1,7 @@
  <section class="hero">
    <div class="hero-background">
-     <img src="<?php the_field("hero-background"); ?>" alt="">
+     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lines-.svg" alt="description">
+
    </div>
    <div class="container">
      <div class="hero-items">
