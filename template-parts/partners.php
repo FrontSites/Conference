@@ -25,7 +25,7 @@
       <div class="partners-blocks">
         <?php $blocks = get_field('partners-blocks'); ?>
         <?php foreach ($blocks as $block) : ?>
-          <a href="<?php echo $block['partners-block-link']; ?>" class=" partners-block" target="_blank">
+          <a href="<?php echo $block['partner-link']; ?>" class=" partners-block" target="_blank">
             <h3><?php echo $block['partners-block-title']; ?></h3>
             <p><?php echo $block['partners-block-description']; ?></p>
           </a>
