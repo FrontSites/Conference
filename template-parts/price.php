@@ -3,6 +3,14 @@
     <h2>
       <?php the_field('price-title'); ?>
     </h2>
+    
+    <?php
+    // Выводим таймер конференции
+    if (function_exists('display_conference_timer')) {
+        display_conference_timer();
+    }
+    ?>
+    
     <div class="price-items">
       <?php
       if (have_rows('price-items')) {
