@@ -45,8 +45,4 @@ $timer_small_label = get_option('timer_small_label', '<span>Экономия</sp
             </div>
         </div>
     </div>
-
-    <div class="timer-prices" id="timer-prices">
-        <!-- Цены будут загружены через JavaScript -->
-    </div>
 </div>

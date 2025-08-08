@@ -526,12 +526,8 @@ function timer_admin_page() {
         update_option('timer_end_time', sanitize_text_field($_POST['timer_end_time']));
         update_option('timer_regular_old_price', sanitize_text_field($_POST['timer_regular_old_price']));
         update_option('timer_regular_new_price', sanitize_text_field($_POST['timer_regular_new_price']));
-        update_option('timer_regular_discount', sanitize_text_field($_POST['timer_regular_discount']));
-        update_option('timer_regular_small_label', sanitize_text_field($_POST['timer_regular_small_label']));
         update_option('timer_vip_old_price', sanitize_text_field($_POST['timer_vip_old_price']));
         update_option('timer_vip_new_price', sanitize_text_field($_POST['timer_vip_new_price']));
-        update_option('timer_vip_discount', sanitize_text_field($_POST['timer_vip_discount']));
-        update_option('timer_vip_small_label', sanitize_text_field($_POST['timer_vip_small_label']));
         
         echo '<div class="notice notice-success"><p>Налаштування таймера збережено!</p></div>';
     }
@@ -546,14 +542,10 @@ function timer_admin_page() {
     // Цены для REGULAR билета
     $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
     $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
-    $timer_regular_discount = get_option('timer_regular_discount', '<span>-33%</span>');
-    $timer_regular_small_label = get_option('timer_regular_small_label', '<span>Экономия</span>');
     
     // Цены для VIP билета
     $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
     $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
-    $timer_vip_discount = get_option('timer_vip_discount', '<span>-33%</span>');
-    $timer_vip_small_label = get_option('timer_vip_small_label', '<span>Экономия</span>');
     ?>
     
     <div class="wrap">
@@ -627,21 +619,7 @@ function timer_admin_page() {
                     </td>
                 </tr>
                 
-                <tr>
-                    <th scope="row">Знижка (REGULAR)</th>
-                    <td>
-                        <input type="text" name="timer_regular_discount" value="<?php echo esc_attr($timer_regular_discount); ?>" class="regular-text">
-                        <p class="description">Наприклад: -33% або -100₴</p>
-                    </td>
-                </tr>
                 
-                <tr>
-                    <th scope="row">Мала підпис (REGULAR)</th>
-                    <td>
-                        <input type="text" name="timer_regular_small_label" value="<?php echo esc_attr($timer_regular_small_label); ?>" class="regular-text">
-                        <p class="description">Наприклад: Економія або Save</p>
-                    </td>
-                </tr>
                 
                 <tr>
                     <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
@@ -665,21 +643,7 @@ function timer_admin_page() {
                     </td>
                 </tr>
                 
-                <tr>
-                    <th scope="row">Знижка (VIP)</th>
-                    <td>
-                        <input type="text" name="timer_vip_discount" value="<?php echo esc_attr($timer_vip_discount); ?>" class="regular-text">
-                        <p class="description">Наприклад: -33% або -100₴</p>
-                    </td>
-                </tr>
                 
-                <tr>
-                    <th scope="row">Мала підпис (VIP)</th>
-                    <td>
-                        <input type="text" name="timer_vip_small_label" value="<?php echo esc_attr($timer_vip_small_label); ?>" class="regular-text">
-                        <p class="description">Наприклад: Економія або Save</p>
-                    </td>
-                </tr>
             </table>
             
             <?php submit_button('Зберегти налаштування', 'primary', 'submit_timer_settings'); ?>
