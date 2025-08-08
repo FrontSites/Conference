@@ -657,6 +657,59 @@ body img{pointer-events:none}
 .subscribe .container .subscribe-items .subscribe-item.right .form-items .form-item .main-button{max-width:9.5rem;margin-left:auto}
 .subscribe .container .subscribe-items .subscribe-item.right .form-items .form-item:last-child{max-width:9.5rem;width:100%}
 }
+.conference-timer{background:linear-gradient(135deg,#1a1a1a 0,#2d2d2d 100%);border-radius:20px;padding:30px;margin:20px 0;box-shadow:0 10px 30px rgba(0,0,0,.3);border:2px solid gold;position:relative;overflow:hidden}
+.conference-timer::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,gold,#ff6b35,gold);animation:shimmer 2s ease-in-out infinite}
+.conference-timer .timer-container{text-align:center;margin-bottom:25px}
+.conference-timer .timer-title{font-size:24px;font-weight:700;color:#fff;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px;text-shadow:0 2px 4px rgba(0,0,0,.5)}
+.conference-timer .timer-display{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap}
+.conference-timer .timer-unit{display:flex;flex-direction:column;align-items:center;min-width:80px}
+.conference-timer .timer-number{font-size:48px;font-weight:900;color:gold;text-shadow:0 0 20px rgba(255,215,0,.5);line-height:1;font-family:"Bebas Neue",sans-serif;background:linear-gradient(45deg,gold,#ffed4e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:pulse 1s ease-in-out infinite}
+.conference-timer .timer-label{font-size:14px;color:#ccc;text-transform:uppercase;letter-spacing:1px;margin-top:5px;font-weight:600}
+.conference-timer .timer-separator{font-size:36px;font-weight:900;color:gold;margin-top:-10px;animation:blink 1s ease-in-out infinite}
+.conference-timer .timer-prices{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.05);border-radius:15px;padding:20px;border:1px solid rgba(255,215,0,.3)}
+.conference-timer .timer-prices .price-block__item.left{text-align:left}
+.conference-timer .timer-prices .price-block__item.right{text-align:right}
+.conference-timer .timer-prices .price-block__old-price{font-size:18px;color:#999;text-decoration:line-through;margin-bottom:5px;font-weight:400}
+.conference-timer .timer-prices .price-block__old-price span{color:#999}
+.conference-timer .timer-prices .price-block__new-price{font-size:32px;font-weight:900;color:#ff6b35;margin-bottom:10px}
+.conference-timer .timer-prices .price-block__new-price span{color:#ff6b35;text-shadow:0 0 10px rgba(255,107,53,.3)}
+.conference-timer .timer-prices .price-block__small-label{font-size:12px;color:#ccc;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.conference-timer .timer-prices .price-block__small-label span{color:#ccc}
+.conference-timer .timer-prices .price-block__discount{font-size:16px;font-weight:700;color:#0f8}
+.conference-timer .timer-prices .price-block__discount span{color:#0f8;text-shadow:0 0 10px rgba(0,255,136,.3)}
+@keyframes pulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.05)}
+}
+@keyframes blink{
+0%,50%{opacity:1}
+100%,51%{opacity:.5}
+}
+@keyframes shimmer{
+0%{transform:translateX(-100%)}
+100%{transform:translateX(100%)}
+}
+@media (max-width:768px){
+.conference-timer{padding:20px;margin:15px 0}
+.conference-timer .timer-title{font-size:20px}
+.conference-timer .timer-display{gap:10px}
+.conference-timer .timer-unit{min-width:60px}
+.conference-timer .timer-number{font-size:36px}
+.conference-timer .timer-label{font-size:12px}
+.conference-timer .timer-separator{font-size:28px}
+.conference-timer .timer-prices{flex-direction:column;gap:15px;text-align:center}
+.conference-timer .timer-prices .price-block__item.left,.conference-timer .timer-prices .price-block__item.right{text-align:center}
+}
+@media (max-width:480px){
+.conference-timer{padding:15px}
+.conference-timer .timer-display{gap:8px}
+.conference-timer .timer-unit{min-width:50px}
+.conference-timer .timer-number{font-size:28px}
+.conference-timer .timer-label{font-size:10px}
+.conference-timer .timer-separator{font-size:24px}
+}
+.conference-timer.hidden{display:none!important}
+.conference-timer.expired{opacity:.5;pointer-events:none}
 @font-face{font-family:"Bebas Neue Cyrillic";src:url(../../assets/fonts/BebasNeueCyrillic.eot);src:local("../../assets/fonts/Bebas Neue Cyrillic"),local("BebasNeueCyrillic"),url(../../assets/fonts/BebasNeueCyrillic.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/BebasNeueCyrillic.woff2) format("woff2"),url(../../assets/fonts/BebasNeueCyrillic.woff) format("woff"),url(../../assets/fonts/BebasNeueCyrillic.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
 .container{max-width:1280px;margin:0 auto;padding:0 5rem}
 @media (width <= 80em){
