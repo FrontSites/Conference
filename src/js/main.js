@@ -619,7 +619,11 @@ function initTimer() {
   
   class ConferenceTimer {
     constructor() {
+      console.log('=== CONFERENCE TIMER CONSTRUCTOR ===');
       console.log('ConferenceTimer constructor called');
+      console.log('jQuery available:', typeof $ !== 'undefined');
+      console.log('jQuery version:', typeof $ !== 'undefined' ? $.fn.jquery : 'not available');
+      
       this.timerElement = $('#conference-timer');
       this.daysElement = $('#timer-days');
       this.hoursElement = $('#timer-hours');
