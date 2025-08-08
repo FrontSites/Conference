@@ -524,10 +524,10 @@ function timer_admin_page() {
         update_option('timer_hidden', isset($_POST['timer_hidden']) ? 1 : 0);
         update_option('timer_end_date', sanitize_text_field($_POST['timer_end_date']));
         update_option('timer_end_time', sanitize_text_field($_POST['timer_end_time']));
-        update_option('timer_regular_old_price', sanitize_text_field($_POST['timer_regular_old_price']));
-        update_option('timer_regular_new_price', sanitize_text_field($_POST['timer_regular_new_price']));
-        update_option('timer_vip_old_price', sanitize_text_field($_POST['timer_vip_old_price']));
-        update_option('timer_vip_new_price', sanitize_text_field($_POST['timer_vip_new_price']));
+        update_option('timer_regular_old_price', sanitize_price_html($_POST['timer_regular_old_price']));
+        update_option('timer_regular_new_price', sanitize_price_html($_POST['timer_regular_new_price']));
+        update_option('timer_vip_old_price', sanitize_price_html($_POST['timer_vip_old_price']));
+        update_option('timer_vip_new_price', sanitize_price_html($_POST['timer_vip_new_price']));
         
         echo '<div class="notice notice-success"><p>Налаштування таймера збережено!</p></div>';
     }
