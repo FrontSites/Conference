@@ -554,6 +554,10 @@ function timer_admin_page() {
         update_option('timer_regular_new_price' . $suffix, sanitize_price_html($_POST['timer_regular_new_price']));
         update_option('timer_vip_old_price' . $suffix, sanitize_price_html($_POST['timer_vip_old_price']));
         update_option('timer_vip_new_price' . $suffix, sanitize_price_html($_POST['timer_vip_new_price']));
+        // Заголовок таймера (языковой)
+        if (isset($_POST['timer_title'])) {
+            update_option('timer_title' . $suffix, sanitize_text_field($_POST['timer_title']));
+        }
         
         echo '<div class="notice notice-success"><p>Налаштування таймера збережено!</p></div>';
     }
