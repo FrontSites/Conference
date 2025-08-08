@@ -805,7 +805,7 @@ function display_conference_timer() {
         $current_lang = ICL_LANGUAGE_CODE;
     }
     
-    // Локализация для времени
+    // Локализация для времени и текста
     $time_labels = [
         'uk' => [
             'days' => ['день', 'дня', 'днів'],
@@ -821,7 +821,20 @@ function display_conference_timer() {
         ]
     ];
     
+    // Локализация для текста
+    $text_labels = [
+        'uk' => [
+            'title' => 'До кінця акції залишилось:',
+            'economy' => 'Економія'
+        ],
+        'en' => [
+            'title' => 'Time until promotion ends:',
+            'economy' => 'Save'
+        ]
+    ];
+    
     $labels = $time_labels[$current_lang] ?? $time_labels['uk'];
+    $texts = $text_labels[$current_lang] ?? $text_labels['uk'];
     
     ?>
     <div id="conference-timer" class="conference-timer">
