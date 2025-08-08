@@ -808,7 +808,7 @@ add_action('wp_ajax_nopriv_get_timer_data', 'get_timer_data');
 // Добавление данных таймера в основной скрипт
 function enqueue_timer_data() {
     if (!is_admin()) {
-        wp_localize_script('main', 'timer_ajax', [
+        wp_localize_script('main-min', 'timer_ajax', [
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('timer_nonce')
         ]);
