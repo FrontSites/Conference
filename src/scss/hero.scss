@@ -5,6 +5,7 @@
   position: relative;
   z-index: 3;
   padding-bottom: 2.5rem;
+  overflow: hidden;
   @include vw(padding-top, 150, 114, 150);
   .hero-background {
     position: absolute;
@@ -13,7 +14,6 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
