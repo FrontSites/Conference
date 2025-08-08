@@ -650,15 +650,49 @@ function get_timer_data() {
     $timer_hidden = get_option('timer_hidden', 0);
     $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
     $timer_end_time = get_option('timer_end_time', '23:59');
-    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
-    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
-    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
-    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    
+    // Цены для REGULAR билета
+    $timer_regular_old_price = get_option('timer_regular_old_price', '<span>299</span>');
+    $timer_regular_new_price = get_option('timer_regular_new_price', '<span>199</span>');
+    $timer_regular_discount = get_option('timer_regular_discount', '<span>-33%</span>');
+    $timer_regular_small_label = get_option('timer_regular_small_label', '<span>Экономия</span>');
+    
+    // Цены для VIP билета
+    $timer_vip_old_price = get_option('timer_vip_old_price', '<span>599</span>');
+    $timer_vip_new_price = get_option('timer_vip_new_price', '<span>399</span>');
+    $timer_vip_discount = get_option('timer_vip_discount', '<span>-33%</span>');
+    $timer_vip_small_label = get_option('timer_vip_small_label', '<span>Экономия</span>');
     
     $end_datetime = $timer_end_date . ' ' . $timer_end_time;
     $end_timestamp = strtotime($end_datetime);
     $current_timestamp = current_time('timestamp');
     $time_left = max(0, $end_timestamp - $current_timestamp);
+    
+    // Определяем текущий язык
+    $current_lang = 'uk'; // По умолчанию украинский
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+    } elseif (function_exists('icl_object_id')) {
+        $current_lang = ICL_LANGUAGE_CODE;
+    }
+    
+    // Локализация для времени
+    $time_labels = [
+        'uk' => [
+            'days' => ['день', 'дня', 'дней'],
+            'hours' => ['час', 'часа', 'часов'],
+            'minutes' => ['минута', 'минуты', 'минут'],
+            'seconds' => ['секунда', 'секунды', 'секунд']
+        ],
+        'en' => [
+            'days' => ['day', 'days', 'days'],
+            'hours' => ['hour', 'hours', 'hours'],
+            'minutes' => ['minute', 'minutes', 'minutes'],
+            'seconds' => ['second', 'seconds', 'seconds']
+        ]
+    ];
+    
+    $labels = $time_labels[$current_lang] ?? $time_labels['uk'];
     
     wp_send_json([
         'enabled' => (bool)$timer_enabled,
@@ -666,10 +700,19 @@ function get_timer_data() {
         'hidden' => (bool)$timer_hidden,
         'timeLeft' => $time_left,
         'endTimestamp' => $end_timestamp,
-        'oldPrice' => $timer_old_price,
-        'newPrice' => $timer_new_price,
-        'discount' => $timer_discount,
-        'smallLabel' => $timer_small_label,
+        'regular' => [
+            'oldPrice' => $timer_regular_old_price,
+            'newPrice' => $timer_regular_new_price,
+            'discount' => $timer_regular_discount,
+            'smallLabel' => $timer_regular_small_label
+        ],
+        'vip' => [
+            'oldPrice' => $timer_vip_old_price,
+            'newPrice' => $timer_vip_new_price,
+            'discount' => $timer_vip_discount,
+            'smallLabel' => $timer_vip_small_label
+        ],
+        'labels' => $labels,
         'expired' => $time_left <= 0
     ]);
 }
