@@ -785,7 +785,8 @@ function get_timer_data() {
         'enabled' => (bool)$timer_enabled,
         'paused' => (bool)$timer_paused,
         'hidden' => (bool)$timer_hidden,
-        'timeLeft' => $time_left,
+        // Возвращаем остаток времени в миллисекундах, чтобы совпадать с JavaScript
+        'timeLeft' => $time_left * 1000,
         'endTimestamp' => $end_timestamp,
         'regular' => [
             'oldPrice' => $timer_regular_old_price,
