@@ -53,7 +53,7 @@
         .timer-number {
           color: #FFF;
           text-align: center;
-          font-size: 48px;
+          @include vw(font-size, 48,32,48);
           font-style: normal;
           font-weight: 700;
           line-height: 120%;

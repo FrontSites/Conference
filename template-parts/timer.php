@@ -1,7 +1,4 @@
 <?php
-
-
-
 // Проверяем, включен ли таймер
 $timer_enabled = get_option('timer_enabled', 0);
 $timer_hidden = get_option('timer_hidden', 0);
