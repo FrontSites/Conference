@@ -569,7 +569,7 @@ function timer_admin_page() {
     $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
     $timer_end_time = get_option('timer_end_time', '23:59');
     
-    // Определяем язык админки для вывода цен
+    // Определяем язык админки для вывода цен и заголовка
     $admin_lang = 'uk';
     if (function_exists('pll_current_language')) {
         $admin_lang = pll_current_language();
@@ -584,6 +584,13 @@ function timer_admin_page() {
     
     $timer_vip_old_price = get_option('timer_vip_old_price' . $suffix, get_option('timer_vip_old_price', '<span>599</span>'));
     $timer_vip_new_price = get_option('timer_vip_new_price' . $suffix, get_option('timer_vip_new_price', '<span>399</span>'));
+
+    // Заголовок таймера по языку
+    $default_titles = [
+        'uk' => 'До кінця акції залишилось:',
+        'en' => 'Time until promotion ends:'
+    ];
+    $timer_title = get_option('timer_title' . $suffix, $default_titles[$admin_lang] ?? $default_titles['uk']);
     ?>
     
     <div class="wrap">
