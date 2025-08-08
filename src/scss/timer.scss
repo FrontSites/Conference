@@ -42,8 +42,16 @@
         border: 0.0625rem solid #17F7E2;
         display: flex;
         flex-direction: column;
-        .timer-number { 
-          
+
+        .timer-number {
+          color: #FFF;
+          text-align: center;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: 0.15rem;
+          text-transform: uppercase;
         }
       }
     }
