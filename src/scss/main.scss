@@ -29,10 +29,10 @@
   font-family: 'Bebas Neue Cyrillic';
   src: url('../../assets/fonts/BebasNeueCyrillic.eot');
   src: local('../../assets/fonts/Bebas Neue Cyrillic'), local('BebasNeueCyrillic'),
-      url('../../assets/fonts/BebasNeueCyrillic.eot?#iefix') format('embedded-opentype'),
-      url('../../assets/fonts/BebasNeueCyrillic.woff2') format('woff2'),
-      url('../../assets/fonts/BebasNeueCyrillic.woff') format('woff'),
-      url('../../assets/fonts/BebasNeueCyrillic.ttf') format('truetype');
+    url('../../assets/fonts/BebasNeueCyrillic.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/BebasNeueCyrillic.woff2') format('woff2'),
+    url('../../assets/fonts/BebasNeueCyrillic.woff') format('woff'),
+    url('../../assets/fonts/BebasNeueCyrillic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -46,16 +46,18 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
- padding: 0rem 5rem;
-  @media (width <= 80em) {
+  padding: 0rem 5rem;
+
+  @media (width <=80em) {
     padding: 0rem 1.875rem;
   }
-  @media (width <= 48em) {
+
+  @media (width <=48em) {
     padding: 0rem 1.25rem;
   }
 }
 
-@media (width <= 992px) {
+@media (width <=992px) {
   .burger.active {
     transform: rotate(90deg);
 
@@ -88,29 +90,33 @@
 
 
 
-.select2-container { 
+.select2-container {
   .select2-dropdown {
     transform: translateY(1.875rem) !important;
     background: transparent !important;
-    border-radius:  0px !important;
+    border-radius: 0px !important;
     border: none !important;
+
     .select2-results {
       padding: 0.625rem !important;
       border-bottom-left-radius: 0.625rem !important;
       border-bottom-right-radius: 0.625rem !important;
       border: 0.0625rem solid #FFF !important;
       background: #222649 !important;
+
       .select2-results__options {
         .select2-results__option {
           color: #FFF !important;
+
           &:hover {
             background: #2C3055 !important;
           }
+
           &.select2-results__option--highlighted {
             background: #FF29AE !important;
           }
         }
       }
     }
-  } 
+  }
 }
