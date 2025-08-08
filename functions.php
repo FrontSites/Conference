@@ -751,6 +751,20 @@ function get_timer_data() {
     
     $labels = $time_labels[$current_lang] ?? $time_labels['uk'];
     
+    // Локализация для текста
+    $text_labels = [
+        'uk' => [
+            'title' => 'До кінця акції залишилось:',
+            'economy' => 'Економія'
+        ],
+        'en' => [
+            'title' => 'Time until promotion ends:',
+            'economy' => 'Save'
+        ]
+    ];
+    
+    $texts = $text_labels[$current_lang] ?? $text_labels['uk'];
+    
     wp_send_json([
         'enabled' => (bool)$timer_enabled,
         'paused' => (bool)$timer_paused,
@@ -770,6 +784,7 @@ function get_timer_data() {
             'smallLabel' => $timer_vip_small_label
         ],
         'labels' => $labels,
+        'texts' => $texts,
         'expired' => $time_left <= 0
     ]);
 }
