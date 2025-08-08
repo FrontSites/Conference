@@ -10,7 +10,7 @@
           $image = get_sub_field('partner-media-image');
           $link = get_sub_field('partner-media-link');
       ?>
-          <a href="<?php echo $link; ?>" class="partners-item">
+          <a href="<?php echo $link; ?>" class="partners-item" target="_blank">
             <?php if ($image) : ?>
               <img src="<?php echo $image; ?>" alt="Media Partner">
             <?php endif; ?>
