@@ -58,12 +58,15 @@
     </div>
   </div>
   <script>
-    window.addEventListener('load', function () {
+    window.addEventListener('load', function() {
       var $ = window.jQuery;
       if (!$ || typeof window.timer_ajax === 'undefined') return;
 
-      $.post(window.timer_ajax.ajaxurl, { action: 'get_timer_data', nonce: window.timer_ajax.nonce })
-        .done(function (resp) {
+      $.post(window.timer_ajax.ajaxurl, {
+          action: 'get_timer_data',
+          nonce: window.timer_ajax.nonce
+        })
+        .done(function(resp) {
           if (!resp || !resp.success) return;
           var data = resp.data || {};
           if (!data.enabled) return;
@@ -90,7 +93,7 @@
           }
 
           applyPrices(0, data.regular); // REGULAR
-          applyPrices(1, data.vip);     // VIP
+          applyPrices(1, data.vip); // VIP
         });
     });
   </script>
