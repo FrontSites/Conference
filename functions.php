@@ -839,21 +839,21 @@ function display_conference_timer() {
     ?>
     <div id="conference-timer" class="conference-timer">
         <div class="timer-container">
-            <div class="timer-title">До конца акции осталось:</div>
+            <div class="timer-title"><?php echo $texts['title']; ?></div>
             <div class="timer-display">
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-days">00</span>
-                    <span class="timer-label" id="timer-days-label">дней</span>
+                    <span class="timer-label" id="timer-days-label">днів</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-hours">00</span>
-                    <span class="timer-label" id="timer-hours-label">часов</span>
+                    <span class="timer-label" id="timer-hours-label">годин</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
                     <span class="timer-number" id="timer-minutes">00</span>
-                    <span class="timer-label" id="timer-minutes-label">минут</span>
+                    <span class="timer-label" id="timer-minutes-label">хвилин</span>
                 </div>
                 <div class="timer-separator">:</div>
                 <div class="timer-unit">
@@ -872,6 +872,7 @@ function display_conference_timer() {
     <script>
         // Передаем локализацию в JavaScript
         window.timerLabels = <?php echo json_encode($labels); ?>;
+        window.timerTexts = <?php echo json_encode($texts); ?>;
     </script>
     </div>
     <?php
