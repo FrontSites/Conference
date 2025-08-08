@@ -606,7 +606,7 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: center; font-weight: bold;">
+                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
                         Цены для REGULAR билета
                     </th>
                 </tr>
@@ -644,7 +644,7 @@ function timer_admin_page() {
                 </tr>
                 
                 <tr>
-                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: center; font-weight: bold;">
+                    <th scope="row" colspan="2" style="background: #f0f0f0; padding: 10px; text-align: left; font-weight: bold;">
                         Цены для VIP билета
                     </th>
                 </tr>
