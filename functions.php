@@ -498,3 +498,255 @@ function sprite_icon($icon_name, $class_name = '', $sprite_path = '/sprite.svg')
     echo '<use xlink:href="' . esc_url($sprite_url) . '#' . esc_attr($icon_name) . '"></use>';
     echo '</svg>';
 }
+
+// ===== ТАЙМЕР СИСТЕМА =====
+
+// Создание админ-страницы для таймера
+function timer_admin_menu() {
+    add_menu_page(
+        'Таймер конференции',
+        'Таймер',
+        'manage_options',
+        'conference-timer',
+        'timer_admin_page',
+        'dashicons-clock',
+        30
+    );
+}
+add_action('admin_menu', 'timer_admin_menu');
+
+// Страница админки таймера
+function timer_admin_page() {
+    // Сохранение настроек
+    if (isset($_POST['submit_timer_settings'])) {
+        update_option('timer_enabled', isset($_POST['timer_enabled']) ? 1 : 0);
+        update_option('timer_paused', isset($_POST['timer_paused']) ? 1 : 0);
+        update_option('timer_hidden', isset($_POST['timer_hidden']) ? 1 : 0);
+        update_option('timer_end_date', sanitize_text_field($_POST['timer_end_date']));
+        update_option('timer_end_time', sanitize_text_field($_POST['timer_end_time']));
+        update_option('timer_old_price', sanitize_text_field($_POST['timer_old_price']));
+        update_option('timer_new_price', sanitize_text_field($_POST['timer_new_price']));
+        update_option('timer_discount', sanitize_text_field($_POST['timer_discount']));
+        update_option('timer_small_label', sanitize_text_field($_POST['timer_small_label']));
+        
+        echo '<div class="notice notice-success"><p>Настройки таймера сохранены!</p></div>';
+    }
+
+    // Получение текущих настроек
+    $timer_enabled = get_option('timer_enabled', 0);
+    $timer_paused = get_option('timer_paused', 0);
+    $timer_hidden = get_option('timer_hidden', 0);
+    $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
+    $timer_end_time = get_option('timer_end_time', '23:59');
+    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
+    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
+    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
+    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    ?>
+    
+    <div class="wrap">
+        <h1>Управление таймером конференции</h1>
+        
+        <form method="post" action="">
+            <table class="form-table">
+                <tr>
+                    <th scope="row">Статус таймера</th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="timer_enabled" value="1" <?php checked($timer_enabled, 1); ?>>
+                            Включить таймер
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Пауза таймера</th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="timer_paused" value="1" <?php checked($timer_paused, 1); ?>>
+                            Остановить таймер
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Скрыть таймер</th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="timer_hidden" value="1" <?php checked($timer_hidden, 1); ?>>
+                            Скрыть таймер на сайте
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Дата окончания</th>
+                    <td>
+                        <input type="date" name="timer_end_date" value="<?php echo esc_attr($timer_end_date); ?>" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Время окончания</th>
+                    <td>
+                        <input type="time" name="timer_end_time" value="<?php echo esc_attr($timer_end_time); ?>" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Старая цена</th>
+                    <td>
+                        <input type="text" name="timer_old_price" value="<?php echo esc_attr($timer_old_price); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Новая цена</th>
+                    <td>
+                        <input type="text" name="timer_new_price" value="<?php echo esc_attr($timer_new_price); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Скидка</th>
+                    <td>
+                        <input type="text" name="timer_discount" value="<?php echo esc_attr($timer_discount); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Маленькая подпись</th>
+                    <td>
+                        <input type="text" name="timer_small_label" value="<?php echo esc_attr($timer_small_label); ?>" class="regular-text">
+                        <p class="description">Используйте тег &lt;span&gt; для стилизации</p>
+                    </td>
+                </tr>
+            </table>
+            
+            <?php submit_button('Сохранить настройки', 'primary', 'submit_timer_settings'); ?>
+        </form>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-left: 4px solid #0073aa;">
+            <h3>Информация о таймере</h3>
+            <p><strong>Текущий статус:</strong> 
+                <?php echo $timer_enabled ? 'Включен' : 'Выключен'; ?> | 
+                <?php echo $timer_paused ? 'Остановлен' : 'Работает'; ?> | 
+                <?php echo $timer_hidden ? 'Скрыт' : 'Видим'; ?>
+            </p>
+            <p><strong>Время окончания:</strong> <?php echo $timer_end_date . ' ' . $timer_end_time; ?></p>
+            <p><strong>Цены:</strong> Старая: <?php echo $timer_old_price; ?> | Новая: <?php echo $timer_new_price; ?></p>
+        </div>
+    </div>
+    <?php
+}
+
+// AJAX обработчик для получения данных таймера
+function get_timer_data() {
+    $timer_enabled = get_option('timer_enabled', 0);
+    $timer_paused = get_option('timer_paused', 0);
+    $timer_hidden = get_option('timer_hidden', 0);
+    $timer_end_date = get_option('timer_end_date', date('Y-m-d'));
+    $timer_end_time = get_option('timer_end_time', '23:59');
+    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
+    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
+    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
+    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    
+    $end_datetime = $timer_end_date . ' ' . $timer_end_time;
+    $end_timestamp = strtotime($end_datetime);
+    $current_timestamp = current_time('timestamp');
+    $time_left = max(0, $end_timestamp - $current_timestamp);
+    
+    wp_send_json([
+        'enabled' => (bool)$timer_enabled,
+        'paused' => (bool)$timer_paused,
+        'hidden' => (bool)$timer_hidden,
+        'timeLeft' => $time_left,
+        'endTimestamp' => $end_timestamp,
+        'oldPrice' => $timer_old_price,
+        'newPrice' => $timer_new_price,
+        'discount' => $timer_discount,
+        'smallLabel' => $timer_small_label,
+        'expired' => $time_left <= 0
+    ]);
+}
+add_action('wp_ajax_get_timer_data', 'get_timer_data');
+add_action('wp_ajax_nopriv_get_timer_data', 'get_timer_data');
+
+// Добавление скрипта таймера на фронтенд
+function enqueue_timer_script() {
+    if (!is_admin()) {
+        wp_enqueue_script('conference-timer', get_template_directory_uri() . '/assets/js/timer.js', ['jquery'], '1.0.0', true);
+        wp_localize_script('conference-timer', 'timer_ajax', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('timer_nonce')
+        ]);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_timer_script');
+
+// Функция для вывода таймера в шаблоне
+function display_conference_timer() {
+    $timer_enabled = get_option('timer_enabled', 0);
+    $timer_hidden = get_option('timer_hidden', 0);
+    
+    if (!$timer_enabled || $timer_hidden) {
+        return;
+    }
+    
+    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
+    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
+    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
+    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    
+    ?>
+    <div id="conference-timer" class="conference-timer">
+        <div class="timer-container">
+            <div class="timer-title">До конца акции осталось:</div>
+            <div class="timer-display">
+                <div class="timer-unit">
+                    <span class="timer-number" id="timer-days">00</span>
+                    <span class="timer-label">дней</span>
+                </div>
+                <div class="timer-separator">:</div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="timer-hours">00</span>
+                    <span class="timer-label">часов</span>
+                </div>
+                <div class="timer-separator">:</div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="timer-minutes">00</span>
+                    <span class="timer-label">минут</span>
+                </div>
+                <div class="timer-separator">:</div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="timer-seconds">00</span>
+                    <span class="timer-label">секунд</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timer-prices">
+            <div class="price-block__item left">
+                <div class="price-block__old-price">
+                    <?php echo $timer_old_price; ?>
+                </div>
+                <div class="price-block__new-price">
+                    <?php echo $timer_new_price; ?>
+                </div>
+            </div>
+            <div class="price-block__item right">
+                <div class="price-block__small-label">
+                    <?php echo $timer_small_label; ?>
+                </div>
+                <div class="price-block__discount">
+                    <?php echo $timer_discount; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+}

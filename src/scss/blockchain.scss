@@ -32,7 +32,7 @@
       text-transform: uppercase;
 
       &:first-child {
-        transform: rotate(9.953deg) translate(-3.125rem, -3.75rem);
+        transform: rotate(9.953deg) translate(-3.125rem, -4.375rem);
         background: #F7E405;
         max-width: 10.125rem;
         color: #222649;
@@ -44,7 +44,7 @@
 
         background: #FF29AE;
         max-width: 19.125rem;
-        transform: rotate(-7.895deg) translate(1.875rem, -2.1875rem);
+        transform: rotate(-7.895deg) translate(1.875rem, -3.4375rem);
         color: #fff;
         @media (width <= 30em) {
           z-index: 1;
