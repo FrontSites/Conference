@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест таймера конференции</title>
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .test-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .test-info {
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-container">
+      <div class="test-info">
+        <h1>Тест системы таймера конференции</h1>
+        <p>Эта страница демонстрирует работу таймера конференции.</p>
+        <p>
+          <strong>Статус:</strong> <span id="timer-status">Загрузка...</span>
+        </p>
+      </div>
+
+      <!-- Таймер будет загружен через JavaScript -->
+      <div id="conference-timer" class="conference-timer" style="display: none">
+        <div class="timer-container">
+          <div class="timer-title">До конца акции осталось:</div>
+          <div class="timer-display">
+            <div class="timer-unit">
+              <span class="timer-number" id="timer-days">00</span>
+              <span class="timer-label">дней</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="timer-hours">00</span>
+              <span class="timer-label">часов</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="timer-minutes">00</span>
+              <span class="timer-label">минут</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="timer-seconds">00</span>
+              <span class="timer-label">секунд</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timer-prices">
+          <div class="price-block__item left">
+            <div class="price-block__old-price">
+              <span>299</span>
+            </div>
+            <div class="price-block__new-price">
+              <span>199</span>
+            </div>
+          </div>
+          <div class="price-block__item right">
+            <div class="price-block__small-label">
+              <span>Экономия</span>
+            </div>
+            <div class="price-block__discount">
+              <span>-33%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-info">
+        <h2>Инструкции по тестированию:</h2>
+        <ol>
+          <li>Откройте админ-панель WordPress</li>
+          <li>Перейдите в раздел "Таймер"</li>
+          <li>Настройте время окончания (например, через 1 час)</li>
+          <li>Включите таймер</li>
+          <li>Обновите эту страницу</li>
+          <li>Проверьте работу таймера</li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      // Имитация AJAX данных для тестирования
+      window.timer_ajax = {
+        ajaxurl: "test-ajax.php",
+        nonce: "test-nonce",
+      };
+
+      // Показываем таймер для демонстрации
+      $(document).ready(function () {
+        $("#conference-timer").show();
+        $("#timer-status").text("Таймер отображается (демо режим)");
+
+        // Простой демо таймер
+        let endTime = Date.now() + 24 * 60 * 60 * 1000; // 24 часа
+
+        function updateDemoTimer() {
+          const now = Date.now();
+          const timeLeft = Math.max(0, endTime - now);
+
+          if (timeLeft <= 0) {
+            $("#conference-timer").hide();
+            $("#timer-status").text("Таймер истек");
+            return;
+          }
+
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          $("#timer-days").text(days.toString().padStart(2, "0"));
+          $("#timer-hours").text(hours.toString().padStart(2, "0"));
+          $("#timer-minutes").text(minutes.toString().padStart(2, "0"));
+          $("#timer-seconds").text(seconds.toString().padStart(2, "0"));
+        }
+
+        updateDemoTimer();
+        setInterval(updateDemoTimer, 1000);
+      });
+    </script>
+  </body>
+</html>
