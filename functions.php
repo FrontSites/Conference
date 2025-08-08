@@ -729,9 +729,16 @@ function get_timer_data() {
     $timer_vip_discount = get_option('timer_vip_discount', '-33%');
     $timer_vip_small_label = get_option('timer_vip_small_label', 'Економія');
     
-    $end_datetime = $timer_end_date . ' ' . $timer_end_time;
-    $end_timestamp = strtotime($end_datetime);
-    $current_timestamp = current_time('timestamp');
+    // Корректно вычисляем время окончания в часовом поясе сайта WordPress
+    $timezone = wp_timezone();
+    $end_datetime_string = sprintf('%s %s', $timer_end_date, $timer_end_time);
+    $end_datetime_obj = date_create_from_format('Y-m-d H:i', $end_datetime_string, $timezone);
+
+    $end_timestamp = $end_datetime_obj instanceof DateTime ? $end_datetime_obj->getTimestamp() : 0;
+    // Текущее время в часовом поясе сайта
+    $now_wp = new DateTime('now', $timezone);
+    $current_timestamp = $now_wp->getTimestamp();
+
     $time_left = max(0, $end_timestamp - $current_timestamp);
     
     // Определяем текущий язык
@@ -745,7 +752,7 @@ function get_timer_data() {
     // Локализация для времени
     $time_labels = [
         'uk' => [
-            'days' => ['день', 'дня', 'дней'],
+            'days' => ['день', 'дня', 'днів'],
             'hours' => ['година', 'години', 'годин'],
             'minutes' => ['хвилина', 'хвилини', 'хвилин'],
             'seconds' => ['секунда', 'секунди', 'секунд']
