@@ -57,4 +57,41 @@
       ?>
     </div>
   </div>
+  <script>
+    window.addEventListener('load', function () {
+      var $ = window.jQuery;
+      if (!$ || typeof window.timer_ajax === 'undefined') return;
+
+      $.post(window.timer_ajax.ajaxurl, { action: 'get_timer_data', nonce: window.timer_ajax.nonce })
+        .done(function (resp) {
+          if (!resp || !resp.success) return;
+          var data = resp.data || {};
+          if (!data.enabled) return;
+
+          var $items = $('.price .price-items .price-item');
+
+          function applyPrices(idx, prices) {
+            if (!$items || !$items.length) return;
+            var $item = $items.eq(idx);
+            if (!$item.length || !prices) return;
+
+            var $oldEl = $item.find('.price-block__old-price');
+            var $newEl = $item.find('.price-block__new-price');
+
+            if (data.expired) {
+              // Акция закончилась: показываем старую цену как новую, старую скрываем
+              $newEl.html(prices.oldPrice);
+              $oldEl.hide();
+            } else {
+              // Идёт акция: подставляем старую и новую цены
+              $oldEl.show().html(prices.oldPrice);
+              $newEl.html(prices.newPrice);
+            }
+          }
+
+          applyPrices(0, data.regular); // REGULAR
+          applyPrices(1, data.vip);     // VIP
+        });
+    });
+  </script>
 </section>
