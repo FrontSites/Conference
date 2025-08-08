@@ -1,3 +1,8 @@
+// Простая проверка загрузки JavaScript
+console.log('=== MAIN.JS LOADED ===');
+console.log('Document ready state:', document.readyState);
+console.log('jQuery available:', typeof $ !== 'undefined');
+
 // Проверка загрузки стилей
 function checkStylesLoaded() {
   const styleSheets = Array.from(document.styleSheets);
