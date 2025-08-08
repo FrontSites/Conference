@@ -797,10 +797,31 @@ function display_conference_timer() {
         return;
     }
     
-    $timer_old_price = get_option('timer_old_price', '<span>299</span>');
-    $timer_new_price = get_option('timer_new_price', '<span>199</span>');
-    $timer_discount = get_option('timer_discount', '<span>-33%</span>');
-    $timer_small_label = get_option('timer_small_label', '<span>Экономия</span>');
+    // Определяем текущий язык
+    $current_lang = 'uk'; // По умолчанию украинский
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+    } elseif (function_exists('icl_object_id')) {
+        $current_lang = ICL_LANGUAGE_CODE;
+    }
+    
+    // Локализация для времени
+    $time_labels = [
+        'uk' => [
+            'days' => ['день', 'дня', 'дней'],
+            'hours' => ['час', 'часа', 'часов'],
+            'minutes' => ['минута', 'минуты', 'минут'],
+            'seconds' => ['секунда', 'секунды', 'секунд']
+        ],
+        'en' => [
+            'days' => ['day', 'days', 'days'],
+            'hours' => ['hour', 'hours', 'hours'],
+            'minutes' => ['minute', 'minutes', 'minutes'],
+            'seconds' => ['second', 'seconds', 'seconds']
+        ]
+    ];
+    
+    $labels = $time_labels[$current_lang] ?? $time_labels['uk'];
     
     ?>
     <div id="conference-timer" class="conference-timer">
