@@ -805,17 +805,16 @@ function get_timer_data() {
 add_action('wp_ajax_get_timer_data', 'get_timer_data');
 add_action('wp_ajax_nopriv_get_timer_data', 'get_timer_data');
 
-// Добавление скрипта таймера на фронтенд
-function enqueue_timer_script() {
+// Добавление данных таймера в основной скрипт
+function enqueue_timer_data() {
     if (!is_admin()) {
-        wp_enqueue_script('conference-timer', get_template_directory_uri() . '/assets/js/timer.js', ['jquery'], '1.0.0', true);
-        wp_localize_script('conference-timer', 'timer_ajax', [
+        wp_localize_script('main', 'timer_ajax', [
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('timer_nonce')
         ]);
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_timer_script');
+add_action('wp_enqueue_scripts', 'enqueue_timer_data');
 
 // Функция для вывода таймера в шаблоне
 function display_conference_timer() {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест AJAX таймера</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Тест AJAX запроса таймера</h1>
+    <div id="result"></div>
+    
+    <script>
+        $(document).ready(function() {
+            console.log('Тестируем AJAX запрос...');
+            
+            // Имитируем данные WordPress
+            window.timer_ajax = {
+                ajaxurl: '/wp-admin/admin-ajax.php', // Измените на ваш URL
+                nonce: 'test_nonce' // Это будет заменено реальным nonce
+            };
+            
+            $.ajax({
+                url: timer_ajax.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'get_timer_data',
+                    nonce: timer_ajax.nonce
+                },
+                success: function(response) {
+                    console.log('AJAX успешен:', response);
+                    $('#result').html('<pre>' + JSON.stringify(response, null, 2) + '</pre>');
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX ошибка:', error);
+                    console.error('Status:', status);
+                    console.error('Response:', xhr.responseText);
+                    $('#result').html('<p style="color: red;">Ошибка: ' + error + '</p><pre>' + xhr.responseText + '</pre>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
