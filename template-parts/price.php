@@ -26,9 +26,6 @@
                   </div>
                 </div>
                 <div class="price-block__item right">
-                  <div class="price-block__small-label">
-                    <?php the_sub_field('price-small-label'); ?>
-                  </div>
                   <div class="price-block__discount">
                     <?php the_sub_field('price-discount'); ?>
                   </div>
