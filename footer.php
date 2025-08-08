@@ -51,7 +51,11 @@
 </footer>
 </div>
 <?php get_template_part('template-parts/popup'); ?>
+<script
+  type="module"
+  src="https://wc.ticketcrm.com/lib/tbx-widget.min.js"></script>
 <?php wp_footer(); ?>
+
 </body>
 
 </html>

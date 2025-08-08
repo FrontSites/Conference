@@ -32,17 +32,20 @@
                 </div>
 
               </div>
-
-              <a href="<?php the_sub_field('price-link'); ?>" class="main-button ticket">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.svg" alt="description">
-                <?php
-                if (function_exists('the_field')) {
-                  the_field("ticket_button_text", "option");
-                } else {
-                  echo 'Buy Ticket';
-                }
-                ?>
-              </a>
+              <tbx-button event-hash="73c4b185718e8b9f19934819446e95618684791e"
+                lang="<?php echo esc_attr(function_exists('pll_current_language') ? pll_current_language() : (defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'uk')); ?>"
+                currency="USD">
+                <div class="main-button ticket">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.svg" alt="description">
+                  <?php
+                  if (function_exists('the_field')) {
+                    the_field("ticket_button_text", "option");
+                  } else {
+                    echo 'Buy Ticket';
+                  }
+                  ?>
+                </div>
+              </tbx-button>
             </div>
           </div>
       <?php
