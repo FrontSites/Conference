@@ -175,9 +175,10 @@
 
           }
           .tbx-button { 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex !important;
+            justify-content: center !important
+            align-items: center !important;
+            width: 100% !important;
           }
           .main-button {
             transition: 0.3s ease;
