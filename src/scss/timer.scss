@@ -4,7 +4,7 @@
 .conference-timer {
   max-width: 56.375rem;
   margin: 0 auto;
-  margin-top: 6.25rem;
+  @include vw(margin-top, 100,40,100);
   width: 100%;
   padding-top: 1.5625rem;
   padding-bottom: 4.6875rem;
