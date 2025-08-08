@@ -774,7 +774,7 @@ function get_timer_data() {
     
     $texts = $text_labels[$current_lang] ?? $text_labels['uk'];
     
-    wp_send_json([
+    $response_data = [
         'enabled' => (bool)$timer_enabled,
         'paused' => (bool)$timer_paused,
         'hidden' => (bool)$timer_hidden,
@@ -795,7 +795,12 @@ function get_timer_data() {
         'labels' => $labels,
         'texts' => $texts,
         'expired' => $time_left <= 0
-    ]);
+    ];
+    
+    // Логируем данные для отладки
+    error_log('Timer response data: ' . json_encode($response_data));
+    
+    wp_send_json_success($response_data);
 }
 add_action('wp_ajax_get_timer_data', 'get_timer_data');
 add_action('wp_ajax_nopriv_get_timer_data', 'get_timer_data');

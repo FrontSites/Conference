@@ -68,7 +68,10 @@
                 },
                 success: (response) => {
                     console.log('Timer data loaded:', response);
-                    if (response.success) {
+                    console.log('Response success:', response.success);
+                    console.log('Response data:', response.data);
+                    
+                    if (response.success && response.data) {
                         const data = response.data;
                         this.isEnabled = data.enabled;
                         this.isPaused = data.paused;
