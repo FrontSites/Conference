@@ -43,7 +43,6 @@
       .timer-unit {
         @include vw(width, 100, 70, 100);
         @include vw(height, 100, 70, 100);
-        flex: none;
         border-radius: 1.5625rem;
         border: 0.0625rem solid #17F7E2;
         display: flex;
