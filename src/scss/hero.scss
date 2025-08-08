@@ -6,7 +6,14 @@
   z-index: 3;
   padding-bottom: 2.5rem;
   @include vw(padding-top, 150, 114, 150);
-
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   background: #fff;
   color: #222649;
 
