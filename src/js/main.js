@@ -51,7 +51,10 @@ function initializeAll() {
 }
 
 // Инициализация при загрузке DOM
-document.addEventListener("DOMContentLoaded", initializeAll);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log('=== DOM CONTENT LOADED ===');
+  initializeAll();
+});
 
 // Дополнительная инициализация при полной загрузке страницы
 window.addEventListener("load", () => {
