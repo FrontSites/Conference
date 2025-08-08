@@ -658,7 +658,7 @@ body img{pointer-events:none}
 .subscribe .container .subscribe-items .subscribe-item.right .form-items .form-item:last-child{max-width:9.5rem;width:100%}
 }
 .conference-timer{margin-top:2.5rem;max-width:52.5rem;margin:0 auto;width:100%;padding-top:1.5625rem;padding-bottom:4.6875rem;justify-content:center;align-items:center;border-radius:25px;background:linear-gradient(180deg,#2c3055 0,rgba(44,48,85,0) 92.8%)}
-.conference-timer .timer-container h3{color:#fff;text-align:center;font-family:Manrope;font-size:1.25rem;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase}
+.conference-timer .timer-container h3{color:#fff;text-align:center;font-family:Manrope;font-size:1.25rem;font-weight:700;line-height:120%;row-gap:1.625rem;letter-spacing:.0625rem;text-transform:uppercase}
 .conference-timer .timer-container .timer-display{display:flex;align-items:stretch;justify-content:center}
 @font-face{font-family:"Bebas Neue Cyrillic";src:url(../../assets/fonts/BebasNeueCyrillic.eot);src:local("../../assets/fonts/Bebas Neue Cyrillic"),local("BebasNeueCyrillic"),url(../../assets/fonts/BebasNeueCyrillic.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/BebasNeueCyrillic.woff2) format("woff2"),url(../../assets/fonts/BebasNeueCyrillic.woff) format("woff"),url(../../assets/fonts/BebasNeueCyrillic.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
 .container{max-width:1280px;margin:0 auto;padding:0 5rem}
