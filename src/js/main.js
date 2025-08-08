@@ -2,6 +2,8 @@
 console.log('=== MAIN.JS LOADED ===');
 console.log('Document ready state:', document.readyState);
 console.log('jQuery available:', typeof $ !== 'undefined');
+console.log('Window location:', window.location.href);
+console.log('Script loaded at:', new Date().toISOString());
 
 // Проверка загрузки стилей
 function checkStylesLoaded() {

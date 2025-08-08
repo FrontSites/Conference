@@ -902,6 +902,5 @@ function display_conference_timer() {
         window.timerLabels = <?php echo json_encode($labels); ?>;
         window.timerTexts = <?php echo json_encode($texts); ?>;
     </script>
-    </div>
     <?php
 }
