@@ -691,13 +691,21 @@ function initTimer() {
           console.log('Response success:', response.success);
           console.log('Response data:', response.data);
           
-          if (response.success && response.data) {
-            const data = response.data;
-            this.isEnabled = data.enabled;
-            this.isPaused = data.paused;
-            this.isHidden = data.hidden;
-            this.endTime = data.endTimestamp * 1000; // Конвертируем в миллисекунды
-            this.labels = data.labels || this.labels;
+                      if (response.success && response.data) {
+              const data = response.data;
+              this.isEnabled = data.enabled;
+              this.isPaused = data.paused;
+              this.isHidden = data.hidden;
+              this.endTime = data.endTimestamp * 1000; // Конвертируем в миллисекунды
+              this.labels = data.labels || this.labels;
+              
+              // Отладочная информация для данных таймера
+              console.log('=== TIMER DATA DEBUG ===');
+              console.log('Raw endTimestamp:', data.endTimestamp);
+              console.log('Calculated endTime:', this.endTime);
+              console.log('Current Date.now():', Date.now());
+              console.log('Time difference (ms):', this.endTime - Date.now());
+              console.log('Time difference (days):', (this.endTime - Date.now()) / (1000 * 60 * 60 * 24));
             
             // Обновляем заголовок таймера
             if (data.texts && data.texts.title) {
