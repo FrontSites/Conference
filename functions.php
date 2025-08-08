@@ -576,17 +576,17 @@ function timer_admin_page() {
                     <td>
                         <label>
                             <input type="checkbox" name="timer_paused" value="1" <?php checked($timer_paused, 1); ?>>
-                            Остановить таймер
+                            Зупинити таймер
                         </label>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th scope="row">Скрыть таймер</th>
+                    <th scope="row">Приховати таймер</th>
                     <td>
                         <label>
                             <input type="checkbox" name="timer_hidden" value="1" <?php checked($timer_hidden, 1); ?>>
-                            Скрыть таймер на сайте
+                            Приховати таймер на сайті
                         </label>
                     </td>
                 </tr>
