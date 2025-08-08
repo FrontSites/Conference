@@ -1,6 +1,10 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.timer-container { 
-  
+.conference-timer { 
+  padding: 25px 190px 75px 190px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background: linear-gradient(180deg, #2C3055 0%, rgba(44, 48, 85, 0.00) 92.8%);
 }
