@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: center;
     row-gap: 1.625rem;
+
     h3 {
       color: #FFF;
       text-align: center;
@@ -35,9 +36,15 @@
       display: flex;
       align-items: stretch;
       justify-content: center;
+
       .timer-unit {
+        border-radius: 1.5625rem;
+        border: 0.0625rem solid #17F7E2;
         display: flex;
         flex-direction: column;
+        .timer-number { 
+          
+        }
       }
     }
   }
