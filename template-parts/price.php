@@ -4,10 +4,7 @@
       <?php the_field('price-title'); ?>
     </h2>
 
-    <?php
-    // Выводим таймер конференции
-    get_template_part('template-parts/timer');
-    ?>
+
 
     <div class="price-items">
       <?php
