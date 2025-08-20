@@ -5,6 +5,11 @@
   padding-top: 4.375rem;
   border-top-right-radius: 1.5625rem;
   position: relative;
+  .blockchain-img-text { 
+    &.mob {
+      display: none;
+    }
+  }
 
   .blockchain-voices {
     transform: rotate(9.953deg);
