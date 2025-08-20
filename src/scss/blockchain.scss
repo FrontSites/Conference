@@ -9,10 +9,13 @@
     &.mob {
       display: none;
       @media (width <= 62em) {
+        display: flex;
+        flex-direction: column;
         display: block;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
         p {
           @include vw(font-size, 20, 16, 20);
