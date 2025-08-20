@@ -78,8 +78,7 @@
     }
     @media (width <= 30em) {
       top: -180px;
-      right: 50px;
-      @include vw(margin-left, );
+      @include vw(right, 50,20,50);
     }
   }
 
