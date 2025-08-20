@@ -65,6 +65,11 @@
       transform: rotate(-9.953deg) translate(0rem, 0rem);
       
     }
+    @media (width <= 62em) {
+      top: -5rem;
+      right: 0;
+      left: auto
+    }
   }
 
   .blockchain-img-block {
