@@ -150,7 +150,12 @@
           display: flex;
           align-items: center;
           .icon {
-            
+            width: 1.4375rem;
+            height: 1.4375rem;
+            background: #FF29AE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           h3 {
             
