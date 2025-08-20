@@ -64,7 +64,9 @@
     z-index: 3;
 
     .blockchain-img-text { 
-      
+      @media (width <= 62em) {
+        display: none;
+      }
     }
 
     p {
