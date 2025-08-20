@@ -129,6 +129,11 @@
         left: -5rem;
         top: 26.875rem;
       }
+      @media (width <= 62em) {
+        top: -16.6875rem;
+        left: 60%;
+        transform: translateX(-60%);
+      }
     }
   }
 
