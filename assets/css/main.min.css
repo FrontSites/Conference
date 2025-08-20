@@ -604,7 +604,7 @@ body img{pointer-events:none}
 }
 .speakers .container .speakers-items .speakers-item .speakers-item__image{padding:.875rem .4375rem;padding-bottom:0;display:flex;justify-content:center;align-items:flex-end;border-radius:15px;background:#222649}
 .speakers .container .speakers-items .speakers-item .speakers-item__image img{width:100%;height:100%;max-width:none;-o-object-fit:cover;object-fit:cover}
-.speakers .container .speakers-items .speakers-item .speakers-item__name{display:flex;align-items:center}
+.speakers .container .speakers-items .speakers-item .speakers-item__name{display:flex;align-items:center;-moz-column-gap:.375rem;column-gap:.375rem}
 .speakers .container .speakers-items .speakers-item .speakers-item__name .icon{width:1.4375rem;height:1.4375rem;background:#ff29ae;display:flex;justify-content:center;align-items:center}
 .speakers .container .speakers-items .speakers-item .speakers-item__name .icon svg path{transition:.3s ease}
 @media (hover:hover){
