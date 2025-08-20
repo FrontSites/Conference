@@ -195,6 +195,9 @@
         top: -38rem;
         left: 25%;
       }
+      @media (width <= 30em) {
+        left: 28%;
+      }
     }
   }
 
