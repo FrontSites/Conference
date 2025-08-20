@@ -5,23 +5,24 @@
   padding-top: 4.375rem;
   border-top-right-radius: 1.5625rem;
   position: relative;
- .blockchain-voices { 
-  transform: rotate(9.953deg) ;
-  background: #F7E405;
-  @include vw(font-size, 20,16,20);
-  font-style: normal;
-  font-weight: 700;
-  padding: 7px 7px;
-  line-height: 120%;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
-  color: #222649;
-  border-radius: 0.3125rem;
-  position: absolute;
-  left: 18.75rem;
-  top: 6.25rem;
-  z-index: 3;
- }
+
+  .blockchain-voices {
+    transform: rotate(9.953deg);
+    background: #F7E405;
+    @include vw(font-size, 20, 16, 20);
+    font-style: normal;
+    font-weight: 700;
+    padding: 7px 7px;
+    line-height: 120%;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: #222649;
+    border-radius: 0.3125rem;
+    position: absolute;
+    left: 19.75rem;
+    top: 11.25rem;
+    z-index: 3;
+  }
 
   .blockchain-img-block {
     display: flex;
@@ -29,66 +30,73 @@
     align-items: center;
     max-width: 153.125rem;
     position: absolute;
-    
+
     z-index: 3;
+
     p {
-      @include vw(font-size, 20,16,20);
+      @include vw(font-size, 20, 16, 20);
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
       letter-spacing: 0.0625rem;
       text-transform: uppercase;
-        background: #FF29AE;
-        max-width: 19.125rem;
-        border-radius: 0.3125rem;
-        padding: 7px 7px;
+      background: #FF29AE;
+      max-width: 19.125rem;
+      border-radius: 0.3125rem;
+      padding: 7px 7px;
     }
 
-   
-    @media (width <= 64em) {
+
+    @media (width <=64em) {
       left: -3.125rem;
     }
-    @media (width <= 62em) {
+
+    @media (width <=62em) {
       position: relative;
       top: -15.625rem;
       left: auto;
-      
-      
+
+
     }
-    @media (width <= 30em) {
+
+    @media (width <=30em) {
       top: -13.75rem;
     }
 
     &.man {
       left: 2.25rem;
-    top: -0.125rem;
-    p {
-      position: relative;
-     
-      text-align: center;
-      background: #2A2F5D;
-   
-      @include vw(font-size, 20,16,20);
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%;
-      letter-spacing: 0.0625rem;
-      text-transform: uppercase;
+      top: -0.125rem;
+
+      p {
+        position: relative;
+
+        text-align: center;
+        background: #2A2F5D;
+
+        @include vw(font-size, 20, 16, 20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
         background: #FF29AE;
         max-width: 19.125rem;
         transform: rotate(-7.895deg) translate(-0.9375rem, -3.4375rem);
         color: #fff;
-        @media (width <= 30em) {
+
+        @media (width <=30em) {
           z-index: 1;
-        transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
+          transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
 
         }
-      
+
+      }
     }
-    }
+
     &.girl {
       left: 14.375rem;
       top: 19.375rem;
+
       p {
         text-align: center;
         transform: rotate(-7.895deg) translate(0.625rem, -3.4375rem);
@@ -96,7 +104,7 @@
     }
   }
 
- 
+
 
   &:before {
     content: "";
@@ -258,25 +266,27 @@
         }
       }
     }
-    @media (width <= 62em) {
+
+    @media (width <=62em) {
       margin-top: -14.8125rem;
     }
   }
-  @media (width <= 62em) {
+
+  @media (width <=62em) {
     margin-top: 11.25rem;
     padding-top: 0rem;
   }
-  
+
 }
 
 .lang-en {
-  .blockchain { 
-    .blockchain-img-block {  
+  .blockchain {
+    .blockchain-img-block {
       p {
         &:first-child {
           max-width: 14.125rem;
+        }
       }
-    }
     }
   }
 }
