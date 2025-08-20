@@ -68,7 +68,7 @@
 
     &.man {
       left: 2.25rem;
-    @include vw(top, 50, 1, 50);
+    top: -3.125rem;
     }
   }
 
