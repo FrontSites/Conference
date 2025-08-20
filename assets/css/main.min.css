@@ -1,7 +1,7 @@
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-voices{transform:rotate(9.953deg);background:#f7e405;font-size:clamp(16px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;padding:7px 7px;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase;color:#222649;border-radius:.3125rem;position:absolute;left:19.75rem;top:11.25rem;z-index:3}
 @media (width <= 75em){
-.blockchain .blockchain-voices{left:17.5rem;top:13.75rem;transform:rotate(9.953deg) translate(0,0)}
+.blockchain .blockchain-voices{left:11.25rem;top:13.75rem;transform:rotate(9.953deg) translate(0,0)}
 }
 .blockchain .blockchain-img-block{display:flex;flex-direction:column;align-items:center;max-width:153.125rem;position:absolute;z-index:3}
 .blockchain .blockchain-img-block p{font-size:clamp(16px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase;background:#ff29ae;max-width:19.125rem;border-radius:.3125rem;padding:7px 7px}
