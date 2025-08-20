@@ -13,6 +13,10 @@
       <?php the_field("sched-item-text_2"); ?>
     </div>
   </div>
+  <div class="blockchain-img-text">
+    <?php the_field("sched-item-text"); ?>
+    <?php the_field("sched-item-text_2"); ?>
+  </div>
   <img class="blockchain-bg" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockchain.svg" alt="">
   <img class="blockchain-circle" src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-circle.webp" alt="">
   <div class="container">
