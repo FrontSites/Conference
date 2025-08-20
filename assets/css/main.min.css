@@ -102,6 +102,9 @@
 @media (width <= 62em){
 .blockchain .container{margin-top:-38.8125rem}
 }
+@media (width <= 30em){
+.blockchain .container{margin-top:-42.8125rem}
+}
 @media (width <= 62em){
 .blockchain{margin-top:11.25rem;padding-top:0}
 }
