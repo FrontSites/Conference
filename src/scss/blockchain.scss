@@ -14,6 +14,18 @@
         top: 0;
         left: 0;
         width: 100%;
+        p {
+          @include vw(font-size, 20, 16, 20);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: 0.0625rem;
+          text-transform: uppercase;
+          background: #FF29AE;
+          max-width: 19.125rem;
+          border-radius: 0.3125rem;
+          padding: 7px 7px;
+        }
       }
     }
   }
