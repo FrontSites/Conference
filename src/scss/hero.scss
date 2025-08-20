@@ -405,7 +405,11 @@
           }
         }
       }
-      @m
+      @media (width <= 48em) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     @media (width <=30em) {
