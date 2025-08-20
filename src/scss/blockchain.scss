@@ -94,6 +94,10 @@
       @media (width <= 78.125rem) {
         top: 1.875rem;
       }
+      @media (width <= 75em) {
+        left: 0px;
+        
+      }
     }
 
     &.girl {
@@ -111,7 +115,7 @@
 
       @media (width <= 75em) {
         left: 0px;
-        top: 25rem;
+        top: 400px;
       }
     }
   }
