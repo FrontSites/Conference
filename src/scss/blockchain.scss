@@ -5,7 +5,7 @@
   padding-top: 4.375rem;
   border-top-right-radius: 1.5625rem;
   position: relative;
- 
+ .blockchain-voices { 
 
   .blockchain-img-block {
     display: flex;
@@ -32,10 +32,7 @@
       text-transform: uppercase;
 
       &:first-child {
-        transform: rotate(9.953deg) translate(-3.125rem, -4.375rem);
-        background: #F7E405;
-        max-width: 10.125rem;
-        color: #222649;
+      
         @media (width <= 30em) {
           z-index: 2;
         }
