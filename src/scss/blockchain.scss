@@ -43,12 +43,7 @@
       letter-spacing: 0.0625rem;
       text-transform: uppercase;
 
-      &:first-child {
       
-        @media (width <= 30em) {
-          z-index: 2;
-        }
-      }
       &:last-child { 
 
         background: #FF29AE;
@@ -60,7 +55,7 @@
         transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
 
         }
-      }
+      
     }
     @media (width <= 64em) {
       left: -3.125rem;
