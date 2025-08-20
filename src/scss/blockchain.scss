@@ -6,6 +6,17 @@
   border-top-right-radius: 1.5625rem;
   position: relative;
  .blockchain-voices { 
+  transform: rotate(9.953deg) translate(-3.125rem, -4.375rem);
+  background: #F7E405;
+  max-width: 10.125rem;
+  @include vw(font-size, 20,16,20);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  color: #222649;
+ }
 
   .blockchain-img-block {
     display: flex;
