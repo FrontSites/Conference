@@ -1,13 +1,13 @@
 <section class="blockchain">
   <div class="blockchein-voices"><?php the_field("blockchain-voices"); ?></div>
-  <div class="blockchain-img-block">
+  <div class="blockchain-img-block man">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
     <div class="blockchain-img-text">
       <?php the_field("sched-item-text"); ?>
     </div>
   </div>
 
-  <div class="blockchain-img-block">
+  <div class="blockchain-img-block girl">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
     <div class="blockchain-img-text">
       <?php the_field("sched-item-text_2"); ?>
