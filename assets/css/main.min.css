@@ -19,7 +19,7 @@
 .blockchain .blockchain-img-block.girl{left:14.375rem;top:19.375rem}
 .blockchain .blockchain-img-block.girl p{text-align:center;transform:rotate(-7.895deg) translate(.625rem,-3.4375rem)}
 @media (width <= 78.125rem){
-.blockchain .blockchain-img-block.girl{left:9.375rem;top:20.625rem}
+.blockchain .blockchain-img-block.girl{left:9.375rem;top:23.125rem}
 }
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
 .blockchain .blockchain-bg{position:absolute;top:-50%;left:0;width:77.8125rem}
