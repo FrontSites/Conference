@@ -95,7 +95,10 @@
           transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
 
         }
-
+@media (width <= 62em) {
+  position: relative;
+  z-index: 5;
+}
       }
       @media (width <= 78.125rem) {
         top: 1.875rem;
