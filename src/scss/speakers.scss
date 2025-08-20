@@ -149,6 +149,7 @@
         .speakers-item__name {
           display: flex;
           align-items: center;
+          column-gap: 0.375rem;
           .icon {
             width: 1.4375rem;
             height: 1.4375rem;
@@ -156,6 +157,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            svg {
+              path {
+                transition: 0.3s ease;
+              }
+            }
             @media (hover:hover) {
               &:hover {
                 background: #F7E405;

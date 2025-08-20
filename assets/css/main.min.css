@@ -606,6 +606,7 @@ body img{pointer-events:none}
 .speakers .container .speakers-items .speakers-item .speakers-item__image img{width:100%;height:100%;max-width:none;-o-object-fit:cover;object-fit:cover}
 .speakers .container .speakers-items .speakers-item .speakers-item__name{display:flex;align-items:center}
 .speakers .container .speakers-items .speakers-item .speakers-item__name .icon{width:1.4375rem;height:1.4375rem;background:#ff29ae;display:flex;justify-content:center;align-items:center}
+.speakers .container .speakers-items .speakers-item .speakers-item__name .icon svg path{transition:.3s ease}
 @media (hover:hover){
 .speakers .container .speakers-items .speakers-item .speakers-item__name .icon:hover{background:#f7e405}
 .speakers .container .speakers-items .speakers-item .speakers-item__name .icon:hover svg path{fill:#22274a}
