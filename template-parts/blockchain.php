@@ -13,7 +13,7 @@
       <?php the_field("sched-item-text_2"); ?>
     </div>
   </div>
-  <div class="blockchain-img-text">
+  <div class="blockchain-img-text mob">
     <?php the_field("sched-item-text"); ?>
     <?php the_field("sched-item-text_2"); ?>
   </div>
