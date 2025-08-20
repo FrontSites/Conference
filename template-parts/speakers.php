@@ -8,7 +8,7 @@
         $image = $speaker["speaker-image"];
         $name = $speaker["speaker-name"];
         $position = $speaker["speaker-position"];
-        $label = $speaker["speaker-label"];
+        $label = isset($speaker["speaker-label"]) ? trim($speaker["speaker-label"]) : '';
       ?>
         <div class="speakers-item">
           <div class="speakers-item__image">
@@ -18,9 +18,9 @@
             <h3><?php echo $name; ?></h3>
           </div>
           <p><?php echo $position; ?></p>
-          <div class="speaker-label">
-            <?php echo $label; ?>
-          </div>
+          <?php if ($label !== ''): ?>
+            <div class="speaker-label"><?php echo $label; ?></div>
+          <?php endif; ?>
         </div>
       <?php } ?>
     </div>
