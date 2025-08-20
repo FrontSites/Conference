@@ -606,7 +606,7 @@ body img{pointer-events:none}
 .speakers .container .speakers-items .speakers-item .speakers-item__image img{width:100%;height:100%;max-width:none;-o-object-fit:cover;object-fit:cover}
 .speakers .container .speakers-items .speakers-item .speakers-item__name h3{font-family:Manrope;font-weight:700;font-size:1.25rem;font-weight:700;letter-spacing:.0625rem;text-align:center;margin-top:.8125rem}
 .speakers .container .speakers-items .speakers-item .speakers-item__name h3:empty{display:none}
-.speakers .container .speakers-items .speakers-item p{max-width:10.625rem;color:#fff;margin:0 auto;margin-top:.8125rem;text-align:center;font-size:.75rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0375rem}
+.speakers .container .speakers-items .speakers-item p{color:#fff;margin:0 auto;margin-top:.8125rem;text-align:center;font-size:.75rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0375rem}
 .speakers .container .speakers-items .speakers-item p:empty{display:none}
 .speakers .container .speakers-items .speakers-item .speaker-label{transform:rotate(9.953deg) translateY(-1.875rem);max-width:10.9375rem;margin:0 auto;color:#22274a;font-size:20px;font-style:normal;padding:7px 15px;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-align:center;text-transform:uppercase;border-radius:.3125rem;background:#f7e405}
 .speakers .container .speakers-items .speakers-item .speaker-label:empty{display:none}
