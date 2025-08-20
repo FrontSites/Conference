@@ -76,7 +76,7 @@
 }
 .blockchain .blockchain-circle{position:absolute;top:0;right:0;max-width:100%;z-index:1;border-top-right-radius:1.5625rem}
 .blockchain .container{position:relative;z-index:4}
-.blockchain .container .blockchain-block{max-width:40.25rem;margin-left:auto;display:flex;flex-direction:column}
+.blockchain .container .blockchain-block{max-width:44.25rem;margin-left:auto;display:flex;flex-direction:column}
 .blockchain .container .blockchain-block h2{font-family:"Bebas Neue Cyrillic",sans-serif;margin-bottom:1.25rem;letter-spacing:.2rem}
 .blockchain .container .blockchain-block .block-chain-block__list{margin-bottom:1.25rem}
 .blockchain .container .blockchain-block .block-chain-block__list ul{display:flex;flex-direction:column;row-gap:1.25rem;align-items:flex-start}
