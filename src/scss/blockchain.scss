@@ -8,6 +8,13 @@
   .blockchain-img-text { 
     &.mob {
       display: none;
+      @media (width <= 62em) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 
