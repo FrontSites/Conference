@@ -16,6 +16,9 @@
 @media (width <= 30em){
 .blockchain .blockchain-img-block.man p{z-index:1;transform:rotate(-7.895deg) translate(1.875rem,-3.9375rem)}
 }
+@media (width <= 78.125rem){
+.blockchain .blockchain-img-block.man{top:1.875rem}
+}
 .blockchain .blockchain-img-block.girl{left:14.375rem;top:19.375rem}
 .blockchain .blockchain-img-block.girl p{text-align:center;transform:rotate(-7.895deg) translate(.625rem,-3.4375rem)}
 @media (width <= 78.125rem){
