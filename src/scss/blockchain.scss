@@ -28,30 +28,7 @@
     
     z-index: 3;
 
-    p {
-      position: relative;
-      padding: 7px 7px;
-      text-align: center;
-      background: #2A2F5D;
-      border-radius: 0.3125rem;
-      border-radius: 5px;
-      @include vw(font-size, 20,16,20);
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%;
-      letter-spacing: 0.0625rem;
-      text-transform: uppercase;
-        background: #FF29AE;
-        max-width: 19.125rem;
-        transform: rotate(-7.895deg) translate(1.875rem, -3.4375rem);
-        color: #fff;
-        @media (width <= 30em) {
-          z-index: 1;
-        transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
-
-        }
-      
-    }
+   
     @media (width <= 64em) {
       left: -3.125rem;
     }
