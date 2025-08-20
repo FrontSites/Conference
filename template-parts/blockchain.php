@@ -1,5 +1,5 @@
 <section class="blockchain">
-  <div class="blockchein-voices"><?php the_field("blockchain-voices"); ?></div>
+  <div class="blockchain-voices"><?php the_field("blockchain-voices"); ?></div>
   <div class="blockchain-img-block man">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
     <div class="blockchain-img-text">
