@@ -25,8 +25,7 @@
     align-items: center;
     max-width: 153.125rem;
     position: absolute;
-    left: 2.25rem;
-    @include vw(top, 150, 1, 150);
+    
     z-index: 3;
 
     p {
@@ -68,7 +67,8 @@
     }
 
     &.man {
-      
+      left: 2.25rem;
+    @include vw(top, 150, 1, 150);
     }
   }
 
