@@ -15,7 +15,7 @@
         flex-direction: column;
         position: absolute;
         align-items: center;
-        top:100px ;
+        @include vw(top, 100,50,100);
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
@@ -78,7 +78,7 @@
     }
     @media (width <= 30em) {
       top: -160px;
-      right: 2.5rem;
+      right: 3.125rem;
     }
   }
 
