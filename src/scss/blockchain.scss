@@ -201,6 +201,8 @@
       }
       @media (width <= 30em) {
         left: 23%;
+        top: auto;
+        transform: translate(0%, 100%);
       }
     }
   }
