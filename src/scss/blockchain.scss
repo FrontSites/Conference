@@ -32,8 +32,11 @@
           border-radius: 0.3125rem;
           transform: rotate(-7.895deg);
           padding: 7px 7px;
+          &:first-child { 
+            transform: translate(-2.25rem, 6.875rem) rotate(-7.895deg);
+          }
           &:last-child {
-            transform: translate(11.875rem 2.5rem) rotate(-7.895deg);
+            transform: translate(11.875rem, 2.5rem) rotate(-7.895deg);
           }
         }
       }
