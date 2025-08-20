@@ -28,7 +28,7 @@
 .blockchain .blockchain-img-block.girl{left:6.25rem;top:25rem}
 }
 @media (width <= 75em){
-.blockchain .blockchain-img-block.girl{left:0;top:25rem}
+.blockchain .blockchain-img-block.girl{left:0;top:26.875rem}
 }
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
 .blockchain .blockchain-bg{position:absolute;top:-50%;left:0;width:77.8125rem}
