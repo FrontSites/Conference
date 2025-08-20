@@ -175,6 +175,9 @@
       @media (width <= 30em) {
         left: -10%;
         transform: translate(0%);
+        img {
+          width: 21.875rem;
+        }
       }
     }
 
