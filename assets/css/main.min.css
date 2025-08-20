@@ -1,7 +1,7 @@
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
-.blockchain .blockchain-img-text.mob{position:absolute;display:flex;flex-direction:column;position:absolute;align-items:center;top:0;left:50%;transform:translateX(-50%);width:100%}
+.blockchain .blockchain-img-text.mob{position:absolute;display:flex;flex-direction:column;position:absolute;align-items:center;top:0;left:50%;transform:translateX(-50%);width:100%;z-index:5}
 .blockchain .blockchain-img-text.mob p{font-size:clamp(16px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase;background:#ff29ae;max-width:19.125rem;border-radius:.3125rem;padding:7px 7px}
 .blockchain .blockchain-img-text.mob p:last-child{align-self:flex-end}
 }

@@ -19,6 +19,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+        z-index: 5;
         p {
           @include vw(font-size, 20, 16, 20);
           font-style: normal;
