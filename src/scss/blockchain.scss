@@ -172,6 +172,9 @@
         transform: translateX(-50%);
         
       }
+      @media (width <= 30em) {
+        left: 25%;
+      }
     }
 
     &.girl {
