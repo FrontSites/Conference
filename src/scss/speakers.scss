@@ -147,6 +147,8 @@
         }
 
         .speakers-item__name {
+          display: flex;
+          align-items: center;
           h3 {
             
             font-family: "Manrope";
