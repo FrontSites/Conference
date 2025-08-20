@@ -33,7 +33,7 @@
           transform: rotate(-7.895deg);
           padding: 7px 7px;
           &:last-child {
-            transform: translateX(30px) rotate(-7.895deg);
+            transform: translateX(80px) rotate(-7.895deg);
           }
         }
       }
@@ -175,7 +175,7 @@
       }
       @media (width <= 62em) {
         top: -42rem;
-        left: 20%;
+        left: 25%;
       }
     }
   }
