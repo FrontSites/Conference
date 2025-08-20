@@ -14,7 +14,7 @@
 .blockchain .blockchain-voices{top:-11.25rem;right:9.375rem;transform:rotate(9.953deg);left:auto}
 }
 @media (width <= 30em){
-.blockchain .blockchain-voices{top:-13.25rem}
+.blockchain .blockchain-voices{top:-13.25rem;right:1.25rem}
 }
 .blockchain .blockchain-img-block{display:flex;flex-direction:column;align-items:center;max-width:153.125rem;position:absolute;z-index:3}
 @media (width <= 62em){
