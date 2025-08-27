@@ -56,26 +56,35 @@
   src="https://wc.ticketcrm.com/lib/tbx-widget.min.js"></script>
 
 <script>
-// Отслеживание кликов на кнопки покупки билетов
-document.addEventListener('DOMContentLoaded', function() {
-  // Функция для отправки события в DataLayer
-  function sendTicketClickEvent() {
-    if (typeof dataLayer !== 'undefined') {
-      dataLayer.push({
-        'event': 'click_buy_ticket'
-      });
-    }
-  }
+  // Отслеживание кликов на кнопки покупки билетов
+  document.addEventListener('DOMContentLoaded', function() {
+    // Функция для отправки события в DataLayer
+    function sendTicketClickEvent(buttonElement) {
+      if (typeof dataLayer !== 'undefined') {
+        dataLayer.push({
+          'event': 'click_buy_ticket',
+          'event_category': 'engagement',
+          'event_action': 'click',
+          'event_label': 'buy_ticket_button',
+          'button_text': buttonElement.textContent.trim() || 'Buy Ticket',
+          'button_location': buttonElement.closest('section') ? buttonElement.closest('section').id || 'unknown' : 'unknown',
+          'timestamp': new Date().toISOString()
+        });
 
-  // Обработчик кликов на кнопки с классом ticket
-  document.addEventListener('click', function(event) {
-    // Проверяем, является ли кликнутый элемент кнопкой ticket или его дочерним элементом
-    const ticketButton = event.target.closest('.ticket');
-    if (ticketButton) {
-      sendTicketClickEvent();
+        // Логирование для отладки (можно убрать в продакшене)
+        console.log('Ticket button clicked - DataLayer event sent');
+      }
     }
+
+    // Обработчик кликов на кнопки с классом ticket
+    document.addEventListener('click', function(event) {
+      // Проверяем, является ли кликнутый элемент кнопкой ticket или его дочерним элементом
+      const ticketButton = event.target.closest('.ticket');
+      if (ticketButton) {
+        sendTicketClickEvent(ticketButton);
+      }
+    });
   });
-});
 </script>
 
 <?php wp_footer(); ?>
