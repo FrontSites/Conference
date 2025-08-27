@@ -25,15 +25,15 @@
                     <?php the_sub_field('price-new-price'); ?>
                   </div>
                 </div>
-                <?php 
+                <?php
                 $discount = get_sub_field('price-discount');
-                if (!empty($discount)) : 
+                if (!empty($discount)) :
                 ?>
-                <div class="price-block__item right">
-                  <div class="price-block__discount">
-                    <?php echo $discount; ?>
+                  <div class="price-block__item right">
+                    <div class="price-block__discount">
+                      <?php echo $discount; ?>
+                    </div>
                   </div>
-                </div>
                 <?php endif; ?>
 
               </div>
