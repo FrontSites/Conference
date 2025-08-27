@@ -54,6 +54,30 @@
 <script
   type="module"
   src="https://wc.ticketcrm.com/lib/tbx-widget.min.js"></script>
+
+<script>
+// Отслеживание кликов на кнопки покупки билетов
+document.addEventListener('DOMContentLoaded', function() {
+  // Функция для отправки события в DataLayer
+  function sendTicketClickEvent() {
+    if (typeof dataLayer !== 'undefined') {
+      dataLayer.push({
+        'event': 'click_buy_ticket'
+      });
+    }
+  }
+
+  // Обработчик кликов на кнопки с классом ticket
+  document.addEventListener('click', function(event) {
+    // Проверяем, является ли кликнутый элемент кнопкой ticket или его дочерним элементом
+    const ticketButton = event.target.closest('.ticket');
+    if (ticketButton) {
+      sendTicketClickEvent();
+    }
+  });
+});
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
