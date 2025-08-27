@@ -25,11 +25,16 @@
                     <?php the_sub_field('price-new-price'); ?>
                   </div>
                 </div>
+                <?php 
+                $discount = get_sub_field('price-discount');
+                if (!empty($discount)) : 
+                ?>
                 <div class="price-block__item right">
                   <div class="price-block__discount">
-                    <?php the_sub_field('price-discount'); ?>
+                    <?php echo $discount; ?>
                   </div>
                 </div>
+                <?php endif; ?>
 
               </div>
               <tbx-button event-hash="73c4b185718e8b9f19934819446e95618684791e"
