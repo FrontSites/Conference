@@ -12,7 +12,7 @@
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item p{color:#fff;margin:0 auto;margin-top:.8125rem;text-align:center;font-size:.75rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0375rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item p:empty{display:none}
 @media (hover:hover){
-.afterparty .container .afterparty-items:before{transform:rotate(-6.75deg)}
+.afterparty .container .afterparty-items .afterparty-item__wrapper:before{transform:rotate(-6.75deg)}
 }
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}

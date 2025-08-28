@@ -108,13 +108,14 @@
           }
         }
         }
-      }
-
-      @media (hover:hover) {
-        &:before {
-          transform: rotate(-6.75deg);
+        @media (hover:hover) {
+          &:before {
+            transform: rotate(-6.75deg);
+          }
         }
       }
+
+      
     }
   }
 }
