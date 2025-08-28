@@ -18,6 +18,7 @@
 @media (width <= 37.5em){
 .afterparty .container .afterparty-items{flex-direction:column;row-gap:2.5rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper{padding-bottom:3.75rem}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{margin-top:-.9375rem}
 }
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
