@@ -34,11 +34,12 @@
       column-gap: 2.5rem;
 
       .afterparty-item__wrapper {
+        max-width: 18.125rem;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1 1 33.3333333333333%;
         position: relative;
         padding: 1.25rem;
 
