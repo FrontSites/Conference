@@ -3,7 +3,7 @@
 .afterparty .container h2 strong{padding:.4375rem .9375rem;background:#f7e405;border-radius:.3125rem;transform:rotate(4.68deg);display:inline-block;margin-left:.125rem;color:#2c3055;font-weight:700}
 .afterparty .container p{text-align:center;font-size:1rem;color:#d9d9d9;font-size:1rem;margin-top:1.25rem;text-transform:uppercase}
 .afterparty .container .afterparty-items{margin-top:2.75rem;display:flex;justify-content:center;align-items:stretch;-moz-column-gap:2.5rem;column-gap:2.5rem}
-.afterparty .container .afterparty-items .afterparty-item__wrapper{max-width:18.125rem;width:100%;height:auto;display:flex;justify-content:center;align-items:center;position:relative;padding:.625rem}
+.afterparty .container .afterparty-items .afterparty-item__wrapper{max-width:18.125rem;width:100%;height:auto;display:flex;justify-content:center;align-items:center;position:relative;padding:.625rem;padding-bottom:2rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper:before{content:"";position:absolute;width:100%;height:100%;border:.625rem solid #2c3055;border-radius:1.5625rem;transition:transform .3s ease-in-out}
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{width:100%;height:100%;border-radius:1.5625rem;display:flex;flex-direction:column;row-gap:.8125rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item .afteparty-image{aspect-ratio:250/250;border-radius:.9375rem;background:#ff29ae;display:flex;justify-content:center;align-items:flex-end}
