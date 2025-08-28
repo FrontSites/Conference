@@ -110,11 +110,13 @@
         }
         @media (hover:hover) {
           &:hover {
-            transform: rotate(-6.75deg);
+            &:before {
+              transform: rotate(-6.75deg);
+              background: #FF29AE;
+            }
+           
           }
-          &:before {
-          
-          }
+
         }
       }
 
