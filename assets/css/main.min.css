@@ -1,3 +1,19 @@
+.afterparty .container h2{text-align:center}
+.afterparty .container h2 strong{padding:.4375rem .9375rem;background:#f7e405;border-radius:.3125rem;transform:rotate(-4.68deg);margin-left:.125rem}
+.afterparty .container p{text-align:center;font-size:1rem;color:#d9d9d9;font-size:1rem;margin-top:1.25rem}
+.afterparty .container .afterparty-items{margin-top:2.75rem;display:flex;justify-content:space-between;align-items:stretch;gap:clamp(20px,calc(2.7777777778vw),40px)}
+.afterparty .container .afterparty-items .afterparty-item__wrapper{padding:1.25rem;flex:1 1 33.3333333333%;position:relative}
+.afterparty .container .afterparty-items .afterparty-item__wrapper:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;border:.625rem solid #2c3055;opacity:.5;border-radius:1.5625rem;transition:transform .3s ease-in-out}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{border-radius:1.5625rem;background:#2c3055;display:flex;flex-direction:column;row-gap:.8125rem}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item .afteparty-image{aspect-ratio:250/250;border-radius:.9375rem;background:#ff29ae;display:flex;justify-content:center;align-items:flex-end}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item .afteparty-image img{border-radius:.9375rem;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item h3{font-family:Manrope;font-weight:700;font-size:1.25rem;font-weight:700;letter-spacing:.0625rem;text-align:center}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item h3:empty{display:none}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item p{color:#fff;margin:0 auto;margin-top:.8125rem;text-align:center;font-size:.75rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0375rem}
+.afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item p:empty{display:none}
+@media (hover:hover){
+.afterparty .container .afterparty-items:before{transform:rotate(-6.75deg)}
+}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){

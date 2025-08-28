@@ -10,6 +10,7 @@ Template Name: Home
   <div class="main-content">
     <?php get_template_part('template-parts/blockchain'); ?>
     <?php get_template_part('template-parts/speakers'); ?>
+    <?php get_template_part('template-parts/afterparty'); ?>
     <?php get_template_part('template-parts/schedule'); ?>
     <?php get_template_part('template-parts/fullset'); ?>
     <?php get_template_part('template-parts/partners'); ?>
@@ -17,7 +18,7 @@ Template Name: Home
     <?php get_template_part('template-parts/partners-media'); ?>
     <?php get_template_part('template-parts/partners-tech'); ?>
     <?php get_template_part('template-parts/location'); ?>
-<?php get_template_part('template-parts/subscribe'); ?>
+    <?php get_template_part('template-parts/subscribe'); ?>
 
 
 
