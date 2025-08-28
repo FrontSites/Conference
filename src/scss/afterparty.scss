@@ -31,7 +31,7 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      @include vw(gap, 40, 20, 40);
+      column-gap: 2.5rem;
 
       .afterparty-item__wrapper {
         height: auto;
