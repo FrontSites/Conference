@@ -109,8 +109,11 @@
         }
         }
         @media (hover:hover) {
-          &:before {
+          &:hover {
             transform: rotate(-6.75deg);
+          }
+          &:before {
+          
           }
         }
       }
