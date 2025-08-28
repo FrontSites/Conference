@@ -3,6 +3,8 @@
 
 
 .afterparty {
+  @include vw(padding-top, 100, 50, 100);
+
   .container {
     h2 {
       text-align: center;
@@ -13,7 +15,7 @@
         padding: 0.4375rem 0.9375rem;
         background: #F7E405;
         border-radius: 0.3125rem;
-        transform: rotate(-4.68deg);
+        transform: rotate(4.68deg);
         display: inline-block;
         margin-left: 0.125rem;
         color: #2C3055;
