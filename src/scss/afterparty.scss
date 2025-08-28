@@ -132,7 +132,12 @@
       @media (width <= 37.5em) {
         flex-direction: column;
         row-gap: 2.50rem;
-        .
+        .afterparty-item__wrapper { 
+          padding-bottom: 3.75rem;
+          .afterparty-item { 
+            margin-top: -1.25rem;
+          }
+        }
       }
     }
   }
