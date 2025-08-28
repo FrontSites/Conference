@@ -1,4 +1,4 @@
-<section class="afterparty">
+<section class="afterparty" style="display: ;">
   <div class="container">
     <h2><?php the_field("afterparty-title"); ?></h2>
     <p><?php the_field("afterparty-subtitle"); ?></p>
