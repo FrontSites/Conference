@@ -7,7 +7,7 @@
       <?php foreach ($block as $item) : ?>
         <div class="afterparty-item__wrapper">
           <div class="afterparty-item">
-            <div class="afteparty-image"><?php echo $item['afterparty-image']; ?></div>
+            <div class="afteparty-image"><img src="<?php echo $item['afterparty-image']; ?>" alt=""></div>
             <h3 class="afterparty-item-title"><?php echo $item['afterparty-item-title']; ?></h3>
             <p class="afterparty-item-description"><?php echo $item['afterparty-description']; ?></p>
           </div>
