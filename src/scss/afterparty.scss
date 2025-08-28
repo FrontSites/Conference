@@ -34,6 +34,7 @@
       @include vw(gap, 40, 20, 40);
 
       .afterparty-item__wrapper {
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;

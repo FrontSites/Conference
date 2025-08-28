@@ -9,7 +9,7 @@
           <div class="afterparty-item">
             <div class="afteparty-image"><img src="<?php echo $item['afterparty-image']; ?>" alt=""></div>
             <h3 class="afterparty-item-title"><?php echo $item['afterparty-item-title']; ?></h3>
-            <p class="afterparty-item-description"><?php echo $item['afterparty-description']; ?></p>
+            <p class="afterparty-item-description"><?php echo $item['afterparty-item-description']; ?></p>
           </div>
         </div>
       <?php endforeach; ?>
