@@ -495,6 +495,7 @@
 .marque{background:#222649;padding-top:.4375rem;padding-bottom:.4375rem}
 .marque .marque-items{display:flex;flex-wrap:nowrap;overflow:hidden;-moz-column-gap:1.25rem;column-gap:1.25rem}
 .marque .marque-items .marque-item{flex:0 0 auto;white-space:nowrap}
+.marque .marque-items .marque-item p{color:#fff;text-align:center;font-family:Manrope;font-size:20px;font-style:normal;font-weight:400;line-height:120%;letter-spacing:1px}
 *{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
 *{box-sizing:border-box}

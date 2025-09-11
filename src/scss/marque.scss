@@ -2,15 +2,30 @@
   background: #222649;
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
+
   .marque-items {
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
     column-gap: 1.25rem;
+
     .marque-item {
       flex: 0 0 auto;
       white-space: nowrap;
-      
+
+      p {
+        color: #FFF;
+
+        text-align: center;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        /* 24px */
+        letter-spacing: 1px;
+      }
+
     }
   }
 }
