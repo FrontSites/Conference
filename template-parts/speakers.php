@@ -16,12 +16,11 @@
           </div>
           <div class="speakers-item__name">
             <h3><?php echo $name; ?></h3>
-            <a href="<?php echo $speaker["speaker-link"]; ?>" class="icon" target="_blank">
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.59805 15H0.198044V4.96875H3.59805V15ZM1.89805 3.5625C0.798048 3.5625 -0.00195312 2.8125 -0.00195312 1.78125C-0.00195312 0.75 0.898048 0 1.89805 0C2.99805 0 3.79805 0.75 3.79805 1.78125C3.79805 2.8125 2.99805 3.5625 1.89805 3.5625ZM15.998 15H12.5981V9.5625C12.5981 7.96875 11.898 7.5 10.898 7.5C9.89804 7.5 8.89804 8.25 8.89804 9.65625V15H5.49805V4.96875H8.69804V6.375C8.99804 5.71875 10.198 4.6875 11.898 4.6875C13.798 4.6875 15.798 5.71875 15.798 8.8125V15H15.998Z" fill="white" />
-              </svg>
-
-            </a>
+            <?php if (!empty($speaker["speaker-icon"])) : ?>
+              <a href="<?php echo $speaker["speaker-link"]; ?>" class="icon" target="_blank">
+                <?php echo $speaker["speaker-icon"]; ?>
+              </a>
+            <?php endif; ?>
           </div>
           <p><?php echo $position; ?></p>
           <?php if ($label !== ''): ?>
