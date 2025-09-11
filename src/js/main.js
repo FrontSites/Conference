@@ -978,7 +978,7 @@ function initTimer() {
 function initMarque() {
   // Бесконечный marquee без рывков
   window.addEventListener('DOMContentLoaded', () => {
-    const marqueeContent = document.querySelector('.marquee-content');
+    const marqueeContent = document.querySelector('.marque-items');
     const marqueeContainer = marqueeContent.parentNode;
   
     if (!marqueeContent || !marqueeContainer) return;
