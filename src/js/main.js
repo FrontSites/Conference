@@ -974,3 +974,65 @@ function initTimer() {
     }
   });
 }
+
+function initMarque() {
+  // Бесконечный marquee без рывков
+  window.addEventListener('DOMContentLoaded', () => {
+    const marqueeContent = document.querySelector('.marquee-content');
+    const marqueeContainer = marqueeContent.parentNode;
+  
+    if (!marqueeContent || !marqueeContainer) return;
+  
+    const speed = 100;
+    let animation = null;
+  
+    const createSeamlessMarquee = () => {
+      // Сохраняем оригинальный контент
+      const originalContent = marqueeContent.innerHTML;
+      
+      // Создаем две копии для бесконечной анимации
+      marqueeContent.innerHTML = originalContent + originalContent;
+      
+      // Устанавливаем начальную позицию
+      gsap.set(marqueeContent, { x: 0 });
+    };
+  
+    const startAnimation = () => {
+      // Останавливаем предыдущую анимацию
+      if (animation) {
+        animation.kill();
+      }
+      
+      createSeamlessMarquee();
+      
+      // Получаем ширину одного набора элементов
+      const singleSetWidth = marqueeContent.scrollWidth / 2;
+      
+      // Создаем бесконечную анимацию с modifiers
+      animation = gsap.to(marqueeContent, {
+        x: -singleSetWidth,
+        duration: singleSetWidth / speed,
+        repeat: -1,
+        ease: 'none',
+        modifiers: {
+          x: function(x) {
+            // Создаем бесконечный цикл без рывков
+            return (parseFloat(x) % singleSetWidth);
+          }
+        }
+      });
+    };
+  
+    // Запускаем анимацию
+    startAnimation();
+    
+    // Обрабатываем изменение размера окна
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        startAnimation();
+      }, 250);
+    });
+  });
+}
