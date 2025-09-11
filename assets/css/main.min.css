@@ -492,6 +492,7 @@
 @media (width <= 30em){
 .lang-en .location .container .location-block .location-item .hero-location{right:1.875rem;top:.9375rem;font-size:1rem}
 }
+.marque{background:#222649}
 *{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
 *{box-sizing:border-box}
