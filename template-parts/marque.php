@@ -4,7 +4,7 @@
     if (have_posts()) {
       while (have_posts()) {
         the_post();
-        $brands = get_field('brand-item');
+        $brands = get_field('marque-item');
 
         if ($brands) {
           $original_brands = $brands;
