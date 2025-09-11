@@ -492,10 +492,10 @@
 @media (width <= 30em){
 .lang-en .location .container .location-block .location-item .hero-location{right:1.875rem;top:.9375rem;font-size:1rem}
 }
-.marque{background:#222649;padding-top:.4375rem;padding-bottom:.4375rem}
+.marque{position:relative;z-index:10;margin-top:6.25rem;background:#222649;padding-top:.4375rem;padding-bottom:.4375rem}
 .marque .marque-items{display:flex;flex-wrap:nowrap;overflow:hidden;-moz-column-gap:1.25rem;column-gap:1.25rem}
 .marque .marque-items .marque-item{flex:0 0 auto;white-space:nowrap}
-.marque .marque-items .marque-item p{color:#fff;text-align:center;font-family:Manrope;font-size:20px;font-style:normal;font-weight:400;line-height:120%;letter-spacing:1px}
+.marque .marque-items .marque-item p{color:#fff;text-align:center;font-size:clamp(16px,calc(1.3888888889vw),20px);font-weight:400;line-height:120%;letter-spacing:.0625rem}
 *{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
 *{box-sizing:border-box}
