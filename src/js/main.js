@@ -619,22 +619,14 @@ function initPopup() {
 
 // Инициализация таймера конференции
 function initTimer() {
-  console.log("=== TIMER INITIALIZATION START ===");
-  console.log("Initializing conference timer...");
-  console.log("timer_ajax available:", typeof timer_ajax !== "undefined");
+  
   if (typeof timer_ajax !== "undefined") {
-    console.log("timer_ajax object:", timer_ajax);
+    
   }
 
   class ConferenceTimer {
     constructor() {
-      console.log("=== CONFERENCE TIMER CONSTRUCTOR ===");
-      console.log("ConferenceTimer constructor called");
-      console.log("jQuery available:", typeof $ !== "undefined");
-      console.log(
-        "jQuery version:",
-        typeof $ !== "undefined" ? $.fn.jquery : "not available"
-      );
+     
 
       this.timerElement = $("#conference-timer");
       this.daysElement = $("#timer-days");
