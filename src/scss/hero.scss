@@ -152,6 +152,8 @@
               letter-spacing: 0.075rem;
 
               strong {
+                position: relative;
+                z-index: 1;
                 transform: translateY(0.625rem);
                 font-size: 3rem;
                 font-style: normal;
