@@ -140,6 +140,8 @@
             z-index: 1;
 
             p {
+              position: relative;
+              z-index: 1;
               color: #FFF;
               display: flex;
               flex-direction: column;
