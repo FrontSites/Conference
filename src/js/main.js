@@ -915,6 +915,10 @@ function initMarque() {
     return;
   }
 
+  // Сразу определяем правильную скорость для текущего устройства
+  const screenWidth = window.innerWidth;
+  const isMobile = screenWidth <= 480;
+  const initialDuration = isMobile ? '60s' : '30s';
   
   // Сохраняем оригинальный контент
   const originalContent = marqueeContent.innerHTML;
@@ -924,10 +928,10 @@ function initMarque() {
   
   // Функция для обновления скорости анимации
   const updateMarqueeSpeed = () => {
-    const screenWidth = window.innerWidth;
+    const currentScreenWidth = window.innerWidth;
     let animationDuration;
     
-    if (screenWidth <= 480) {
+    if (currentScreenWidth <= 480) {
       animationDuration = '60s'; // Медленнее для мобильных
     } else {
       animationDuration = '30s'; // Обычная скорость для десктопа
@@ -937,11 +941,11 @@ function initMarque() {
     document.documentElement.style.setProperty('--marquee-duration', animationDuration);
   };
   
-  // Добавляем CSS анимацию через стили
+  // Добавляем CSS анимацию через стили с правильной начальной скоростью
   const style = document.createElement('style');
   style.textContent = `
     .marque-items {
-      animation: marquee-scroll var(--marquee-duration, 30s) linear infinite;
+      animation: marquee-scroll var(--marquee-duration, ${initialDuration}) linear infinite;
     }
     
     @keyframes marquee-scroll {
@@ -964,8 +968,8 @@ function initMarque() {
     document.head.appendChild(style);
   }
   
-  // Устанавливаем начальную скорость
-  updateMarqueeSpeed();
+  // Устанавливаем правильную скорость сразу
+  document.documentElement.style.setProperty('--marquee-duration', initialDuration);
   
   // Обновляем скорость при изменении размера окна
   let resizeTimeout;
