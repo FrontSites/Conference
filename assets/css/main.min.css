@@ -346,7 +346,7 @@
 }
 .hero .container .hero-items .hero-item.right .hero-time{position:absolute;bottom:2.5rem;left:1.875rem;z-index:1}
 .hero .container .hero-items .hero-item.right .hero-time p{position:relative;z-index:1;color:#222649;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:clamp(18px,calc(1.6666666667vw),24px);font-style:normal;font-weight:400;line-height:120%;letter-spacing:.075rem}
-.hero .container .hero-items .hero-item.right .hero-time p strong{position:relative;z-index:1;transform:translateY(.625rem);font-size:calc(4.4444444444vw);font-style:normal;font-weight:700}
+.hero .container .hero-items .hero-item.right .hero-time p strong{position:relative;z-index:1;transform:translateY(.625rem);font-size:4rem;font-style:normal;font-weight:700}
 .hero .container .hero-items .hero-item.right .hero-time p:before{content:"";position:absolute;left:-1.875rem;width:9.4375rem;height:9.4375rem;background:url(../images/stiker.png) no-repeat center center;z-index:-1}
 @media (width <= 62em){
 .hero .container .hero-items .hero-item.right .hero-time{bottom:.625rem}
