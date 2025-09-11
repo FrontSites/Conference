@@ -871,12 +871,10 @@ function initTimer() {
     }
 
     showTimer() {
-      console.log("Showing timer");
       this.timerElement.show();
     }
 
     hideTimer() {
-      console.log("Hiding timer");
       this.timerElement.hide();
       if (this.interval) {
         clearInterval(this.interval);
@@ -898,7 +896,6 @@ function initTimer() {
   // Обработка видимости страницы для точности таймера
   document.addEventListener("visibilitychange", function () {
     if (window.conferenceTimer && !document.hidden) {
-      console.log("Page became visible, reloading timer data");
       window.conferenceTimer.loadTimerData();
     }
   });
@@ -906,22 +903,18 @@ function initTimer() {
   // Обработка фокуса окна для синхронизации времени
   window.addEventListener("focus", function () {
     if (window.conferenceTimer) {
-      console.log("Window focused, reloading timer data");
       window.conferenceTimer.loadTimerData();
     }
   });
 }
 
 function initMarque() {
-  console.log('=== MARQUE INITIALIZATION START ===');
   
   const marqueeContent = document.querySelector('.marque-items');
   if (!marqueeContent) {
-    console.log('Marquee content not found');
     return;
   }
 
-  console.log('Marquee content found, initializing...');
   
   // Сохраняем оригинальный контент
   const originalContent = marqueeContent.innerHTML;
@@ -936,10 +929,8 @@ function initMarque() {
     
     if (screenWidth <= 480) {
       animationDuration = '60s'; // Медленнее для мобильных
-      console.log('Mobile marquee speed: 60s');
     } else {
       animationDuration = '30s'; // Обычная скорость для десктопа
-      console.log('Desktop marquee speed: 30s');
     }
     
     // Обновляем CSS переменную
@@ -985,5 +976,4 @@ function initMarque() {
     }, 250);
   });
   
-  console.log('Marquee animation initialized successfully');
 }
