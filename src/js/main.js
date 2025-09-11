@@ -1,28 +1,3 @@
-// Простая проверка загрузки JavaScript
-console.log('=== MAIN.JS LOADED ===');
-console.log('Document ready state:', document.readyState);
-console.log('jQuery available:', typeof $ !== 'undefined');
-console.log('Window location:', window.location.href);
-console.log('Script loaded at:', new Date().toISOString());
-
-// Проверка загрузки стилей
-function checkStylesLoaded() {
-  const styleSheets = Array.from(document.styleSheets);
-  const mainStyle = styleSheets.find(
-    (sheet) => sheet.href && sheet.href.includes("main.min.css")
-  );
-
-  if (!mainStyle) {
-    // Показываем fallback стили
-    document.body.style.background = "#000";
-    document.body.style.color = "#fff";
-    document.body.innerHTML =
-      '<div class="error">Стили не загрузились. Обновите страницу.</div>';
-    return false;
-  }
-
-  return true;
-}
 
 // Надежная инициализация с повторными попытками
 function initializeAll() {
