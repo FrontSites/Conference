@@ -1,3 +1,14 @@
 .marque {
   background: #222649;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+  .marque-items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    .marque-item {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+  }
 }

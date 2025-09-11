@@ -492,7 +492,9 @@
 @media (width <= 30em){
 .lang-en .location .container .location-block .location-item .hero-location{right:1.875rem;top:.9375rem;font-size:1rem}
 }
-.marque{background:#222649}
+.marque{background:#222649;padding-top:.4375rem;padding-bottom:.4375rem}
+.marque .marque-items{display:flex;flex-wrap:nowrap;overflow:hidden}
+.marque .marque-items .marque-item{flex:0 0 auto;white-space:nowrap}
 *{outline:0!important;box-sizing:content-box}
 @media (width <= 80em){
 *{box-sizing:border-box}
