@@ -6,9 +6,11 @@
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
+    column-gap: 1.25rem;
     .marque-item {
       flex: 0 0 auto;
       white-space: nowrap;
+      
     }
   }
 }
