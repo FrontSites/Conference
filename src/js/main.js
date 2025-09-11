@@ -21,6 +21,7 @@ function initializeAll() {
     initSelect();
     initPopup();
     initTimer();
+    initMarque();
   } catch (error) {
     // Повторная попытка через 1 секунду
     setTimeout(initializeAll, 1000);
