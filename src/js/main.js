@@ -1,9 +1,5 @@
 // Простая проверка загрузки JavaScript
-console.log('=== MAIN.JS LOADED ===');
-console.log('Document ready state:', document.readyState);
-console.log('jQuery available:', typeof $ !== 'undefined');
-console.log('Window location:', window.location.href);
-console.log('Script loaded at:', new Date().toISOString());
+
 
 // Проверка загрузки стилей
 function checkStylesLoaded() {
@@ -26,7 +22,6 @@ function checkStylesLoaded() {
 
 // Надежная инициализация с повторными попытками
 function initializeAll() {
-  console.log('=== INITIALIZE ALL START ===');
   try {
     // Проверяем загрузку стилей
     if (!checkStylesLoaded()) {
@@ -55,7 +50,6 @@ function initializeAll() {
 
 // Инициализация при загрузке DOM
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('=== DOM CONTENT LOADED ===');
   initializeAll();
 });
 
@@ -994,11 +988,28 @@ function initMarque() {
   // Создаем две копии для бесконечной анимации
   marqueeContent.innerHTML = originalContent + originalContent;
   
+  // Функция для обновления скорости анимации
+  const updateMarqueeSpeed = () => {
+    const screenWidth = window.innerWidth;
+    let animationDuration;
+    
+    if (screenWidth <= 480) {
+      animationDuration = '60s'; // Медленнее для мобильных
+      console.log('Mobile marquee speed: 60s');
+    } else {
+      animationDuration = '30s'; // Обычная скорость для десктопа
+      console.log('Desktop marquee speed: 30s');
+    }
+    
+    // Обновляем CSS переменную
+    document.documentElement.style.setProperty('--marquee-duration', animationDuration);
+  };
+  
   // Добавляем CSS анимацию через стили
   const style = document.createElement('style');
   style.textContent = `
     .marque-items {
-      animation: marquee-scroll 30s linear infinite;
+      animation: marquee-scroll var(--marquee-duration, 30s) linear infinite;
     }
     
     @keyframes marquee-scroll {
@@ -1020,6 +1031,18 @@ function initMarque() {
     style.id = 'marquee-styles';
     document.head.appendChild(style);
   }
+  
+  // Устанавливаем начальную скорость
+  updateMarqueeSpeed();
+  
+  // Обновляем скорость при изменении размера окна
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      updateMarqueeSpeed();
+    }, 250);
+  });
   
   console.log('Marquee animation initialized successfully');
 }
