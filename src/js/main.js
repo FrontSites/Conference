@@ -651,31 +651,21 @@ function initTimer() {
         seconds: ["секунда", "секунди", "секунд"],
       };
 
-      console.log("Timer elements found:", {
-        timer: this.timerElement.length,
-        days: this.daysElement.length,
-        hours: this.hoursElement.length,
-        minutes: this.minutesElement.length,
-        seconds: this.secondsElement.length,
-        prices: this.pricesElement.length,
-      });
+     
 
       this.init();
     }
 
     init() {
       if (this.timerElement.length === 0) {
-        console.log("Timer element not found");
         return;
       }
 
-      console.log("Initializing timer...");
       this.loadTimerData();
       this.startTimer();
     }
 
     loadTimerData() {
-      console.log("Loading timer data...");
 
       // Проверяем, есть ли timer_ajax
       if (typeof timer_ajax === "undefined") {
