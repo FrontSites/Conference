@@ -681,9 +681,7 @@ function initTimer() {
           nonce: timer_ajax.nonce,
         },
         success: (response) => {
-          console.log("Timer data loaded:", response);
-          console.log("Response success:", response.success);
-          console.log("Response data:", response.data);
+         
 
           if (response.success && response.data) {
             const data = response.data;
@@ -694,28 +692,14 @@ function initTimer() {
             this.labels = data.labels || this.labels;
 
             // Отладочная информация для данных таймера
-            console.log("=== TIMER DATA DEBUG ===");
-            console.log("Raw endTimestamp:", data.endTimestamp);
-            console.log("Calculated endTime:", this.endTime);
-            console.log("Current Date.now():", Date.now());
-            console.log("Time difference (ms):", this.endTime - Date.now());
-            console.log(
-              "Time difference (days):",
-              (this.endTime - Date.now()) / (1000 * 60 * 60 * 24)
-            );
+           
 
             // Обновляем заголовок таймера
             if (data.texts && data.texts.title) {
               $(".timer-title").text(data.texts.title);
             }
 
-            console.log("Timer status:", {
-              enabled: this.isEnabled,
-              paused: this.isPaused,
-              hidden: this.isHidden,
-              endTime: this.endTime,
-              currentTime: Date.now(),
-            });
+            
 
             // Вычисляем разницу между серверным и клиентским временем
             const serverTime = data.timeLeft;
