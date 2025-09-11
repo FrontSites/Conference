@@ -808,17 +808,7 @@ function initTimer() {
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // Отладочная информация
-      console.log("=== TIMER UPDATE DEBUG ===");
-      console.log("Current time (now):", now);
-      console.log("End time:", this.endTime);
-      console.log("Time left (ms):", timeLeft);
-      console.log("Calculated values:", { days, hours, minutes, seconds });
-      console.log("Elements found:", {
-        days: this.daysElement.length,
-        hours: this.hoursElement.length,
-        minutes: this.minutesElement.length,
-        seconds: this.secondsElement.length,
-      });
+      
 
       // Проверяем, что элементы существуют перед обновлением
       if (this.daysElement.length > 0) {
@@ -830,23 +820,17 @@ function initTimer() {
 
       if (this.hoursElement.length > 0) {
         this.hoursElement.text(hours.toString().padStart(2, "0"));
-        console.log("Hours updated to:", hours.toString().padStart(2, "0"));
       } else {
-        console.error("Hours element not found!");
       }
 
       if (this.minutesElement.length > 0) {
         this.minutesElement.text(minutes.toString().padStart(2, "0"));
-        console.log("Minutes updated to:", minutes.toString().padStart(2, "0"));
       } else {
-        console.error("Minutes element not found!");
       }
 
       if (this.secondsElement.length > 0) {
         this.secondsElement.text(seconds.toString().padStart(2, "0"));
-        console.log("Seconds updated to:", seconds.toString().padStart(2, "0"));
       } else {
-        console.error("Seconds element not found!");
       }
 
       // Обновляем подписи с правильными окончаниями
