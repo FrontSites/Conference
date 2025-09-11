@@ -13,7 +13,7 @@
           for ($i = 0; $i < $repeat; $i++) {
             foreach ($original_brands as $brand) {
               $brand_text = $brand['marque-text'];
-              if ($brand_image) {
+              if ($brand_text) {
     ?>
                 <div class="marque-item">
                   <p><?php echo $brand_text; ?></p>
