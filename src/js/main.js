@@ -711,13 +711,11 @@ function initTimer() {
 
             // Проверяем статус таймера
             if (!this.isEnabled || this.isHidden) {
-              console.log("Timer is disabled or hidden");
               this.hideTimer();
               return;
             }
 
             if (data.expired) {
-              console.log("Timer has expired");
               this.hideTimer();
               return;
             }
@@ -725,19 +723,15 @@ function initTimer() {
             this.showTimer();
             this.updateDisplay();
           } else {
-            console.error("Timer data response was not successful");
           }
         },
         error: (xhr, status, error) => {
-          console.error("Ошибка загрузки данных таймера:", error);
-          console.error("Status:", status);
-          console.error("Response:", xhr.responseText);
+        
         },
       });
     }
 
     updatePrices(data) {
-      console.log("Updating prices with data:", data);
 
       // Создаем HTML для цен
       let pricesHtml = "";
@@ -783,7 +777,6 @@ function initTimer() {
       `;
 
       this.pricesElement.html(pricesHtml);
-      console.log("Prices updated");
     }
 
     startTimer() {
@@ -791,7 +784,6 @@ function initTimer() {
         clearInterval(this.interval);
       }
 
-      console.log("Starting timer interval");
       this.interval = setInterval(() => {
         if (!this.isPaused && this.isEnabled && !this.isHidden) {
           this.updateDisplay();
@@ -804,7 +796,6 @@ function initTimer() {
       const timeLeft = Math.max(0, this.endTime - now);
 
       if (timeLeft <= 0) {
-        console.log("Time left is 0, hiding timer");
         this.hideTimer();
         return;
       }
