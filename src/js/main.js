@@ -985,31 +985,16 @@ function initMarque() {
 }
 
 function initSupport() { 
-  const supportIcon = document.querySelector('.support-icon');
-  const supportItems = document.querySelector('.support-items');
-  
-  if (!supportIcon || !supportItems) {
-    return;
-  }
-  
-  // Клик по иконке поддержки - открываем/закрываем
-  supportIcon.addEventListener('click', function(e) {
+  $(".support-icon").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
-    
-    if (supportItems.style.display === 'block') {
-      // Закрываем
-      supportItems.style.display = 'none';
-    } else {
-      // Открываем
-      supportItems.style.display = 'block';
-    }
+    $(".support-items").slideToggle(300);
   });
   
   // Закрываем при клике по документу
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.support-icon') && !e.target.closest('.support-block')) {
-      supportItems.style.display = 'none';
+  $(document).click(function (e) {
+    if (!$(e.target).closest('.support-icon, .support-block').length) {
+      $(".support-items").slideUp(300);
     }
   });
 }
