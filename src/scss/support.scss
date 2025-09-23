@@ -32,7 +32,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &:first-child {
+    @media (hover:hover) {
+      &:hover {
+        background: #FF29AE;
+      }
+    }
       background: #F7E405;
     }
     &:nth-child(2) { 
