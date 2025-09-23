@@ -21,6 +21,7 @@
     align-items: center;
   }
   .support-items {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     row-gap: 0.9375rem;
@@ -57,6 +58,7 @@
   &.active {
     .support-items {
       transform: translateY(-5.625rem);
+      
     }
     overflow: visible;
   }
