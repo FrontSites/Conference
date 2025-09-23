@@ -987,11 +987,11 @@ function initMarque() {
 function initSupport() { 
   $(".support-icon").click(function (e) {
     e.stopPropagation();
-    $(".support-items").toggleClass("active");
+    $(".support-block").toggleClass("active");
   });
   
   $(".support-items a").click(function () {
-    $(".support-items").removeClass("active");
+    $(".support-block").removeClass("active");
   });
   
   // Закрываем при клике вне области поддержки
