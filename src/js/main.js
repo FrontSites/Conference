@@ -42,6 +42,7 @@ function initializeAll() {
     initPopup();
     initTimer();
     initMarque();
+    initSupport();
   } catch (error) {
     // Повторная попытка через 1 секунду
     setTimeout(initializeAll, 1000);
@@ -77,6 +78,7 @@ window.addEventListener("resize", () => {
     initSpeakersLoadMore();
     initScheduleVisibility();
     initMarque();
+    initSupport();
   }, 300);
 });
 
@@ -983,10 +985,19 @@ function initMarque() {
 }
 
 function initSupport() { 
-  $(".support-icon").click(function () {
+  $(".support-icon").click(function (e) {
+    e.stopPropagation();
     $(".support-items").toggleClass("active");
   });
+  
   $(".support-items a").click(function () {
     $(".support-items").removeClass("active");
+  });
+  
+  // Закрываем при клике вне области поддержки
+  $(document).click(function (e) {
+    if (!$(e.target).closest('.support-icon, .support-items').length) {
+      $(".support-items").removeClass("active");
+    }
   });
 }
