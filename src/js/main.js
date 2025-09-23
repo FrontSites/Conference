@@ -985,13 +985,20 @@ function initMarque() {
 }
 
 function initSupport() { 
+  console.log('Support initialization started');
+  console.log('Support icon found:', $(".support-icon").length);
+  console.log('Support block found:', $(".support-block").length);
+  
   $(".support-icon").click(function (e) {
+    console.log('Support icon clicked');
     e.preventDefault();
     e.stopPropagation();
     $(".support-block").toggleClass("active");
+    console.log('Support block active class toggled');
   });
   
   $(".support-items a").click(function () {
+    console.log('Support item clicked');
     $(".support-block").removeClass("active");
   });
   
