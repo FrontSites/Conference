@@ -777,7 +777,7 @@ body img{pointer-events:none}
 .support-block .support-items a:hover{background:#ff29ae}
 }
 .support-block .support-items a:first-child{background:#f7e405}
-.support-block .support-items a:nth-child(2){background:#222649}
+.support-block .support-items a:nth-child(2){background:#0079e2}
 .support-block .support-items a:last-child{background:#fff}
 .support-block.active{overflow:visible}
 .support-block.active .support-items{transform:translateY(-5.625rem);opacity:1}
