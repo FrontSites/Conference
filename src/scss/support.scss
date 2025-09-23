@@ -42,6 +42,9 @@
     &:nth-child(2) { 
       background: #222649;
     }
+    &:last-child {
+      background: #fff;
+    }
     }
     &.active {
       transform: translateY(0);
