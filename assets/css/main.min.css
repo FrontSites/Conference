@@ -771,7 +771,7 @@ body img{pointer-events:none}
 }
 .support-block{display:flex;flex-direction:column;row-gap:.625rem;overflow:hidden;position:fixed;bottom:1.875rem;right:1.875rem;max-width:5rem;width:100%}
 .support-block .support-icon{cursor:pointer;background:#ff29ae;width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
-.support-block .support-items{opacity:0;display:flex;flex-direction:column;row-gap:.625rem;position:absolute;width:100%;bottom:0;transform:translateY(300%);transition:transform .3s ease,opacity .3s ease}
+.support-block .support-items{opacity:0;display:flex;flex-direction:column;row-gap:.625rem;position:absolute;width:100%;bottom:0;transition:transform .3s ease,opacity .3s ease}
 .support-block .support-items a{width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
 @media (hover:hover){
 .support-block .support-items a:hover{background:#ff29ae}
@@ -780,7 +780,7 @@ body img{pointer-events:none}
 .support-block .support-items a:nth-child(2){background:#0079e2}
 .support-block .support-items a:last-child{background:#fff}
 .support-block.active{overflow:visible}
-.support-block.active .support-items{transform:translateY(-5.625rem);opacity:1}
+.support-block.active .support-items{opacity:1}
 .conference-timer{max-width:56.375rem;margin:0 auto;margin-top:clamp(40px,calc(6.9444444444vw),100px);width:100%;padding-top:1.5625rem;padding-bottom:4.6875rem;padding-left:1.0625rem;padding-right:1.0625rem;justify-content:center;align-items:center;border-radius:25px;background:linear-gradient(180deg,#2c3055 0,rgba(44,48,85,0) 92.8%)}
 .conference-timer .timer-container{display:flex;flex-direction:column;align-items:center;justify-content:center;row-gap:1.625rem}
 .conference-timer .timer-container h3{color:#fff;text-align:center;font-family:Manrope;font-size:1.25rem;font-weight:700;line-height:120%;row-gap:1.625rem;letter-spacing:.0625rem;text-transform:uppercase}
