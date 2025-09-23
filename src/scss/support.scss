@@ -35,7 +35,9 @@
     &:first-child {
       background: #F7E405;
     }
-    
+    &:nth-child(2) { 
+      background: #222649;
+    }
     }
     &.active {
       transform: translateY(0);
