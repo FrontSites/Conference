@@ -9,8 +9,7 @@
   position: fixed;
   bottom: 1.875rem;
   right: 1.875rem;
-  max-width: 5rem;
-  width: 100%;
+  @include vw(width, 80,60,80);
   .support-icon {
     cursor: pointer;
     background: #FF29AE;
