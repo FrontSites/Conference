@@ -985,42 +985,42 @@ function initMarque() {
 }
 
 function initSupport() { 
-  console.log('Support initialization started');
-  
   const supportIcon = document.querySelector('.support-icon');
-  const supportBlock = document.querySelector('.support-block');
-  const supportItems = document.querySelectorAll('.support-items a');
+  const supportItems = document.querySelector('.support-items');
   
-  console.log('Support icon found:', supportIcon);
-  console.log('Support block found:', supportBlock);
-  console.log('Support items found:', supportItems.length);
-  
-  if (!supportIcon || !supportBlock) {
-    console.log('Support elements not found');
+  if (!supportIcon || !supportItems) {
     return;
   }
   
   // Клик по иконке поддержки
   supportIcon.addEventListener('click', function(e) {
-    console.log('Support icon clicked');
     e.preventDefault();
     e.stopPropagation();
-    supportBlock.classList.toggle('active');
-    console.log('Support block active class toggled');
-  });
-  
-  // Клик по ссылкам в меню поддержки
-  supportItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      console.log('Support item clicked');
-      supportBlock.classList.remove('active');
-    });
+    
+    if (supportItems.style.display === 'block') {
+      // Закрываем с анимацией
+      supportItems.style.animation = 'slideUp 0.3s ease forwards';
+      setTimeout(() => {
+        supportItems.style.display = 'none';
+        supportItems.style.animation = '';
+      }, 300);
+    } else {
+      // Открываем с анимацией
+      supportItems.style.display = 'block';
+      supportItems.style.animation = 'slideDown 0.3s ease forwards';
+    }
   });
   
   // Закрываем при клике вне области поддержки
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.support-icon') && !e.target.closest('.support-block')) {
-      supportBlock.classList.remove('active');
+      if (supportItems.style.display === 'block') {
+        supportItems.style.animation = 'slideUp 0.3s ease forwards';
+        setTimeout(() => {
+          supportItems.style.display = 'none';
+          supportItems.style.animation = '';
+        }, 300);
+      }
     }
   });
 }
