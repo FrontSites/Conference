@@ -3,6 +3,7 @@
   bottom: 1.875rem;
   right: 1.875rem;
   max-width: 5rem;
+  width: 100%;
   position: relative;
   .support-icon {
     background: #FF29AE;
@@ -18,7 +19,7 @@
     flex-direction: column;
     row-gap: 0.9375rem;
     position: absolute;
-    top: 0;
+    width: 100%;
     
   }
 
