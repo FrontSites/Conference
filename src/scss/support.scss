@@ -21,14 +21,13 @@
     align-items: center;
   }
   .support-items {
-    display: flex;
+    display: none;
     flex-direction: column;
     row-gap: 0.625rem;
     position: absolute;
     width: 100%;
-    bottom: 0;
-    z-index: -1;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    bottom: 100%;
+    z-index: 10;
     a {
       @include vw(width, 80,60,80);
     @include vw(height, 80,60,80);
@@ -50,11 +49,6 @@
     &:last-child {
       background: #fff;
     }
-    }
-  }
-  &.active {
-    .support-items {
-z-index: 1;
     }
   }
 }
