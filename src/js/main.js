@@ -986,6 +986,7 @@ function initMarque() {
 
 function initSupport() { 
   $(".support-icon").click(function (e) {
+    e.preventDefault();
     e.stopPropagation();
     $(".support-block").toggleClass("active");
   });
