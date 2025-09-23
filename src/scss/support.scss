@@ -25,13 +25,12 @@
     opacity: 0;
     display: flex;
     flex-direction: column;
-    row-gap: 0.9375rem;
+    row-gap: 0.625rem;
     position: absolute;
     width: 100%;
-    row-gap: 0.625rem;
     bottom: 0;
     transform: translateY(300%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     a {
       @include vw(width, 80,60,80);
     @include vw(height, 80,60,80);
@@ -54,7 +53,6 @@
       background: #fff;
     }
     }
-   
   }
   &.active {
     .support-items {
