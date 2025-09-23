@@ -771,7 +771,7 @@ body img{pointer-events:none}
 }
 .support-block{display:flex;flex-direction:column;row-gap:.625rem;position:fixed;bottom:1.875rem;right:1.875rem;max-width:5rem;width:100%}
 .support-block .support-icon{cursor:pointer;background:#ff29ae;width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
-.support-block .support-items{display:none;flex-direction:column;row-gap:.625rem;position:absolute;width:100%;bottom:100%;z-index:10}
+.support-block .support-items{margin-top:.625rem;display:none;flex-direction:column;row-gap:.625rem;position:absolute;width:100%;bottom:100%;z-index:10}
 .support-block .support-items a{width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
 @media (hover:hover){
 .support-block .support-items a:hover{background:#ff29ae}
