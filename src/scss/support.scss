@@ -36,34 +36,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    svg {
-      path {
-        transition: fill, all 0.3s ease;
-      }
   
     &:first-child {
       margin-bottom: 0.625rem;
       background: #F7E405;
-      svg {
-        path {
-          transition: fill, all 0.3s ease;
-        }
-      }
       @media (hover:hover) {
         &:hover {
           background: #FF29AE;
-          svg {
-            path {
-              fill: #fff;
-            }
-          }
         }
       }
     }
     &:nth-child(2) { 
       margin-bottom: 0.625rem;
       background: #0079E2;
-      
     }
     &:last-child {
       margin-bottom: 0.625rem;
@@ -71,5 +56,4 @@
     }
     }
   }
-}
 }
