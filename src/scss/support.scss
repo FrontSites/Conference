@@ -56,7 +56,7 @@
   }
   &.active {
     .support-items {
-      transform: translateY();
+      transform: translateY(0);
     }
     overflow: visible;
   }
