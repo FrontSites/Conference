@@ -996,8 +996,8 @@ function initSupport() {
   
   // Закрываем при клике вне области поддержки
   $(document).click(function (e) {
-    if (!$(e.target).closest('.support-icon, .support-items').length) {
-      $(".support-items").removeClass("active");
+    if (!$(e.target).closest('.support-icon, .support-block').length) {
+      $(".support-block").removeClass("active");
     }
   });
 }
