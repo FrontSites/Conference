@@ -49,8 +49,9 @@
       background: #fff;
     }
     }
-    &.active {
-      transform: translateY(0);
-    }
+   
+  }
+  &.active {
+    transform: translateY(0);
   }
 }
