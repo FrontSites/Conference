@@ -981,3 +981,4 @@ function initMarque() {
   });
   
 }
+
