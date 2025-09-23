@@ -986,26 +986,41 @@ function initMarque() {
 
 function initSupport() { 
   console.log('Support initialization started');
-  console.log('Support icon found:', $(".support-icon").length);
-  console.log('Support block found:', $(".support-block").length);
   
-  $(".support-icon").click(function (e) {
+  const supportIcon = document.querySelector('.support-icon');
+  const supportBlock = document.querySelector('.support-block');
+  const supportItems = document.querySelectorAll('.support-items a');
+  
+  console.log('Support icon found:', supportIcon);
+  console.log('Support block found:', supportBlock);
+  console.log('Support items found:', supportItems.length);
+  
+  if (!supportIcon || !supportBlock) {
+    console.log('Support elements not found');
+    return;
+  }
+  
+  // Клик по иконке поддержки
+  supportIcon.addEventListener('click', function(e) {
     console.log('Support icon clicked');
     e.preventDefault();
     e.stopPropagation();
-    $(".support-block").toggleClass("active");
+    supportBlock.classList.toggle('active');
     console.log('Support block active class toggled');
   });
   
-  $(".support-items a").click(function () {
-    console.log('Support item clicked');
-    $(".support-block").removeClass("active");
+  // Клик по ссылкам в меню поддержки
+  supportItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      console.log('Support item clicked');
+      supportBlock.classList.remove('active');
+    });
   });
   
   // Закрываем при клике вне области поддержки
-  $(document).click(function (e) {
-    if (!$(e.target).closest('.support-icon, .support-block').length) {
-      $(".support-block").removeClass("active");
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.support-icon') && !e.target.closest('.support-block')) {
+      supportBlock.classList.remove('active');
     }
   });
 }
