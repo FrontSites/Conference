@@ -1,4 +1,5 @@
 .support-block {
+  overflow: hidden;
   position: fixed;
   bottom: 1.875rem;
   right: 1.875rem;
@@ -21,7 +22,8 @@
     position: absolute;
     width: 100%;
     row-gap: 0.625rem;
-    
+    bottom: 0;
+    transform: translateY(300%);
     
   }
 
