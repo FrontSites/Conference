@@ -2,6 +2,8 @@
 @use "./mixins" as *;
 
 .support-block {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: fixed;
   bottom: 1.875rem;
@@ -53,7 +55,7 @@
   }
   &.active {
     .support-items {
-      transform: translateY(0);
+      transform: translateY();
     }
     overflow: visible;
   }
