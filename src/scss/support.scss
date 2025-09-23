@@ -25,6 +25,15 @@
     bottom: 0;
     transform: translateY(300%);
     transition: transform 0.3s ease;
+    a {
+      @include vw(width, 80,60,80);
+    @include vw(height, 80,60,80);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
     &.active {
       transform: translateY(0);
     }
