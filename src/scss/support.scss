@@ -43,6 +43,11 @@
       @media (hover:hover) {
         &:hover {
           background: #FF29AE;
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
         }
       }
     }

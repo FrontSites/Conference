@@ -776,6 +776,7 @@ body img{pointer-events:none}
 .support-block .support-items a:first-child{margin-bottom:.625rem;background:#f7e405}
 @media (hover:hover){
 .support-block .support-items a:first-child:hover{background:#ff29ae}
+.support-block .support-items a:first-child:hover svg path{fill:#fff}
 }
 .support-block .support-items a:nth-child(2){margin-bottom:.625rem;background:#0079e2}
 .support-block .support-items a:last-child{margin-bottom:.625rem;background:#fff}
