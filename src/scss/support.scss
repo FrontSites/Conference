@@ -32,6 +32,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &:first-child {
+      background: #F7E405;
+    }
     
     }
     &.active {
