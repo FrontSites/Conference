@@ -12,6 +12,7 @@
   max-width: 5rem;
   width: 100%;
   .support-icon {
+    cursor: pointer;
     background: #FF29AE;
     @include vw(width, 80,60,80);
     @include vw(height, 80,60,80);

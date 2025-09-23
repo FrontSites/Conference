@@ -770,7 +770,7 @@ body img{pointer-events:none}
 .subscribe .container .subscribe-items .subscribe-item.right .form-items .form-item:last-child{max-width:9.5rem;width:100%}
 }
 .support-block{display:flex;flex-direction:column;row-gap:.625rem;overflow:hidden;position:fixed;bottom:1.875rem;right:1.875rem;max-width:5rem;width:100%}
-.support-block .support-icon{background:#ff29ae;width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
+.support-block .support-icon{cursor:pointer;background:#ff29ae;width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
 .support-block .support-items{opacity:0;display:flex;flex-direction:column;row-gap:.9375rem;position:absolute;width:100%;row-gap:.625rem;bottom:0;transform:translateY(300%);transition:transform .3s ease}
 .support-block .support-items a{width:clamp(60px,calc(5.5555555556vw),80px);height:clamp(60px,calc(5.5555555556vw),80px);border-radius:50%;display:flex;justify-content:center;align-items:center}
 @media (hover:hover){
