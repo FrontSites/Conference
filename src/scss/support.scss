@@ -42,9 +42,11 @@
       }
     }
     &:first-child {
+      margin-bottom: 0.625rem;
       background: #F7E405;
     }
     &:nth-child(2) { 
+      margin-bottom: 0.625rem;
       background: #0079E2;
     }
     &:last-child {
