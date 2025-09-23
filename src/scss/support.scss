@@ -1,8 +1,16 @@
 .support-block {
+  position: fixed;
+  
   max-width: 5rem;
   position: relative;
   .support-icon {
     background: #FF29AE;
     @include vw(width, 80,60,80);
+    @include vw(height, 80,60,80);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
 }
