@@ -87,5 +87,7 @@
     }
     }
   }
-  @m
+  @media (width <= 48em) {
+    right: 0.9375rem;
+  }
 }
