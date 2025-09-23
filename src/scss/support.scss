@@ -1,3 +1,6 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
 .support-block {
   overflow: hidden;
   position: fixed;
