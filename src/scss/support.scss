@@ -39,6 +39,7 @@
         background: #FF29AE;
       }
     }
+    &:first-child {
       background: #F7E405;
     }
     &:nth-child(2) { 
@@ -52,3 +53,4 @@
       transform: translateY(0);
     }
   }
+}
