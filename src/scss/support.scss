@@ -3,6 +3,7 @@
 
 .support-block {
   display: flex;
+  z-index: 50;
   flex-direction: column;
   row-gap: 0.625rem;
   position: fixed;
@@ -86,4 +87,5 @@
     }
     }
   }
+  @m
 }
