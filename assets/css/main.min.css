@@ -779,7 +779,7 @@ body img{pointer-events:none}
 .support-block .support-items a:first-child{background:#f7e405}
 .support-block .support-items a:nth-child(2){background:#222649}
 .support-block .support-items a:last-child{background:#fff}
-.support-block.active{transform:translateY(0)}
+.support-block.active .support-items{transform:translateY(0)}
 .conference-timer{max-width:56.375rem;margin:0 auto;margin-top:clamp(40px,calc(6.9444444444vw),100px);width:100%;padding-top:1.5625rem;padding-bottom:4.6875rem;padding-left:1.0625rem;padding-right:1.0625rem;justify-content:center;align-items:center;border-radius:25px;background:linear-gradient(180deg,#2c3055 0,rgba(44,48,85,0) 92.8%)}
 .conference-timer .timer-container{display:flex;flex-direction:column;align-items:center;justify-content:center;row-gap:1.625rem}
 .conference-timer .timer-container h3{color:#fff;text-align:center;font-family:Manrope;font-size:1.25rem;font-weight:700;line-height:120%;row-gap:1.625rem;letter-spacing:.0625rem;text-transform:uppercase}

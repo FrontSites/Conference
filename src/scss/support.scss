@@ -52,6 +52,9 @@
    
   }
   &.active {
-    transform: translateY(0);
+    .support-items {
+      transform: translateY(0);
+    }
+    
   }
 }
