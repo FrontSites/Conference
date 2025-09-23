@@ -992,35 +992,24 @@ function initSupport() {
     return;
   }
   
-  // Клик по иконке поддержки
+  // Клик по иконке поддержки - открываем/закрываем
   supportIcon.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     
     if (supportItems.style.display === 'block') {
-      // Закрываем с анимацией
-      supportItems.style.animation = 'slideUp 0.3s ease forwards';
-      setTimeout(() => {
-        supportItems.style.display = 'none';
-        supportItems.style.animation = '';
-      }, 300);
+      // Закрываем
+      supportItems.style.display = 'none';
     } else {
-      // Открываем с анимацией
+      // Открываем
       supportItems.style.display = 'block';
-      supportItems.style.animation = 'slideDown 0.3s ease forwards';
     }
   });
   
-  // Закрываем при клике вне области поддержки
+  // Закрываем при клике по документу
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.support-icon') && !e.target.closest('.support-block')) {
-      if (supportItems.style.display === 'block') {
-        supportItems.style.animation = 'slideUp 0.3s ease forwards';
-        setTimeout(() => {
-          supportItems.style.display = 'none';
-          supportItems.style.animation = '';
-        }, 300);
-      }
+      supportItems.style.display = 'none';
     }
   });
 }
