@@ -982,3 +982,15 @@ function initMarque() {
   
 }
 
+function initSupport() { 
+  $(".support-icon").click(function () {
+    $(".support-items").toggleClass("active");
+  });
+  $(".support-items a").click(function () {
+    $(".support-items").removeClass("active");
+  });
+  $(window).resize(function () {
+    if ($(window).width() > 768) {
+      $(".support-items").removeClass("active");
+  });
+}
