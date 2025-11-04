@@ -226,6 +226,11 @@
             display: flex;
             flex-direction: column;
             row-gap: 2.5rem;
+            li {
+              position: relative;
+              align-items: center;
+              display: flex;
+            }
           }
         }
 
