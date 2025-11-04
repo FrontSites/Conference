@@ -74,12 +74,7 @@
       left: 14.875rem;
     }
 
-    @media (width <=75em) {
-      left: 1.875rem;
-      top: 4.375rem;
-      transform: rotate(-9.953deg) translate(0rem, 0rem);
-
-    }
+  
 
     @media (width <=62em) {
       top: -11.25rem;
@@ -178,10 +173,7 @@
         left: 1.875rem;
       }
 
-      @media (width <=75em) {
-        left: -5rem;
-
-      }
+    
 
       @media (width <=62em) {
         top: -14.6875rem;

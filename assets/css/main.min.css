@@ -38,9 +38,6 @@
 @media (width <= 78.125em){
 .blockchain .blockchain-voices{left:14.875rem}
 }
-@media (width <= 75em){
-.blockchain .blockchain-voices{left:1.875rem;top:4.375rem;transform:rotate(-9.953deg) translate(0,0)}
-}
 @media (width <= 62em){
 .blockchain .blockchain-voices{top:-11.25rem;right:9.375rem;transform:rotate(9.953deg);left:auto}
 }
@@ -71,9 +68,6 @@
 }
 @media (width <= 78.125rem){
 .blockchain .blockchain-img-block.man{top:1.875rem;left:1.875rem}
-}
-@media (width <= 75em){
-.blockchain .blockchain-img-block.man{left:-5rem}
 }
 @media (width <= 62em){
 .blockchain .blockchain-img-block.man{top:-14.6875rem;left:50%;transform:translateX(-50%)}
