@@ -205,11 +205,14 @@
         transform: rotate(2.384deg) translate(-3.9375rem, -1.0625rem);
         max-width: 13.125rem;
         width: 100%;
+        @media (width <=85em) { 
+          padding: 6px 11px;
       }
 
       @media (width <=85em) {
         left: 2.5rem;
         top: 29.5rem;
+        
       }
 
       @media (width <=78.125em) {
