@@ -10,7 +10,7 @@
   <div class="container">
     <div class="app-items">
       <div class="app-item left">
-
+        <?php the_field("app-item-content"); ?>
         <div class="app-item__img">
           <img src="<?php the_field('app-image-top') ?>" alt="">
           <div class="app-image__text"><?php the_field("app-image-top-text"); ?></div>
