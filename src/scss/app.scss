@@ -44,6 +44,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include vw(column-gap, 54,30,54);
 
       .app-item {
         &.left {
