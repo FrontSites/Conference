@@ -5,7 +5,8 @@
   .app-bg {
     position: absolute;
     &.left {
-      left: 0;
+      left: -50%;
+      transform: translateX(-50%);
       top: 0;
       width: 100%;
       height: 100%;
