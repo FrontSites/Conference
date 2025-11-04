@@ -84,9 +84,8 @@
 
     @media (width <=62em) {
       top: -148px;
-      left: 80%;
-      transform: rotate(9.953deg);
-      left: auto;
+      left: 50%;
+      transform: rotate(9.953deg) translateX(-50%);
     }
 
     @media (width <=30em) {
