@@ -216,7 +216,9 @@
         
       }
 
-    @media (width <= 80em) {}
+    @media (width <= 78.125em) {
+      left: 0.5rem;
+    }
 
       @media (width <=62em) {
         top: -38rem;
