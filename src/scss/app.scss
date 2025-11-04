@@ -53,6 +53,8 @@
       .app-item {
         &.left {
           h2 {
+            font-weight: 400;
+            font-family: "Manrope";
             text-align: center;
             display: none;
             color: #222649;
@@ -112,6 +114,8 @@
           flex: 1 1 60%;
 
           h2 {
+            font-weight: 400;
+            font-family: "Manrope";
             color: #222649;
             margin-bottom: 2.5rem;
           }
