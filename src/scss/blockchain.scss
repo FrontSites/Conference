@@ -196,7 +196,9 @@
       left: 11.5rem;
       top: 27.5rem;
       .blockchain-img-text { 
-        
+        @media (width <= 75em) {
+          width: 100%;
+        }
 
       p {
         text-align: center;
@@ -213,6 +215,7 @@
         top: 29.5rem;
         
       }
+      
 
     @media (width <= 78.125em) {
       left: 0.5rem;
