@@ -8,7 +8,7 @@
   </div>
 
   <div class="blockchain-img-block girl">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/girl.png" alt="description">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/boy.png" alt="description">
     <div class="blockchain-img-text">
       <?php the_field("sched-item-text_2"); ?>
     </div>
