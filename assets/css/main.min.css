@@ -23,6 +23,7 @@
 .afterparty .container .afterparty-items .afterparty-item__wrapper{padding-bottom:3.75rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{margin-top:-.9375rem}
 }
+.app{background:#fff}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
