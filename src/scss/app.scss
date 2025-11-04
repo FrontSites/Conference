@@ -1,5 +1,6 @@
 .app {
-  @include vw(padding-top, 5rem);
+  @include vw(padding-top, 80,62,80);
+  padding-bottom: 2.75rem;
   background: #fff;
   position: relative;
   overflow: hidden;
