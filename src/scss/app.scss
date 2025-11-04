@@ -154,7 +154,9 @@
         }
       }
 
-
+@media (width <= 48em) {
+  flex-direction: column;
+}
     }
   }
 }

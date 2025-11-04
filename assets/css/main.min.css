@@ -50,6 +50,9 @@
 @media (hover:none){
 .app .container .app-items .app-item.right .main-button__wrap .main-button:active{background:#222649;color:#fff}
 }
+@media (width <= 48em){
+.app .container .app-items{flex-direction:column}
+}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
