@@ -58,7 +58,7 @@
 @media (width <= 30em){
 .blockchain .blockchain-img-block{top:-13.75rem}
 }
-.blockchain .blockchain-img-block.man{left:2.25rem;top:-.125rem}
+.blockchain .blockchain-img-block.man{left:7.5rem;top:-.125rem}
 .blockchain .blockchain-img-block.man p{position:relative;text-align:center;background:#2a2f5d;font-size:clamp(16px,calc(1.3888888889vw),20px);font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;text-transform:uppercase;background:#ff29ae;max-width:19.125rem;transform:rotate(-7.895deg) translate(-.9375rem,-3.4375rem);color:#fff}
 @media (width <= 30em){
 .blockchain .blockchain-img-block.man p{z-index:1;transform:rotate(-7.895deg) translate(1.875rem,-3.9375rem)}
