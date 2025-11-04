@@ -20,7 +20,9 @@ Template Name: Home
     <?php get_template_part('template-parts/partners-tech'); ?>
     <?php get_template_part('template-parts/location'); ?>
     <?php get_template_part('template-parts/subscribe'); ?>
-    <?php get_template_part('template-parts/app'); ?>
+    <?php if (current_user_can('manage_options')) : ?>
+      <?php get_template_part('template-parts/app'); ?>
+    <?php endif; ?>
 
 
 
