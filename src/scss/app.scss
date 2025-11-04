@@ -66,12 +66,11 @@
               line-height: 100%;
               text-transform: uppercase;
               background: #F7E405;
-              transform: rotate(4.607deg);
               padding: 0.5397rem 0.8995rem;
               position: absolute;
               bottom: 8.5rem;
               left: 50%;
-              transform: translateX(-50%);
+              transform:rotate(4.607deg) translateX(-50%);
             }
           }
         }
