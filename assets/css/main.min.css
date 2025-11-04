@@ -44,6 +44,9 @@
 @media (width <= 62em){
 .blockchain .blockchain-voices{top:-148px;left:70%;transform:rotate(9.953deg) translateX(-70%)}
 }
+@media (width <= 32.5rem){
+.blockchain .blockchain-voices{text-align:center;width:35%}
+}
 @media (width <= 30em){
 .blockchain .blockchain-voices{top:-180px;right:clamp(20px,calc(3.4722222222vw),50px)}
 }
