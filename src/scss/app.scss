@@ -43,6 +43,7 @@
     .app-items {
       display: flex;
       justify-content: space-between;
+      align-items: stretch;
       @include vw(column-gap, 54, 30, 54);
 
       .app-item {
@@ -52,11 +53,14 @@
           .app-item__img {
             position: relative;
             border-radius: 0.625rem;
+            width: 100%;
+            height: 100%;
 
             img {
               border-radius: 0.625rem;
               width: 100%;
               height: 100%;
+              object-fit: cover;
             }
 
             .app-image__text {
