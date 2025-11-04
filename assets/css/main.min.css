@@ -63,7 +63,7 @@
 .app .container .app-items .app-item.right .main-button__wrap .qr-code{display:none}
 }
 .app .container .app-bottom__items{max-width:57.3125rem;margin:0 auto;display:flex;justify-content:center;align-items:center;-moz-column-gap:clamp(30px,calc(11.3888888889vw),164px);column-gap:clamp(30px,calc(11.3888888889vw),164px)}
-.app .container .app-bottom__items .app-bottom__item.left{flex:1 1 30%}
+.app .container .app-bottom__items .app-bottom__item.left{flex:1 1 50%}
 .app .container .app-bottom__items .app-bottom__item.left p{color:#222649;font-size:1.25rem;font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;margin-bottom:3.125rem}
 .app .container .app-bottom__items .app-bottom__item.left ul{display:flex;flex-direction:column;row-gap:2.5rem}
 .app .container .app-bottom__items .app-bottom__item.left ul li{position:relative;align-items:center;-moz-column-gap:.875rem;column-gap:.875rem;display:flex;color:#222649;font-size:1rem;font-weight:600;line-height:120%;letter-spacing:.05rem}
