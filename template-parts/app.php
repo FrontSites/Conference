@@ -7,7 +7,7 @@ if (is_admin()) : ?>
       <div class="app-items">
         <div class="app-item left">
           <div class="app-item__img">
-            <img src="<? the_field() ?>" alt="">
+            <img src="<? the_field('app-image-top') ?>" alt="">
           </div>
         </div>
         <div class="app-item right"></div>
