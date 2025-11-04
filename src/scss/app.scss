@@ -262,6 +262,7 @@
       }
       @media (width <= 37.5em) {
         flex-direction: column;
+        row-gap: 4.0625rem;
         .app-bottom__item {
           &.left {
             p {

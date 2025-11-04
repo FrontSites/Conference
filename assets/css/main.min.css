@@ -70,7 +70,7 @@
 .app .container .app-bottom__items .app-bottom__item.left ul li::before{content:"";width:1.5625rem;height:2.75rem;background:url(../images/zipps.svg) no-repeat;background-position:center;background-size:100%}
 .app .container .app-bottom__items .app-bottom__item.right{flex:1 1 70%}
 @media (width <= 37.5em){
-.app .container .app-bottom__items{flex-direction:column}
+.app .container .app-bottom__items{flex-direction:column;row-gap:4.0625rem}
 .app .container .app-bottom__items .app-bottom__item.left p{text-align:center}
 }
 .app .container>.main-button__wrap{margin-top:2.0625rem;display:flex;align-items:center;justify-content:center;-moz-column-gap:2.5rem;column-gap:2.5rem}
