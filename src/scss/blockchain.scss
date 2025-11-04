@@ -5,7 +5,82 @@
   padding-top: 4.375rem;
   border-top-right-radius: 1.5625rem;
   position: relative;
- 
+  .blockchain-img-text { 
+    &.mob {
+      
+      display: none;
+      @media (width <= 62em) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        @include vw(top, 100,20,100);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 5;
+        p {
+          @include vw(font-size, 20, 16, 20);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          letter-spacing: 0.0625rem;
+          text-transform: uppercase;
+          background: #FF29AE;
+          max-width: 19.125rem;
+          border-radius: 0.3125rem;
+          transform: rotate(-7.895deg);
+          padding: 7px 7px;
+          &:first-child { 
+            transform: translate(-2.25rem, 3.125rem) rotate(-7.895deg);
+            
+          }
+          &:last-child {
+
+            transform: translate(11.875rem, 2.5rem) rotate(-7.895deg);
+            @media (width <= 30em) {
+              transform: translate(4.375rem, 2.5rem) rotate(-7.895deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blockchain-voices {
+    transform: rotate(9.953deg);
+    background: #F7E405;
+    @include vw(font-size, 20, 16, 20);
+    font-style: normal;
+    font-weight: 700;
+    padding: 7px 7px;
+    line-height: 120%;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: #222649;
+    border-radius: 0.3125rem;
+    position: absolute;
+    left: 19.75rem;
+    top: 11.25rem;
+    z-index: 3;
+    @media (width <= 75em) {
+      left: 1.875rem;
+      top: 4.375rem;
+      transform: rotate(-9.953deg) translate(0rem, 0rem);
+      
+    }
+    @media (width <= 62em) {
+      top: -11.25rem;
+      right: 9.375rem;
+      transform: rotate(9.953deg);
+      left: auto
+    }
+    @media (width <= 30em) {
+      top: -180px;
+      @include vw(right, 50,20,50);
+    }
+  }
 
   .blockchain-img-block {
     display: flex;
@@ -13,62 +88,132 @@
     align-items: center;
     max-width: 153.125rem;
     position: absolute;
-    left: 2.25rem;
-    @include vw(top, 150, 1, 150);
+
     z-index: 3;
 
+    .blockchain-img-text { 
+      @media (width <= 62em) {
+        display: none;
+      }
+    }
+
     p {
-      position: relative;
-      padding: 7px 7px;
-      text-align: center;
-      background: #2A2F5D;
-      border-radius: 0.3125rem;
-      border-radius: 5px;
-      @include vw(font-size, 20,16,20);
+      @include vw(font-size, 20, 16, 20);
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
       letter-spacing: 0.0625rem;
       text-transform: uppercase;
-
-      &:first-child {
-        transform: rotate(9.953deg) translate(-3.125rem, -4.375rem);
-        background: #F7E405;
-        max-width: 17.125rem;
-        color: #222649;
-        @media (width <= 30em) {
-          z-index: 2;
-        }
-      }
-      &:last-child { 
-
-        background: #FF29AE;
-        max-width: 19.125rem;
-        transform: rotate(-7.895deg) translate(1.875rem, -3.4375rem);
-        color: #fff;
-        @media (width <= 30em) {
-          z-index: 1;
-        transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
-
-        }
-      }
+      background: #FF29AE;
+      max-width: 19.125rem;
+      border-radius: 0.3125rem;
+      padding: 7px 7px;
+      
     }
-    @media (width <= 64em) {
+
+
+    @media (width <=64em) {
       left: -3.125rem;
     }
-    @media (width <= 62em) {
+
+    @media (width <=62em) {
       position: relative;
       top: -15.625rem;
       left: auto;
-      
-      
+
+
     }
-    @media (width <= 30em) {
+
+    @media (width <=30em) {
       top: -13.75rem;
+    }
+
+    &.man {
+      left: 2.25rem;
+      top: -0.125rem;
+
+      p {
+        position: relative;
+
+        text-align: center;
+        background: #2A2F5D;
+
+        @include vw(font-size, 20, 16, 20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+        background: #FF29AE;
+        max-width: 19.125rem;
+        transform: rotate(-7.895deg) translate(-0.9375rem, -3.4375rem);
+        color: #fff;
+
+        @media (width <=30em) {
+          z-index: 1;
+          transform: rotate(-7.895deg) translate(1.875rem, -3.9375rem);
+
+        }
+@media (width <= 62em) {
+  position: relative;
+  z-index: 5;
+}
+      }
+      @media (width <= 78.125rem) {
+        top: 1.875rem;
+      }
+      @media (width <= 75em) {
+        left: -5rem;
+        
+      }
+      @media (width <= 62em) {
+        top: -14.6875rem;
+        left: 50%;
+        transform: translateX(-50%);
+        
+      }
+      @media (width <= 30em) {
+        left: -10%;
+        transform: translate(0%);
+        img {
+          width: 21.875rem;
+        }
+      }
+    }
+
+    &.girl {
+      left: 14.375rem;
+      top: 19.375rem;
+
+      p {
+        text-align: center;
+        transform: rotate(-7.895deg) translate(0.625rem, -3.4375rem);
+      }
+      @media (width <= 78.125em) {
+        left: 6.25rem;
+        top: 25rem;
+      }
+
+      @media (width <= 75em) {
+        left: -5rem;
+        top: 26.875rem;
+      }
+      @media (width <= 62em) {
+        top: -38rem;
+        left: 25%;
+      }
+      @media (width <= 30em) {
+        left: 23%;
+        top: auto;
+        transform: translate(0%, -32rem);
+        img {
+          width: 21.875rem;
+        }
+      }
     }
   }
 
- 
+
 
   &:before {
     content: "";
@@ -111,7 +256,7 @@
     z-index: 4;
 
     .blockchain-block {
-      max-width: 40.25rem;
+      max-width: 44.25rem;
       margin-left: auto;
       display: flex;
       flex-direction: column;
@@ -230,25 +375,30 @@
         }
       }
     }
-    @media (width <= 62em) {
-      margin-top: -14.8125rem;
+
+    @media (width <=62em) {
+      margin-top: -38.8125rem;
+    }
+    @media (width <= 30em) {
+      margin-top: -25.8125rem;
     }
   }
-  @media (width <= 62em) {
+
+  @media (width <=62em) {
     margin-top: 11.25rem;
     padding-top: 0rem;
   }
-  
+
 }
 
 .lang-en {
-  .blockchain { 
-    .blockchain-img-block {  
+  .blockchain {
+    .blockchain-img-block {
       p {
         &:first-child {
           max-width: 14.125rem;
+        }
       }
-    }
     }
   }
 }
