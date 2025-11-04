@@ -48,7 +48,7 @@
 
       .app-item {
         &.left {
-          flex: 0 1 50%;
+          flex: 1 1 50%;
 
           .app-item__img {
             position: relative;
@@ -85,11 +85,15 @@
             }
           }
         }
+        &.right {
+          flex: 1 1 50%;
+          h2 {
+            background: #222649;
+          }
+        }
       }
 
-      &.right {
-        flex: 0 1 50%;
-      }
+     
     }
   }
 }
