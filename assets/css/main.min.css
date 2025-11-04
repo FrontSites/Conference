@@ -62,7 +62,7 @@
 .app .container .app-items .app-item.right .main-button__wrap{margin-top:2.5rem;justify-content:center}
 .app .container .app-items .app-item.right .main-button__wrap .qr-code{display:none}
 }
-.app .container .app-bottom__items{display:flex;justify-content:center;align-items:center}
+.app .container .app-bottom__items{display:flex;justify-content:center;align-items:center;-moz-column-gap:clamp(30px,calc(11.3888888889vw),164px);column-gap:clamp(30px,calc(11.3888888889vw),164px)}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
