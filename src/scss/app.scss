@@ -264,7 +264,9 @@
         flex-direction: column;
         .app-item {
           &.left {
-            
+            p {
+              text-align: center;
+            }
           }
         }
       }
