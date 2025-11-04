@@ -1,7 +1,7 @@
 <section class="blockchain">
   <div class="blockchain-voices"><?php the_field("blockchain-voices"); ?></div>
   <div class="blockchain-img-block man">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/man-2.png" alt="description">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sched-image.png" alt="description">
     <div class="blockchain-img-text">
       <?php the_field("sched-item-text"); ?>
     </div>
