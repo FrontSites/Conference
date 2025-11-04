@@ -160,6 +160,9 @@
 @media (width <= 62em){
 .blockchain{margin-top:11.25rem;padding-top:22.5rem}
 }
+@media (width <= 30em){
+.blockchain{padding-top:5.5rem}
+}
 .lang-en .blockchain .blockchain-img-block p:first-child{max-width:14.125rem}
 .main-button{display:flex;justify-content:center;align-items:center;padding:12px 1.25rem;border-radius:.625rem;-moz-column-gap:.625rem;column-gap:.625rem;font-size:clamp(14px,calc(1.0416666667vw),15px);line-height:120%;text-align:center;letter-spacing:.0469rem;text-transform:uppercase}
 .main-button._border{background:0 0;border:1px solid #222649;color:#222649}
