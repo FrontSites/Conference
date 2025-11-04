@@ -35,7 +35,7 @@
 .app .container{position:relative;z-index:2}
 .app .container .app-items{display:flex;justify-content:space-between;align-items:stretch;-moz-column-gap:clamp(30px,calc(3.75vw),54px);column-gap:clamp(30px,calc(3.75vw),54px)}
 .app .container .app-items .app-item.left{flex:1 1 40%}
-.app .container .app-items .app-item.left h2{display:none;color:#222649;font-weight:500}
+.app .container .app-items .app-item.left h2{text-align:center;display:none;color:#222649;font-weight:500}
 .app .container .app-items .app-item.left p{display:none}
 .app .container .app-items .app-item.left .app-item__img{position:relative;border-radius:.625rem;width:100%;height:100%}
 .app .container .app-items .app-item.left .app-item__img img{border-radius:.625rem;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
