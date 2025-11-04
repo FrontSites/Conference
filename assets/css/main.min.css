@@ -67,7 +67,7 @@
 .blockchain .blockchain-img-block.man p{z-index:1;transform:rotate(-7.895deg) translate(1.875rem,-3.9375rem)}
 }
 @media (width <= 72.5em){
-.blockchain .blockchain-img-block.man p{padding:6px}
+.blockchain .blockchain-img-block.man p{padding:.4375rem .5625rem}
 }
 @media (width <= 62em){
 .blockchain .blockchain-img-block.man p{position:relative;z-index:5}
