@@ -35,7 +35,7 @@
 .app .container{position:relative;z-index:2}
 .app .container .app-items{display:flex;justify-content:space-between;align-items:stretch;-moz-column-gap:clamp(30px,calc(3.75vw),54px);column-gap:clamp(30px,calc(3.75vw),54px)}
 .app .container .app-items .app-item.left{flex:1 1 40%}
-.app .container .app-items .app-item.left h2{text-align:center;display:none;color:#222649;font-weight:500}
+.app .container .app-items .app-item.left h2{text-align:center;display:none;color:#222649}
 .app .container .app-items .app-item.left p{display:none}
 .app .container .app-items .app-item.left .app-item__img{position:relative;border-radius:.625rem;width:100%;height:100%}
 .app .container .app-items .app-item.left .app-item__img img{border-radius:.625rem;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
@@ -44,7 +44,7 @@
 .app .container .app-items .app-item.left .app-item__img{width:auto;height:auto;aspect-ratio:1/1}
 }
 .app .container .app-items .app-item.right{margin-top:1.75rem;flex:1 1 60%}
-.app .container .app-items .app-item.right h2{color:#222649;margin-bottom:2.5rem;font-weight:500}
+.app .container .app-items .app-item.right h2{color:#222649;margin-bottom:2.5rem}
 .app .container .app-items .app-item.right p{color:#222649;font-size:1rem;font-weight:400;line-height:120%;letter-spacing:.05rem}
 .app .container .app-items .app-item.right p:not(:last-child){margin-bottom:1.25rem}
 .app .container .app-items .app-item.right .main-button__wrap{margin-top:2.0625rem;display:flex;align-items:center;-moz-column-gap:2.5rem;column-gap:2.5rem}
