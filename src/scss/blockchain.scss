@@ -92,10 +92,7 @@
       width: 35%;
     }
 
-    @media (width <=30em) {
-      top: -180px;
-      @include vw(right, 50, 20, 50);
-    }
+   
   }
 
   .blockchain-img-block {
@@ -201,12 +198,7 @@
       }
 
       @media (width <=30em) {
-        left: -10%;
-        transform: translate(0%);
-
-        img {
-          width: 21.875rem;
-        }
+     
       }
     }
 
