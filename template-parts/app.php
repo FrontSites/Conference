@@ -21,7 +21,14 @@ if (is_admin()) : ?>
           </div>
         </div>
       </div>
-      .app-item
+      <div class="app-bottom__items">
+        <div class="app-bottom__item">
+          <div class="app-bottom__item-img">
+            <img src="<?php the_field("app-bottom-image"); ?>" alt="">
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
