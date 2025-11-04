@@ -220,7 +220,11 @@
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.0625rem;
-
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: ;
           }
         }
 
