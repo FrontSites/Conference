@@ -199,6 +199,7 @@
         @media (width <= 75em) {
           width: 100%;
         }
+        
 
       p {
         text-align: center;
@@ -219,6 +220,12 @@
 
     @media (width <= 78.125em) {
       left: 0.5rem;
+    }
+    @media (width <= 75em) { 
+      text-align: center;
+      transform: rotate(2.384deg) translate(1.0625rem, -1.0625rem);
+      max-width: 14.125rem;
+      width: 100%;
     }
 
       @media (width <=62em) {
