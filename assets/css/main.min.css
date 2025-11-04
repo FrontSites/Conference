@@ -69,6 +69,9 @@
 @media (width <= 78.125rem){
 .blockchain .blockchain-img-block.man{top:1.875rem;left:1.875rem}
 }
+@media (width <= 72.5rem){
+.blockchain .blockchain-img-block.man{max-width:13rem}
+}
 @media (width <= 62em){
 .blockchain .blockchain-img-block.man{top:-14.6875rem;left:50%;transform:translateX(-50%)}
 }

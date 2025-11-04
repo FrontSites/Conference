@@ -173,6 +173,9 @@
         left: 1.875rem;
       }
 
+      @media (width <= 72.5rem) {
+        max-width: 13rem;
+       }
     
 
       @media (width <=62em) {
