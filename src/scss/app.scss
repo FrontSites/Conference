@@ -262,6 +262,11 @@
       }
       @media (width <= 37.5em) {
         flex-direction: column;
+        .app-item {
+          &.left {
+            
+          }
+        }
       }
     }
 
