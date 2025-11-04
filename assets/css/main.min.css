@@ -34,7 +34,7 @@
 .app .container .app-items .app-item.left{flex:0 1 50%}
 .app .container .app-items .app-item.left .app-item__img{position:relative;background:#ff29a3;border-radius:.625rem;aspect-ratio:1/1;overflow:hidden}
 .app .container .app-items .app-item.left .app-item__img img{border-radius:.625rem;width:100%;height:100%}
-.app .container .app-items .app-item.left .app-item__img .app-image__text{color:#222649;text-align:center;font-family:"Bebas Neue",sans-serif;font-size:3.598rem;font-weight:400;line-height:100%;text-transform:uppercase;background:#f7e405;padding:.5rem 14.392px;position:absolute;bottom:8.5rem;left:50%;transform:rotate(4.607deg) translateX(-50%)}
+.app .container .app-items .app-item.left .app-item__img .app-image__text{color:#222649;text-align:center;font-family:"Bebas Neue",sans-serif;font-size:3.598rem;font-weight:400;line-height:100%;text-transform:uppercase;background:#f7e405;padding:.5rem .875rem .375rem;position:absolute;bottom:8.5rem;left:50%;transform:rotate(4.607deg) translateX(-50%)}
 .app .container .app-items.right{flex:0 1 50%}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
