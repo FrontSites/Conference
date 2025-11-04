@@ -67,7 +67,7 @@
 .app .container .app-bottom__items .app-bottom__item.left p{color:#222649;font-size:1.25rem;font-style:normal;font-weight:700;line-height:120%;letter-spacing:.0625rem;margin-bottom:3.125rem}
 .app .container .app-bottom__items .app-bottom__item.left ul{display:flex;flex-direction:column;row-gap:2.5rem}
 .app .container .app-bottom__items .app-bottom__item.left ul li{position:relative;align-items:center;display:flex;color:#222649;font-size:1rem;font-weight:600;line-height:120%;letter-spacing:.05rem}
-.app .container .app-bottom__items .app-bottom__item.left ul li::before{content:"";width:1.5625rem;height:2.75rem;background:url(../assets/images/zipp.svg) no-repeat;background-position:center;background-size:100%}
+.app .container .app-bottom__items .app-bottom__item.left ul li::before{content:"";width:1.5625rem;height:2.75rem;background:url(../assets/images/zipps.svg) no-repeat;background-position:center;background-size:100%}
 .app .container .app-bottom__items .app-bottom__item.right{flex:1 1 70%}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
