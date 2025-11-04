@@ -24,6 +24,11 @@
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{margin-top:-.9375rem}
 }
 .app{background:#fff;position:relative;overflow:hidden}
+.app .app-bg{position:absolute}
+.app .app-bg.left{left:0;top:0;width:100%;height:100%}
+.app .app-bg.left img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
+.app .app-bg.left{left:0;top:0;width:100%;height:100%}
+.app .app-bg.left img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
