@@ -48,7 +48,7 @@
 .blockchain .blockchain-voices{text-align:center;width:35%}
 }
 @media (width <= 30em){
-.blockchain .blockchain-voices{text-align:center;width:45%}
+.blockchain .blockchain-voices{text-align:center;width:45%;top:-8.3125rem;left:81%}
 }
 .blockchain .blockchain-img-block{display:flex;flex-direction:column;align-items:center;max-width:153.125rem;position:absolute;z-index:3}
 @media (width <= 62em){
@@ -114,7 +114,7 @@
 .blockchain .blockchain-img-block.girl{top:-50rem;left:47%;max-width:18rem;width:100%}
 }
 @media (width <= 30em){
-.blockchain .blockchain-img-block.girl{left:36%}
+.blockchain .blockchain-img-block.girl{left:36%;top:-32rem}
 }
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
 .blockchain .blockchain-bg{position:absolute;top:-50%;left:0;width:77.8125rem}
