@@ -1,6 +1,8 @@
 <section class="app">
-  .app-bg.left
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-bg.svg?v=<?php echo filemtime(get_template_directory() . '/assets/images/app-bg.svg'); ?>" alt="">
+  <div class="app-bg left">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-bg.svg?v=<?php echo filemtime(get_template_directory() . '/assets/images/app-bg.svg'); ?>" alt="">
+  </div>
+
   </div>
   <div class="app-bg right">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-bg-2.svg?v=<?php echo filemtime(get_template_directory() . '/assets/images/app-bg-2.svg'); ?>" alt="">
