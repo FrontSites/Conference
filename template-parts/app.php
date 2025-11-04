@@ -14,7 +14,7 @@ if (is_admin()) : ?>
         <div class="app-item right">
           <?php the_field("app-item-content"); ?>
           <div class="main-button__wrap">
-            a.main-btn
+            <a href="/" class="main-button"></a>
           </div>
         </div>
       </div>
