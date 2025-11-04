@@ -12,10 +12,11 @@ if (is_admin()) : ?>
           </div>
         </div>
         <div class="app-item right">
-          <
-            </div>
+          <?php the_field("app-item-content"); ?>
+          .main-t
         </div>
       </div>
+    </div>
   </section>
 
 <?php endif; ?>
