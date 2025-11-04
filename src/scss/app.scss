@@ -228,9 +228,11 @@
             flex-direction: column;
             row-gap: 2.5rem;
 
+
             li {
               position: relative;
               align-items: center;
+              column-gap: 0.875rem;
               display: flex;
               color: #222649;
               font-size: 1rem;
