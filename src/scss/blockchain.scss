@@ -92,6 +92,11 @@
       width: 35%;
     }
 
+    @media (width <= 30em) { 
+      text-align: center;
+      width: 45%;
+    }
+
    
   }
 
@@ -199,7 +204,7 @@
       }
 
       @media (width <=30em) {
-     
+        left: 36%;
       }
     }
 
