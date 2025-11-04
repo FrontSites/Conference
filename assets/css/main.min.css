@@ -38,6 +38,9 @@
 @media (width <= 78.125em){
 .blockchain .blockchain-voices{left:14.875rem}
 }
+@media (width <= 72.5em){
+.blockchain .blockchain-voices{left:2.875rem}
+}
 @media (width <= 62em){
 .blockchain .blockchain-voices{top:-11.25rem;right:9.375rem;transform:rotate(9.953deg);left:auto}
 }
