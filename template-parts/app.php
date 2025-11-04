@@ -1,6 +1,6 @@
 <section class="app">
   .app-bg.left
-  <img src="<?php the_field('app-image-left') ?>" alt="">
+  tem
   </div>
   <div class="app-bg right">
     <img src="<?php the_field('app-image-right') ?>" alt="">
