@@ -48,6 +48,12 @@
 
       .app-item {
         &.left {
+          h2 {
+            display: none;
+          }
+          p {
+            display: none;
+          }
           flex: 1 1 40%;
 
           .app-item__img {
@@ -158,7 +164,9 @@
   flex-direction: column;
   .app-item { 
     &.left {
-      
+      h2 {
+        display: none;
+      }
     }
   }
 }
