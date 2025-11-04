@@ -158,14 +158,7 @@
   flex-direction: column;
   .app-item { 
     &.left {
-      display: flex;
-      flex-direction: column;
-      h2 {
-        order: 1;
-      }
-      .app-item__img { 
-        order: 2;
-      }
+      
     }
   }
 }

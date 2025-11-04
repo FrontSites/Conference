@@ -52,7 +52,6 @@
 }
 @media (width <= 48em){
 .app .container .app-items{flex-direction:column}
-.app .container .app-items .app-item.left{display:flex;flex-direction:column}
 .app .container .app-items .app-item.left h2{order:1}
 .app .container .app-items .app-item.left .app-item__img{order:2}
 }
