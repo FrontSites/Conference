@@ -260,6 +260,9 @@
           flex: 1 1 70%;
         }
       }
+      @media (width <= 37.5em) {
+        flex-direction: column;
+      }
     }
 
     >.main-button__wrap {
