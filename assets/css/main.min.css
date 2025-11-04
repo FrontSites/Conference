@@ -56,7 +56,7 @@
 .blockchain .blockchain-img-block{left:-3.125rem}
 }
 @media (width <= 62em){
-.blockchain .blockchain-img-block{position:relative;top:-15.625rem;left:auto}
+.blockchain .blockchain-img-block{position:relative;top:-31.625rem;left:36%}
 }
 @media (width <= 30em){
 .blockchain .blockchain-img-block{top:-13.75rem}
