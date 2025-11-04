@@ -67,7 +67,7 @@
               color: #222649;
               text-align: center;
               font-family: "Bebas Neue", sans-serif;
-              font-size: 3.598rem;
+              @include vw(font-size, 57,39,57);
               font-weight: 400;
               line-height: 100%;
               text-transform: uppercase;
@@ -87,7 +87,7 @@
             @media (width <= 62em) {
               width: auto;
               height: auto;
-              
+              aspect-ratio: 1 / 1;
             }
           }
         }
