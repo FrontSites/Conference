@@ -2,7 +2,7 @@
 @use "./mixins" as *;
 
 .app {
-  @include vw(padding-top, 80,62,80);
+  @include vw(padding-top, 80, 62, 80);
   padding-bottom: 2.75rem;
   background: #fff;
   position: relative;
@@ -43,7 +43,7 @@
     .app-items {
       display: flex;
       justify-content: space-between;
-      @include vw(column-gap, 54,30,54);
+      @include vw(column-gap, 54, 30, 54);
 
       .app-item {
         &.left {
@@ -80,24 +80,31 @@
               bottom: 8.5rem;
               line-height: 100%;
               left: 50%;
-              transform:rotate(4.607deg) translateX(-50%);
+              transform: rotate(4.607deg) translateX(-50%);
             }
           }
         }
+
         &.right {
           margin-top: 1.75rem;
           flex: 1 1 50%;
+
           h2 {
             color: #222649;
             margin-bottom: 2.5rem;
           }
+
           p {
-            
+            color: #222649;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 0.05rem;
           }
         }
       }
 
-     
+
     }
   }
 }
