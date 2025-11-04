@@ -1,7 +1,14 @@
 <section class="app">
+  .app-bg.left
+  <img src="<?php the_field('app-image-left') ?>" alt="">
+  </div>
+  <div class="app-bg right">
+    <img src="<?php the_field('app-image-right') ?>" alt="">
+  </div>
   <div class="container">
     <div class="app-items">
       <div class="app-item left">
+
         <div class="app-item__img">
           <img src="<?php the_field('app-image-top') ?>" alt="">
           <div class="app-image__text"><?php the_field("app-image-top-text"); ?></div>
