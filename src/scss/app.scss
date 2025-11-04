@@ -222,14 +222,27 @@
             letter-spacing: 0.0625rem;
             margin-bottom: 3.125rem;
           }
+
           ul {
             display: flex;
             flex-direction: column;
             row-gap: 2.5rem;
+
             li {
               position: relative;
               align-items: center;
               display: flex;
+              color: #222649;
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 120%;
+              letter-spacing: 0.05rem;
+              &::before {
+                content: "";
+                width: 1.5625rem;
+                height: 2.75rem;
+               
+              }
             }
           }
         }
