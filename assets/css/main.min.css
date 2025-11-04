@@ -42,7 +42,7 @@
 .blockchain .blockchain-voices{left:2.875rem;top:2.25rem}
 }
 @media (width <= 62em){
-.blockchain .blockchain-voices{top:-11.25rem;right:9.375rem;transform:rotate(9.953deg);left:auto}
+.blockchain .blockchain-voices{top:-9.25rem;right:14.375rem;transform:rotate(9.953deg);left:auto}
 }
 @media (width <= 30em){
 .blockchain .blockchain-voices{top:-180px;right:clamp(20px,calc(3.4722222222vw),50px)}
