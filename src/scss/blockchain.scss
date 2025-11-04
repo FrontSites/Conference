@@ -17,8 +17,8 @@
         flex-direction: column;
         position: absolute;
         align-items: center;
-        @include vw(top, 100, 20, 100);
-        left: 50%;
+        @include vw(top, 82, 20, 82);
+        left: 49%;
         transform: translateX(-50%);
         width: 100%;
         z-index: 5;
