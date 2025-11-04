@@ -171,7 +171,14 @@
       
     }
     &.right {
-      
+      h2 {
+        display: none;
+      }
+      .main-button__wrap { 
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
