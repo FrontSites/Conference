@@ -207,6 +207,11 @@
         width: 100%;
       }
 
+      @media (width <=85em) {
+        left: 2.5rem;
+        top: 29.5rem;
+      }
+
       @media (width <=78.125em) {
         left: 6.25rem;
         top: 25rem;
