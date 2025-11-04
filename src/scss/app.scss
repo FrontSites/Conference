@@ -36,7 +36,15 @@
       .app-item {
         &.left {
           flex: 0 1 50%;
+          .app-item__img {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
+        &.right {
+          flex: 0 1 50%;
       }
     }
   }
