@@ -27,8 +27,8 @@
 .app .app-bg{position:absolute}
 .app .app-bg.left{left:0;top:0;width:100%;height:100%}
 .app .app-bg.left img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
-.app .app-bg.left{left:0;top:0;width:100%;height:100%}
-.app .app-bg.left img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
+.app .app-bg.right{right:0;bottom:0;width:100%;height:100%}
+.app .app-bg.right img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
