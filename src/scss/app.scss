@@ -108,10 +108,11 @@
           }
           .main-button__wrap {
             display: flex;
+            align-items: center;
 
             .main-button {
               color: #222649;
-
+              height: auto;
               text-align: center;
               font-size: 0.9375rem;
               font-style: normal;
