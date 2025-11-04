@@ -84,6 +84,11 @@
               left: 50%;
               transform: rotate(4.607deg) translateX(-50%);
             }
+            @media (width <= 62em) {
+              width: auto;
+              height: auto;
+              
+            }
           }
         }
 
