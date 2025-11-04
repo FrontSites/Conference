@@ -125,6 +125,19 @@
               border: 0.0625rem solid #222649;
               padding: 1.0625rem 1.875rem;
               width: fit-content;
+              @media (hover:hover) {
+                &:hover {
+                  background: #222649;
+                  color: #fff;
+                }
+              }
+
+              @media (hover:none) {
+                &:hover {
+                  background: #222649;
+                  color: #fff;
+                }
+              }
             }
           }
         }
