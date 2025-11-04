@@ -39,8 +39,6 @@
 .app .container .app-items .app-item.right h2{color:#222649;margin-bottom:2.5rem}
 .app .container .app-items .app-item.right p{color:#222649;font-size:1rem;font-weight:400;line-height:120%;letter-spacing:.05rem}
 .app .container .app-items .app-item.right p:not(:last-child){margin-bottom:1.25rem}
-.app .container .app-items .app-item.right p .main-button__wrap{display:flex}
-.app .container .app-items .app-item.right p .main-button__wrap a{color:#222649;text-align:center;font-size:.9375rem;font-style:normal;font-weight:400;line-height:120%;letter-spacing:.0469rem;text-transform:uppercase;border:.0625rem solid #222649;padding:1.0625rem 1.875rem;width:-moz-fit-content;width:fit-content}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){

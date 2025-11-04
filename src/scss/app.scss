@@ -104,23 +104,24 @@
               margin-bottom: 1.25rem;
             }
 
-            .main-button__wrap {
-              display: flex;
+           
+          }
+          .main-button__wrap {
+            display: flex;
 
-              a {
-                color: #222649;
+            .main-button {
+              color: #222649;
 
-                text-align: center;
-                font-size: 0.9375rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 120%;
-                letter-spacing: 0.0469rem;
-                text-transform: uppercase;
-                border: 0.0625rem solid #222649;
-                padding: 1.0625rem 1.875rem;
-                width: fit-content;
-              }
+              text-align: center;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 120%;
+              letter-spacing: 0.0469rem;
+              text-transform: uppercase;
+              border: 0.0625rem solid #222649;
+              padding: 1.0625rem 1.875rem;
+              width: fit-content;
             }
           }
         }
