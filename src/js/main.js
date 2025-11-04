@@ -984,17 +984,48 @@ function initMarque() {
   
 }
 
-function initSupport() { 
-  $(".support-icon").click(function (e) {
+function initSupport() {
+  let isToggling = false; // Флаг для предотвращения множественных срабатываний
+  
+  // Используем touchstart для мобильных устройств и click для десктопа
+  $(".support-icon").off('click touchstart'); // Удаляем предыдущие обработчики
+  
+  $(".support-icon").on('touchstart click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    $(".support-items").slideToggle(300);
+    
+    // Предотвращаем множественные срабатывания
+    if (isToggling) {
+      return;
+    }
+    
+    isToggling = true;
+    
+    // Если это touchstart, предотвращаем последующий click
+    if (e.type === 'touchstart') {
+      $(this).one('click', function(clickEvent) {
+        clickEvent.preventDefault();
+        clickEvent.stopPropagation();
+      });
+    }
+    
+    $(".support-items").slideToggle(300, function() {
+      // Сбрасываем флаг после завершения анимации
+      setTimeout(function() {
+        isToggling = false;
+      }, 50);
+    });
   });
   
-  // Закрываем при клике по документу
-  $(document).click(function (e) {
+  // Закрываем при клике/тапе по документу
+  $(document).off('click touchstart', handleOutsideClick);
+  $(document).on('click touchstart', handleOutsideClick);
+  
+  function handleOutsideClick(e) {
     if (!$(e.target).closest('.support-icon, .support-block').length) {
-      $(".support-items").slideUp(300);
+      if ($(".support-items").is(':visible')) {
+        $(".support-items").slideUp(300);
+      }
     }
-  });
+  }
 }
