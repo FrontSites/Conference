@@ -87,6 +87,9 @@
       left: 70%;
       transform: rotate(9.953deg) translateX(-70%);
     }
+    @media (width <= 32.5rem) { 
+      
+    }
 
     @media (width <=30em) {
       top: -180px;
