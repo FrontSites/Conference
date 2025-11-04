@@ -34,6 +34,9 @@
         height: 100%;
       }
     }
+    @media (width <= 48em) {
+      display: none;
+    }
   }
 
   .container {

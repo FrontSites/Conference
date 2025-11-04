@@ -29,6 +29,9 @@
 .app .app-bg.left img{width:100%;height:100%}
 .app .app-bg.right{right:0;bottom:0;width:100%;height:100%}
 .app .app-bg.right img{width:100%;height:100%}
+@media (width <= 48em){
+.app .app-bg{display:none}
+}
 .app .container{position:relative;z-index:2}
 .app .container .app-items{display:flex;justify-content:space-between;align-items:stretch;-moz-column-gap:clamp(30px,calc(3.75vw),54px);column-gap:clamp(30px,calc(3.75vw),54px)}
 .app .container .app-items .app-item.left{flex:1 1 40%}
