@@ -241,11 +241,7 @@
                 content: "";
                 width: 1.5625rem;
                 height: 2.75rem;
-                background: url(../assets/images/zipp.svg) no-repeat center center;
-                background-size: contain;
-                position: absolute;
-                left: 0;
-                top: 0;
+                background: url(../assets/images/zipp.svg) no-repeat center/100%;
               }
             }
           }
