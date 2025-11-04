@@ -70,6 +70,9 @@
     left: 19.75rem;
     top: 11.25rem;
     z-index: 3;
+    @media (width 78.125em) { 
+      
+    }
 
     @media (width <=75em) {
       left: 1.875rem;
