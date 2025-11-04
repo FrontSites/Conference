@@ -15,10 +15,13 @@ if (is_admin()) : ?>
           <?php the_field("app-item-content"); ?>
           <div class="main-button__wrap">
             <a href="https://t.me/FullsetconfBot" target="_blank" class="main-button"><?php the_field("app-button-text"); ?></a>
-            .qr-code
+            <div class="qr-code">
+              <img src="<?php the_field("qr-code-image"); ?>" alt="">
+            </div>
           </div>
         </div>
       </div>
+      .app-item
     </div>
   </section>
 
