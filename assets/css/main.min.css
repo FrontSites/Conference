@@ -45,7 +45,7 @@
 .app .container .app-items .app-item.right .main-button__wrap .main-button:hover{background:#222649;color:#fff}
 }
 @media (hover:none){
-.app .container .app-items .app-item.right .main-button__wrap .main-button:hover{background:#222649;color:#fff}
+.app .container .app-items .app-item.right .main-button__wrap .main-button:active{background:#222649;color:#fff}
 }
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
