@@ -197,6 +197,9 @@
       justify-content: center;
       align-items: center;
       @include vw(column-gap, 164,30,164);
+      .app-bottom__item {  
+        
+      }
     }
   }
 }
