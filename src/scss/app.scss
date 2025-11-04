@@ -43,7 +43,6 @@
     .app-items {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       @include vw(column-gap, 54,30,54);
 
       .app-item {
@@ -88,7 +87,7 @@
         &.right {
           flex: 1 1 50%;
           h2 {
-            background: #222649;
+            color: #222649;
             margin-bottom: 2.5rem;
           }
         }
