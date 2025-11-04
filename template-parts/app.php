@@ -8,12 +8,14 @@ if (is_admin()) : ?>
         <div class="app-item left">
           <div class="app-item__img">
             <img src="<? the_field('app-image-top') ?>" alt="">
-            .app-image__text
+            <div class="app-image__text"><?php the_field("app-image-top-text"); ?></div>
           </div>
         </div>
-        <div class="app-item right"></div>
+        <div class="app-item right">
+          <
+            </div>
+        </div>
       </div>
-    </div>
   </section>
 
 <?php endif; ?>
