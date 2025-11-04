@@ -156,7 +156,16 @@
 
 @media (width <= 48em) {
   flex-direction: column;
-  .
+  .app-item { 
+    &.left {
+      h2 {
+        order: 1;
+      }
+      .app-item__img { 
+        order: 2;
+      }
+    }
+  }
 }
     }
   }
