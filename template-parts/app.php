@@ -1,9 +1,9 @@
 <section class="app">
   .app-bg.left
-  tem
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-bg-left.png?v=<?php echo filemtime(get_template_directory() . '/assets/images/app-bg-left.png'); ?>" alt="">
   </div>
   <div class="app-bg right">
-    <img src="<?php the_field('app-image-right') ?>" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/app-bg-right.png?v=<?php echo filemtime(get_template_directory() . '/assets/images/app-bg-right.png'); ?>" alt="">
   </div>
   <div class="container">
     <div class="app-items">
