@@ -19,7 +19,7 @@
 .afterparty .container .afterparty-items .afterparty-item__wrapper:hover:before{transform:rotate(6.75deg);border-color:#ff29ae}
 }
 @media (width <= 37.5em){
-.afterparty .container .afterparty-items{flex-direction:column;row-gap:2.5rem}
+.afterparty .container .afterparty-items{flex-direction:column;align-items:center;row-gap:2.5rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper{padding-bottom:3.75rem}
 .afterparty .container .afterparty-items .afterparty-item__wrapper .afterparty-item{margin-top:-.9375rem}
 }
