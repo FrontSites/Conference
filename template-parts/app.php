@@ -3,7 +3,7 @@
     <div class="app-items">
       <div class="app-item left">
         <div class="app-item__img">
-          <img src="<? the_field('app-image-top') ?>" alt="">
+          <img src="<?php the_field('app-image-top') ?>" alt="">
           <div class="app-image__text"><?php the_field("app-image-top-text"); ?></div>
         </div>
       </div>
