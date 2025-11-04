@@ -79,7 +79,7 @@
 .blockchain .blockchain-img-block.man{max-width:15rem}
 }
 @media (width <= 62em){
-.blockchain .blockchain-img-block.man{top:-14.6875rem;left:50%;transform:translateX(-50%)}
+.blockchain .blockchain-img-block.man{top:-34.6875rem;left:46%;transform:translateX(-50%)}
 }
 @media (width <= 30em){
 .blockchain .blockchain-img-block.man{left:-10%;transform:translate(0)}
