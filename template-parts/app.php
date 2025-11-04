@@ -22,7 +22,7 @@ if (is_admin()) : ?>
         </div>
       </div>
       <div class="app-bottom__items">
-        <div class="app-bottom__item">
+        <div class="app-bottom__item left">
           <div class="app-bottom__item-img">
             <img src="<?php the_field("app-bottom-image"); ?>" alt="">
           </div>
