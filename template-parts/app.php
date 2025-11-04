@@ -13,7 +13,7 @@ if (is_admin()) : ?>
         </div>
         <div class="app-item right">
           <?php the_field("app-item-content"); ?>
-          .main-t
+          <a href="" class="main-btn"></a>
         </div>
       </div>
     </div>
