@@ -30,6 +30,11 @@
 .app .app-bg.right{right:0;bottom:0;width:100%;height:100%}
 .app .app-bg.right img{width:100%;height:100%}
 .app .container{position:relative;z-index:2}
+.app .container .app-items{display:flex;justify-content:space-between;align-items:center}
+.app .container .app-items .app-item.left{flex:0 1 50%}
+.app .container .app-items .app-item.left .app-item__img{background:#ff29a3}
+.app .container .app-items .app-item.left .app-item__img img{width:100%;height:100%}
+.app .container .app-items.right{flex:0 1 50%}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
