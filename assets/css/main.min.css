@@ -93,6 +93,9 @@
 @media (width <= 78.125em){
 .blockchain .blockchain-img-block.girl{left:.5rem}
 }
+@media (width <= 72.5rem){
+.blockchain .blockchain-img-block.girl{max-width:13rem}
+}
 @media (width <= 62em){
 .blockchain .blockchain-img-block.girl{top:-38rem;left:25%}
 }
