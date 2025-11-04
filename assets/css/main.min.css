@@ -25,10 +25,11 @@
 }
 .app{background:#fff;position:relative;overflow:hidden}
 .app .app-bg{position:absolute}
-.app .app-bg.left{left:-25%;top:0;width:100%;height:100%}
+.app .app-bg.left{left:-23%;top:0;width:100%;height:100%}
 .app .app-bg.left img{width:100%;height:100%}
 .app .app-bg.right{right:0;bottom:0;width:100%;height:100%}
 .app .app-bg.right img{width:100%;height:100%}
+.app .container{position:relative;z-index:2}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
 @media (width <= 62em){
