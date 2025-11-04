@@ -270,15 +270,14 @@
     left: 0;
     width: 77.8125rem;
 
-    @media (width <= 75em) {
-      width: 65.8125rem;
-    
-      }
-
     @media (width <=62em) {
       display: none;
     }
+@media (width <= 68.75em) {
+  
+}
 
+  }
 
   .blockchain-circle {
     position: absolute;
@@ -440,5 +439,4 @@
       }
     }
   }
-}
 }

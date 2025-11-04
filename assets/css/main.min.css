@@ -102,49 +102,46 @@
 }
 .blockchain:before{content:"";width:clamp(400px,calc(85.625vw),1233px);height:clamp(400px,calc(85.625vw),1233px);position:absolute;top:15.625rem;border-radius:50%;left:-10%;background:#2a2f5d;filter:blur(7.8125rem);z-index:0}
 .blockchain .blockchain-bg{position:absolute;top:-50%;left:0;width:77.8125rem}
-@media (width <= 75em){
-.blockchain .blockchain-bg{width:65.8125rem}
-}
 @media (width <= 62em){
 .blockchain .blockchain-bg{display:none}
 }
-.blockchain .blockchain-bg .blockchain-circle{position:absolute;top:0;right:0;max-width:100%;z-index:1;border-top-right-radius:1.5625rem}
-.blockchain .blockchain-bg .container{position:relative;z-index:4}
-.blockchain .blockchain-bg .container .blockchain-block{max-width:44.25rem;margin-left:auto;display:flex;flex-direction:column}
-.blockchain .blockchain-bg .container .blockchain-block h2{font-family:"Bebas Neue Cyrillic",sans-serif;margin-bottom:1.25rem;letter-spacing:.2rem}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__list{margin-bottom:1.25rem}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__list ul{display:flex;flex-direction:column;row-gap:1.25rem;align-items:flex-start}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__list ul li{justify-content:flex-start;width:auto;display:flex;align-items:center;-moz-column-gap:.625rem;column-gap:.625rem;position:relative;letter-spacing:.0625rem;padding:.4375rem 1.25rem;font-size:clamp(15px,calc(1.3888888889vw),20px);border-radius:.3125rem;background:rgba(245,245,245,.05);-webkit-backdrop-filter:blur(1.5625rem);backdrop-filter:blur(1.5625rem)}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__list ul li:before{content:"";width:.75rem;height:1.3125rem;background:url(../../assets/images/zipper-yellow.svg) no-repeat center/100%}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__text p{color:#d9d9d9;font-size:clamp(15px,calc(1.1111111111vw),16px);font-weight:400;line-height:120%;letter-spacing:.8px}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__text p:first-child{margin-top:clamp(44px,calc(3.4722222222vw),50px);text-transform:uppercase;margin-bottom:clamp(15px,calc(2.4305555556vw),35px)}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__text ul{margin-top:.9375rem;padding-left:1.25rem;margin-bottom:.9375rem}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__text ul li{color:#d9d9d9;font-size:clamp(15px,calc(1.1111111111vw),16px);font-weight:400;line-height:120%;letter-spacing:.8px;list-style:disc}
-.blockchain .blockchain-bg .container .blockchain-block .block-chain-block__text ul li::marker{color:#d9d9d9}
+.blockchain .blockchain-circle{position:absolute;top:0;right:0;max-width:100%;z-index:1;border-top-right-radius:1.5625rem}
+.blockchain .container{position:relative;z-index:4}
+.blockchain .container .blockchain-block{max-width:44.25rem;margin-left:auto;display:flex;flex-direction:column}
+.blockchain .container .blockchain-block h2{font-family:"Bebas Neue Cyrillic",sans-serif;margin-bottom:1.25rem;letter-spacing:.2rem}
+.blockchain .container .blockchain-block .block-chain-block__list{margin-bottom:1.25rem}
+.blockchain .container .blockchain-block .block-chain-block__list ul{display:flex;flex-direction:column;row-gap:1.25rem;align-items:flex-start}
+.blockchain .container .blockchain-block .block-chain-block__list ul li{justify-content:flex-start;width:auto;display:flex;align-items:center;-moz-column-gap:.625rem;column-gap:.625rem;position:relative;letter-spacing:.0625rem;padding:.4375rem 1.25rem;font-size:clamp(15px,calc(1.3888888889vw),20px);border-radius:.3125rem;background:rgba(245,245,245,.05);-webkit-backdrop-filter:blur(1.5625rem);backdrop-filter:blur(1.5625rem)}
+.blockchain .container .blockchain-block .block-chain-block__list ul li:before{content:"";width:.75rem;height:1.3125rem;background:url(../../assets/images/zipper-yellow.svg) no-repeat center/100%}
+.blockchain .container .blockchain-block .block-chain-block__text p{color:#d9d9d9;font-size:clamp(15px,calc(1.1111111111vw),16px);font-weight:400;line-height:120%;letter-spacing:.8px}
+.blockchain .container .blockchain-block .block-chain-block__text p:first-child{margin-top:clamp(44px,calc(3.4722222222vw),50px);text-transform:uppercase;margin-bottom:clamp(15px,calc(2.4305555556vw),35px)}
+.blockchain .container .blockchain-block .block-chain-block__text ul{margin-top:.9375rem;padding-left:1.25rem;margin-bottom:.9375rem}
+.blockchain .container .blockchain-block .block-chain-block__text ul li{color:#d9d9d9;font-size:clamp(15px,calc(1.1111111111vw),16px);font-weight:400;line-height:120%;letter-spacing:.8px;list-style:disc}
+.blockchain .container .blockchain-block .block-chain-block__text ul li::marker{color:#d9d9d9}
 @media (width <= 62em){
-.blockchain .blockchain-bg .container .blockchain-block{margin:0 auto}
+.blockchain .container .blockchain-block{margin:0 auto}
 }
-.blockchain .blockchain-bg .container .blockchain-block .main-button{margin-top:2.5rem;position:relative;z-index:3;background:0 0;border:.0625rem solid #fff;max-width:13.5rem}
+.blockchain .container .blockchain-block .main-button{margin-top:2.5rem;position:relative;z-index:3;background:0 0;border:.0625rem solid #fff;max-width:13.5rem}
 @media (hover:hover){
-.blockchain .blockchain-bg .container .blockchain-block .main-button:hover{background:#ff29ae;color:#fff;border-color:transparent}
+.blockchain .container .blockchain-block .main-button:hover{background:#ff29ae;color:#fff;border-color:transparent}
 }
 @media (hover:none){
-.blockchain .blockchain-bg .container .blockchain-block .main-button:active{background:#ff29ae;color:#fff;border-color:transparent}
+.blockchain .container .blockchain-block .main-button:active{background:#ff29ae;color:#fff;border-color:transparent}
 }
-.blockchain .blockchain-bg .container .blockchain-block .main-button img{display:block}
+.blockchain .container .blockchain-block .main-button img{display:block}
 @media (width <= 48em){
-.blockchain .blockchain-bg .container .blockchain-block .main-button{margin:0 auto;margin-top:2.5rem}
+.blockchain .container .blockchain-block .main-button{margin:0 auto;margin-top:2.5rem}
 }
 @media (width <= 62em){
-.blockchain .blockchain-bg .container{margin-top:-38.8125rem}
+.blockchain .container{margin-top:-38.8125rem}
 }
 @media (width <= 30em){
-.blockchain .blockchain-bg .container{margin-top:-25.8125rem}
+.blockchain .container{margin-top:-25.8125rem}
 }
 @media (width <= 62em){
-.blockchain .blockchain-bg{margin-top:11.25rem;padding-top:0}
+.blockchain{margin-top:11.25rem;padding-top:0}
 }
-.blockchain .lang-en .blockchain .blockchain-img-block p:first-child{max-width:14.125rem}
+.lang-en .blockchain .blockchain-img-block p:first-child{max-width:14.125rem}
 .main-button{display:flex;justify-content:center;align-items:center;padding:12px 1.25rem;border-radius:.625rem;-moz-column-gap:.625rem;column-gap:.625rem;font-size:clamp(14px,calc(1.0416666667vw),15px);line-height:120%;text-align:center;letter-spacing:.0469rem;text-transform:uppercase}
 .main-button._border{background:0 0;border:1px solid #222649;color:#222649}
 .main-button._border img{display:block;width:22px;height:22px;flex-shrink:0}
