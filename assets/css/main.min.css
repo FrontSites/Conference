@@ -32,7 +32,7 @@
 .app .container{position:relative;z-index:2}
 .app .container .app-items{display:flex;justify-content:space-between;align-items:center}
 .app .container .app-items .app-item.left{flex:0 1 50%}
-.app .container .app-items .app-item.left .app-item__img{background:#ff29a3}
+.app .container .app-items .app-item.left .app-item__img{position:relative;background:#ff29a3;border-radius:.625rem}
 .app .container .app-items .app-item.left .app-item__img img{width:100%;height:100%}
 .app .container .app-items.right{flex:0 1 50%}
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
