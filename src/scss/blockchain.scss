@@ -131,6 +131,8 @@
       position: relative;
       top: -15.625rem;
       left: auto;
+      max-width: 13rem;
+        width: 100%;
 
 
     }
@@ -256,6 +258,8 @@
       @media (width <=62em) {
         top: -38rem;
         left: 25%;
+        max-width: 13rem;
+        width: 100%;
       }
 
       @media (width <=30em) {
