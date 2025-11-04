@@ -79,10 +79,10 @@
               align-items: center;
               padding-left: 0.875rem;
               padding-right: 0.875rem;
-              bottom: 8.5rem;
+              bottom: 20%;
               line-height: 100%;
               left: 50%;
-              transform: rotate(4.607deg) translateX(-50%);
+              transform: rotate(4.607deg) translate(-50%, 20%);
             }
             @media (width <= 62em) {
               width: auto;
