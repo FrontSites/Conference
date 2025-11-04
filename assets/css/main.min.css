@@ -54,7 +54,7 @@
 }
 @media (width <= 48em){
 .app .container .app-items{flex-direction:column}
-.app .container .app-items .app-item.left h2{display:none}
+.app .container .app-items .app-item.left h2{display:block;margin-bottom:1.9375rem}
 }
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}

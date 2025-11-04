@@ -165,8 +165,13 @@
   .app-item { 
     &.left {
       h2 {
-        display: none;
+        display: block;
+        margin-bottom: 1.9375rem;
       }
+      
+    }
+    &.right {
+      
     }
   }
 }
