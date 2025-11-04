@@ -85,7 +85,7 @@
 .app .container>.main-button__wrap .qr-code{display:none}
 }
 @media (width <= 30em){
-.app{padding-bottom:3.125rem}
+.app{padding-bottom:3.75rem}
 }
 .blockchain{padding-top:4.375rem;border-top-right-radius:1.5625rem;position:relative}
 .blockchain .blockchain-img-text.mob{display:none}
