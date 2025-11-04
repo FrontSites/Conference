@@ -47,11 +47,10 @@
 
       .app-item {
         &.left {
-          flex: 1 1 50%;
+          flex: 1 1 30%;
 
           .app-item__img {
             position: relative;
-            background: #ff29a3;
             border-radius: 0.625rem;
             aspect-ratio: 1 / 1;
 
